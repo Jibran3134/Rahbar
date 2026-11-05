@@ -2,6 +2,7 @@
 import argparse
 import json
 import re
+import subprocess
 from pathlib import Path
 
 p=argparse.ArgumentParser()
@@ -18,9 +19,10 @@ live=json.loads((base/f"{a.sprint}-live.json").read_text())
 assert checks and all(c["exit_code"]==0 for c in checks) and live["passed"]
 commands="\n".join(f"- cwd {c['cwd']}: `{' '.join(c['command'])}`; native exit {c['exit_code']}."
                    for c in checks)
+revision=subprocess.run(["git","rev-parse","HEAD"],cwd=root,capture_output=True,text=True,check=True).stdout.strip()
 report=(f"# {a.sprint} — {a.title}\n\nStatus: PASS. 5 November 2026 PKT. "
-        "Base 5a40788, uncommitted Jibran-owned work. Human and Alishba integration review pending. "
-        "No commit/push, external message or Alishba-owned file change.\n\n"
+        f"Working tree parent {revision}; Jibran-owned work. Human/platform integration review pending. "
+        "Local main commits are authorized; no push, external message or Alishba-owned file change.\n\n"
         f"Files: {a.files}.\n\n{a.notes}\n\n## Verification\n\n{commands}\n\n"
         f"Live command: `{a.live_command}`; native check completed and {a.sprint}-live.json records passed=true. "
         "See adjacent red/final transcripts for initial missing-behavior failures and exact final counts. "
@@ -36,5 +38,5 @@ disclosure=root/"docs/AI-USAGE-JIBRAN.md"
 with disclosure.open("a",encoding="utf-8") as f:
     f.write(f"\n\n## Codex — {a.sprint}\n\nCodex implemented and tested {a.title.lower()}, "
             f"ran the checks/live command in {a.sprint}.md and recorded actual evidence. {a.notes} "
-            "Jibran human review and Alishba integration review remain pending. No external communication or Git publication.\n")
+            "Jibran human review and platform integration remain pending. Local main commits are authorized; no push or external communication.\n")
 print(a.sprint,"PASS recorded")

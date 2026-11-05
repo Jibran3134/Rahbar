@@ -33,7 +33,7 @@ def test_wire_schema_delimiters_model_temperature_and_order():
     assert request["model"] == "llama3.2:3b" and request["stream"] is False
     base=Answer.model_json_schema()
     assert request["format"]["required"] == base["required"]
-    assert all(request["format"]["properties"][key]==value for key,value in base["properties"].items() if key!="answer")
+    assert request["format"]==base
     assert request["options"]["temperature"] == .2
     messages = request["messages"]
     assert messages[0]["role"] == "system" and "untrusted" in messages[0]["content"].lower()
@@ -52,8 +52,35 @@ def test_prompt_supplies_exact_copyable_inline_label():
         OllamaProvider(Settings(),client=client).generate("When?",[passage()])
     evidence = json.loads(seen[0]["messages"][1]["content"])["evidence"][0]
     assert evidence["inline_citation"] == "[s.pdf / 4.25]"
-    assert "pattern" in seen[0]["format"]["properties"]["answer"]
-    assert "\\ " not in seen[0]["format"]["properties"]["answer"]["pattern"]
+    assert "pattern" not in seen[0]["format"]["properties"]["answer"]
+
+
+def test_prefix_citation_is_rendered_after_single_claim_without_inventing_sources():
+    data=payload()
+    data["answer"]="[s.pdf / 4.25] Deadline is makeup week."
+    with httpx.Client(transport=httpx.MockTransport(lambda r:httpx.Response(200,json={
+            "message":{"content":json.dumps(data)}}))) as client:
+        result=OllamaProvider(Settings(),client=client).generate("Question",[passage()])
+    assert result.answer=="Deadline is makeup week. [s.pdf / 4.25]"
+
+
+def test_bare_claims_render_only_existing_single_verified_source():
+    from app.services.grounding import validate_grounding
+    from app.providers.llm.base import ProviderError
+    data=payload()
+    data["answer"]="Deadline is makeup week. Permission is required."
+    with httpx.Client(transport=httpx.MockTransport(lambda r:httpx.Response(200,json={
+            "message":{"content":json.dumps(data)}}))) as client:
+        result=OllamaProvider(Settings(),client=client).generate("Question",[passage()])
+    assert result.answer.count("[s.pdf / 4.25]")==2
+    validate_grounding(result,[passage()])
+    data["citations"][0]["source"]="invented.pdf"
+    with httpx.Client(transport=httpx.MockTransport(lambda r:httpx.Response(200,json={
+            "message":{"content":json.dumps(data)}}))) as client:
+        result=OllamaProvider(Settings(),client=client).generate("Question",[passage()])
+    assert "[invented.pdf" not in result.answer
+    with pytest.raises(ProviderError):
+        validate_grounding(result,[passage()])
 
 
 @pytest.mark.parametrize("kind", ["timeout", "transport", "status", "json", "schema", "outer"])

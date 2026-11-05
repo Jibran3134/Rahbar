@@ -37,6 +37,8 @@ def validate_grounding(answer: Answer, passages: list[Passage]) -> Answer:
                                  r"not (?:available|specified|provided)", answer.answer, re.I)):
             invalid()
         return abstention().model_copy(update={"reasoning":"Provider reported insufficient evidence."})
+    if re.search(r"(?:supplied documents do not provide|cannot determine|unable to answer)",answer.answer,re.I):
+        invalid()
     available = {(p.source,p.section,p.page) for p in passages}
     cited = [(c.source,c.section,c.page) for c in answer.citations]
     if not available or not cited or len(set(cited)) != len(cited) or any(c not in available for c in cited):

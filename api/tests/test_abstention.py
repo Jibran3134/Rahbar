@@ -24,12 +24,12 @@ def test_no_usable_evidence_abstains_without_generation(passages):
 
 
 @pytest.mark.parametrize("score", [.45,.46])
-def test_floor_is_inclusive_and_low_hits_are_removed(score):
+def test_floor_is_inclusive_and_valid_top_k_context_is_preserved(score):
     seen = []
     def generate(question, passages):
         seen.extend(passages)
         return Answer(reasoning="private",answer="Cannot determine.",citations=[],
                       answered_from_context=False,confidence="low")
     result = answer_question("Question", SimpleNamespace(name="fake",retrieve=lambda q,k:[hit(.4),hit(score)]),
-                             SimpleNamespace(name="spy",generate=generate), Settings())
-    assert len(seen) == 1 and seen[0].score == score and len(result.retrieved) == 1
+                             SimpleNamespace(name="spy",generate=generate), Settings(relevance_floor=.45))
+    assert len(seen) == 2 and seen[-1].score == score and len(result.retrieved) == 2

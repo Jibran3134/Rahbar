@@ -12,11 +12,11 @@ def usable_passages(passages: list[Passage], floor: float) -> list[Passage]:
         if (all(isinstance(s,str) and s.strip() for s in (
                 passage.chunk_id,passage.text,passage.source,passage.section))
                 and type(passage.score) in (int,float) and math.isfinite(passage.score)
-                and -1 <= passage.score <= 1 and passage.score >= floor
+                and -1 <= passage.score <= 1
                 and ((html and passage.page is None) or (not html and type(passage.page) is int
                                                         and passage.page > 0))):
             valid.append(passage)
-    return valid
+    return valid if any(p.score>=floor for p in valid) else []
 
 
 def abstention() -> Answer:

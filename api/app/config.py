@@ -91,14 +91,14 @@ class Settings:
     # Retrieval and generation
     top_k: int = 5
     temperature: float = 0.2
-    relevance_floor: float = 0.45   # provisional; measure in S19 before shipping
+    relevance_floor: float = 0.74   # S19 measured selected-corpus operating point
     llm_model: str = "llama3.2:3b"
     ollama_url: str = "http://host.minikube.internal:11434"
     hosted_base_url: str = ""        # e.g. an OpenAI-compatible endpoint
     llm_api_key: str = field(default="", repr=False)   # from the Secret; never log it
 
     redis_url: str = field(default="redis://redis:6379/0", repr=False)
-    cache_threshold: float = 0.95   # provisional; no claim of measured cache quality
+    cache_threshold: float = 0.95   # S19 conservative small-sample calibration
     cache_ttl_seconds: int = 3600
     cache_max_entries: int = 256
     session_ttl_seconds: int = 1800
@@ -146,7 +146,7 @@ def get_settings() -> Settings:
         collection=os.environ.get("CHROMA_COLLECTION", "rahbar"),
         top_k=_int("TOP_K", 5),
         temperature=_float("TEMPERATURE", 0.2),
-        relevance_floor=_float("RELEVANCE_FLOOR", 0.45),
+        relevance_floor=_float("RELEVANCE_FLOOR", 0.74),
         llm_model=os.environ.get("LLM_MODEL", "llama3.2:3b"),
         ollama_url=os.environ.get("OLLAMA_URL", "http://host.minikube.internal:11434"),
         hosted_base_url=os.environ.get("HOSTED_BASE_URL", ""),

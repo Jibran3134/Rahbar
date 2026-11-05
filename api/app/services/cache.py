@@ -15,7 +15,7 @@ from ..schemas import ActiveIndex, Answer, AskResponse, Passage
 from .grounding import validate_grounding
 from ..routes import metrics
 
-PROMPT_VERSION="grounded-v3-inline-constraint"
+PROMPT_VERSION="grounded-v7-quarantine-verified-render-query-floor-4096"
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:
