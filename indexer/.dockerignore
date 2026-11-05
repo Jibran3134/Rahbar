@@ -4,3 +4,7 @@
 !pipeline/**
 **/__pycache__/
 **/*.pyc
+.git/
+__pycache__/
+.venv/
+corpus/

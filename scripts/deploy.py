@@ -43,7 +43,14 @@ def render(overlay, tag, registry, ollama_url=None, host_cidr=None):
     (path / "kustomization.yaml").write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
     text = native(["kubectl", "kustomize", str(path)])
     (path / "rendered.yaml").write_text(text, encoding="utf-8")
-    return list(yaml.safe_load_all(text))
+    documents = list(yaml.safe_load_all(text))
+    for filename, selected in [
+        ("namespace.yaml", [d for d in documents if d["kind"] == "Namespace"]),
+        ("foundation.yaml", [d for d in documents if d["kind"] not in {"Namespace", "Job"}]),
+        ("indexer.yaml", [d for d in documents if d["kind"] == "Job"]),
+    ]:
+        (path / filename).write_text(yaml.safe_dump_all(selected), encoding="utf-8")
+    return documents
 
 
 def apply(documents, context):

@@ -1,0 +1,13 @@
+{
+  "source": "platform/P02/indexer-memory.json and platform/P04/acceptance.json",
+  "indexer_peak_bytes": 343830528,
+  "indexer_limit_bytes": 1610612736,
+  "indexer_observed_headroom_bytes": 1266782208,
+  "api_observed_memory_mib": [
+    188,
+    195,
+    196
+  ],
+  "chroma_observed_memory_mib": 573,
+  "requests_adjustment": "API 256Mi; Chroma 768Mi/50m following observed post-evaluation usage"
+}

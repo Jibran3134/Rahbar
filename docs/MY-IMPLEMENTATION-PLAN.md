@@ -811,3 +811,8 @@ Your workload is intentionally larger. Cut optional provider modes, UI ideas, st
 ## Current execution status (5 November 2026)
 
 Jibran's application sprints S00-S21 have passed; see [the ledger and final platform handoff](notes/jibran.md). Jibran authorized local commits directly on main and confirmed that the platform files have not been developed and will be developed separately. Preserve the ownership separation above. S22 fresh-checkout application checks passed, including 299 tests, types/lint/coverage and real/fixture baseline evaluations. Full S22 release acceptance is BLOCKED by the absent platform; local success does not establish a release. [The S22 report](evidence/app/sprints/S22.md) records the exact tested revision, measurements and remaining requirements.
+
+
+## Subsequent platform execution
+
+Jibran subsequently authorized implementation of Alishba's scope. P01-P04 have implemented and locally verified the platform; the earlier S22 absent-platform report remains a historical checkpoint. Current release blockers are remote protected PR/approval proof, registry credentials/publication and successful SHA-tagged CD evidence, plus human review. See docs/notes/alishba.md and docs/evidence/README.md.

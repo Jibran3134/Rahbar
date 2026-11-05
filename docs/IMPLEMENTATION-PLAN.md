@@ -4,6 +4,10 @@ Updated: 4 November 2026. This revision replaces the previous Ubuntu-based sched
 
 Target development days: 5–6 November. Assignment deadline: 8 November 2026, 23:59 PKT. Preserve 7 November for recovery.
 
+## Execution update: 5 November 2026
+
+Jibran authorized Codex to implement Alishba's platform scope and to keep local commits on main. Application S00-S21 and available S22 local checks passed; platform P01-P04 now supplies images, persistent Calico minikube deployment, Windows automation, scan-gated CI/CD and actual local fixture/real evaluation evidence. See both ledgers and docs/evidence/README.md. This supersedes earlier exclusive-writer restrictions for the authorized work; team authorship/human review is not invented. Required remote PR/protection/registry/CD evidence remains pending and is not replaced by local commits or tests.
+
 ## 1. Environment and capacity
 
 Development uses Windows, PowerShell, Python 3.12 in a project virtual environment, Docker Desktop in Linux-container mode, minikube, kubectl and Git. Developing inside Ubuntu, a WSL terminal, GNU Make or Bash is not required. Docker Desktop may use WSL 2 internally; Linux containers and Linux CI runners remain appropriate deployment environments.

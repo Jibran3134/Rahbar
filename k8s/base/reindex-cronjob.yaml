@@ -21,6 +21,7 @@ spec:
             app.kubernetes.io/name: indexer
             app.kubernetes.io/part-of: rahbar
         spec:
+          restartPolicy: OnFailure
           serviceAccountName: indexer
           automountServiceAccountToken: false
           securityContext:
@@ -71,7 +72,6 @@ spec:
           - name: snapshot
             configMap:
               name: snapshot-config
-          restartPolicy: OnFailure
           initContainers:
           - name: fetch-corpus
             image: rahbar-indexer:dev

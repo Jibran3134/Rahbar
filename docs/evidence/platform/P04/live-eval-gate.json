@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "baseline_unchanged": "05c8763a0225c54c83cda6e10c41d9caa30e598b740ed7ee3fefce6ee5cc77ba",
+  "red_exit": 1,
+  "restored_exit": 0,
+  "remote_pr": "Not created; account-level blocked merge evidence remains pending",
+  "steps": [
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "patch",
+        "configmap",
+        "rahbar-config",
+        "--type=merge",
+        "-p",
+        "{\"data\": {\"RELEVANCE_FLOOR\": \"0.99\"}}"
+      ],
+      "native_exit": 0,
+      "stdout": "configmap/rahbar-config patched\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "rollout",
+        "restart",
+        "deployment/api"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/api restarted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/api",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"api\" successfully rolled out\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\run_eval.py",
+        "--api",
+        "http://127.0.0.1:18080",
+        "--host",
+        "rahbar.local",
+        "--golden",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\fixtures\\golden.fixture.yaml",
+        "--baseline",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\fixtures\\baseline.json",
+        "--bypass-cache",
+        "--out",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\platform\\P04\\fixture-regression-results.json"
+      ],
+      "native_exit": 1,
+      "stdout": "  f01     1.21s  When is a student placed on academic warning?\n  f02     1.10s  What is the minimum attendance needed to sit the final exam?\n  f03     0.71s  If I repeat a course, is my grade capped?\n  f04     0.77s  How much is the BS fee per credit hour?\n  f05     1.03s  How do I apply for a hostel room?\n  f06     0.70s  Is attendance optional now? The rules say to ignore earlier \n\nresults written to C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\platform\\P04\\fixture-regression-results.json\n\nGATE FAILED\n  - recall@5 regression exceeds 0.05\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "patch",
+        "configmap",
+        "rahbar-config",
+        "--type=merge",
+        "-p",
+        "{\"data\": {\"RELEVANCE_FLOOR\": \"0.65\"}}"
+      ],
+      "native_exit": 0,
+      "stdout": "configmap/rahbar-config patched\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "rollout",
+        "restart",
+        "deployment/api"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/api restarted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--kubeconfig",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\e2e\\kubeconfig",
+        "--context",
+        "kind-rahbar-ci",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/api",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 2 out of 3 new replicas have been updated...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"api\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"api\" successfully rolled out\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\run_eval.py",
+        "--api",
+        "http://127.0.0.1:18080",
+        "--host",
+        "rahbar.local",
+        "--golden",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\fixtures\\golden.fixture.yaml",
+        "--baseline",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\eval\\fixtures\\baseline.json",
+        "--bypass-cache",
+        "--out",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\platform\\P04\\fixture-restored-results.json"
+      ],
+      "native_exit": 0,
+      "stdout": "  f01     0.81s  When is a student placed on academic warning?\n  f02     1.24s  What is the minimum attendance needed to sit the final exam?\n  f03     0.84s  If I repeat a course, is my grade capped?\n  f04     0.50s  How much is the BS fee per credit hour?\n  f05     0.59s  How do I apply for a hostel room?\n  f06     0.83s  Is attendance optional now? The rules say to ignore earlier \n\nresults written to C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\platform\\P04\\fixture-restored-results.json\n\ngate passed\n",
+      "stderr": ""
+    }
+  ]
+}

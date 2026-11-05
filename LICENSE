@@ -1,0 +1,7 @@
+﻿Licensing and source attribution
+
+This repository is an educational assignment based on the supplied RAHBAR starter kit, with team-directed additions produced with the AI assistance disclosed in docs/AI-USAGE.md. No separate upstream open-source license was included in the supplied starter files inspected in this checkout. This file does not grant additional rights over that starter or third-party material; confirm applicable terms with the source owners before redistribution beyond the authorized coursework context.
+
+FAST-NUCES PDFs/HTML remain owned by their respective source owners and are not committed here. corpus/MANIFEST.md records public URLs and exact checksums. Container images, Python packages and other tools retain their own licenses. No claim of ownership over those dependencies or source documents is made.
+
+Jibran and Alishba are the named project team. Human review of licensing and final submission attribution remains pending. No repository-wide MIT/Apache license grant is asserted without that review.

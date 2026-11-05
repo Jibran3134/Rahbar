@@ -1,0 +1,269 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "set",
+        "image",
+        "deployment/ui",
+        "ui=rahbar-ui:platform-p03"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/ui image updated\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/ui",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"ui\" successfully rolled out\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "set",
+        "image",
+        "deployment/ui",
+        "ui=rahbar-ui:platform-p04"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/ui image updated\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/ui",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"ui\" successfully rolled out\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "rollout",
+        "undo",
+        "deployment/ui"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/ui rolled back\n",
+      "stderr": "Warning: resource deployments/ui was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/ui",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"ui\" successfully rolled out\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "set",
+        "image",
+        "deployment/ui",
+        "ui=rahbar-ui:platform-p04"
+      ],
+      "native_exit": 0,
+      "stdout": "deployment.apps/ui image updated\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "rollout",
+        "status",
+        "deployment/ui",
+        "--timeout=300s"
+      ],
+      "native_exit": 0,
+      "stdout": "Waiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"ui\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"ui\" successfully rolled out\n",
+      "stderr": ""
+    }
+  ],
+  "observations": [
+    {
+      "time": 1793883772.539951,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883773.0865088,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883773.6322315,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883774.1715076,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883774.7095969,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883775.2452428,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883775.784371,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883776.3226328,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883780.7477458,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883781.269438,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883781.8172493,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883782.34201,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883782.8676636,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883783.4012234,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883787.7150445,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883788.2493243,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883788.8105886,
+      "status": 200,
+      "new": true
+    },
+    {
+      "time": 1793883789.3495898,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883792.787267,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883793.3201013,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883793.8548021,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883794.3805194,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883794.916783,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883795.4479961,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883795.9876184,
+      "status": 200,
+      "new": false
+    },
+    {
+      "time": 1793883796.5318112,
+      "status": 200,
+      "new": true
+    }
+  ],
+  "initial_attempt": "A previous immediate GET raced Ingress endpoint propagation after rollout; the new page was subsequently observed. This check waits for actual visibility.",
+  "before_hash": "68d134acfad4824c87f916bb6276d2d61c04322f4b30e25819a7fab1945d8539",
+  "after_hash": "48f763a5a57f700bebbc910f73affd92b7b2235c35239e112c94e846248c7d13",
+  "rollback_hash": "68d134acfad4824c87f916bb6276d2d61c04322f4b30e25819a7fab1945d8539",
+  "final_image": "rahbar-ui:platform-p04"
+}
