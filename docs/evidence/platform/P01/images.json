@@ -1,0 +1,17 @@
+[
+  {
+    "name": "rahbar-api:platform-p01",
+    "id": "sha256:dcd4a80c4cbd91c0a1b0583a0e4039c5c9766853ada8f0805fa986f9fb51282f",
+    "user": "10001:10001"
+  },
+  {
+    "name": "rahbar-indexer:platform-p01",
+    "id": "sha256:a7b116d4bec1b0824fe7915de38f0f771c0c963094603d225782c5034769a504",
+    "user": "10001:10001"
+  },
+  {
+    "name": "rahbar-ui:platform-p01",
+    "id": "sha256:12fcd0c2d62cfe0ed5d72668633a8dfe6e1d33b7215ab6f1df659e9fea3c45d4",
+    "user": "10001:10001"
+  }
+]

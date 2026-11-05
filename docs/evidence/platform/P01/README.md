@@ -1,0 +1,5 @@
+# P01 - Images and UI sessions
+
+PASS on 5 November 2026. Actual Docker builds and restrictive runtime checks passed for three immutable-base images. API/UI run as 10001 with read-only roots, dropped capabilities and temporary writable /tmp. API returns validated cited stub output without reasoning. Indexer OCR recovered all eight pages of the original scanned policy using image-native Tesseract. Native node UI tests passed for issued-session reuse/reset and text-only rendering; two snapshot-provisioning tests passed.
+
+Commands: docker build -t rahbar-{api,indexer,ui}:platform-p01 <context> (each context separately); python scripts/container_smoke.py; node scripts/ui.test.cjs; python -m pytest scripts/tests -q -p no:cacheprovider. Exact Docker argv/exits/output are in container-smoke.json, base/image IDs in Dockerfiles/images.json, and native build transcripts adjacent. Image vulnerability scanning and cluster acceptance remain later gates. Codex implemented the platform scope at Jibran's request; human review is pending.

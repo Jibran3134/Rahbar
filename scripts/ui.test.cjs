@@ -1,0 +1,38 @@
+// Native node tests: no UI build step or third-party browser dependency.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+class Node {
+  constructor() { this.children = []; this.disabled = false; this.listeners = {}; }
+  setAttribute() {}
+  append(...nodes) { this.children.push(...nodes); }
+  replaceChildren() { this.children = []; }
+  addEventListener(event, fn) { this.listeners[event] = fn; }
+  remove() {}
+  scrollIntoView() {}
+  focus() {}
+  set innerHTML(_) { throw Error('Untrusted markup must never execute'); }
+}
+const elements = Object.fromEntries(['thread','ask','question','send','new-chat'].map(id => [id,new Node()]));
+const calls = [];
+const context = vm.createContext({
+  URLSearchParams, location: {search:'',origin:'http://test'}, window: {},
+  document: {getElementById: id => elements[id],createElement: () => new Node()},
+  fetch: async (_, options) => {
+    calls.push(JSON.parse(options.body));
+    return {ok:true,json:async () => ({session_id:'server_session_1',answer:'<script>unsafe</script>',citations:[]}),
+      headers:{get:()=>'BYPASS'}};
+  }
+});
+const html = fs.readFileSync('ui/index.html','utf8');
+vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+(async () => {
+  await vm.runInContext('ask("First question")',context);
+  await vm.runInContext('ask("And the old policy?")',context);
+  assert.equal(calls[0].session_id,undefined);
+  assert.equal(calls[1].session_id,'server_session_1');
+  elements['new-chat'].listeners.click();
+  await vm.runInContext('ask("New independent question")',context);
+  assert.equal(calls[2].session_id,undefined);
+  console.log('PASS: server-issued sessions reused, reset works, untrusted output stays text');
+})().catch(error => { console.error(error); process.exitCode=1; });

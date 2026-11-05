@@ -1,0 +1,6 @@
+**
+!requirements.txt
+!pipeline/
+!pipeline/**
+**/__pycache__/
+**/*.pyc
