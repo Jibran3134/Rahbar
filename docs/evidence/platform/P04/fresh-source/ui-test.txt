@@ -1,0 +1,3 @@
+PASS: server-issued sessions reused, reset works, untrusted output stays text
+
+NATIVE_EXIT=0

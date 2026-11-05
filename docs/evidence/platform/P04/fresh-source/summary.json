@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "tested_commit": "756304d216fd16a32fbd7b123c40a87184c549ae",
+  "api_tests": 160,
+  "indexer_tests": 130,
+  "evaluator_tests": 9,
+  "snapshot_tests": 2,
+  "total_pytest": 301,
+  "platform_checks": [
+    {
+      "check": "snapshot-tests",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "scripts/tests",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    },
+    {
+      "check": "platform-lint",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    },
+    {
+      "check": "platform-invariants",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "scripts/check_platform.py"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    },
+    {
+      "check": "ui-test",
+      "command": [
+        "node",
+        "scripts/ui.test.cjs"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    },
+    {
+      "check": "workflow-lint",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\tools\\bin\\actionlint.exe",
+        "-shellcheck=",
+        "-color=false"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    },
+    {
+      "check": "dependencies",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "exit_code": 0
+    }
+  ],
+  "application_checks": [
+    {
+      "check": "api-tests",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d\\api",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": "api-mypy",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d\\api",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "app"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": "ruff",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "api",
+        "indexer",
+        "eval",
+        "corpus"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": "indexer-tests",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d\\indexer",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": "indexer-mypy",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d\\indexer",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "pipeline"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": "eval-tests",
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-platform-756304d",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "eval/tests",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "environment": "Fresh committed source; reused installed Python/dependencies. Real/fixture live stacks were independently verified in P03/P04, not re-provisioned by this offline fresh-source check.",
+  "remote_release": "Pending permission, credentials and actual protected PR/CD evidence"
+}
