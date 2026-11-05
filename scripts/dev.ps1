@@ -14,6 +14,10 @@ param(
 $ErrorActionPreference = 'Stop'
 $RepoRoot = Split-Path $PSScriptRoot -Parent
 $Python = Join-Path $RepoRoot '.venv/Scripts/python.exe'
+$OriginalContext = $null
+if ($Task -in @('cluster','images') -and (Get-Command kubectl -ErrorAction SilentlyContinue)) {
+    $OriginalContext = (& kubectl config current-context 2>$null)
+}
 function Invoke-Native([string]$Exe, [string[]]$Arguments) {
     & $Exe @Arguments
     if ($LASTEXITCODE -ne 0) { throw "$Exe exited with native status $LASTEXITCODE" }
@@ -37,7 +41,7 @@ try {
             if (-not (Test-Path -LiteralPath $Python)) { Invoke-Native 'py' @('-3.12','-m','venv','.venv') }
             Invoke-Native $Python @('-m','pip','install','-r','api/requirements-dev.txt','-r','indexer/requirements-dev.txt')
         }
-        'tools' { Invoke-Native $Python @('scripts/bootstrap_tools.py','minikube','kubeconform','trivy','kind','--manifests') }
+        'tools' { Invoke-Native $Python @('scripts/bootstrap_tools.py','minikube','kubeconform','trivy','kind','actionlint','--manifests') }
         'test' {
             foreach ($part in @('api','indexer')) {
                 Push-Location $part
@@ -56,7 +60,7 @@ try {
         'manifests' {
             Invoke-Native $Python @('scripts/check_platform.py')
             foreach ($profile in @('dev','prod','ci')) {
-                Invoke-Native $Python @('scripts/deploy.py','render','--overlay',$profile,'--tag',$Tag,'--registry',$Registry)
+                Invoke-Native $Python @('scripts/deploy.py','render','--overlay',$profile,'--tag',$Tag,"--registry=$Registry")
                 Invoke-Native (Find-Tool 'kubeconform') @('-strict','-summary','-kubernetes-version','1.35.0',".venv/platform/$profile/rendered.yaml")
             }
         }
@@ -75,7 +79,9 @@ try {
             Invoke-Native (Find-Tool 'minikube') (@('image','load','-p','rahbar') + $names)
         }
         'apply' {
-            Invoke-Native $Python @('scripts/deploy.py','apply','--overlay',$Overlay,'--tag',$Tag,'--registry',$Registry,'--context',$Context,'--ollama-url',$OllamaUrl,'--host-cidr',$HostCidr)
+            $deployArguments = @('scripts/deploy.py','apply','--overlay',$Overlay,'--tag',$Tag,"--registry=$Registry",'--context',$Context)
+            if ($Overlay -ne 'ci') { $deployArguments += @('--ollama-url',$OllamaUrl,'--host-cidr',$HostCidr) }
+            Invoke-Native $Python $deployArguments
         }
         'index' {
             $job = 'manual-reindex-' + [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
@@ -84,11 +90,17 @@ try {
         }
         'eval' { Invoke-Native $Python @('eval/run_eval.py','--api',$Api,'--host','rahbar.local','--golden','eval/golden.yaml','--baseline','eval/baseline.json','--out','.venv/real-results.json','--bypass-cache') }
         'check' { Invoke-Native $Python @('scripts/check_submission.py') }
-        'e2e' { Invoke-Native $Python @('scripts/ci_e2e.py','--tag',$Tag,'--registry',$Registry) }
+        'e2e' { Invoke-Native $Python @('scripts/ci_e2e.py','--tag',$Tag,"--registry=$Registry") }
         'dev' {
             $env:RETRIEVER='stub'; $env:LLM_PROVIDER='stub'; $env:SERVE_UI_DIR='../ui'
             Push-Location api
             try { Invoke-Native $Python @('-m','uvicorn','app.main:app','--host','127.0.0.1','--port','8000') } finally { Pop-Location }
         }
     }
-} finally { Pop-Location }
+} finally {
+    if ($Task -in @('cluster','images') -and $OriginalContext) {
+        $CurrentContext = (& kubectl config current-context 2>$null)
+        if ($CurrentContext -ne $OriginalContext) { & kubectl config use-context $OriginalContext | Out-Null }
+    }
+    Pop-Location
+}

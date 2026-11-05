@@ -58,9 +58,9 @@ def apply(documents, context):
     kubectl("apply", "-f", "-", data=yaml.safe_dump_all(namespace))
     kubectl("apply", "-f", "-", data=yaml.safe_dump_all(foundation))
     for name in ["statefulset/chroma", "deployment/redis"]:
-        kubectl("-n", "rahbar", "rollout", "status", name, "--timeout=300s")
+        kubectl("-n", "rahbar", "rollout", "status", name, "--timeout=900s")
     if any(d["kind"] == "Deployment" and d["metadata"]["name"] == "embedding" for d in foundation):
-        kubectl("-n", "rahbar", "rollout", "status", "deployment/embedding", "--timeout=600s")
+        kubectl("-n", "rahbar", "rollout", "status", "deployment/embedding", "--timeout=900s")
     # Completed Jobs have immutable pod templates. Reindex through the CronJob for later rebuilds.
     existing = native([*command, "-n", "rahbar", "get", "job", "indexer", "--ignore-not-found", "-o", "name"])
     if not existing.strip():

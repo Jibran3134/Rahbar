@@ -1,0 +1,14 @@
+﻿[
+    {
+        "exit_code":  0,
+        "image":  "api"
+    },
+    {
+        "exit_code":  0,
+        "image":  "indexer"
+    },
+    {
+        "exit_code":  0,
+        "image":  "ui"
+    }
+]

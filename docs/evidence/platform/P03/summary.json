@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "local_ci_equivalent": true,
+  "remote_github_runs": "Not run: no push authorized",
+  "registry": "docker.io/jibran3134",
+  "scan_exit_codes": [
+    {
+      "exit_code": 0,
+      "image": "api"
+    },
+    {
+      "exit_code": 0,
+      "image": "indexer"
+    },
+    {
+      "exit_code": 0,
+      "image": "ui"
+    }
+  ],
+  "coverage_py": {
+    "api": 0.9012,
+    "indexer": 0.9026
+  },
+  "real_fixture_scores": {
+    "recall5": 1,
+    "citations": 1,
+    "abstention": 1
+  },
+  "secrets_required": [
+    "DOCKERHUB_USERNAME",
+    "DOCKERHUB_TOKEN"
+  ]
+}

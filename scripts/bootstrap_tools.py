@@ -54,7 +54,7 @@ def install(names, manifests=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("names", nargs="*", choices=["kind", "kubeconform", "trivy", "minikube"])
+    parser.add_argument("names", nargs="*", choices=["kind", "kubeconform", "trivy", "minikube", "actionlint"])
     parser.add_argument("--manifests", action="store_true")
     args = parser.parse_args()
     install(args.names, args.manifests)

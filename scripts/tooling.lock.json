@@ -47,6 +47,21 @@
     "ingress": {
       "url": "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/kind/deploy.yaml",
       "sha256": "2a3ae008c8786431115502644e77ab398fdebfb721a5d1195ed3089cde3299df"
+    },
+    "metrics-server": {
+      "url": "https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.9.0/components.yaml",
+      "sha256": "1cec29a5267809306a2c6ec74a3e449abbb705b4a8beed0c8a1963910f72c79b"
+    }
+  },
+  "actionlint": {
+    "version": "1.7.12",
+    "windows": {
+      "url": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_windows_amd64.zip",
+      "sha256": "6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9"
+    },
+    "linux": {
+      "url": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz",
+      "sha256": "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
     }
   }
 }
