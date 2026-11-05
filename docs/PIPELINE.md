@@ -1,6 +1,6 @@
 ﻿# Indexing and retrieval pipeline
 
-Status through S17: indexing/query stages, shared sessions, cache, truthful readiness, observability, indexed-poison safety and evaluator implemented. Full integration and measured configuration/failure experiments are in progress.
+Status through S19: indexing/query stages, shared sessions, cache, truthful readiness, observability, indexed-poison safety and evaluator implemented. Full real/fixture integration and measured configuration selection passed; controlled failure experiments and final handoff are being completed. Platform/release acceptance remains external.
 
 ## Extraction
 
@@ -99,7 +99,7 @@ Nineteen owned cleaning tests also protect repeated policy sentences/headings, l
 
 ## Chunking — implemented S05 / quality selection pending S19
 
-Implementation: indexer/pipeline/chunk.py. No network/dependency calls or model tokenizer downloads. chunk(doc, size, overlap) rejects invalid/non-integer/bool settings before processing, then returns nonempty bounded chunks without changing its input. Initial configuration remains 400/50, pending actual retrieval comparisons in S19.
+Implementation: indexer/pipeline/chunk.py. No network/dependency calls or model tokenizer downloads. chunk(doc, size, overlap) rejects invalid/non-integer/bool settings before processing, then returns nonempty bounded chunks without changing its input. The initial 400/50 configuration was provisional; S19 selected 250/30 from real retrieval comparisons (ADR0002).
 
 ### Counting and structural boundaries
 
@@ -167,7 +167,7 @@ The native model's initial incorrect [1/4.25] inline citation was rejected in th
 
 Redis sessions use fresh unpredictable IDs, six bounded turns, configurable TTL and transactional append/trim/expire. Existing sessions bypass semantic cache; supported elliptical follow-ups include only the previous user question. Stored assistant answers never become trusted evidence. Two native processes shared a session and correctly retrieved the historical policy. Concurrent turns complete in completion order; clients should serialize turns.
 
-Semantic candidates are bounded sorted sets per immutable generation/model/provider/prompt/settings namespace. One prepared vector is shared with retrieval. Per-entry expiry and transactionally capped candidates enforce TTL and CACHE_MAX_ENTRIES. Cosine threshold and numeric/version/scope/negation/course-code signatures must agree. Only validated grounded non-low-confidence standalone answers are stored. Hits receive fresh request/session IDs. Redis is trusted internal state; manual in-place generation mutation violates publication contracts. Native Monday-to-Tuesday publication demonstrated useful paraphrase HIT, version rejection, follow-up BYPASS and changed-policy invalidation. See ADR0003/S13 evidence; default threshold .95 remains provisional until S19.
+Semantic candidates are bounded sorted sets per immutable generation/model/provider/prompt/settings namespace. One prepared vector is shared with retrieval. Per-entry expiry and transactionally capped candidates enforce TTL and CACHE_MAX_ENTRIES. Cosine threshold and numeric/version/scope/negation/course-code signatures must agree. Only validated grounded non-low-confidence standalone answers are stored. Hits receive fresh request/session IDs. Redis is trusted internal state; manual in-place generation mutation violates publication contracts. Native Monday-to-Tuesday publication demonstrated useful paraphrase HIT, version rejection, follow-up BYPASS and changed-policy invalidation. See ADR0003/S13 evidence; threshold .95 was selected in S19 from explicit small-sample near-miss measurements.
 
 ## Probes and telemetry - S14/S15 implemented
 
@@ -182,3 +182,17 @@ Actual indexed document/user override attacks were protected by bounded validati
 Recall matches unique exact source/section pairs in the first k actual positions. Duplicate relevant/hit pairs cannot inflate scores; empty relevance is undefined. Citation validity matches unique source/section/page triples; grounded-without-citations scores zero. Both are macro means over defined question scores with denominators and by-type recall. Required abstentions need false groundedness, no citations and low confidence. Optional expect strings are diagnostic, not entailment certification.
 
 Dataset hash, runtime configuration/active identity, source revision/content digest and per-question outcomes/timings accompany results. Missing/invalid/cross-dataset baselines and undefined/nonfinite metrics fail closed. Gates allow recall@5 drop at most .05, require citation validity >=.95 and all required abstentions. Explicit --update-baseline bootstraps only after absolute gates; failed runs never refresh a baseline. --bypass-cache supports clean experiments; --responses is explicitly labeled diagnostic replay. The actual CLI rejected a fabricated-citation replay in S17. Real/fixture/probe baselines remain separate; full selection follows S18/S19.
+
+## S19 final operating point and limitations
+
+Shipped defaults: CHUNK_SIZE=250, CHUNK_OVERLAP=30, RELEVANCE_FLOOR=.74, CACHE_THRESHOLD=.95. All three candidate indices used the same frozen questions, actual nomic vectors and exact evaluator functions. Raw recall@3/@5: 250/30=1.0; 400/50 and 650/80=.933333. Counts/amplification and by-type data are in S19-measurements.json and ADR0002. The assignment relevance rule is query-level: abstain if no valid hit clears the floor, otherwise retain all valid top-k context. Earlier per-passage filtering incorrectly discarded the historical rule after accepting the question; the superseded measurements are preserved. Final returned-evidence recall@3/@5=.933333, citation integrity=1.0, required abstentions=1.0. Fixture scores are all 1.0. Separate eval/baseline.json and eval/fixtures/baseline.json were written explicitly after passing absolute gates.
+
+Cache candidates .90/.95/.98 yielded respectively 2/1, 1/0, 0/0 positive/false hits on two paraphrases and five near misses. The .90 regular-versus-summer false hit ruled it out. This is calibration, not a general semantic-equivalence guarantee. Final .95 matches the lowest tested threshold with zero false hits.
+
+Model string-pattern experiments were rejected after the runtime ignored escaped spaces and admitted malformed output or stalled on constraints. Final format is the base Answer JSON schema. A deterministic adapter may render existing exact citation objects into inline tags only when every triple matches this request and there is one source/section pair; unknown or ambiguous references are not repaired. Leading known tags can be moved to the displayed sentence end. The independent final per-claim/source/page validator and one-retry/fallback policy still run. Actual native source-public observations and red tests are retained.
+
+Improved rendering exposed a real indexed-poison escape previously hidden by format fallback. The shared generation path now quarantines obvious assistant-directed instruction blocks and user override sentences before generation, preserving original stored documents/IDs and remaining factual text. Empty safe context refuses before generation. Native document/user attacks were rerun after the fix. This conservative pattern guard can falsely remove ambiguous text and is not universal injection detection. No source truth or golden labels were rewritten.
+
+The final real report has five expect-string misses. Two are terse negative answers rather than the literal expected keyword; q07 is a conservative floor refusal, q08 a verification fallback, and q17 returns a heading rather than the requested condition. These are residual usefulness/semantic limits, not hidden by perfect citation-integrity numbers. Citation validity is not answer correctness. The fixture report has no expect misses.
+
+Full Windows extraction/OCR/embedding/publication produced 813 chunks. Actual interpreter OS peak was 238,583,808 bytes (227.53 MiB), excluding separate OCR children; the initial roughly 4-MiB launcher measurement was invalid and retained separately. This is not a pod/cgroup peak or a tested memory-limit margin. Final Kubernetes measurements remain required from platform work.

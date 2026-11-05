@@ -23,7 +23,7 @@ Updated: 5 November 2026, PKT. This is execution state, not a claim that the pla
 | S16 | PASS | Indexed poison safety verification | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S16](../evidence/app/sprints/S16.md) | Continue authorized range |
 | S17 | PASS | Fail-closed evaluator and regression gates | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S17](../evidence/app/sprints/S17.md) | Continue authorized range |
 | S18 | PASS | Real and fixture query integration | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S18](../evidence/app/sprints/S18.md) | Continue authorized range |
-| S19 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
+| S19 | PASS | Measured configuration and final baselines | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S19](../evidence/app/sprints/S19.md) | Continue authorized range |
 | S20 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
 | S21 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
 | S22 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
