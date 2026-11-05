@@ -26,7 +26,7 @@ Updated: 5 November 2026, PKT. Application implementation is verified through S2
 | S19 | PASS | Measured configuration and final baselines | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S19](../evidence/app/sprints/S19.md) | Continue authorized range |
 | S20 | PASS | Four controlled stage failures and restoration | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S20](../evidence/app/sprints/S20.md) | Continue authorized range |
 | S21 | PASS | Final application review, documentation and platform handoff | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S21](../evidence/app/sprints/S21.md) | Continue authorized range |
-| S22 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
+| S22 | BLOCKED | Fresh committed-source local acceptance passed; platform absent | 299 tests; both mypy; Ruff; coverage pass | Real/fixture baseline CLI gates pass | Native services only; cluster/CD not available | [S22](../evidence/app/sprints/S22.md) | Develop platform then rerun same-release gate |
 
 ## S00 handoff for Alishba
 
@@ -152,7 +152,7 @@ Use Python 3.12 and the existing pinned requirements for each independent build 
 
 Indexer: from indexer working directory, run `python -m pipeline.run` with the environment above. For native OCR set TESSERACT_CMD to the actual installed executable; never bake a Windows path into Linux configuration. All real writers must follow the exclusive lock/publication protocol. **Do not use --dummy for final CI or release:** it does not publish the required active-control identity. API: from api working directory, run `python -m uvicorn app.main:app --host 0.0.0.0 --port 8000` with matching environment. Downloads/extracted corpus/vectors in corpus/raw remain ignored; provision verified corpus separately.
 
-CI fixture path: real extraction/chunking/embedding/publication of corpus/ci-fixtures into a separate collection, same nomic model, API RETRIEVER=chroma, LLM_PROVIDER=stub, RELEVANCE_FLOOR=.65. This profile differs explicitly from the .74 real profile. From root run:
+CI fixture path: real extraction/chunking/embedding/publication of eval/fixtures into a separate collection, same nomic model, API RETRIEVER=chroma, LLM_PROVIDER=stub, RELEVANCE_FLOOR=.65. This profile differs explicitly from the .74 real profile. From root run:
 
 ```powershell
 python eval/run_eval.py --api http://127.0.0.1:8000 --golden eval/fixtures/golden.fixture.yaml --baseline eval/fixtures/baseline.json --out eval/fixtures/results.json --bypass-cache
@@ -169,3 +169,8 @@ Native submission checker: 83 passed, 12 warnings, 29 failures, native exit 1 (S
 Six captured historical failure transcripts were archived from .txt to .log, with exact bytes and SHA-256 preserved, because old captured placeholder error text was being counted as current source. S21-historical-transcript-map.json maps original command paths to archive paths. Historical commands remain unchanged. The later generation diagnostic rerun is saved as S19-format-diagnosis-rerun.json; original S18 diagnosis is preserved.
 
 Complete platform image builds/scans, manifests/probes/resources/network policies/storage/Ingress/HPA, protected fixture regression CI and SHA-tagged dependent CD, actual rollout and rollback, endpoint/model mismatch and recovery, deletion/reindex/cache/persistence tests, screenshots and required submission links. Assemble final README/engineering notes/disclosure from these contributions and review the actual assignment. S22 must stay BLOCKED until those requirements pass on the same released application revision. No Kubernetes success, blocked-merge screenshot, protected PR or CD URL is fabricated.
+
+
+## S22 local acceptance and remaining release work
+
+Fresh checkout of f6e92017aae2b311cad119f7a9cf5be05d6db77d passed 299 tests, both mypy checks, Ruff, API/indexer line coverage and actual fixture/real baseline CLI gates. Real recall@5=.933333, citation integrity/required abstentions=1; fixture scores all 1. Source/golden/baseline digest was unchanged. S22 real diagnostic misses are q01/q07/q08/q15; q17 answered the historical condition in this run, while its original S19 heading failure remains recorded. See [S22](../evidence/app/sprints/S22.md) for exact commands, environment limits and platform release blockers. Fixture path correction is preserved as an orchestration failure; committed production sources were unchanged. Full release acceptance remains BLOCKED until the separately planned platform work passes.

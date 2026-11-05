@@ -1,0 +1,80 @@
+[
+  {
+    "name": "fresh-checks",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\sprint_checks.py",
+      "S22",
+      "--eval",
+      "--indexer"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-api-coverage",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+      "api"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-indexer-coverage",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+      "indexer"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-fixture-index",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pipeline.run"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\indexer",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-fixture-eval",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\run_eval.py",
+      "--api",
+      "http://127.0.0.1:8002",
+      "--golden",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\fixtures\\golden.fixture.yaml",
+      "--baseline",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\fixtures\\baseline.json",
+      "--out",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\sprints\\S22-fixture-results.json",
+      "--bypass-cache"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-real-eval",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\run_eval.py",
+      "--api",
+      "http://127.0.0.1:8002",
+      "--golden",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\golden.yaml",
+      "--baseline",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\baseline.json",
+      "--out",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\sprints\\S22-real-results.json",
+      "--bypass-cache"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  }
+]

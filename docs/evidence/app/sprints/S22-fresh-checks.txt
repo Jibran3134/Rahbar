@@ -1,0 +1,32 @@
+api-tests 0 ........................................................................ [ 45%]
+........................................................................ [ 90%]
+................                                                         [100%]
+160 passed in 1.68s
+
+NATIVE_EXIT=0
+
+api-mypy 0 Success: no issues found in 28 source files
+
+NATIVE_EXIT=0
+
+ruff 0 All checks passed!
+
+NATIVE_EXIT=0
+
+indexer-tests 0 ........................................................................ [ 55%]
+..........................................................               [100%]
+130 passed in 3.64s
+
+NATIVE_EXIT=0
+
+indexer-mypy 0 Success: no issues found in 10 source files
+
+NATIVE_EXIT=0
+
+eval-tests 0 .........                                                                [100%]
+9 passed in 0.12s
+
+NATIVE_EXIT=0
+
+
+NATIVE_EXIT=0

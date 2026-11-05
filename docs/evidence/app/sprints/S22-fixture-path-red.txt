@@ -1,0 +1,4 @@
+{"ts": "2026-11-05T10:40:57Z", "logger": "rahbar.indexer", "msg": "indexer starting", "dummy": false, "embed_model": "nomic-embed-text", "collection": "rahbar_s22_fixtures_f6e92017", "chroma": "127.0.0.1:8001", "pod": "-"}
+no documents found in C:\Users\Jibran\Desktop\Rahbar\.venv\fresh-acceptance-f6e9201\corpus\ci-fixtures
+
+NATIVE_EXIT=1
