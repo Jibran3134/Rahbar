@@ -2784,9 +2784,9 @@
     },
     {
       "positive": false,
-      "a": "What is the regular semester withdrawal deadline?",
-      "b": "What is the summer semester withdrawal deadline?",
-      "cosine": 0.9010239941051249,
+      "a": "Can students drop a course in a regular semester?",
+      "b": "Can students drop a course in a summer semester?",
+      "cosine": 0.9128822269816489,
       "compatible": true
     }
   ],

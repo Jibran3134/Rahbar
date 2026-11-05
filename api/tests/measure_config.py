@@ -31,9 +31,12 @@ questions=yaml.safe_load(golden.read_text(encoding="utf-8"))["questions"]
 settings=replace(get_settings(),chroma_host="127.0.0.1",chroma_port=8001,ollama_url="http://127.0.0.1:11434")
 client=get_client(settings)
 qvectors={}
-configs=[]
+configs=(json.loads((base/"S19-measurements.json").read_text(encoding="utf-8"))["configurations"]
+         if "--cache-only" in sys.argv else [])
 structural=json.loads((base/"S05-live.json").read_text())["configurations"]
 for size,overlap in [(250,30),(400,50),(650,80)]:
+    if "--cache-only" in sys.argv:
+        break
     print("BUILD",size,overlap,flush=True)
     path=raw/f"_s05-chunks/chunks-{size}-{overlap}.jsonl"
     chunks=[Chunk(**json.loads(line)) for line in path.read_text(encoding="utf-8").splitlines()]
@@ -86,7 +89,7 @@ pairs=[
     (False,"Is CS101 required?","Is CS102 required?"),
     (False,"What is the admission deposit?","What is the hostel deposit?"),
     (False,"Withdrawal under August 2023 rules?","Withdrawal under June 2026 rules?"),
-    (False,"What is the regular semester withdrawal deadline?","What is the summer semester withdrawal deadline?")]
+    (False,"Can students drop a course in a regular semester?","Can students drop a course in a summer semester?")]
 retriever=ChromaRetriever(Settings(chroma_host="127.0.0.1",chroma_port=8001,ollama_url=settings.ollama_url))
 cache_rows=[]
 for positive,a,b in pairs:
