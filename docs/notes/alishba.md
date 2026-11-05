@@ -20,3 +20,13 @@ Default-context monitoring found rahbar selected after local tooling recovery; t
 
 
 Final fresh-source verification of 756304d216fd16a32fbd7b123c40a87184c549ae passed 301 pytest cases, UI tests, both mypy checks, Ruff, manifest/config invariants, actionlint and dependency consistency. The latest unchanged submission checker reports 163 passes, seven warnings, zero failures. Final development images use platform-p04; runtime/readiness/image IDs are in P04/final-state.json, with the API/indexer root filesystem layers matching the scan-passing images. A local dev branch was prepared without switching off main. Remaining work requires actual remote release authorization/credentials and human protected-review/merge evidence.
+
+
+## P05 remote delivery authorization and protection
+
+Jibran approved pushing review branches, configuring protection, creating regression/fix PRs and publishing SHA-tagged Docker Hub/CD releases. The tested code was pushed to dev; PR #1 uses a separate evidence/eval-gate worktree/branch with a deliberate CI-only floor .99 regression. Working main keeps the valid .65 fixture configuration. GitHub Actions' actual check contexts were bound to app ID 15368. After Jibran explicitly said not to require approval, protection retains PRs/required CI/admin enforcement but uses zero required approvals. No independent approval is fabricated; the assignment's one-approval criterion is unmet by user choice.
+
+DOCKERHUB_USERNAME=jibran3134 is configured; Jibran was given official instructions to create a Repo Read & Write token and add DOCKERHUB_TOKEN privately. No token was requested in chat. Initial remote failures were release-asset HTTP 504s before scan/schema checks, not accepted evidence of evaluation regression. Bounded retry logic was added and four targeted tests passed, bringing pytest total to 305. Original remote failure logs are preserved.
+
+
+P05 actual remote gate proof: dev CI run 42046219261 is green. PR #1 run 42046173348 reached the live fixture evaluator and failed with recall@5=0, citation_validity undefined and exit 1 under the deliberate .99 floor; all preceding lint/test/manifests/build/scan jobs passed. The PR reported BLOCKED with zero required approvals, proving CI enforcement rather than a review requirement. Logs, actual fixture responses and API snapshots are retained in platform/P05. DOCKERHUB_TOKEN and DOCKERHUB_USERNAME are now present in Actions; only secret names were checked. Registry authentication remains unverified until the publish job. Restore .65 on the same PR without changing golden questions/baseline, then require a green run before merge.
