@@ -816,3 +816,8 @@ Jibran's application sprints S00-S21 have passed; see [the ledger and final plat
 ## Subsequent platform execution
 
 Jibran subsequently authorized implementation of Alishba's scope. P01-P04 have implemented and locally verified the platform; the earlier S22 absent-platform report remains a historical checkpoint. Current release blockers are remote protected PR/approval proof, registry credentials/publication and successful SHA-tagged CD evidence, plus human review. See docs/notes/alishba.md and docs/evidence/README.md.
+
+
+## Final delivery follow-through (6 November 2026 PKT)
+
+The earlier S22 blocked-platform report is historical. Alishba-scope P01-P05 implementation and remote delivery are now verified: PR #1 demonstrated an actual failed evaluation and passed after correction, then merged through required CI. CD run 42090196319 published the three full-SHA images and successfully deployed/evaluated them in an ephemeral cluster. All source, tests and evidence are committed; see [submission links](SUBMISSION.md) and [Alishba's execution ledger](notes/alishba.md). No optional application features remain scheduled. The assignment's independent approval remains unmet at Jibran's explicit request; exact authenticated settings/grey-button screenshots and human submission/review remain outside the recorded evidence.

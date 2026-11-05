@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tag": "4710bb834fe2b52805776f088fd8da3233a50378",
+  "registry": "",
+  "retrieval": "real Chroma and nomic embeddings",
+  "generation": "stub",
+  "ingress": "http://127.0.0.1:18080"
+}

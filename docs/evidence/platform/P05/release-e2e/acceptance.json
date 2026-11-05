@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tag": "47fdad99c57f5bddf437bcf318fe1eaee22e1763",
+  "registry": "docker.io/jibran3134",
+  "retrieval": "real Chroma and nomic embeddings",
+  "generation": "stub",
+  "ingress": "http://127.0.0.1:18080"
+}

@@ -6,13 +6,13 @@ Jibran authorized implementation of Alishba's scope on 5 November 2026 and conti
 | --- | --- | --- | --- |
 | P01 | Non-root images, runtime/OCR checks, UI shared sessions | PASS | P01/container-smoke.json; images.json; node UI test |
 | P02 | Kustomize and isolated real-corpus minikube deployment | PASS; failure/network experiments continue in P04 | P02 Ingress, Job, endpoints/HPA and cgroup evidence |
-| P03 | CI/CD, security remediation and real fixture cluster | Local PASS; remote release pending | P03/summary.json, scans, coverage and e2e |
-| P04 | Network/recovery/mismatch/reindex/real eval/rollout/docs | Local PASS including fresh source; remote release pending | P04/acceptance.json, real-results.json, rollout-rollback.json, live-eval-gate.json |
+| P03 | CI/CD, security remediation and real fixture cluster | Local PASS; remote delivery tracked in P05 | P03/summary.json, scans, coverage and e2e |
+| P04 | Network/recovery/mismatch/reindex/real eval/rollout/docs | Local PASS including fresh source; remote delivery tracked in P05 | P04/acceptance.json, real-results.json, rollout-rollback.json, live-eval-gate.json |
 
 Existing context k3d-civicpulse-ci and unrelated Docker workloads must remain untouched. Rahbar cluster operations use an explicit separate context/profile. Native application services and data remain separate from cluster state.
 
 
-## Current platform handoff
+## Historical platform handoff before remote authorization
 
 Docker Hub account metadata identified jibran3134, which Jibran requested using. GitHub publishing secrets are not configured; no token was read or displayed and nothing was pushed/published. P01 committed 9879bd5, P02 1835903 and P03 ef57ee9 on main. Local fixture and real Ingress gates passed. User-requested main commits do not establish protected remote delivery. Account gates still require actual protection/PR/approval, failed-and-corrected eval PR proof, registry credentials and SHA publication/CD links. No authorship or human review by Alishba is fabricated.
 
@@ -30,3 +30,12 @@ DOCKERHUB_USERNAME=jibran3134 is configured; Jibran was given official instructi
 
 
 P05 actual remote gate proof: dev CI run 42046219261 is green. PR #1 run 42046173348 reached the live fixture evaluator and failed with recall@5=0, citation_validity undefined and exit 1 under the deliberate .99 floor; all preceding lint/test/manifests/build/scan jobs passed. The PR reported BLOCKED with zero required approvals, proving CI enforcement rather than a review requirement. Logs, actual fixture responses and API snapshots are retained in platform/P05. DOCKERHUB_TOKEN and DOCKERHUB_USERNAME are now present in Actions; only secret names were checked. Registry authentication remains unverified until the publish job. Restore .65 on the same PR without changing golden questions/baseline, then require a green run before merge.
+
+
+## Final P05 delivery outcome (6 November 2026 PKT)
+
+PASS for implemented remote delivery: corrected PR CI 42088730566 passed all checks; PR #1 merged as 47fdad99c57f5bddf437bcf318fe1eaee22e1763. CD 42090196319 passed verification, publication of the exact scanned API/indexer/UI artifacts under that full SHA, registry pulls and fresh ephemeral-cluster rollout/Ingress/evaluation. The published-image fixture scores were recall@5=1, citation validity=1 and required abstentions=1 with zero execution errors. Registry digests, original hosted artifacts, metadata and real public red/green/release screenshots are in P05. API/indexer hosted coverage was 90.12%/90.26%; the code has 305 pytest cases. See docs/SUBMISSION.md for all required links.
+
+After Docker restarted, the stopped existing Rahbar minikube profile and native Ollama were restarted without recreating data. Direct readiness, public Ingress UI/info returned 200; persistent claims remained bound and HPA CPU recovered to 14%/70%. The original k3d-civicpulse-ci context was preserved. The first ad hoc smoke used an incorrect /api/readyz Ingress route; it was corrected to the actual /readyz API Service probe, with the failed assumption recorded in local-after-restart.json. No application change was needed.
+
+Remaining rubric exceptions: Jibran explicitly removed required independent approval (actual required count zero); Alishba-authored commits/human review are not claimed. Public GitHub hides the authenticated merge box/settings, so the exact grey merge-button/protection screenshots are not present; real API proof and actual workflow screenshots are supplied instead. Classroom submission remains a human task. These exceptions do not convert into fabricated PASS claims.
