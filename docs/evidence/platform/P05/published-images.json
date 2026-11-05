@@ -1,0 +1,14 @@
+[
+  {
+    "image": "docker.io/jibran3134/rahbar-api:47fdad99c57f5bddf437bcf318fe1eaee22e1763",
+    "inspect": "Name:      docker.io/jibran3134/rahbar-api:47fdad99c57f5bddf437bcf318fe1eaee22e1763\nMediaType: application/vnd.docker.distribution.manifest.v2+json\nDigest:    sha256:c5464c410a1d723117a19c67afb08a4adbf572149eb9ad3c6ded45a1c5325759\n"
+  },
+  {
+    "image": "docker.io/jibran3134/rahbar-indexer:47fdad99c57f5bddf437bcf318fe1eaee22e1763",
+    "inspect": "Name:      docker.io/jibran3134/rahbar-indexer:47fdad99c57f5bddf437bcf318fe1eaee22e1763\nMediaType: application/vnd.docker.distribution.manifest.v2+json\nDigest:    sha256:60f265cc9618618b896ce00e2c8d5eb9706d54c2cda563e319162d82ffd21aa9\n"
+  },
+  {
+    "image": "docker.io/jibran3134/rahbar-ui:47fdad99c57f5bddf437bcf318fe1eaee22e1763",
+    "inspect": "Name:      docker.io/jibran3134/rahbar-ui:47fdad99c57f5bddf437bcf318fe1eaee22e1763\nMediaType: application/vnd.docker.distribution.manifest.v2+json\nDigest:    sha256:2ed02632bd679e5e443ce6a55d09a34ea2570d1d406c3409342bb3f94745f59d\n"
+  }
+]
