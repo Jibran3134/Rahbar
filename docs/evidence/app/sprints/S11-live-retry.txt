@@ -1,0 +1,190 @@
+{"ts": "2026-11-05T07:16:19Z", "level": "INFO", "logger": "rahbar.api", "msg": "api started", "request_id": "-", "retriever": "chroma", "llm_provider": "ollama-host", "embed_model": "nomic-embed-text", "top_k": 5}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/auth/identity \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_97765075e99c4e4fbf05bd0c6999eba0 \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/embed \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:20Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/query \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:38Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:38Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation validation/failure", "request_id": "10c9ae61fba24029b30141f87b4ea438", "failure_kind": "invalid_citation", "attempt": 1, "provider": "ollama"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "10c9ae61fba24029b30141f87b4ea438"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "10c9ae61fba24029b30141f87b4ea438", "retriever": "chroma", "provider": "ollama", "top_k": 5, "chunk_ids": ["ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650"], "scores": [0.8292], "answered_from_context": true}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "10c9ae61fba24029b30141f87b4ea438", "path": "/api/ask", "status": 200, "ms": 34730.5}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/auth/identity \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_97765075e99c4e4fbf05bd0c6999eba0 \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:54Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/embed \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/query \"HTTP/1.1 200 OK\"", "request_id": "659d1c70d5ba4857b26ad6e57088983b"}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "659d1c70d5ba4857b26ad6e57088983b", "retriever": "chroma", "provider": "ollama", "top_k": 5, "chunk_ids": [], "scores": [], "answered_from_context": false}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "659d1c70d5ba4857b26ad6e57088983b", "path": "/api/ask", "status": 200, "ms": 1180.5}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:16:55Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/auth/identity \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_97765075e99c4e4fbf05bd0c6999eba0 \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/embed \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/query \"HTTP/1.1 200 OK\"", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0"}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0", "retriever": "chroma", "provider": "ollama", "top_k": 5, "chunk_ids": [], "scores": [], "answered_from_context": false}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "d2ff3d517f8048cda0f719db0a0dedc0", "path": "/api/ask", "status": 200, "ms": 1431.1}
+{"ts": "2026-11-05T07:16:56Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/auth/identity \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_97765075e99c4e4fbf05bd0c6999eba0 \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/embed \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/query \"HTTP/1.1 200 OK\"", "request_id": "af803420ec3c4182bc811269a2f44e3d"}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "af803420ec3c4182bc811269a2f44e3d", "retriever": "chroma", "provider": "ollama", "top_k": 5, "chunk_ids": [], "scores": [], "answered_from_context": false}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "af803420ec3c4182bc811269a2f44e3d", "path": "/api/ask", "status": 200, "ms": 1260.3}
+{"ts": "2026-11-05T07:16:57Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/auth/identity \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_97765075e99c4e4fbf05bd0c6999eba0 \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:58Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/embed \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/count \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:8001/api/v2/tenants/default_tenant/databases/default_database/collections/cc47b5e0-64ab-4048-a022-ce098f186edf/query \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation validation/failure", "request_id": "ae584875b11a408f91f77564ddb3f02a", "failure_kind": "invalid_json", "attempt": 1, "provider": "ollama"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://127.0.0.1:11434/api/chat \"HTTP/1.1 200 OK\"", "request_id": "ae584875b11a408f91f77564ddb3f02a"}
+{"ts": "2026-11-05T07:16:59Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation validation/failure", "request_id": "ae584875b11a408f91f77564ddb3f02a", "failure_kind": "invalid_json", "attempt": 2, "provider": "ollama"}
+{"ts": "2026-11-05T07:16:59Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation fallback", "request_id": "ae584875b11a408f91f77564ddb3f02a", "fallback": true, "provider": "ollama"}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "ae584875b11a408f91f77564ddb3f02a", "retriever": "chroma", "provider": "ollama", "top_k": 5, "chunk_ids": ["ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650"], "scores": [0.8292], "answered_from_context": false}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "ae584875b11a408f91f77564ddb3f02a", "path": "/api/ask", "status": 200, "ms": 1334.0}
+{"ts": "2026-11-05T07:16:59Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{
+  "passed": false,
+  "checked_at_utc": "2026-11-05T07:16:59.249047+00:00",
+  "provisional_floor": 0.7817780999999999,
+  "model": "llama3.2:3b",
+  "scope": "Real services through ASGI HTTP; final case is explicit transport injection",
+  "probes": [
+    {
+      "probe": "current_withdrawal",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "10c9ae61fba24029b30141f87b4ea438",
+        "answer": "The last day of the makeup week of every semester.[academic-rules-handbook-jun-2026.pdf / 4.25]",
+        "citations": [
+          {
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
+        "retrieved": [
+          {
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:2 char:1
++ .\.venv\Scripts\python.exe -u api/tests/live_grounding.py *> docs/evi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_grounding.py", line 70, in <module>
+            "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23,
+            "score": 0.82920778
+          }
+        ],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "historical_withdrawal",
+      "passed": false,
+      "status": 200,
+      "response": {
+        "request_id": "659d1c70d5ba4857b26ad6e57088983b",
+        "answer": "The supplied documents do not provide enough information to answer this question.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "absent_deadline",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "d2ff3d517f8048cda0f719db0a0dedc0",
+        "answer": "The supplied documents do not provide enough information to answer this question.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "absent_deposit",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "af803420ec3c4182bc811269a2f44e3d",
+        "answer": "The supplied documents do not provide enough information to answer this question.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "injected_malformed_provider_json",
+      "status": 200,
+      "passed": true,
+      "provider_calls": 2,
+      "response": {
+        "request_id": "ae584875b11a408f91f77564ddb3f02a",
+        "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [
+          {
+            "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23,
+            "score": 0.82920778
+          }
+        ],
+        "provider": "ollama",
+        "session_id": null
+      }
+    }
+  ]
+}
+    main()
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_grounding.py", line 66, in main
+    assert report["passed"], "Inspect failed native answer or malformed-output probe"
+           ~~~~~~^^^^^^^^^^
+AssertionError: Inspect failed native answer or malformed-output probe
+NATIVE_EXIT=1

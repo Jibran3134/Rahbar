@@ -1,0 +1,18 @@
+questions:
+- id: q09
+  type: version
+  question: Under the current undergraduate rules, what is the course-withdrawal deadline?
+  relevant:
+  - source: academic-rules-handbook-jun-2026.pdf
+    section: '4.25'
+    page: 23
+  expect: makeup
+  doc_version: 2026-06
+  review: Historical 2023 clause 4.25 on PDF page 16 uses the end of classes instead.
+- id: q13
+  type: abstain
+  question: What is the hostel-room allotment application deadline for the Peshawar
+    campus?
+  relevant: []
+  must_abstain: true
+  review: Hostel existence is mentioned; an allotment procedure/deadline is not supplied.

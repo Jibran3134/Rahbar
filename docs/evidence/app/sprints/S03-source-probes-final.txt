@@ -1,0 +1,9 @@
+﻿{
+  "historical_load_clause_association": true,
+  "historical_deadline_clause_association": true,
+  "startup_eligibility_clause_association": true,
+  "current_load_clause_association": true,
+  "current_deadline_clause_association": true,
+  "student_definition_section_preserved": true
+}
+EXIT_CODE=0

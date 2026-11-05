@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:25:47.521798+00:00",
+  "model": "nomic-embed-text",
+  "dimension": 768,
+  "vectors": 3,
+  "batch_size": 2,
+  "document_prefix": "search_document: ",
+  "truncate": false,
+  "repeat_vector_max_difference": 0.0,
+  "model_inventory": {
+    "models": [
+      {
+        "name": "nomic-embed-text:latest",
+        "model": "nomic-embed-text:latest",
+        "modified_at": "2026-11-05T10:25:07.9639852+05:00",
+        "size": 274302450,
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16",
+          "context_length": 2048,
+          "embedding_length": 768,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      {
+        "name": "llama3.2:1b",
+        "model": "llama3.2:1b",
+        "modified_at": "2026-09-26T01:54:12.8173301+05:00",
+        "size": 1321098329,
+        "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "1.2B",
+          "quantization_level": "Q8_0",
+          "context_length": 131072,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3:14b",
+        "model": "qwen3:14b",
+        "modified_at": "2026-08-24T11:48:30.2697488+05:00",
+        "size": 9276198565,
+        "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "14.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 5120,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "vectors_sha256": "33a8bbb8e5b3d282761dd20c33689aa1d706f231299cf7aec35d657b68af7bf8"
+}

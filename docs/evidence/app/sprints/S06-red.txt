@@ -1,0 +1,87 @@
+FFFFFFFFFFFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+______________ test_batches_model_prefix_order_and_no_truncation ______________
+tests\test_embed.py:18: in test_batches_model_prefix_order_and_no_truncation
+    vectors = module.embed(["doc1", "doc2", "doc3"], get_settings(), client=client, batch_size=2)
+E   TypeError: embed() got an unexpected keyword argument 'client'
+__________________ test_invalid_vectors_rejected[response0] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response1] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response2] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response3] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response4] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response5] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response6] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response7] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_invalid_vectors_rejected[response8] ___________________
+tests\test_embed.py:34: in test_invalid_vectors_rejected
+    with pytest.raises(module.EmbeddingError):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+__________________ test_dimension_must_match_across_batches ___________________
+tests\test_embed.py:42: in test_dimension_must_match_across_batches
+    with pytest.raises(module.EmbeddingError, match="dimension"):
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+_____ test_failures_are_actionable_without_echoing_provider_data[timeout] _____
+tests\test_embed.py:55: in test_failures_are_actionable_without_echoing_provider_data
+    with pytest.raises(module.EmbeddingError) as error:
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+____ test_failures_are_actionable_without_echoing_provider_data[transport] ____
+tests\test_embed.py:55: in test_failures_are_actionable_without_echoing_provider_data
+    with pytest.raises(module.EmbeddingError) as error:
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+_____ test_failures_are_actionable_without_echoing_provider_data[status] ______
+tests\test_embed.py:55: in test_failures_are_actionable_without_echoing_provider_data
+    with pytest.raises(module.EmbeddingError) as error:
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+______ test_failures_are_actionable_without_echoing_provider_data[json] _______
+tests\test_embed.py:55: in test_failures_are_actionable_without_echoing_provider_data
+    with pytest.raises(module.EmbeddingError) as error:
+E   AttributeError: module 'pipeline.embed' has no attribute 'EmbeddingError'
+_______________ test_empty_input_is_offline_and_bad_limits_fail _______________
+tests\test_embed.py:61: in test_empty_input_is_offline_and_bad_limits_fail
+    assert module.embed([], get_settings()) == []
+pipeline\embed.py:15: in embed
+    raise NotImplementedError("embed: see STARTER-TODO(3.1)")
+E   NotImplementedError: embed: see STARTER-TODO(3.1)
+=========================== short test summary info ===========================
+FAILED tests/test_embed.py::test_batches_model_prefix_order_and_no_truncation
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response0] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response1] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response2] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response3] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response4] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response5] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response6] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response7] - Attrib...
+FAILED tests/test_embed.py::test_invalid_vectors_rejected[response8] - Attrib...
+FAILED tests/test_embed.py::test_dimension_must_match_across_batches - Attrib...
+FAILED tests/test_embed.py::test_failures_are_actionable_without_echoing_provider_data[timeout]
+FAILED tests/test_embed.py::test_failures_are_actionable_without_echoing_provider_data[transport]
+FAILED tests/test_embed.py::test_failures_are_actionable_without_echoing_provider_data[status]
+FAILED tests/test_embed.py::test_failures_are_actionable_without_echoing_provider_data[json]
+FAILED tests/test_embed.py::test_empty_input_is_offline_and_bad_limits_fail
+16 failed in 0.28s
+NATIVE_EXIT=1

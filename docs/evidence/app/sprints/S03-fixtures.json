@@ -1,0 +1,29 @@
+[
+  {
+    "source": "academic-rules-2023.md",
+    "doc_version": "2023",
+    "superseded": true,
+    "logical_pages": 1,
+    "ocr": false,
+    "front_matter_removed": true,
+    "characters": 833
+  },
+  {
+    "source": "academic-rules-2026.md",
+    "doc_version": "2026",
+    "superseded": false,
+    "logical_pages": 1,
+    "ocr": false,
+    "front_matter_removed": true,
+    "characters": 1017
+  },
+  {
+    "source": "fees-2026.md",
+    "doc_version": "2026",
+    "superseded": false,
+    "logical_pages": 1,
+    "ocr": false,
+    "front_matter_removed": true,
+    "characters": 525
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "q03",
+    "valid": false,
+    "output": {
+      "answer": "only Lab needs to be repeated.",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.8",
+          "page": 20
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high"
+    }
+  },
+  {
+    "id": "q11",
+    "valid": false,
+    "output": {
+      "answer": "100% attendance",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "1.21",
+          "page": 10
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high"
+    }
+  }
+]
+NATIVE_EXIT=0

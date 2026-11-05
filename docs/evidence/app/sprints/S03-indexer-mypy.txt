@@ -1,0 +1,4 @@
+﻿pipeline\extract.py:116: error: Unsupported operand types for >= ("tuple[int, int]" and "int")  [operator]
+pipeline\extract.py:116: note: Left operand is of type "float | tuple[int, int]"
+Found 1 error in 1 file (checked 10 source files)
+EXIT_CODE=1

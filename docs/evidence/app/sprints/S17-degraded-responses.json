@@ -1,0 +1,64 @@
+{
+  "q09": {
+    "request_id": "bdf91eb151c14ba18b38350ee44ee593",
+    "answer": "The last day of the makeup week of every semester.[academic-rules-handbook-jun-2026.pdf / 4.25]",
+    "citations": [
+      {
+        "source": "fabricated-source.pdf",
+        "section": "4.25",
+        "page": 23
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "high",
+    "retrieved": [
+      {
+        "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.25",
+        "page": 23,
+        "score": 0.82920778
+      },
+      {
+        "chunk_id": "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.24",
+        "page": 22,
+        "score": 0.78173196
+      },
+      {
+        "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.23",
+        "page": 22,
+        "score": 0.78047496
+      },
+      {
+        "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "D.6.8",
+        "page": 29,
+        "score": 0.77765661
+      },
+      {
+        "chunk_id": "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "3.33",
+        "page": 18,
+        "score": 0.76983392
+      }
+    ],
+    "provider": "ollama",
+    "session_id": "7b839396972548bcb6bd1327c5571954"
+  },
+  "q13": {
+    "request_id": "f3476612c6324057895534d491f072d6",
+    "answer": "The supplied documents do not provide enough information to answer this question.",
+    "citations": [],
+    "answered_from_context": false,
+    "confidence": "low",
+    "retrieved": [],
+    "provider": "ollama",
+    "session_id": "d9caeb339d3e4fca97ac89dca987c785"
+  }
+}

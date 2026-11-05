@@ -1,0 +1,16 @@
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:2 char:1
++ .\.venv\Scripts\python.exe api/tests/diagnose_generation.py *> docs/e ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\diagnose_generation.py", line 18, in <module>
+    result=OllamaProvider(Settings(ollama_url="http://127.0.0.1:11434")).generate(row["response"].get("question") or 
+next(
+           
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Jibran\Desktop\Rahbar\api\app\providers\llm\ollama.py", line 84, in generate
+    raise ProviderError(ProviderFailureKind.INVALID_JSON) from None
+app.providers.llm.base.ProviderError: LLM provider failed: invalid_json
+NATIVE_EXIT=1

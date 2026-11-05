@@ -1,0 +1,11 @@
+﻿F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_normal_word_boundaries_survive_fallback_and_overlap ___________
+tests\test_chunk.py:176: in test_normal_word_boundaries_survive_fallback_and_overlap
+    assert all(c.text.split()[0] in words and c.text.split()[-1] in words for c in chunks)
+E   assert False
+E    +  where False = all(<generator object test_normal_word_boundaries_survive_fallback_and_overlap.<locals>.<genexpr> at 0x00000240ADF46190>)
+=========================== short test summary info ===========================
+FAILED tests/test_chunk.py::test_normal_word_boundaries_survive_fallback_and_overlap
+1 failed, 28 deselected in 0.10s
+NATIVE_EXIT=1

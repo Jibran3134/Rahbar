@@ -1,0 +1,14 @@
+{
+  "dataset": "fast-nuces-public-policy-s01",
+  "created_at_utc": "2026-11-04T18:45:19.125459+00:00",
+  "created_before_retrieval_tuning": true,
+  "base_revision": "5a40788c505481486700fa2f057822460f9d51c5",
+  "git_commit_created": false,
+  "semantic_review": "Original sources inspected by Codex; Jibran human review pending",
+  "update_rule": "Document genuine source/label changes explicitly; never regenerate automatically in CI",
+  "golden_sha256": "8fc89dcc1ee4b5eada586ff7d96d3c3692eb3c5afb4e6d19b3b8a200615912e1",
+  "sources_sha256": "8d91cc2b7c2ce2dc92dc61e8f55a058f4439a875a47a263fd7769c61c7405d87",
+  "manifest_sha256": "1a738659abd6aae5ac177bd3a3a290368fa2bcc09f6028faa3d9b2f84889eeed",
+  "text_hash_format": "utf8-no-bom-lf",
+  "s01_review_note": "Normalize only textual snapshot hashes for Windows/Linux Git line endings; source/golden content unchanged; raw corpus SHA-256 stays strict"
+}

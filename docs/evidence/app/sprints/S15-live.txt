@@ -1,0 +1,2 @@
+S15 PASS: real query, safe hit, refusal, correlated JSON outcomes and metrics
+NATIVE_EXIT=0

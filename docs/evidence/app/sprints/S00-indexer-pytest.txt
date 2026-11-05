@@ -1,0 +1,13 @@
+﻿....                                                                     [100%]
+============================== warnings summary ===============================
+..\.venv\Lib\site-packages\_pytest\cacheprovider.py:475
+  C:\Users\Jibran\Desktop\Rahbar\.venv\Lib\site-packages\_pytest\cacheprovider.py:475: PytestCacheWarning: could not create cache path C:\Users\Jibran\Desktop\Rahbar\indexer\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'C:\\Users\\Jibran\\Desktop\\Rahbar\\indexer\\pytest-cache-files-66_abqrk'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+..\.venv\Lib\site-packages\_pytest\stepwise.py:51
+  C:\Users\Jibran\Desktop\Rahbar\.venv\Lib\site-packages\_pytest\stepwise.py:51: PytestCacheWarning: could not create cache path C:\Users\Jibran\Desktop\Rahbar\indexer\.pytest_cache\v\cache\stepwise: [WinError 5] Access is denied: 'C:\\Users\\Jibran\\Desktop\\Rahbar\\indexer\\pytest-cache-files-___331ye'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+4 passed, 2 warnings in 0.04s
+EXIT_CODE=0

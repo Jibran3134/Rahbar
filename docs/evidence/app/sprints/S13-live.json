@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "scope": "Isolated owned policy and actual model/Redis/Chroma; normal index untouched",
+  "first": {
+    "cache": "MISS",
+    "body": {
+      "request_id": "9e059edd90f3479bac4932009ab9b11d",
+      "answer": "The course withdrawal deadline is Monday.[owned-cache-policy.txt / 4.25]",
+      "citations": [
+        {
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "policy-Monday",
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1,
+          "score": 0.899597585
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "4f43640374c44071a57de747a1d8f362"
+    }
+  },
+  "paraphrase": {
+    "cache": "HIT",
+    "body": {
+      "request_id": "926587bd1ca343aba0a91d037d54ab2e",
+      "answer": "The course withdrawal deadline is Monday.[owned-cache-policy.txt / 4.25]",
+      "citations": [
+        {
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "policy-Monday",
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1,
+          "score": 0.899597585
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "f775f7cc2fc0494390a2535620376763"
+    }
+  },
+  "near_miss": {
+    "cache": "MISS",
+    "body": {
+      "request_id": "994b35b64c2843bb868ba283b362ae17",
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [],
+      "provider": "ollama",
+      "session_id": "19a5895aab69499aaff88909f86e0704"
+    }
+  },
+  "follow_up": {
+    "cache": "BYPASS",
+    "body": {
+      "request_id": "5c5dcf99d0414b0fb8337f37a72db281",
+      "answer": "The course withdrawal deadline is Monday.[owned-cache-policy.txt / 4.25]",
+      "citations": [
+        {
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "policy-Monday",
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1,
+          "score": 0.899597585
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "4f43640374c44071a57de747a1d8f362"
+    }
+  },
+  "changed_policy": {
+    "cache": "MISS",
+    "body": {
+      "request_id": "4eaa92b6ad5a44dba368051aa00ee956",
+      "answer": "The course withdrawal deadline is Tuesday.[owned-cache-policy.txt / 4.25]",
+      "citations": [
+        {
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "policy-Tuesday",
+          "source": "owned-cache-policy.txt",
+          "section": "4.25",
+          "page": 1,
+          "score": 0.89832139
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "d2f193e4e06940dcb629bc224f738915"
+    }
+  }
+}

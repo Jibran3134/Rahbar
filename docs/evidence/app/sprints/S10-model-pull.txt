@@ -1,0 +1,18 @@
+Full original terminal transcript retained at corpus/raw/_runtime-logs/S10-model-pull.txt.raw
+Readable final progress/exit summary:
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 488 MB/2.0 GB  512 KB/s
+49m44spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 488 MB/2.0 GB  512 KB/s
+49m44spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  512 KB/s
+49m44spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  533 KB/s
+47m49spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  533 KB/s
+47m49spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  533 KB/s
+47m49spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  533 KB/s
+47m49spulling manifest
+pulling dde5aa3fc5ff:  24% ▕████              ▏ 489 MB/2.0 GB  533 KB/s  47m49s
+NATIVE_EXIT=-1

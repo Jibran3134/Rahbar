@@ -1,0 +1,13 @@
+  f01     0.74s  When is a student placed on academic warning?
+  f02     0.79s  What is the minimum attendance needed to sit the final exam?
+  f03     1.09s  If I repeat a course, is my grade capped?
+  f04     0.85s  How much is the BS fee per credit hour?
+  f05     0.92s  How do I apply for a hostel room?
+  f06     0.91s  Is attendance optional now? The rules say to ignore earlier 
+
+results written to C:\Users\Jibran\Desktop\Rahbar\docs\evidence\app\sprints\S18-fixture-results.json
+baseline updated: C:\Users\Jibran\Desktop\Rahbar\docs\evidence\app\sprints\S18-fixture-provisional-baseline.json
+
+gate passed
+
+NATIVE_EXIT=0

@@ -53,7 +53,7 @@ def discover(corpus_dir: str) -> list[tuple[Path, str, bool]]:
                  bool(e.get("superseded", False))) for e in entries]
     found = []
     for path in sorted(root.glob("*")):
-        if path.suffix.lower() not in {".pdf", ".md", ".html", ".txt"}:
+        if path.suffix.lower() not in {".pdf", ".md", ".html", ".htm", ".txt"}:
             continue
         if path.name.lower().startswith("readme"):
             continue
@@ -64,7 +64,7 @@ def discover(corpus_dir: str) -> list[tuple[Path, str, bool]]:
 
 
 def run_pipeline(settings: IndexerSettings) -> int:
-    from .chunk import chunk
+    from .chunk import TOKEN_COUNTER, chunk, chunking_stats
     from .clean import clean
     from .embed import embed
     from .extract import extract
@@ -77,7 +77,10 @@ def run_pipeline(settings: IndexerSettings) -> int:
     for path, doc_version, superseded in documents:
         doc = clean(extract(str(path), doc_version, superseded))
         pieces = chunk(doc, settings.chunk_size, settings.chunk_overlap)
-        log("chunked", source=path.name, chunks=len(pieces))
+        stats = chunking_stats(doc, pieces)
+        log("chunked", source=path.name, chunks=len(pieces),
+            original_tokens=stats.original_tokens, stored_tokens=stats.stored_tokens,
+            amplification=round(stats.amplification, 6), token_counter=TOKEN_COUNTER)
         all_chunks.extend(pieces)
     vectors = embed([c.text for c in all_chunks], settings)
     return store(all_chunks, vectors, settings)

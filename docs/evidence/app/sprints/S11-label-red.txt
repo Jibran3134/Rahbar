@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______________ test_prompt_supplies_exact_copyable_inline_label _______________
+tests\test_ollama.py:52: in test_prompt_supplies_exact_copyable_inline_label
+    assert evidence["inline_citation"] == "[s.pdf / 4.25]"
+E   KeyError: 'inline_citation'
+=========================== short test summary info ===========================
+FAILED tests/test_ollama.py::test_prompt_supplies_exact_copyable_inline_label
+1 failed, 7 deselected in 0.26s
+NATIVE_EXIT=1

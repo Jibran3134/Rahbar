@@ -1,0 +1,17 @@
+﻿F                                                                        [100%]
+================================== FAILURES ===================================
+_________ test_off_page_text_does_not_interleave_with_visible_policy __________
+tests\test_extract.py:284: in test_off_page_text_does_not_interleave_with_visible_policy
+    assert "HIDDEN" not in text and "4.25" in text and "makeup week" in text
+E   AssertionError: assert ('HIDDEN' not in 'HIDDEN PREV...makeup week.'
+E     
+E     'HIDDEN' is contained here:
+E       HIDDEN PREVIOUS PAGE RULE 4.25 The current rule mentions the makeup week.
+E     ? ++++++)
+------------------------------ Captured log call ------------------------------
+WARNING  pdfminer.pdfpage:pdfpage.py:202 CropBox missing from /Page, defaulting to MediaBox
+WARNING  pdfminer.pdfpage:pdfpage.py:202 CropBox missing from /Page, defaulting to MediaBox
+=========================== short test summary info ===========================
+FAILED tests/test_extract.py::test_off_page_text_does_not_interleave_with_visible_policy
+1 failed, 23 deselected in 0.41s
+EXIT_CODE=1 (expected failure before visible-page fix)

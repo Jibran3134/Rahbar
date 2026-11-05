@@ -1,0 +1,2 @@
+﻿Canonical text hashes match across LF/CRLF/BOM; raw hashes still distinguish bytes
+EXIT_CODE=0

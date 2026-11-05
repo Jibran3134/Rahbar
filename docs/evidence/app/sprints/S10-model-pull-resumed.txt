@@ -1,0 +1,18 @@
+Full original terminal transcript retained at corpus/raw/_runtime-logs/S10-model-pull-resumed.txt.raw
+Readable final progress/exit summary:
+verifying sha256 digest ⠹ pulling manifest
+pulling dde5aa3fc5ff: 100% ▕██████████████████▏ 2.0 GB
+pulling 966de95ca8a6: 100% ▕██████████████████▏ 1.4 KB
+pulling fcc5a6bec9da: 100% ▕██████████████████▏ 7.7 KB
+pulling a70ff7e570d9: 100% ▕██████████████████▏ 6.0 KB
+pulling 34bb5ab01051: 100% ▕██████████████████▏  561 B
+verifying sha256 digest ⠸ pulling manifest
+pulling dde5aa3fc5ff: 100% ▕██████████████████▏ 2.0 GB
+pulling 966de95ca8a6: 100% ▕██████████████████▏ 1.4 KB
+pulling fcc5a6bec9da: 100% ▕██████████████████▏ 7.7 KB
+pulling a70ff7e570d9: 100% ▕██████████████████▏ 6.0 KB
+pulling 34bb5ab01051: 100% ▕██████████████████▏  561 B
+verifying sha256 digest
+writing manifest
+success
+NATIVE_EXIT=0

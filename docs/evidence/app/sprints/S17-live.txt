@@ -1,0 +1,2 @@
+S17 PASS: native CLI scoring and real degraded-response runner failure
+NATIVE_EXIT=0

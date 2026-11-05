@@ -10,14 +10,10 @@ def get_provider(settings: Settings) -> LLMProvider:
         from .stub import StubProvider
 
         return StubProvider()
-    if name in ("ollama-host", "ollama-incluster"):
+    if name == "ollama-host":
         from .ollama import OllamaProvider
 
         return OllamaProvider(settings)
-    if name == "hosted":
-        from .hosted import HostedProvider
-
-        return HostedProvider(settings)
     raise ValueError(
-        f"unknown LLM_PROVIDER {name!r}; expected stub, ollama-host, ollama-incluster or hosted"
+        "Unsupported LLM_PROVIDER; supported modes are stub and ollama-host"
     )

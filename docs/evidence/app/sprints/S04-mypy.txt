@@ -1,0 +1,5 @@
+﻿pipeline\clean.py:19: error: Argument 1 to "maketrans" of "str" has incompatible type "dict[str, str]"; expected "dict[int, str | int | None] | dict[str, str | int | None] | dict[str | int, str | int | None]"  [arg-type]
+pipeline\clean.py:19: note: "Dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+pipeline\clean.py:19: note: Consider using "Mapping" instead, which is covariant in the value type
+Found 1 error in 1 file (checked 10 source files)
+NATIVE_EXIT=1

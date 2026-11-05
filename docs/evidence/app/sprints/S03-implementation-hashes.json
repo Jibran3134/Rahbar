@@ -1,0 +1,5 @@
+{
+  "indexer/pipeline/extract.py": "20e5dfbe5a499a81cbfce4decf0b42052c6061f3aec5f8474ecd588b732061ce",
+  "indexer/tests/test_extract.py": "d0a8522d622581903c2feeca1867e09d50b37df3d6d4512e837e395c13b35e09",
+  "indexer/tests/live_extract.py": "16430a43c1e21ed665a78b188ab5a5e0e5fd950481f0c25436eab5843de16bf0"
+}

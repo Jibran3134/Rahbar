@@ -1,0 +1,14 @@
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:2 char:31
++ ... ama3.2:1b'; .\.venv\Scripts\python.exe api/tests/live_provider.py *>  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_provider.py", line 36, in <module>
+    main()
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_provider.py", line 25, in main
+    assert result.answered_from_context and "makeup" in result.answer.lower()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+NATIVE_EXIT=1

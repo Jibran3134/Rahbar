@@ -1,0 +1,16 @@
+﻿Client:
+ Version:           29.8.0
+ API version:       1.56
+ Go version:        go1.26.8
+ Git commit:        88096ef
+ Built:             Thu Sep  3 21:53:38 2026
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+docker : permission denied while trying to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine
+At line:2 char:1
++ docker version 2>&1 | Out-File -LiteralPath docs/evidence/app/sprints ...
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (permission deni...ktopLinuxEngine:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+EXIT_CODE=1

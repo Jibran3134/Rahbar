@@ -1,0 +1,34 @@
+[
+  {
+    "source_image": "startups-1.png",
+    "psm": 3,
+    "letters": 2185,
+    "standalone_4_2_or_4_3": 2,
+    "number_attached_to_text_4_2": false,
+    "number_attached_to_text_4_3": false
+  },
+  {
+    "source_image": "startups-1.png",
+    "psm": 6,
+    "letters": 2179,
+    "standalone_4_2_or_4_3": 0,
+    "number_attached_to_text_4_2": true,
+    "number_attached_to_text_4_3": true
+  },
+  {
+    "source_image": "academic-2023-14.png",
+    "psm": 3,
+    "letters": 1336,
+    "standalone_4_2_or_4_3": 2,
+    "number_attached_to_text_4_2": false,
+    "number_attached_to_text_4_3": false
+  },
+  {
+    "source_image": "academic-2023-14.png",
+    "psm": 6,
+    "letters": 1336,
+    "standalone_4_2_or_4_3": 0,
+    "number_attached_to_text_4_2": true,
+    "number_attached_to_text_4_3": true
+  }
+]

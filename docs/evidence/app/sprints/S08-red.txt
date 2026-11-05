@@ -1,0 +1,168 @@
+FFFFFFFFFFFFFFF                                                          [100%]
+================================== FAILURES ===================================
+_ test_explicit_vector_prefix_cosine_conversion_small_index_and_one_snapshot __
+tests\test_retrieval.py:44: in test_explicit_vector_prefix_cosine_conversion_small_index_and_one_snapshot
+    hits, requests = retrieve(client)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_unrelated_numbers_dates_and_course_codes_keep_current_default[Does CS-2023 need prerequisites?] _
+tests\test_retrieval.py:56: in test_unrelated_numbers_dates_and_course_codes_keep_current_default
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_unrelated_numbers_dates_and_course_codes_keep_current_default[I joined in 2023; what is the rule?] _
+tests\test_retrieval.py:56: in test_unrelated_numbers_dates_and_course_codes_keep_current_default
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_unrelated_numbers_dates_and_course_codes_keep_current_default[Is the fee Rs 2023?] _
+tests\test_retrieval.py:56: in test_unrelated_numbers_dates_and_course_codes_keep_current_default
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_unrelated_numbers_dates_and_course_codes_keep_current_default[My exam is on 2023-08-10. What is attendance?] _
+tests\test_retrieval.py:56: in test_unrelated_numbers_dates_and_course_codes_keep_current_default
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_unrelated_numbers_dates_and_course_codes_keep_current_default[What are current rules?] _
+tests\test_retrieval.py:56: in test_unrelated_numbers_dates_and_course_codes_keep_current_default
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_explicit_historical_version_filter[Under the August 2023 undergraduate rules, what was the deadline?] _
+tests\test_retrieval.py:65: in test_explicit_historical_version_filter
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_ test_explicit_historical_version_filter[According to the 2023-08 handbook, what was the load?] _
+tests\test_retrieval.py:65: in test_explicit_historical_version_filter
+    retrieve(client,question)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+__________________ test_empty_results_and_html_logical_page ___________________
+tests\test_retrieval.py:72: in test_empty_results_and_html_logical_page
+    assert retrieve(client)[0] == []
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+_____________ test_conflicts_and_corrupt_hits_fail_closed[model] ______________
+tests\test_retrieval.py:91: in test_conflicts_and_corrupt_hits_fail_closed
+    retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+___________ test_conflicts_and_corrupt_hits_fail_closed[dimension] ____________
+tests\test_retrieval.py:91: in test_conflicts_and_corrupt_hits_fail_closed
+    retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+______________ test_conflicts_and_corrupt_hits_fail_closed[nan] _______________
+tests\test_retrieval.py:91: in test_conflicts_and_corrupt_hits_fail_closed
+    retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+____________ test_conflicts_and_corrupt_hits_fail_closed[metadata] ____________
+tests\test_retrieval.py:91: in test_conflicts_and_corrupt_hits_fail_closed
+    retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+____________ test_conflicts_and_corrupt_hits_fail_closed[distance] ____________
+tests\test_retrieval.py:91: in test_conflicts_and_corrupt_hits_fail_closed
+    retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+tests\test_retrieval.py:38: in retrieve
+    result = ChromaRetriever(Settings(),client=client,http_client=http).retrieve(question,5)
+E   TypeError: ChromaRetriever.__init__() got an unexpected keyword argument 'client'
+______________________ test_constructor_does_not_connect ______________________
+..\.venv\Lib\site-packages\httpx\_transports\default.py:101: in map_httpcore_exceptions
+    yield
+..\.venv\Lib\site-packages\httpx\_transports\default.py:250: in handle_request
+    resp = self._pool.handle_request(req)
+..\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py:256: in handle_request
+    raise exc from None
+..\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py:236: in handle_request
+    response = connection.handle_request(
+..\.venv\Lib\site-packages\httpcore\_sync\http_proxy.py:206: in handle_request
+    return self._connection.handle_request(proxy_request)
+..\.venv\Lib\site-packages\httpcore\_sync\connection.py:101: in handle_request
+    raise exc
+..\.venv\Lib\site-packages\httpcore\_sync\connection.py:78: in handle_request
+    stream = self._connect(request)
+..\.venv\Lib\site-packages\httpcore\_sync\connection.py:124: in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+..\.venv\Lib\site-packages\httpcore\_backends\sync.py:207: in connect_tcp
+    with map_exceptions(exc_map):
+..\.venv\python-runtime\Lib\contextlib.py:158: in __exit__
+    self.gen.throw(value)
+..\.venv\Lib\site-packages\httpcore\_exceptions.py:14: in map_exceptions
+    raise to_exc(exc) from exc
+E   httpcore.ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+..\.venv\Lib\site-packages\chromadb\api\client.py:108: in get_user_identity
+    return self._server.get_user_identity()
+..\.venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py:150: in wrapper
+    return f(*args, **kwargs)
+..\.venv\Lib\site-packages\chromadb\api\fastapi.py:201: in get_user_identity
+    return UserIdentity(**self._make_request("get", "/auth/identity"))
+..\.venv\Lib\site-packages\chromadb\api\fastapi.py:106: in _make_request
+    response = self._session.request(method, url, **cast(Any, kwargs))
+..\.venv\Lib\site-packages\httpx\_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+..\.venv\Lib\site-packages\httpx\_client.py:914: in send
+    response = self._send_handling_auth(
+..\.venv\Lib\site-packages\httpx\_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+..\.venv\Lib\site-packages\httpx\_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+..\.venv\Lib\site-packages\httpx\_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+..\.venv\Lib\site-packages\httpx\_transports\default.py:249: in handle_request
+    with map_httpcore_exceptions():
+..\.venv\python-runtime\Lib\contextlib.py:158: in __exit__
+    self.gen.throw(value)
+..\.venv\Lib\site-packages\httpx\_transports\default.py:118: in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+E   httpx.ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+tests\test_retrieval.py:96: in test_constructor_does_not_connect
+    assert ChromaRetriever(Settings(chroma_host="does-not-exist.invalid")).name == "chroma"
+app\retrieval\chroma.py:20: in __init__
+    self.client = chromadb.HttpClient(host=settings.chroma_host, port=settings.chroma_port,
+..\.venv\Lib\site-packages\chromadb\__init__.py:241: in HttpClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+..\.venv\Lib\site-packages\chromadb\api\client.py:72: in __init__
+    user_identity = self.get_user_identity()
+..\.venv\Lib\site-packages\chromadb\api\client.py:110: in get_user_identity
+    raise ValueError(
+E   ValueError: Could not connect to a Chroma server. Are you sure it is running?
+=========================== short test summary info ===========================
+FAILED tests/test_retrieval.py::test_explicit_vector_prefix_cosine_conversion_small_index_and_one_snapshot
+FAILED tests/test_retrieval.py::test_unrelated_numbers_dates_and_course_codes_keep_current_default[Does CS-2023 need prerequisites?]
+FAILED tests/test_retrieval.py::test_unrelated_numbers_dates_and_course_codes_keep_current_default[I joined in 2023; what is the rule?]
+FAILED tests/test_retrieval.py::test_unrelated_numbers_dates_and_course_codes_keep_current_default[Is the fee Rs 2023?]
+FAILED tests/test_retrieval.py::test_unrelated_numbers_dates_and_course_codes_keep_current_default[My exam is on 2023-08-10. What is attendance?]
+FAILED tests/test_retrieval.py::test_unrelated_numbers_dates_and_course_codes_keep_current_default[What are current rules?]
+FAILED tests/test_retrieval.py::test_explicit_historical_version_filter[Under the August 2023 undergraduate rules, what was the deadline?]
+FAILED tests/test_retrieval.py::test_explicit_historical_version_filter[According to the 2023-08 handbook, what was the load?]
+FAILED tests/test_retrieval.py::test_empty_results_and_html_logical_page - Ty...
+FAILED tests/test_retrieval.py::test_conflicts_and_corrupt_hits_fail_closed[model]
+FAILED tests/test_retrieval.py::test_conflicts_and_corrupt_hits_fail_closed[dimension]
+FAILED tests/test_retrieval.py::test_conflicts_and_corrupt_hits_fail_closed[nan]
+FAILED tests/test_retrieval.py::test_conflicts_and_corrupt_hits_fail_closed[metadata]
+FAILED tests/test_retrieval.py::test_conflicts_and_corrupt_hits_fail_closed[distance]
+FAILED tests/test_retrieval.py::test_constructor_does_not_connect - ValueErro...
+15 failed in 6.51s
+NATIVE_EXIT=1

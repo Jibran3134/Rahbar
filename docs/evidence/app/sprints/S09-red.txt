@@ -1,0 +1,71 @@
+FFFFFFFF                                                                 [100%]
+================================== FAILURES ===================================
+_______ test_no_usable_evidence_abstains_without_generation[passages0] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+_______ test_no_usable_evidence_abstains_without_generation[passages1] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+_______ test_no_usable_evidence_abstains_without_generation[passages2] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+_______ test_no_usable_evidence_abstains_without_generation[passages3] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+_______ test_no_usable_evidence_abstains_without_generation[passages4] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+_______ test_no_usable_evidence_abstains_without_generation[passages5] ________
+tests\test_abstention.py:20: in test_no_usable_evidence_abstains_without_generation
+    result = answer_question("Question",SimpleNamespace(name="fake",retrieve=lambda q,k:passages),
+app\services\answer.py:29: in answer_question
+    answer = provider.generate(question, passages)
+tests\test_abstention.py:19: in forbidden
+    raise AssertionError("Provider must not run")
+E   AssertionError: Provider must not run
+___________ test_floor_is_inclusive_and_low_hits_are_removed[0.45] ____________
+tests\test_abstention.py:35: in test_floor_is_inclusive_and_low_hits_are_removed
+    assert len(seen) == 1 and seen[0].score == score and len(result.retrieved) == 1
+E   AssertionError: assert (2 == 1)
+E    +  where 2 = len([Passage(chunk_id='one', text='A policy rule.', source='a.pdf', section='1.1', page=1, score=0.4), Passage(chunk_id='one', text='A policy rule.', source='a.pdf', section='1.1', page=1, score=0.45)])
+___________ test_floor_is_inclusive_and_low_hits_are_removed[0.46] ____________
+tests\test_abstention.py:35: in test_floor_is_inclusive_and_low_hits_are_removed
+    assert len(seen) == 1 and seen[0].score == score and len(result.retrieved) == 1
+E   AssertionError: assert (2 == 1)
+E    +  where 2 = len([Passage(chunk_id='one', text='A policy rule.', source='a.pdf', section='1.1', page=1, score=0.4), Passage(chunk_id='one', text='A policy rule.', source='a.pdf', section='1.1', page=1, score=0.46)])
+=========================== short test summary info ===========================
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages0]
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages1]
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages2]
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages3]
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages4]
+FAILED tests/test_abstention.py::test_no_usable_evidence_abstains_without_generation[passages5]
+FAILED tests/test_abstention.py::test_floor_is_inclusive_and_low_hits_are_removed[0.45]
+FAILED tests/test_abstention.py::test_floor_is_inclusive_and_low_hits_are_removed[0.46]
+8 failed in 0.23s
+NATIVE_EXIT=1

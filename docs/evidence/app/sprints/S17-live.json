@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "baseline_scope": "Two-question probe only, not shipped baseline",
+  "native_exit": 0,
+  "degraded_exit": 1,
+  "score": {
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "citation_validity": 1.0,
+    "abstention_correctness": 1.0,
+    "by_type": {
+      "abstain": {
+        "recall@5": null,
+        "questions": 1
+      },
+      "version": {
+        "recall@5": 1.0,
+        "questions": 1
+      }
+    },
+    "questions": 2,
+    "execution_errors": 0,
+    "denominators": {
+      "recall": 1,
+      "citation_questions": 1,
+      "must_abstain": 1
+    },
+    "dataset_id": "e25bfc6dcd0ce68bb498c6e75ae4143f9545b6b857c4a7510f016dd0ebe853bd",
+    "configuration": {
+      "active": {
+        "collection": "rahbar__g_97765075e99c4e4fbf05bd0c6999eba0",
+        "generation": "97765075e99c4e4fbf05bd0c6999eba0",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      },
+      "embed_model": "nomic-embed-text",
+      "llm_model": "llama3.2:3b",
+      "provider": "ollama-host",
+      "top_k": 5,
+      "temperature": 0.2,
+      "relevance_floor": 0.75,
+      "cache_threshold": 0.95,
+      "cache_ttl_seconds": 3600
+    },
+    "source_revision": {
+      "git": "5a40788c505481486700fa2f057822460f9d51c5",
+      "application_digest": "5caa4405ed4fc3117db9f5e4c38d12bab7a5b0c0776d465c0b77d6276c72e885"
+    },
+    "golden": "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\sprints\\S17-probe-golden.yaml",
+    "gate_failures": []
+  }
+}

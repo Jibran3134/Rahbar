@@ -1,0 +1,114 @@
+{
+  "ollama_version": {
+    "version": "0.40.1"
+  },
+  "models": {
+    "models": [
+      {
+        "name": "llama3.2:3b",
+        "model": "llama3.2:3b",
+        "modified_at": "2026-11-05T10:28:19.3065355+05:00",
+        "size": 2019393189,
+        "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 3072,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "nomic-embed-text:latest",
+        "model": "nomic-embed-text:latest",
+        "modified_at": "2026-11-05T10:25:07.9639852+05:00",
+        "size": 274302450,
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16",
+          "context_length": 2048,
+          "embedding_length": 768,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      {
+        "name": "llama3.2:1b",
+        "model": "llama3.2:1b",
+        "modified_at": "2026-09-26T01:54:12.8173301+05:00",
+        "size": 1321098329,
+        "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "1.2B",
+          "quantization_level": "Q8_0",
+          "context_length": 131072,
+          "embedding_length": 2048,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      {
+        "name": "qwen3:14b",
+        "model": "qwen3:14b",
+        "modified_at": "2026-08-24T11:48:30.2697488+05:00",
+        "size": 9276198565,
+        "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "14.8B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 5120,
+          "runner": "ggml"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "chroma_version": "1.0.0",
+  "active": {
+    "embed_model": "nomic-embed-text",
+    "collection": "rahbar__g_97765075e99c4e4fbf05bd0c6999eba0",
+    "dimension": 768,
+    "generation": "97765075e99c4e4fbf05bd0c6999eba0"
+  },
+  "active_rows": 760,
+  "scope": "Local development services; no Kubernetes or readiness claim"
+}

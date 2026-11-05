@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:38:39.058571+00:00",
+  "configured_default": 0.45,
+  "provisional_live_floor": 0.7817780999999999,
+  "selected_score_separation": true,
+  "probes": [
+    {
+      "probe": "answerable",
+      "max_similarity": 0.82920778,
+      "generator_calls": 1,
+      "answered_from_context": true,
+      "citations": 1
+    },
+    {
+      "probe": "absent_deadline",
+      "max_similarity": 0.67071605,
+      "generator_calls": 0,
+      "answered_from_context": false,
+      "citations": 0
+    },
+    {
+      "probe": "absent_deposit",
+      "max_similarity": 0.73434842,
+      "generator_calls": 0,
+      "answered_from_context": false,
+      "citations": 0
+    }
+  ],
+  "scope": "Real captured retrieval; counting stub tests gate only, not real answer correctness"
+}

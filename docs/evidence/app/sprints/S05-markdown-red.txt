@@ -1,0 +1,14 @@
+﻿F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_markdown_authoritative_section_keeps_full_title_and_numbered_body ____
+tests\test_chunk.py:164: in test_markdown_authoritative_section_keeps_full_title_and_numbered_body
+    assert [c.section for c in chunks] == ["2. Academic warning", "3. Repeating a course"]
+E   AssertionError: assert ['2', '2.1', ...', '3', '3.1'] == ['2. Academic...ing a course']
+E     
+E     At index 0 diff: '2' != '2. Academic warning'
+E     Left contains 3 more items, first extra item: '2.2'
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_chunk.py::test_markdown_authoritative_section_keeps_full_title_and_numbered_body
+1 failed, 27 deselected in 0.06s
+NATIVE_EXIT=1

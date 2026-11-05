@@ -1,0 +1,15 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+____ test_followup_uses_prior_question_and_isolated_session_has_no_history ____
+tests\test_sessions.py:32: in test_followup_uses_prior_question_and_isolated_session_has_no_history
+    from app.services.sessions import SessionStore
+E   ModuleNotFoundError: No module named 'app.services.sessions'
+_______________ test_history_bounds_unknown_ids_and_invalid_ids _______________
+tests\test_sessions.py:46: in test_history_bounds_unknown_ids_and_invalid_ids
+    from app.services.sessions import MAX_TURNS, SessionStore
+E   ModuleNotFoundError: No module named 'app.services.sessions'
+=========================== short test summary info ===========================
+FAILED tests/test_sessions.py::test_followup_uses_prior_question_and_isolated_session_has_no_history
+FAILED tests/test_sessions.py::test_history_bounds_unknown_ids_and_invalid_ids
+2 failed in 0.05s
+NATIVE_EXIT=1

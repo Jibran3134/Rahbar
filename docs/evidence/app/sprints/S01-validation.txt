@@ -1,0 +1,15 @@
+﻿{
+  "passed": true,
+  "document_count": 7,
+  "pdf_pages": 161,
+  "questions": 17,
+  "question_types": {
+    "ordinary": 8,
+    "version": 4,
+    "exact": 2,
+    "abstain": 2,
+    "injection": 1
+  },
+  "errors": []
+}
+EXIT_CODE=0

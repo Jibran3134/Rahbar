@@ -1,0 +1,1115 @@
+{
+  "checked_at_utc": "2026-11-04T18:49:11.859524+00:00",
+  "passed": true,
+  "errors": [],
+  "documents": [
+    {
+      "file": "undergraduate-academic-rules-aug-2023.pdf",
+      "sha256": "cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004",
+      "doc_version": "2023-08",
+      "superseded": true,
+      "bytes": 14888226,
+      "kind": "pdf",
+      "pages": 26,
+      "page_audit": [
+        {
+          "page": 1,
+          "text_characters": 117,
+          "font_resources": 2,
+          "image_resources": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 2
+        },
+        {
+          "page": 3,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 6,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 7,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 8,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 9,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 10,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 11,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 12,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 13,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 14,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 15,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 16,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 17,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 18,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 19,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 20,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 21,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 22,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 23,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 24,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        },
+        {
+          "page": 25,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 8
+        },
+        {
+          "page": 26,
+          "text_characters": 95,
+          "font_resources": 1,
+          "image_resources": 6
+        }
+      ],
+      "text_characters": 212,
+      "image_only": false
+    },
+    {
+      "file": "academic-rules-handbook-jun-2026.pdf",
+      "sha256": "4cfee3e191b84aeb9168f17656c7642212ff52b90f2780d028b33c154aa74b62",
+      "doc_version": "2026-06",
+      "superseded": false,
+      "bytes": 987731,
+      "kind": "pdf",
+      "pages": 58,
+      "page_audit": [
+        {
+          "page": 1,
+          "text_characters": 4,
+          "font_resources": 1,
+          "image_resources": 2
+        },
+        {
+          "page": 2,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 3,
+          "text_characters": 238,
+          "font_resources": 4,
+          "image_resources": 1
+        },
+        {
+          "page": 4,
+          "text_characters": 1962,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 1963,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 6,
+          "text_characters": 1913,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 1912,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 8,
+          "text_characters": 2440,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 9,
+          "text_characters": 2440,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 1163,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 11,
+          "text_characters": 1958,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 12,
+          "text_characters": 859,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 1491,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 1249,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 15,
+          "text_characters": 2492,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 16,
+          "text_characters": 1189,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 17,
+          "text_characters": 2309,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 18,
+          "text_characters": 342,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 19,
+          "text_characters": 1330,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 20,
+          "text_characters": 1293,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 21,
+          "text_characters": 2410,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 22,
+          "text_characters": 1306,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 23,
+          "text_characters": 2053,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 24,
+          "text_characters": 1256,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 25,
+          "text_characters": 2689,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 26,
+          "text_characters": 1250,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 27,
+          "text_characters": 2196,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 28,
+          "text_characters": 1157,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 29,
+          "text_characters": 1862,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 30,
+          "text_characters": 1046,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 31,
+          "text_characters": 2240,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 32,
+          "text_characters": 1008,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 33,
+          "text_characters": 2278,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 34,
+          "text_characters": 1582,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 35,
+          "text_characters": 2873,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 36,
+          "text_characters": 279,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 37,
+          "text_characters": 1060,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 38,
+          "text_characters": 1105,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 39,
+          "text_characters": 1351,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 40,
+          "text_characters": 1735,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 41,
+          "text_characters": 3250,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 42,
+          "text_characters": 1664,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 43,
+          "text_characters": 3351,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 44,
+          "text_characters": 1514,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 45,
+          "text_characters": 3185,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 46,
+          "text_characters": 1532,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 47,
+          "text_characters": 3015,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 48,
+          "text_characters": 1552,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 49,
+          "text_characters": 2704,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 50,
+          "text_characters": 1383,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 51,
+          "text_characters": 2636,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 52,
+          "text_characters": 1738,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 53,
+          "text_characters": 3448,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 54,
+          "text_characters": 3019,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 55,
+          "text_characters": 1601,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 56,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 57,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 58,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 6
+        }
+      ],
+      "text_characters": 96875,
+      "image_only": false
+    },
+    {
+      "file": "student-handbook-jun-2026.pdf",
+      "sha256": "717eb4b8d37e50185ffe952735c08ef19edd16074d547f10ebd22cf23da67c4d",
+      "doc_version": "2026-06",
+      "superseded": false,
+      "bytes": 1980275,
+      "kind": "pdf",
+      "pages": 64,
+      "page_audit": [
+        {
+          "page": 1,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 2,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 3,
+          "text_characters": 188,
+          "font_resources": 4,
+          "image_resources": 1
+        },
+        {
+          "page": 4,
+          "text_characters": 2732,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 2733,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 6,
+          "text_characters": 1786,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 7,
+          "text_characters": 1765,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 8,
+          "text_characters": 1742,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 9,
+          "text_characters": 1741,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 10,
+          "text_characters": 3400,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 11,
+          "text_characters": 3400,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 12,
+          "text_characters": 2503,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 13,
+          "text_characters": 2503,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 14,
+          "text_characters": 2645,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 15,
+          "text_characters": 2645,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 16,
+          "text_characters": 807,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 17,
+          "text_characters": 807,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 18,
+          "text_characters": 3125,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 19,
+          "text_characters": 3125,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 20,
+          "text_characters": 3141,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 21,
+          "text_characters": 3141,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 22,
+          "text_characters": 2712,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 23,
+          "text_characters": 2712,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 24,
+          "text_characters": 1740,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 25,
+          "text_characters": 1740,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 26,
+          "text_characters": 2355,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 27,
+          "text_characters": 2355,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 28,
+          "text_characters": 1955,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 29,
+          "text_characters": 1955,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 30,
+          "text_characters": 2482,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 31,
+          "text_characters": 2482,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 32,
+          "text_characters": 2642,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 33,
+          "text_characters": 2642,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 34,
+          "text_characters": 2628,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 35,
+          "text_characters": 2628,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 36,
+          "text_characters": 1763,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 37,
+          "text_characters": 1763,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 38,
+          "text_characters": 1892,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 39,
+          "text_characters": 1892,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 40,
+          "text_characters": 1345,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 41,
+          "text_characters": 1345,
+          "font_resources": 9,
+          "image_resources": 0
+        },
+        {
+          "page": 42,
+          "text_characters": 1374,
+          "font_resources": 10,
+          "image_resources": 0
+        },
+        {
+          "page": 43,
+          "text_characters": 1374,
+          "font_resources": 10,
+          "image_resources": 0
+        },
+        {
+          "page": 44,
+          "text_characters": 1047,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 45,
+          "text_characters": 1047,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 46,
+          "text_characters": 2120,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 47,
+          "text_characters": 2120,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 48,
+          "text_characters": 3664,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 49,
+          "text_characters": 3664,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 50,
+          "text_characters": 3580,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 51,
+          "text_characters": 3580,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 52,
+          "text_characters": 3479,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 53,
+          "text_characters": 3479,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 54,
+          "text_characters": 3260,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 55,
+          "text_characters": 3260,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 56,
+          "text_characters": 2947,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 57,
+          "text_characters": 2947,
+          "font_resources": 8,
+          "image_resources": 0
+        },
+        {
+          "page": 58,
+          "text_characters": 3558,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 59,
+          "text_characters": 3558,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 60,
+          "text_characters": 3563,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 61,
+          "text_characters": 3563,
+          "font_resources": 7,
+          "image_resources": 0
+        },
+        {
+          "page": 62,
+          "text_characters": 394,
+          "font_resources": 3,
+          "image_resources": 0
+        },
+        {
+          "page": 63,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 0
+        },
+        {
+          "page": 64,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 4
+        }
+      ],
+      "text_characters": 144535,
+      "image_only": false
+    },
+    {
+      "file": "prospectus-academic-rules-and-regulations.pdf",
+      "sha256": "a7e7f6896a59eb9413c9e8826e6c4c018ebe52045d10cebfcba92ded10a3174a",
+      "doc_version": "2026",
+      "superseded": false,
+      "bytes": 7066767,
+      "kind": "pdf",
+      "pages": 5,
+      "page_audit": [
+        {
+          "page": 1,
+          "text_characters": 4499,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 2,
+          "text_characters": 4980,
+          "font_resources": 6,
+          "image_resources": 0
+        },
+        {
+          "page": 3,
+          "text_characters": 4273,
+          "font_resources": 5,
+          "image_resources": 0
+        },
+        {
+          "page": 4,
+          "text_characters": 4524,
+          "font_resources": 4,
+          "image_resources": 0
+        },
+        {
+          "page": 5,
+          "text_characters": 3868,
+          "font_resources": 4,
+          "image_resources": 0
+        }
+      ],
+      "text_characters": 22144,
+      "image_only": false
+    },
+    {
+      "file": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+      "sha256": "c2d5c7648d1593daf34d5c0596ede476e8984b0551830cc1690017e6e22f1359",
+      "doc_version": "2022-05-30",
+      "superseded": false,
+      "bytes": 3872809,
+      "kind": "pdf",
+      "pages": 8,
+      "page_audit": [
+        {
+          "page": 1,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 2,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 3,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 4,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 5,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 6,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 7,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        },
+        {
+          "page": 8,
+          "text_characters": 0,
+          "font_resources": 0,
+          "image_resources": 1
+        }
+      ],
+      "text_characters": 0,
+      "image_only": true
+    },
+    {
+      "file": "fee-structure-page.html",
+      "sha256": "ec8872ae77cac7e96e20e6979933f36b00aaeb0ab3f668a2116e521c655e7b90",
+      "doc_version": "snapshot-2026-11-04",
+      "superseded": false,
+      "bytes": 91429,
+      "kind": "html",
+      "pages": null,
+      "tables": 3,
+      "headings": [
+        "Fee Structure",
+        "Admission Fee",
+        "Security Deposit",
+        "Tuition Fee (w.e.f. Fall 2026 semester)",
+        "Student Activities Fund",
+        "Miscellaneous Fees",
+        "Fee Refund Policy",
+        "Payment Instructions"
+      ],
+      "text_characters": 53503
+    },
+    {
+      "file": "grading-page.html",
+      "sha256": "66a995b4d8474e914d37bfa14755a5361f47327d5a7314f9b7ec15d9b6176e6e",
+      "doc_version": "snapshot-2026-11-04",
+      "superseded": false,
+      "bytes": 95673,
+      "kind": "html",
+      "pages": null,
+      "tables": 5,
+      "headings": [
+        "Academic Grading",
+        "Description of Grades",
+        "Letter Code Interpretation",
+        "Warning/Probation",
+        "Repeating a Course",
+        "Incomplete Course"
+      ],
+      "text_characters": 56411
+    }
+  ],
+  "document_count": 7,
+  "pdf_pages": 161,
+  "html_pages_counted_toward_pdf_requirement": 0,
+  "questions": 17,
+  "question_types": {
+    "ordinary": 8,
+    "version": 4,
+    "exact": 2,
+    "abstain": 2,
+    "injection": 1
+  },
+  "golden_sha256": "8fc89dcc1ee4b5eada586ff7d96d3c3692eb3c5afb4e6d19b3b8a200615912e1",
+  "freeze_checked": true,
+  "image_passages_requiring_manual_review": [
+    {
+      "question": "q07",
+      "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+      "page": 1,
+      "section": "4.2",
+      "reason": "Image evidence needs visual review/OCR"
+    },
+    {
+      "question": "q16",
+      "source": "undergraduate-academic-rules-aug-2023.pdf",
+      "page": 16,
+      "section": "4.25",
+      "reason": "Image evidence needs visual review/OCR"
+    },
+    {
+      "question": "q17",
+      "source": "undergraduate-academic-rules-aug-2023.pdf",
+      "page": 14,
+      "section": "4.3",
+      "reason": "Image evidence needs visual review/OCR"
+    }
+  ],
+  "limits": "Structural/byte audit only; semantic truth and scans need original-source review."
+}

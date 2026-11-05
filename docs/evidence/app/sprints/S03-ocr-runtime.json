@@ -1,0 +1,24 @@
+﻿{
+    "version":  "5.5.3.20260724",
+    "executable":  "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\tesseract-5.5.3\\tesseract.exe",
+    "source_url":  "https://github.com/tesseract-ocr/tesseract/releases/download/5.5.3/tesseract-ocr-w64-setup-5.5.3.20260724.exe",
+    "official_digest":  "sha256:bee9e3434bd94fd65387d9be28cd467a41f61b1275383b55b0f59a1331270ae4",
+    "installer_sha256":  "bee9e3434bd94fd65387d9be28cd467a41f61b1275383b55b0f59a1331270ae4",
+    "binary_sha256":  "c66f0f12ed76f6aa455dac97684bbc86756d6a732380bee09122454cfda3f420",
+    "signature_status":  "UnknownError",
+    "signature_message":  "A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file",
+    "signer":  "CN=Universität Mannheim, O=Universität Mannheim, S=Baden-Württemberg, C=DE",
+    "signer_not_after":  "2023-12-10T04:59:59.0000000+05:00",
+    "verification":  "Installer matched official release asset SHA-256; expired certificate not treated as valid",
+    "install_exit_code":  0,
+    "install_scope":  "CURRENTUSER; new ignored .venv/tesseract-5.5.3 directory",
+    "languages":  [
+                      "eng",
+                      "osd"
+                  ],
+    "render_backend":  "pypdfium2 via pdfplumber",
+    "dpi":  300,
+    "psm":  6,
+    "timeout_seconds":  60,
+    "max_render_pixels":  16000000
+}

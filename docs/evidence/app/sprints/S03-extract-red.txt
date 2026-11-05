@@ -1,0 +1,201 @@
+﻿FFFFFFFFFFFFFFFFFFF                                                      [100%]
+================================== FAILURES ===================================
+__________ test_text_dispatch_preserves_structure_and_metadata[.md] ___________
+tests\test_extract.py:44: in test_text_dispatch_preserves_structure_and_metadata
+    doc = extraction.extract(str(path), "2026-06", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+__________ test_text_dispatch_preserves_structure_and_metadata[.txt] __________
+tests\test_extract.py:44: in test_text_dispatch_preserves_structure_and_metadata
+    doc = extraction.extract(str(path), "2026-06", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+__________ test_text_dispatch_preserves_structure_and_metadata[.TXT] __________
+tests\test_extract.py:44: in test_text_dispatch_preserves_structure_and_metadata
+    doc = extraction.extract(str(path), "2026-06", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+__________________ test_markdown_front_matter_is_not_content __________________
+tests\test_extract.py:54: in test_markdown_front_matter_is_not_content
+    doc = extraction.extract(str(path), "2023-08", True)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+________________ test_body_separators_and_colons_are_preserved ________________
+tests\test_extract.py:64: in test_body_separators_and_colons_are_preserved
+    assert extraction.extract(str(path), "2026", False).pages[0].text == text
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+______________ test_unterminated_front_matter_fails_with_source _______________
+tests\test_extract.py:71: in test_unterminated_front_matter_fails_with_source
+    extraction.extract(str(path), "2023", True)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:70: in test_unterminated_front_matter_fails_with_source
+    with pytest.raises(RuntimeError, match="broken.md.*front matter"):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'broken.md.*front matter'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_______ test_html_preserves_headings_rows_and_units_without_boilerplate _______
+tests\test_extract.py:83: in test_html_preserves_headings_rows_and_units_without_boilerplate
+    doc = extraction.extract(str(path), "snapshot-2026", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+_____ test_nested_html_inside_cells_and_line_breaks_do_not_merge_columns ______
+tests\test_extract.py:96: in test_nested_html_inside_cells_and_line_breaks_do_not_merge_columns
+    assert "| BS Program | 12,000 PKR |" in extraction.extract(str(path), "v1", False).pages[0].text
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+______ test_pdf_keeps_physical_page_numbers_and_does_not_ocr_text_pages _______
+tests\test_extract.py:110: in test_pdf_keeps_physical_page_numbers_and_does_not_ocr_text_pages
+    doc = extraction.extract(str(path), "2026", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+________________________ test_scan_is_ocrd_and_flagged ________________________
+tests\test_extract.py:126: in test_scan_is_ocrd_and_flagged
+    doc = extraction.extract(str(path), "2022-05-30", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+______________ test_genuine_blank_pdf_page_preserved_without_ocr ______________
+tests\test_extract.py:141: in test_genuine_blank_pdf_page_preserved_without_ocr
+    doc = extraction.extract(str(path), "2026", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+_____________ test_ocr_failure_names_document_and_page[failure0] ______________
+tests\test_extract.py:158: in test_ocr_failure_names_document_and_page
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:157: in test_ocr_failure_names_document_and_page
+    with pytest.raises(RuntimeError, match="broken-scan.pdf.*page 1.*OCR"):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'broken-scan.pdf.*page 1.*OCR'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_____________ test_ocr_failure_names_document_and_page[failure1] ______________
+tests\test_extract.py:158: in test_ocr_failure_names_document_and_page
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:157: in test_ocr_failure_names_document_and_page
+    with pytest.raises(RuntimeError, match="broken-scan.pdf.*page 1.*OCR"):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'broken-scan.pdf.*page 1.*OCR'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_____________ test_empty_ocr_for_nonblank_page_is_not_silent_loss _____________
+tests\test_extract.py:168: in test_empty_ocr_for_nonblank_page_is_not_silent_loss
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:167: in test_empty_ocr_for_nonblank_page_is_not_silent_loss
+    with pytest.raises(RuntimeError, match="unreadable.pdf.*page 1.*OCR"):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'unreadable.pdf.*page 1.*OCR'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_ test_bad_document_fails_instead_of_returning_partial_success[broken.pdf-not a PDF] _
+tests\test_extract.py:181: in test_bad_document_fails_instead_of_returning_partial_success
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:180: in test_bad_document_fails_instead_of_returning_partial_success
+    with pytest.raises(RuntimeError, match=name):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'broken.pdf'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_ test_bad_document_fails_instead_of_returning_partial_success[bad.txt-\xff\xfe\x00bad] _
+tests\test_extract.py:181: in test_bad_document_fails_instead_of_returning_partial_success
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:180: in test_bad_document_fails_instead_of_returning_partial_success
+    with pytest.raises(RuntimeError, match=name):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'bad.txt'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+_ test_bad_document_fails_instead_of_returning_partial_success[unsupported.docx-not supported] _
+tests\test_extract.py:181: in test_bad_document_fails_instead_of_returning_partial_success
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:180: in test_bad_document_fails_instead_of_returning_partial_success
+    with pytest.raises(RuntimeError, match=name):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'unsupported.docx'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+__ test_bad_document_fails_instead_of_returning_partial_success[empty.txt-] ___
+tests\test_extract.py:181: in test_bad_document_fails_instead_of_returning_partial_success
+    extraction.extract(str(path), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:180: in test_bad_document_fails_instead_of_returning_partial_success
+    with pytest.raises(RuntimeError, match=name):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'empty.txt'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+___________________ test_missing_source_fails_with_filename ___________________
+tests\test_extract.py:186: in test_missing_source_fails_with_filename
+    extraction.extract(str(tmp_path / "missing.pdf"), "v1", False)
+pipeline\extract.py:17: in extract
+    raise NotImplementedError("extract: see STARTER-TODO(3.1)")
+E   NotImplementedError: extract: see STARTER-TODO(3.1)
+
+During handling of the above exception, another exception occurred:
+tests\test_extract.py:185: in test_missing_source_fails_with_filename
+    with pytest.raises(RuntimeError, match="missing.pdf"):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'missing.pdf'
+E    Input: 'extract: see STARTER-TODO(3.1)'
+=========================== short test summary info ===========================
+FAILED tests/test_extract.py::test_text_dispatch_preserves_structure_and_metadata[.md]
+FAILED tests/test_extract.py::test_text_dispatch_preserves_structure_and_metadata[.txt]
+FAILED tests/test_extract.py::test_text_dispatch_preserves_structure_and_metadata[.TXT]
+FAILED tests/test_extract.py::test_markdown_front_matter_is_not_content - Not...
+FAILED tests/test_extract.py::test_body_separators_and_colons_are_preserved
+FAILED tests/test_extract.py::test_unterminated_front_matter_fails_with_source
+FAILED tests/test_extract.py::test_html_preserves_headings_rows_and_units_without_boilerplate
+FAILED tests/test_extract.py::test_nested_html_inside_cells_and_line_breaks_do_not_merge_columns
+FAILED tests/test_extract.py::test_pdf_keeps_physical_page_numbers_and_does_not_ocr_text_pages
+FAILED tests/test_extract.py::test_scan_is_ocrd_and_flagged - NotImplementedE...
+FAILED tests/test_extract.py::test_genuine_blank_pdf_page_preserved_without_ocr
+FAILED tests/test_extract.py::test_ocr_failure_names_document_and_page[failure0]
+FAILED tests/test_extract.py::test_ocr_failure_names_document_and_page[failure1]
+FAILED tests/test_extract.py::test_empty_ocr_for_nonblank_page_is_not_silent_loss
+FAILED tests/test_extract.py::test_bad_document_fails_instead_of_returning_partial_success[broken.pdf-not a PDF]
+FAILED tests/test_extract.py::test_bad_document_fails_instead_of_returning_partial_success[bad.txt-\xff\xfe\x00bad]
+FAILED tests/test_extract.py::test_bad_document_fails_instead_of_returning_partial_success[unsupported.docx-not supported]
+FAILED tests/test_extract.py::test_bad_document_fails_instead_of_returning_partial_success[empty.txt-]
+FAILED tests/test_extract.py::test_missing_source_fails_with_filename - Asser...
+19 failed in 0.56s
+EXIT_CODE=1 (expected failure before extraction implementation)

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "fixture_chunks": 12,
+  "reports": [
+    {
+      "kind": "real",
+      "exit_code": 0,
+      "recall5": 0.8,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "gate_failures": [],
+      "expect_failures": [
+        "q03",
+        "q04",
+        "q06",
+        "q07",
+        "q08",
+        "q10",
+        "q11",
+        "q15",
+        "q17"
+      ]
+    },
+    {
+      "kind": "fixture",
+      "exit_code": 0,
+      "recall5": 1.0,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "gate_failures": [],
+      "expect_failures": []
+    }
+  ],
+  "scope": "Local actual services; baselines provisional only; S19 selects shipped configuration"
+}

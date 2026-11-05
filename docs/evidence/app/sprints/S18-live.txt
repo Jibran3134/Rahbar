@@ -1,0 +1,41 @@
+{"ts": "2026-11-05T07:59:24Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2023.md", "chunks": 4, "original_tokens": 255, "stored_tokens": 255, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T07:59:24Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2026.md", "chunks": 4, "original_tokens": 299, "stored_tokens": 299, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T07:59:24Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "fees-2026.md", "chunks": 4, "original_tokens": 185, "stored_tokens": 185, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{
+  "passed": true,
+  "fixture_chunks": 12,
+  "reports": [
+    {
+      "kind": "real",
+      "exit_code": 0,
+      "recall5": 0.8,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "gate_failures": [],
+      "expect_failures": [
+        "q03",
+        "q04",
+        "q06",
+        "q07",
+        "q08",
+        "q10",
+        "q11",
+        "q15",
+        "q17"
+      ]
+    },
+    {
+      "kind": "fixture",
+      "exit_code": 0,
+      "recall5": 1.0,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "gate_failures": [],
+      "expect_failures": [
+        "f03"
+      ]
+    }
+  ],
+  "scope": "Local actual services; baselines provisional only; S19 selects shipped configuration"
+}
+NATIVE_EXIT=0

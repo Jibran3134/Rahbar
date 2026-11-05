@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______________ test_threshold_boundary_course_codes_and_negation ______________
+tests\test_cache.py:93: in test_threshold_boundary_course_codes_and_negation
+    assert cache.get("key","Is CS102 required?",[1,0],now=2) is None
+E   AssertionError: assert AskResponse(request_id='-', answer='Makeup week [p.pdf / 4.25].', citations=[Citation(source='p.pdf', section='4.25', ...ed=[RetrievedRef(chunk_id='a', source='p.pdf', section='4.25', page=1, score=0.9)], provider='ollama', session_id=None) is None
+E    +  where AskResponse(request_id='-', answer='Makeup week [p.pdf / 4.25].', citations=[Citation(source='p.pdf', section='4.25', ...ed=[RetrievedRef(chunk_id='a', source='p.pdf', section='4.25', page=1, score=0.9)], provider='ollama', session_id=None) = get('key', 'Is CS102 required?', [1, 0], now=2)
+E    +    where get = <app.services.cache.SemanticCache object at 0x000001F00200EDE0>.get
+=========================== short test summary info ===========================
+FAILED tests/test_cache.py::test_threshold_boundary_course_codes_and_negation
+1 failed, 3 deselected in 0.23s
+NATIVE_EXIT=1

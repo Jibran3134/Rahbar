@@ -1,0 +1,241 @@
+{
+  "defaults": {
+    "retriever": "stub",
+    "llm_provider": "stub",
+    "embed_model": "nomic-embed-text",
+    "chroma_host": "chroma",
+    "chroma_port": 8000,
+    "collection": "rahbar",
+    "top_k": 5,
+    "temperature": 0.2,
+    "relevance_floor": 0.45,
+    "llm_model": "llama3.2:3b",
+    "ollama_url": "http://host.minikube.internal:11434",
+    "cache_threshold": 0.95,
+    "cache_ttl_seconds": 3600,
+    "cache_max_entries": 256,
+    "session_ttl_seconds": 1800,
+    "llm_timeout_seconds": 60.0,
+    "log_level": "INFO"
+  },
+  "default_redis_url": "redis://redis:6379/0",
+  "sensitive_values_omitted": [
+    "llm_api_key",
+    "configured_redis_url"
+  ],
+  "request_schema": {
+    "properties": {
+      "question": {
+        "maxLength": 500,
+        "minLength": 3,
+        "title": "Question",
+        "type": "string"
+      },
+      "session_id": {
+        "anyOf": [
+          {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Session Id"
+      }
+    },
+    "required": [
+      "question"
+    ],
+    "title": "AskRequest",
+    "type": "object"
+  },
+  "response_schema": {
+    "$defs": {
+      "Citation": {
+        "properties": {
+          "source": {
+            "title": "Source",
+            "type": "string"
+          },
+          "section": {
+            "title": "Section",
+            "type": "string"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Page"
+          }
+        },
+        "required": [
+          "source",
+          "section"
+        ],
+        "title": "Citation",
+        "type": "object"
+      },
+      "RetrievedRef": {
+        "description": "What the response says was retrieved. eval/run_eval.py scores against this.",
+        "properties": {
+          "chunk_id": {
+            "title": "Chunk Id",
+            "type": "string"
+          },
+          "source": {
+            "title": "Source",
+            "type": "string"
+          },
+          "section": {
+            "title": "Section",
+            "type": "string"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Page"
+          },
+          "score": {
+            "title": "Score",
+            "type": "number"
+          }
+        },
+        "required": [
+          "chunk_id",
+          "source",
+          "section",
+          "score"
+        ],
+        "title": "RetrievedRef",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "request_id": {
+        "title": "Request Id",
+        "type": "string"
+      },
+      "answer": {
+        "title": "Answer",
+        "type": "string"
+      },
+      "citations": {
+        "items": {
+          "$ref": "#/$defs/Citation"
+        },
+        "title": "Citations",
+        "type": "array"
+      },
+      "answered_from_context": {
+        "title": "Answered From Context",
+        "type": "boolean"
+      },
+      "confidence": {
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "title": "Confidence",
+        "type": "string"
+      },
+      "retrieved": {
+        "items": {
+          "$ref": "#/$defs/RetrievedRef"
+        },
+        "title": "Retrieved",
+        "type": "array"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "session_id": {
+        "anyOf": [
+          {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Session Id"
+      }
+    },
+    "required": [
+      "request_id",
+      "answer",
+      "citations",
+      "answered_from_context",
+      "confidence",
+      "retrieved",
+      "provider"
+    ],
+    "title": "AskResponse",
+    "type": "object"
+  },
+  "active_index_schema": {
+    "additionalProperties": false,
+    "description": "Internal publication identity, frozen for the lifetime of one request.\n\nSeparate API/indexer images share this wire shape, not Python package imports.\nThis type validates metadata only; it does not resolve/publish an index.",
+    "properties": {
+      "collection": {
+        "minLength": 1,
+        "title": "Collection",
+        "type": "string"
+      },
+      "generation": {
+        "minLength": 1,
+        "title": "Generation",
+        "type": "string"
+      },
+      "embed_model": {
+        "minLength": 1,
+        "title": "Embed Model",
+        "type": "string"
+      },
+      "dimension": {
+        "exclusiveMinimum": 0,
+        "title": "Dimension",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "collection",
+      "generation",
+      "embed_model",
+      "dimension"
+    ],
+    "title": "ActiveIndex",
+    "type": "object"
+  },
+  "provider_failure_kinds": [
+    "timeout",
+    "transport",
+    "invalid_json",
+    "invalid_schema",
+    "invalid_citation"
+  ],
+  "max_generation_attempts": 2,
+  "runtime_limit": "Contracts only. Real generation, turn storage, caching and live index compatibility are later sprints."
+}

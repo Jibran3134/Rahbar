@@ -1,0 +1,51 @@
+[
+  {
+    "ts": "2026-11-05T07:50:58Z",
+    "level": "INFO",
+    "logger": "rahbar.query",
+    "msg": "query outcome",
+    "request_id": "native-observe",
+    "cache": "MISS",
+    "fallback": false,
+    "tokens_in": 756,
+    "tokens_out": 120,
+    "prepare_ms": 1203.817400000844,
+    "retrieval_ms": 1219.8,
+    "token_kind": "actual",
+    "generation_ms": 21713.48,
+    "abstained": false,
+    "ms": 22947.09
+  },
+  {
+    "ts": "2026-11-05T07:51:00Z",
+    "level": "INFO",
+    "logger": "rahbar.query",
+    "msg": "query outcome",
+    "request_id": "611840e08878421482799f2eda519d8d",
+    "cache": "HIT",
+    "fallback": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "prepare_ms": 1220.3588000011223,
+    "retrieval_ms": 1220.36,
+    "generation_ms": 0,
+    "abstained": false,
+    "ms": 1227.23
+  },
+  {
+    "ts": "2026-11-05T07:51:01Z",
+    "level": "INFO",
+    "logger": "rahbar.query",
+    "msg": "query outcome",
+    "request_id": "5a19f6d1848a49149005d3e328a5e610",
+    "cache": "MISS",
+    "fallback": false,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "prepare_ms": 1076.0872999999265,
+    "retrieval_ms": 1094.5,
+    "generation_ms": 0.03,
+    "abstained": true,
+    "ms": 1099.52
+  }
+]

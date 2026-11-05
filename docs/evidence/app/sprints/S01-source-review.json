@@ -1,0 +1,89 @@
+{
+  "reviewed_at_utc": "2026-11-04T18:48:02.906634+00:00",
+  "reviewer": "Codex source inspection; Jibran human review pending",
+  "method": "Original downloaded PDF text/HTML plus visual inspection of rendered scans; no retrieval results used",
+  "version_changes": [
+    {
+      "clause": "4.25",
+      "old": {
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "physical_page": 16,
+        "printed_page": "11",
+        "method": "visual image inspection"
+      },
+      "current": {
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "physical_page": 23,
+        "printed_page": "17",
+        "method": "original PDF text inspection"
+      },
+      "finding": "Withdrawal deadline changes from end of classes to end of makeup week"
+    },
+    {
+      "clause": "4.3",
+      "old": {
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "physical_page": 14,
+        "printed_page": "9",
+        "method": "visual image inspection"
+      },
+      "current": {
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "physical_page": 19,
+        "printed_page": "13",
+        "method": "original PDF text inspection"
+      },
+      "finding": "Extra-course permission changes from batch-advancement condition to one additional course for final-year students"
+    }
+  ],
+  "scan": {
+    "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+    "visually_inspected_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "date_visible_on_page_1": "30.05.2022",
+    "source_scope": "faculty technical startup policy and blank annex forms",
+    "golden_clause": "4.2",
+    "golden_page": 1,
+    "ocr_completed": false
+  },
+  "historical_scan": {
+    "source": "undergraduate-academic-rules-aug-2023.pdf",
+    "visually_inspected_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      14,
+      15,
+      16,
+      17
+    ],
+    "note": "Title/contents and target policy clauses inspected; no claim that all pages have been OCRed"
+  },
+  "long_definition": {
+    "source": "student-handbook-jun-2026.pdf",
+    "physical_page": 48,
+    "printed_page": "40",
+    "section": "XII.1",
+    "whitespace_words_before_objectives": 314,
+    "word_count_is_model_token_count": false
+  },
+  "absence": {
+    "topic": "Hostel room-allotment deadline and hostel-specific deposit",
+    "excluded": "Dedicated Transport and Hostel Facilities prospectus document",
+    "text_review": "Current rules and prospectus have no hostel mentions; student handbook mentions hostel existence twice in duplicated extracted facilities text on physical pages 44-45; HTML has no hostel-specific answers",
+    "image_review": "Entrepreneurship pages 1-8 inspected; historical contents describe academic rules rather than hostel administration",
+    "limit": "Absence relates to this selected frozen corpus, not the entire university website"
+  },
+  "semantic_review_scope": "All 17 golden entries reviewed against the cited originals; page/section anchors machine-checked where a text layer exists; scan evidence reviewed visually",
+  "not_implemented": "No OCR pipeline, chunking, retrieval or quality tuning in S01"
+}

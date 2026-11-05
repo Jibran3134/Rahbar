@@ -1,0 +1,8 @@
+﻿corpus\validate.py:19: error: Library stubs not installed for "yaml"  [import-untyped]
+corpus\validate.py:19: note: Hint: "python3 -m pip install types-PyYAML"
+corpus\validate.py:19: note: (or run "mypy --install-types" to install all missing stub packages)
+corpus\validate.py:19: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+corpus\validate.py:152: error: Incompatible types in assignment (expression has type "dict[Any, Any] | None", variable has type "dict[str, Any]")  [assignment]
+corpus\validate.py:160: error: Unsupported operand types for - ("PageObject" and "int")  [operator]
+Found 3 errors in 1 file (checked 1 source file)
+EXIT_CODE=1

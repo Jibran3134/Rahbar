@@ -1,0 +1,10 @@
+{
+  "original_table_count": 3,
+  "naive_flattening_merges_row_structure": true,
+  "header_preserved": true,
+  "program_value_pair_preserved": true,
+  "units_preserved": true,
+  "effective_date_preserved": true,
+  "navigation_excluded": true,
+  "note": "Structural table improvement; no invented PDF table-repair claim"
+}

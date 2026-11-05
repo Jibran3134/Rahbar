@@ -1,0 +1,183 @@
+﻿FFFFFFFFFFFFFFFFFFFFFFFFFF                                               [100%]
+================================== FAILURES ===================================
+___________ test_invalid_settings_fail_even_for_empty_document[0-0] ___________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+__________ test_invalid_settings_fail_even_for_empty_document[-1-0] ___________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+__________ test_invalid_settings_fail_even_for_empty_document[5--1] ___________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+___________ test_invalid_settings_fail_even_for_empty_document[5-5] ___________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+___________ test_invalid_settings_fail_even_for_empty_document[5-6] ___________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_________ test_invalid_settings_fail_even_for_empty_document[True-0] __________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_________ test_invalid_settings_fail_even_for_empty_document[5-False] _________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+__________ test_invalid_settings_fail_even_for_empty_document[2.5-0] __________
+tests\test_chunk.py:26: in test_invalid_settings_fail_even_for_empty_document
+    chunking.chunk(document(), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+__________________ test_empty_pages_do_not_emit_empty_chunks __________________
+tests\test_chunk.py:30: in test_empty_pages_do_not_emit_empty_chunks
+    assert chunking.chunk(document("", " \n\t"), 20, 2) == []
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+______________ test_numerical_clauses_and_page_version_identity _______________
+tests\test_chunk.py:36: in test_numerical_clauses_and_page_version_identity
+    chunks = chunking.chunk(doc, 100, 5)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+___________ test_markdown_text_headings_and_roman_numeric_hierarchy ___________
+tests\test_chunk.py:48: in test_markdown_text_headings_and_roman_numeric_hierarchy
+    assert [c.section for c in chunking.chunk(doc, 100, 5)] == [
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_________ test_decimal_values_and_table_rows_are_not_clause_headings __________
+tests\test_chunk.py:59: in test_decimal_values_and_table_rows_are_not_clause_headings
+    chunks = chunking.chunk(doc, 100, 0)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+____ test_section_continues_across_empty_pages_but_chunks_never_span_pages ____
+tests\test_chunk.py:67: in test_section_continues_across_empty_pages_but_chunks_never_span_pages
+    chunks = chunking.chunk(doc, 100, 10)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+________ test_paragraph_boundary_preferred_when_paragraph_will_not_fit ________
+tests\test_chunk.py:77: in test_paragraph_boundary_preferred_when_paragraph_will_not_fit
+    size = max(chunking.count_tokens(first), chunking.count_tokens(second))
+E   AttributeError: module 'pipeline.chunk' has no attribute 'count_tokens'
+___________ test_sentence_boundary_preferred_in_oversized_paragraph ___________
+tests\test_chunk.py:84: in test_sentence_boundary_preferred_in_oversized_paragraph
+    chunks = chunking.chunk(document(" ".join(sentences)), 12, 0)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_______ test_bounded_fallback_and_exact_overlap_without_lost_text[1-0] ________
+tests\test_chunk.py:92: in test_bounded_fallback_and_exact_overlap_without_lost_text
+    chunks = chunking.chunk(document(text), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_______ test_bounded_fallback_and_exact_overlap_without_lost_text[2-1] ________
+tests\test_chunk.py:92: in test_bounded_fallback_and_exact_overlap_without_lost_text
+    chunks = chunking.chunk(document(text), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_______ test_bounded_fallback_and_exact_overlap_without_lost_text[20-0] _______
+tests\test_chunk.py:92: in test_bounded_fallback_and_exact_overlap_without_lost_text
+    chunks = chunking.chunk(document(text), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_______ test_bounded_fallback_and_exact_overlap_without_lost_text[20-5] _______
+tests\test_chunk.py:92: in test_bounded_fallback_and_exact_overlap_without_lost_text
+    chunks = chunking.chunk(document(text), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+______ test_bounded_fallback_and_exact_overlap_without_lost_text[20-19] _______
+tests\test_chunk.py:92: in test_bounded_fallback_and_exact_overlap_without_lost_text
+    chunks = chunking.chunk(document(text), size, overlap)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_____ test_oversized_table_preserves_order_and_values_with_bounded_chunks _____
+tests\test_chunk.py:106: in test_oversized_table_preserves_order_and_values_with_bounded_chunks
+    chunks = chunking.chunk(document(row), 20, 0)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_____________________ test_overlap_never_crosses_sections _____________________
+tests\test_chunk.py:112: in test_overlap_never_crosses_sections
+    chunks = chunking.chunk(document("## Alpha\n" + "alpha " * 50
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+________________ test_stable_distinct_ids_and_identity_changes ________________
+tests\test_chunk.py:120: in test_stable_distinct_ids_and_identity_changes
+    chunks = chunking.chunk(doc, 15, 5)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+_________________ test_id_is_independent_of_python_hash_seed __________________
+tests\test_chunk.py:134: in test_id_is_independent_of_python_hash_seed
+    results = [subprocess.run([sys.executable, "-c", code], env={**os.environ, "PYTHONHASHSEED": seed},
+..\.venv\python-runtime\Lib\subprocess.py:571: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe', '-c', "import json; from pipeline.chunk import chunk; from pipeline.models import Document,Page;print(json.dumps([c.id for c in chunk(Document('s','v',False,[Page('s',1,'content '*30)]),12,3)]))"]' returned non-zero exit status 1.
+_____ test_approximate_counter_bounds_long_words_unicode_and_punctuation ______
+tests\test_chunk.py:140: in test_approximate_counter_bounds_long_words_unicode_and_punctuation
+    assert chunking.count_tokens("") == chunking.count_tokens(" \n") == 0
+E   AttributeError: module 'pipeline.chunk' has no attribute 'count_tokens'
+___________ test_amplification_uses_original_tokens_before_overlap ____________
+tests\test_chunk.py:149: in test_amplification_uses_original_tokens_before_overlap
+    chunks = chunking.chunk(doc, 20, 5)
+pipeline\chunk.py:14: in chunk
+    raise NotImplementedError("chunk: see STARTER-TODO(3.1)")
+E   NotImplementedError: chunk: see STARTER-TODO(3.1)
+=========================== short test summary info ===========================
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[0-0]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[-1-0]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[5--1]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[5-5]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[5-6]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[True-0]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[5-False]
+FAILED tests/test_chunk.py::test_invalid_settings_fail_even_for_empty_document[2.5-0]
+FAILED tests/test_chunk.py::test_empty_pages_do_not_emit_empty_chunks - NotIm...
+FAILED tests/test_chunk.py::test_numerical_clauses_and_page_version_identity
+FAILED tests/test_chunk.py::test_markdown_text_headings_and_roman_numeric_hierarchy
+FAILED tests/test_chunk.py::test_decimal_values_and_table_rows_are_not_clause_headings
+FAILED tests/test_chunk.py::test_section_continues_across_empty_pages_but_chunks_never_span_pages
+FAILED tests/test_chunk.py::test_paragraph_boundary_preferred_when_paragraph_will_not_fit
+FAILED tests/test_chunk.py::test_sentence_boundary_preferred_in_oversized_paragraph
+FAILED tests/test_chunk.py::test_bounded_fallback_and_exact_overlap_without_lost_text[1-0]
+FAILED tests/test_chunk.py::test_bounded_fallback_and_exact_overlap_without_lost_text[2-1]
+FAILED tests/test_chunk.py::test_bounded_fallback_and_exact_overlap_without_lost_text[20-0]
+FAILED tests/test_chunk.py::test_bounded_fallback_and_exact_overlap_without_lost_text[20-5]
+FAILED tests/test_chunk.py::test_bounded_fallback_and_exact_overlap_without_lost_text[20-19]
+FAILED tests/test_chunk.py::test_oversized_table_preserves_order_and_values_with_bounded_chunks
+FAILED tests/test_chunk.py::test_overlap_never_crosses_sections - NotImplemen...
+FAILED tests/test_chunk.py::test_stable_distinct_ids_and_identity_changes - N...
+FAILED tests/test_chunk.py::test_id_is_independent_of_python_hash_seed - subp...
+FAILED tests/test_chunk.py::test_approximate_counter_bounds_long_words_unicode_and_punctuation
+FAILED tests/test_chunk.py::test_amplification_uses_original_tokens_before_overlap
+26 failed in 0.28s
+NATIVE_EXIT=1

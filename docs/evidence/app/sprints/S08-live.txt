@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:36:32.754121+00:00",
+  "probes": [
+    {
+      "probe": "current_withdrawal",
+      "passed": true,
+      "question": "Under the current undergraduate rules, what is the course-withdrawal deadline?",
+      "retrieved": [
+        {
+          "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.25",
+          "page": 23,
+          "score": 0.82920778
+        },
+        {
+          "chunk_id": "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.24",
+          "page": 22,
+          "score": 0.78173196
+        },
+        {
+          "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.23",
+          "page": 22,
+          "score": 0.78047496
+        },
+        {
+          "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "D.6.8",
+          "page": 29,
+          "score": 0.77765661
+        },
+        {
+          "chunk_id": "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "3.33",
+          "page": 18,
+          "score": 0.76983392
+        }
+      ]
+    },
+    {
+      "probe": "historical_withdrawal",
+      "passed": true,
+      "question": "Under the August 2023 undergraduate rules specifically, what was the course-withdrawal deadline?",
+      "retrieved": [
+        {
+          "chunk_id": "96b759828454fed3b1960b5d5ac398fef5ecdf1e28dee5ff8fb313f21cc8f72d",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "4.25",
+          "page": 16,
+          "score": 0.7664454
+        },
+        {
+          "chunk_id": "cec5305a5f7616fc38eeb92e49bfafa57dd5a5fd2d370fcf3e6575aa7a494626",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "4.23",
+          "page": 16,
+          "score": 0.7137793299999999
+        },
+        {
+          "chunk_id": "583c3b2b9423592f0c7e06d20ed13d0e55dd5be6e01d8ef364957d5d33a40004",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "6.7",
+          "page": 20,
+          "score": 0.70924795
+        },
+        {
+          "chunk_id": "e4242c233f3404e0d5bd239747bbb3c673a7d4618d49e17c50b54f07c885d55d",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "4.24",
+          "page": 16,
+          "score": 0.7011221599999999
+        },
+        {
+          "chunk_id": "4e7371972e369a71b138bf731932df8818991626fcc9cd2379c150ff16d1c970",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "3.25",
+          "page": 13,
+          "score": 0.70018452
+        }
+      ]
+    },
+    {
+      "probe": "current_load",
+      "passed": true,
+      "question": "Under the current rules, who may register for an additional course beyond the normal five-course load?",
+      "retrieved": [
+        {
+          "chunk_id": "9ea1aae8f9f9d8ca42bfd9054633de805e3b038a74444a4a59e850648b687e59",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.3",
+          "page": 19,
+          "score": 0.75833154
+        },
+        {
+          "chunk_id": "5fd16046076a25bca9d12f7a93ee594ef519f786975a4a7ce30a598ea716ed06",
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "section": "9",
+          "page": 2,
+          "score": 0.7480905
+        },
+        {
+          "chunk_id": "af7122ae1e3ac91a78f6aa49a881e1f10b4e6fc155e02dcb5916c92e2366dede",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "1.19",
+          "page": 9,
+          "score": 0.74118912
+        },
+        {
+          "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "1.20",
+          "page": 9,
+          "score": 0.7339627
+        },
+        {
+          "chunk_id": "3974b006ac83c8db069e387284ee209514005daf3267126ccfcbdf56d61bb920",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.4",
+          "page": 19,
+          "score": 0.73339283
+        }
+      ]
+    },
+    {
+      "probe": "historical_load",
+      "passed": true,
+      "question": "In the August 2023 rules specifically, what condition allowed registration for more than the normal five courses?",
+      "retrieved": [
+        {
+          "chunk_id": "bb201c3089e25d3c274b511a3707af203d5d286bf436c5a381890b862eaadec7",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "6.4",
+          "page": 20,
+          "score": 0.75742424
+        },
+        {
+          "chunk_id": "e8d51f09a1830bfd6acaaf516fe9e76a3f3ccfad95aac639e05f1647e1dcede3",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "1.19",
+          "page": 7,
+          "score": 0.73531055
+        },
+        {
+          "chunk_id": "122e9411e1827ca117c099299b808baf9dd6145c49cb470cb5af43919408d75c",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "4.3",
+          "page": 14,
+          "score": 0.7177977
+        },
+        {
+          "chunk_id": "48a9c02dd7f5f829e815f7c85ed7ca6f7a5b018e95d066b44f055ad3464ab1d6",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "6.10",
+          "page": 20,
+          "score": 0.7170304000000001
+        },
+        {
+          "chunk_id": "bf0cdc3dd8e6c0e34931d9242e18585f2ad0e975a6232eb5941c72cdfcc029fd",
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "section": "1.20",
+          "page": 7,
+          "score": 0.71391165
+        }
+      ]
+    }
+  ]
+}
+NATIVE_EXIT=0

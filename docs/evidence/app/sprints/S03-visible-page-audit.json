@@ -1,0 +1,18 @@
+[
+  {
+    "source": "academic-rules-handbook-jun-2026.pdf",
+    "physical_page": 23,
+    "original_char_objects": 1991,
+    "visible_char_centers": 830,
+    "out_of_bounds_char_centers": 1161,
+    "visible_intro_whitespace_words": null
+  },
+  {
+    "source": "student-handbook-jun-2026.pdf",
+    "physical_page": 48,
+    "original_char_objects": 3584,
+    "visible_char_centers": 1965,
+    "out_of_bounds_char_centers": 1619,
+    "visible_intro_whitespace_words": 237
+  }
+]

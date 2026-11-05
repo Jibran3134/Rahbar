@@ -1,0 +1,10 @@
+﻿  have    undergraduate-academic-rules-aug-2023.pdf
+  have    academic-rules-handbook-jun-2026.pdf
+  have    student-handbook-jun-2026.pdf
+  have    prospectus-academic-rules-and-regulations.pdf
+  have    faculty-entrepreneurship-and-technical-start-ups-policy.pdf
+  have    fee-structure-page.html
+  have    grading-page.html
+
+7 documents in corpus/raw, manifest written to corpus/MANIFEST.md
+EXIT_CODE=0

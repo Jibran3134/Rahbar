@@ -1,0 +1,16 @@
+﻿{
+    "python":  "C:\\Python314\\python.exe",
+    "py":  "C:\\WINDOWS\\py.exe",
+    "docker":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "kubectl":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\kubectl.exe",
+    "minikube":  "NOT_FOUND_ON_PATH",
+    "ollama":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+    "tesseract":  "NOT_FOUND_ON_PATH",
+    "pdftoppm":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdftoppm.exe",
+    "pdftotext":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdftotext.exe",
+    "pdfinfo":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdfinfo.exe",
+    "pdffonts":  "C:\\Users\\Jibran\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdffonts.exe",
+    "checked_at_pkt":  "2026-11-04 23:25:55 +05:00",
+    "git_revision":  "5a40788c505481486700fa2f057822460f9d51c5",
+    "branch":  "main"
+}
