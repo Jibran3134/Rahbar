@@ -1,6 +1,6 @@
 ﻿# Indexing and retrieval pipeline
 
-Status through S19: indexing/query stages, shared sessions, cache, truthful readiness, observability, indexed-poison safety and evaluator implemented. Full real/fixture integration and measured configuration selection passed; controlled failure experiments and final handoff are being completed. Platform/release acceptance remains external.
+Status through S21: indexing/query stages, shared sessions, cache, truthful readiness, observability, indexed-poison safety and evaluator implemented. Real/fixture integration, measured configuration selection and four controlled failure experiments passed. Platform/release acceptance remains pending. Sections labeled S03-S18 describe their historical implementation state; the S19 final operating point below supersedes provisional defaults and pending-sprint statements.
 
 ## Extraction
 

@@ -1,6 +1,6 @@
 ﻿# Jibran: sprint ledger and Alishba handoffs
 
-Updated: 5 November 2026, PKT. This is execution state, not a claim that the planned application exists.
+Updated: 5 November 2026, PKT. Application implementation is verified through S21; platform/release acceptance remains pending. Earlier handoffs retain the state at their sprint date; the final handoff below supersedes their provisional values. Jibran confirmed he will develop the absent platform work separately, and authorized local commits directly on main. No push is authorized or performed.
 
 | Sprint | Status | Revision / working-tree description | Focused test result | Regression result | Live check | Evidence | Next action |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -25,7 +25,7 @@ Updated: 5 November 2026, PKT. This is execution state, not a claim that the pla
 | S18 | PASS | Real and fixture query integration | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S18](../evidence/app/sprints/S18.md) | Continue authorized range |
 | S19 | PASS | Measured configuration and final baselines | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S19](../evidence/app/sprints/S19.md) | Continue authorized range |
 | S20 | PASS | Four controlled stage failures and restoration | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S20](../evidence/app/sprints/S20.md) | Continue authorized range |
-| S21 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
+| S21 | PASS | Final application review, documentation and platform handoff | Red→green recorded | Tests/types/Ruff exit 0 | Explicit live gate passed | [S21](../evidence/app/sprints/S21.md) | Continue authorized range |
 | S22 | TODO | Not started | Not run | Not run | Not run | None | Wait for prerequisites |
 
 ## S00 handoff for Alishba
@@ -39,7 +39,7 @@ Updated: 5 November 2026, PKT. This is execution state, not a claim that the pla
 - No branch protection, GitHub settings or branch changes were made. The current branch is main; establish the agreed dev/feature PR workflow before production changes.
 - This handoff is written evidence only. No Slack/email/other external message has been sent and Alishba has not confirmed agreement in this session.
 
-S00–S11 have passed. S12–S22 remain TODO. No production feature or corpus work began during S00. S10 was developed independently while the S06 model download blocked; all dependent gates were respected.
+Historical S00-S11 handoff: those sprints had passed at that point. Current completion is recorded in the ledger above. No production feature or corpus work began during S00. S10 was developed independently while the S06 model download blocked; all dependent gates were respected.
 ## S01 handoff for Alishba
 
 - Real corpus is seven verified public documents, five PDFs with 161 physical pages and two HTML pages. Sources/manifest are in corpus/; all downloaded originals/inspection artifacts remain ignored in corpus/raw/.
@@ -106,3 +106,66 @@ At the S02 handoff S03 was next; it subsequently passed as recorded below.
 - Real full-path API checks pass current makeup-week and historical end-of-classes deadlines with correct physical-page citations, two absent hostel refusals, and separately injected malformed provider JSON (two attempts, HTTP 200 safe fallback). Native and injected observations are explicitly distinguished in S11-live.json. Claim entailment/all-category quality and indexed-poison resistance are not certified by citation syntax.
 - Final regression: 139 API + 130 indexer cases pass; Ruff and API/indexer relevant mypy pass. Detailed per-sprint commands/exits/failed observations are in S06.md–S11.md. Native checks are explicit live_*.py commands, never collected by default pytest.
 - No Git commit/push, branch/account change, deployment publication or external handoff message occurred. Jibran human review and Alishba integration review are pending. Requested S11 boundary reached; S12 is not started.
+
+## Final S21 handoff: Jibran and Alishba
+
+Jibran confirmed that Dockerfiles, Kubernetes manifests and CI/CD have not been developed and that he will develop them separately. Ownership boundaries remain intact: these application sprints do not change Alishba's files. Human review remains pending. Local commits directly on main are authorized; no remote push or account change was performed.
+
+### Verified application results
+
+- Final offline suite: 160 API + 130 indexer + 9 evaluator cases; both production mypy checks and Ruff pass. Standard-library trace line coverage: API 779/1047=74.403%, indexer 632/710=89.014%; these are line, not branch, measurements ([API](../evidence/app/sprints/S21-api-coverage.json), [indexer](../evidence/app/sprints/S21-indexer-coverage.json)).
+- Real frozen 17-question native report: recall@3/@5=.933333, citation integrity=1, required abstentions=1. Ordinary recall=.875; exact/version/injection recall=1. Two abstention questions have undefined recall by design. Fixtures have all scores 1. See ../../eval/results.json and ../../eval/fixtures/results.json, with separate committed baselines.
+- Real q07 was refused by the conservative floor; q08 fell back after verification; q17 returned an incomplete heading. q01/q15 gave terse negatives without the expected literal keyword. Citation integrity does not measure semantic correctness. These five diagnostic misses remain visible; do not advertise perfect answer quality.
+- S21 native observability recheck returned MISS then HIT and an absent-topic refusal, with three correlated outcomes, actual usage on generation, zero generation usage on HIT, IDs/scores and exported metrics. Expected/actual model/dimension diagnostics and HIT evidence logging were added after red tests. Evidence: S21-live.json, S21-query-logs.json, S21-metrics.prom.
+- Four controlled failures and restoration are documented in FAILURE-ANALYSIS.md and S20-live.json. Removing historical filtering leaked 21 superseded hits across 11 default queries without changing recall; no invented generated-answer degradation is claimed.
+
+### Engineering contributions for final ENGINEERING-NOTES.md
+
+These are inputs for Alishba's final assembled document, with actual production file/line references. Platform outcomes below still require measurement.
+
+1. **Indexer Job and three replicas:** [store.py:24](../../indexer/pipeline/store.py#L24) acquires an exclusive server-side writer-lock collection, builds/validates a separate generation, then publishes four-key identity. [chroma.py:63](../../api/app/retrieval/chroma.py#L63) resolves one generation for a request. API startup must never ingest. Three API replicas should share Chroma/Redis and read the same identity. A Kubernetes Job, restart policy and completion evidence are platform work. A crashed writer lock requires verifying no live writer before manual recovery; do not steal by age or delete a generation after uncertain publication acknowledgement.
+2. **Liveness/readiness:** [health.py:12](../../api/app/routes/health.py#L12) exposes process-only liveness; [readiness.py:17](../../api/app/services/readiness.py#L17) checks actual index/model/query dimension/Redis with bounded waits and one outstanding Chroma task. Native Redis outage/model-conflict checks kept healthz=200 while readyz=503 and recovered after restoration (S14). Configure probes and observe actual endpoints during cluster deletion; native checks do not prove Kubernetes routing/restart behavior.
+3. **Autoscaling:** [metrics.py:51](../../api/app/routes/metrics.py#L51) exports HTTP/retrieval/generation timing, cache and usage metrics. External Ollama can dominate request latency while API CPU stays low; CPU HPA alone may miss that bottleneck. Track generation latency, in-flight work/queue depth and upstream capacity before choosing custom scaling signals. Queue depth is a suggested platform measurement, not an implemented metric. Replicas will not multiply one external model's generation capacity. No HPA/load evidence has yet been produced.
+4. **Memory:** S19 native full OCR/index publication took 198.1 seconds for 813 chunks; interpreter peak 238,583,808 bytes (227.53 MiB), measured on the actual interpreter child. OCR child memory is excluded. This does not establish pod/cgroup peak or safe memory-limit headroom. The initial launcher-only 4-MiB sample is retained as invalid. Platform must capture kubectl top plus peak/cgroup data and justify requests/limits. Exit 137/OOMKilled is an expected possible symptom of too small a limit, not an observed experiment here.
+5. **Weakest question type:** ordinary recall=.875 versus 1 for other answerable types. q07's scanned eligibility clause is present in raw top-k but below the selected .74 floor, producing refusal. Lowering to .70 admitted one absent-topic candidate in the measured sample. Keep the explicit tradeoff rather than altering frozen truth. q17 separately shows answer usefulness can fail despite correct retrieval/citations. See S19-measurements.json and eval/results.json.
+6. **Embedding mismatch:** [chroma.py:63](../../api/app/retrieval/chroma.py#L63) enforces active model and actual query-vector dimension; expected/actual details are logged, requests fail sanitized 503. [readiness.py:17](../../api/app/services/readiness.py#L17) fails the probe, and [cache.py:21](../../api/app/services/cache.py#L21) includes immutable index/model/settings/prompt in its namespace. S08/S14/S21 tests cover conflict/recovery and diagnostics. Linux deployment must reproduce the mismatch and endpoint behavior; a similarly named mutable model tag is not digest enforcement.
+7. **Real debugging account:** S18/S19 retained native failures show schema/citation formatting initially rejected useful evidence, constrained-pattern attempts produced invalid/stalled output, and citation rendering exposed a real indexed-poison escape previously masked by fallback. The resolution combined verified rendering, independent grounding validation, conservative quarantine and query-level relevance interpretation. The evidence timeline spans more than one elapsed hour with other checks interleaved; no stopwatch measured one continuous hour of active editing. Do not claim a fabricated active debugging duration. Inspect S18 reports, S19-prefix-red.txt, S19-safety-red.txt, S19-injection-verified.txt and S19-final-verified.txt, and the corresponding code/tests.
+
+### Exact integration contract and commands
+
+Use Python 3.12 and the existing pinned requirements for each independent build context. API needs Redis; indexer needs native Tesseract/English data for scans. PDFium supplies rasterization; Poppler is not a runtime extraction requirement. Verify OCR again inside the final Linux image.
+
+| Setting | Real native profile / deployment requirement |
+| --- | --- |
+| RETRIEVER / LLM_PROVIDER | chroma / ollama-host |
+| EMBED_MODEL / LLM_MODEL | nomic-embed-text / llama3.2:3b |
+| OLLAMA_URL | Native http://127.0.0.1:11434; choose and verify actual container-reachable endpoint |
+| CHROMA_HOST / CHROMA_PORT | Native 127.0.0.1 / 8001; deployment service hostname / 8000 |
+| CHROMA_COLLECTION | rahbar, same for writer/readers |
+| REDIS_URL | Native redis://127.0.0.1:6379/0; deployment shared Redis service URL |
+| CORPUS_DIR | Native absolute corpus/raw path; deployment mounted corpus directory with _index.json |
+| CHUNK_SIZE / CHUNK_OVERLAP | 250 / 30 |
+| TOP_K / RELEVANCE_FLOOR | 5 / .74 |
+| TEMPERATURE / LLM_TIMEOUT_SECONDS | .2 / 60 |
+| CACHE_THRESHOLD / CACHE_TTL_SECONDS / CACHE_MAX_ENTRIES | .95 / 3600 / 256 |
+| SESSION_TTL_SECONDS | 1800, six bounded turns |
+
+Indexer: from indexer working directory, run `python -m pipeline.run` with the environment above. For native OCR set TESSERACT_CMD to the actual installed executable; never bake a Windows path into Linux configuration. All real writers must follow the exclusive lock/publication protocol. **Do not use --dummy for final CI or release:** it does not publish the required active-control identity. API: from api working directory, run `python -m uvicorn app.main:app --host 0.0.0.0 --port 8000` with matching environment. Downloads/extracted corpus/vectors in corpus/raw remain ignored; provision verified corpus separately.
+
+CI fixture path: real extraction/chunking/embedding/publication of corpus/ci-fixtures into a separate collection, same nomic model, API RETRIEVER=chroma, LLM_PROVIDER=stub, RELEVANCE_FLOOR=.65. This profile differs explicitly from the .74 real profile. From root run:
+
+```powershell
+python eval/run_eval.py --api http://127.0.0.1:8000 --golden eval/fixtures/golden.fixture.yaml --baseline eval/fixtures/baseline.json --out eval/fixtures/results.json --bypass-cache
+```
+
+Real regression uses eval/golden.yaml and eval/baseline.json. Ordinary CI must never pass --update-baseline, overwrite frozen golden/source labels or replay saved responses instead of making requests. Run evaluator tests explicitly with `python -m pytest eval/tests`; they are outside api/indexer test roots. X-Bypass-Cache:true is supported for clean regression requests. GET /api/info exposes the actual runtime profile and active identity for provenance.
+
+API endpoints: POST /api/ask; GET /healthz, /readyz, /metrics, /api/info. Optional session_id enables shared turns; clients can keep omitting it. Reuse server-issued IDs for conversations; treat them as bearer credentials. Responses expose X-Cache HIT/MISS/BYPASS and request correlation; no reasoning. Metrics avoid request-ID labels; structured per-query logs hold IDs, chunk IDs/scores, outcomes/timings and usage. S21 samples can inform dashboards.
+
+### Submission and release blockers
+
+Native submission checker: 83 passed, 12 warnings, 29 failures, native exit 1 (S21-submission.log). Remaining failures concern Alishba's platform/final assembly: Dockerfiles, manifests, workflows, indexer-Job ADR0001, platform evidence, README/diagram/badge/apply/cluster/API/indexer instructions, final ENGINEERING-NOTES.md and AI-USAGE.md. The checker is unchanged. Its output is not a passing submission gate.
+
+Six captured historical failure transcripts were archived from .txt to .log, with exact bytes and SHA-256 preserved, because old captured placeholder error text was being counted as current source. S21-historical-transcript-map.json maps original command paths to archive paths. Historical commands remain unchanged. The later generation diagnostic rerun is saved as S19-format-diagnosis-rerun.json; original S18 diagnosis is preserved.
+
+Complete platform image builds/scans, manifests/probes/resources/network policies/storage/Ingress/HPA, protected fixture regression CI and SHA-tagged dependent CD, actual rollout and rollback, endpoint/model mismatch and recovery, deletion/reindex/cache/persistence tests, screenshots and required submission links. Assemble final README/engineering notes/disclosure from these contributions and review the actual assignment. S22 must stay BLOCKED until those requirements pass on the same released application revision. No Kubernetes success, blocked-merge screenshot, protected PR or CD URL is fabricated.

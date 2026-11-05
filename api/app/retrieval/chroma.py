@@ -67,6 +67,8 @@ class ChromaRetriever:
     def _prepare(self, question: str) -> tuple[ActiveIndex,Any,list[float]]:
         active, collection = resolve_active(self.get_client(),self.settings.collection)
         if active.embed_model != self.settings.embed_model:
+            log.error("embedding model conflict",extra={"expected_model":self.settings.embed_model,
+                                                       "actual_model":active.embed_model})
             raise IndexStateError("Configured embedding model conflicts with active index")
         connection = self.http_client or httpx.Client()
         try:
@@ -82,6 +84,8 @@ class ChromaRetriever:
                 or len(vectors[0])!=active.dimension
                 or any(type(v) not in (int,float) or not math.isfinite(v) for v in vectors[0])
                 or not any(v!=0 for v in vectors[0])):
+            observed=len(vectors[0]) if isinstance(vectors,list) and vectors and isinstance(vectors[0],list) else None
+            log.error("embedding vector conflict",extra={"expected_dimension":active.dimension,"actual_dimension":observed})
             raise IndexStateError("Query vector is invalid or dimension conflicts with active index")
         return active,collection,vectors[0]
 

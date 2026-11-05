@@ -27,6 +27,9 @@ def check_dependencies(state: Any) -> dict[str,bool]:
         active,_=future.result(timeout=2)
         checks["chroma"]=True
         checks["model"]=active.embed_model==state.settings.embed_model
+        if not checks["model"]:
+            log.error("embedding model conflict",extra={"expected_model":state.settings.embed_model,
+                                                       "actual_model":active.embed_model})
         if checks["model"]:
             response=httpx.post(state.settings.ollama_url.rstrip("/")+"/api/embed",json={
                 "model":state.settings.embed_model,"input":["search_query: readiness"],"truncate":False},timeout=2)

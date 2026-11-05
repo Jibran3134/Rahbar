@@ -1,46 +1,39 @@
-# ADR 0004: provider contracts and data governance
+﻿# ADR 0004: provider contracts and data governance
 
 ## Status
 
-S02 contracts and S06–S11 embedding/provider/grounding behavior implemented on 5 November 2026 under Jibran's approved sprint plan. Jibran's human review and Alishba's integration review are pending. Sessions/cache/readiness and later acceptance gates remain incomplete.
+Implemented through S21 on 5 November 2026. Native application checks passed; Jibran's human review and Alishba's platform integration review remain pending. S22 release acceptance requires the platform work, which Jibran confirmed has not been developed yet. Earlier implementation states remain in individual sprint reports.
 
-## Context
+## Context and decision
 
-The starter accepts provider names whose real implementations raise NotImplementedError and ignores an undeclared session field. Three API replicas will require shared session state, explicit failure handling and one coherent index identity. API and indexer images have independent build contexts, so importing one workload's package into the other is inappropriate.
+Three API replicas need one index identity and shared conversation/cache state. The API and indexer have independent build contexts. They use small separate identity representations protected by a wire-contract test, without importing each other's production packages.
 
-## Decision
+Supported modes are `stub` and `ollama-host`; unsupported `hosted` and `ollama-incluster` fail configuration. Hosted compatibility fields do not enable a provider. Configuration parsing makes no network calls. Generation and embedding models remain separate: selected native models are llama3.2:3b and nomic-embed-text (768 dimensions). Runtime digests are recorded in evidence; mutable names do not enforce immutable model contents.
 
-- Configuration accepts `stub` and the selected `ollama-host` mode; both are implemented and tested. Unsupported `hosted` and `ollama-incluster` selections fail during configuration instead of reaching an unimplemented request path. Existing hosted settings remain inert compatibility fields; they do not enable that mode.
-- Model generation and embedding selection remain separate. Both workloads read the same embedding model/endpoint/collection keys. S08 implements collection-model and actual query-dimension enforcement; pure settings validation alone is not a live compatibility check.
-- Provider failures have five explicit categories: timeout, transport, invalid JSON, invalid schema and invalid citation. S11 implements the fixed two-attempt budget for validation failures, with immediate safe fallback on timeout/transport failure.
-- The model's Answer schema is unchanged. AskRequest/AskResponse gain an optional nullable session_id, strictly 1–128 ASCII letters/digits/underscores/hyphens when present. Provided legacy clients can omit it and retain all previous response fields. Until S12, the API does not store/reuse turns and the response session_id remains null.
-- Internal active-index identity contains exactly collection, generation, embed_model and dimension. Text identifiers are nonempty and whitespace-free; dimension is a positive integer, not a boolean or string. API validates/freezes the identity with Pydantic; indexer has a frozen dataclass producing the same wire shape. A cross-workload test protects compatibility without production cross-package imports.
-- Configuration parsing and schema validation perform no service/model calls. Invalid configuration fails before factories initialize dependencies.
+The four-key active identity is collection/generation/embed_model/dimension. Publication validates a new generation before activation; requests resolve one immutable generation and enforce model and actual vector dimension. Conflicts produce sanitized 503 responses with expected/actual model or dimension diagnostics. APIs never build an index at startup.
 
-## S06–S11 implementation update
+Generation uses the Answer JSON schema, temperature .2, output cap 512, context 4096 and configured 60-second HTTP timeout. Strict parsing and an independent request-local citation validator follow generation. One validation retry is allowed; timeout/transport failure immediately falls back. Repeated invalid output becomes an uncited low-confidence refusal. Reasoning never reaches HTTP responses or application logs.
 
-The original S02 decision remains historical context. Real embedding, model/dimension checks, constrained generation and bounded citation validation/recovery are now implemented; sessions/cache/readiness remain pending. Native tests use nomic-embed-text (768 dimensions) and the planned llama3.2:3b, with inventories/digests recorded. The installed 1B profile refused known evidence and is not the verified selected model.
+The Ollama adapter may render already verified citation objects into inline tags when all triples match supplied evidence and only one source/section pair is involved. It cannot invent objects or repair unknown references. Citation validity is not semantic entailment: the real final report includes an incomplete q17 heading despite valid evidence. Conservative quarantine of obvious assistant-directed overrides passed the actual indexed-document/user attacks after an earlier observed escape. It can remove useful ambiguous text and is not universal injection protection. Failed experiments remain available in S19 evidence.
 
-Provider output is strictly parsed and validated. Every returned citation must match request-local source/section/page evidence; every prose sentence must carry the exact inline [source / section] form. One validation retry includes a safe failure category and citation-format feedback. Transport/timeout failures immediately fall back. Repeated invalid output returns a canned uncited false-groundedness response. False provider abstentions are canonicalized; reasoning is excluded from HTTP responses and application logs. Citation syntax does not establish semantic truth or injection robustness.
+Selected measured settings are chunks 250/overlap 30, query relevance floor .74 and cache threshold .95. A query with no valid hit clearing the floor refuses; otherwise all valid top-k context is retained. ADRs 0002/0003 and S19 measurements document the limited calibration sample and tradeoffs.
 
-HTTP calls have configured timeouts and bounded generation output; no hard wall-clock real-time guarantee is asserted. Current relevance/chunk defaults remain provisional; the S11 demonstration's .75 runtime relevance override is not final calibration. Follow-up/session fields are still inert until S12.
+## Shared state and retention
+
+AskRequest/AskResponse retain their existing fields and add optional nullable session_id, restricted to 1-128 ASCII letters/digits/underscores/hyphens. Existing clients can omit it. The API issues unpredictable identifiers; unknown supplied IDs are rotated. Redis stores at most six bounded turns (question 500, answer 1000 characters), with default TTL 1800 seconds refreshed transactionally on append. These IDs are bearer access to conversation state, not authenticated user identities. Supported follow-ups use the preceding user question; stored assistant output never becomes trusted evidence. Clients should serialize concurrent turns, which otherwise complete in completion order.
+
+Semantic cache is internal trusted Redis state: bounded 256 candidates per generation/model/provider/prompt/settings namespace, default logical TTL 3600 seconds, key expiry and pruning. Expired entries are excluded from use; physical bytes may remain until pruning or key expiry. Reindexing changes namespaces without promising immediate deletion of old keys. Only validated grounded non-low-confidence standalone answers are cached. Existing sessions bypass cache; version/numeric/negation/topic guards supplement cosine similarity. This is not a general proof that two questions mean the same thing. API replicas must share Redis and identical settings.
 
 ## Data governance
 
-S02 sent no questions/documents to external generation services. S06–S11 now send selected public corpus text and test questions to local Ollama on 127.0.0.1:11434; no hosted generation provider was used. Native models and the pinned Chroma image were downloaded from their registries. Embedding/generation endpoints remain configurable, so deployment must verify their actual destinations; changing endpoints can change where corpus/questions travel. No conversation retention layer has been implemented.
+Only public FAST-NUCES corpus material and test questions were sent to local Ollama at 127.0.0.1:11434. No hosted generation provider was used. Model/container downloads contacted their registries. Deployment endpoints remain configurable; platform reviewers must verify their actual destinations before using private data. No private user corpus or account credentials belong in committed evidence.
 
-LLM keys and Redis URLs are excluded from Settings repr, and invalid-URL diagnostics name the key without reproducing credentials. This is not encryption: do not log raw environment mappings or dataclass serialization containing secrets.
+Session/cache state resides in Redis and contains questions/answers; deployment must control network access, persistence/backups and retention according to its actual requirements. Current tests demonstrate application TTL behavior, not deletion from backups or a production privacy policy. Full original/extracted corpus and runtime environments remain ignored locally.
 
-Session TTL defaults to 1800 seconds as a future configuration value. No session persistence or retention guarantee exists yet; S12 must implement bounded Redis history, expiration and isolated unpredictable identifiers. Cache TTL/threshold defaults are also provisional until implementation and S19 measurements. Do not present them as measured privacy/quality guarantees.
+Settings repr hides Redis URLs and API keys; invalid-URL messages name configuration keys without credentials. This is not encryption. Never log raw environments or serialize secret-bearing settings. Structured query logs contain IDs, chunk IDs, scores, timing, token counts and outcomes; they omit raw conversation histories, provider reasoning and secrets. Public-source failure diagnostics are separately labeled evidence.
 
-## Alternatives and consequences
+## Consequences and validation
 
-Keeping every starter provider name selectable postpones unsupported-mode failures until traffic arrives. Rejecting unsupported selections gives an actionable startup error and keeps the two-day scope focused on one real provider.
+Rejecting unsupported modes makes failures actionable before traffic. Optional sessions preserve old callers. Separate packages preserve independent image contexts but require contract tests to stay aligned. Shared Redis and Chroma are required dependencies for real mode; healthz remains process-only and readyz tests dependencies with bounded operation waits.
 
-A shared top-level Python package would require changing image build contexts/packaging owned by Alishba. Separate small data representations with a tested wire contract preserve independent work. Their validation must remain aligned as metadata evolves.
-
-Using a required session field would break existing callers. Optional fields preserve the provided UI/evaluator behavior while allowing future shared turns. Alishba should defer UI reuse logic until S12 supplies actual issued session IDs.
-
-## Validation and remaining work
-
-See docs/evidence/app/sprints/S02.md and S06.md through S11.md for actual red/green/live evidence. No Python requirement pins changed. Shared sessions, cache, full readiness, injection experiments and full evaluator/threshold calibration remain their assigned future sprints. Jibran's human review and Alishba's integration review remain pending.
+S02-S21 reports contain actual tests, native probes and rejected approaches. No dependency pins were changed. S19 real returned-evidence recall@5=.933333, citation integrity=1 and required abstentions=1; five diagnostic expect misses remain documented. Fixtures score 1 throughout. These application results do not certify Linux image OCR, Kubernetes probes/HPA/resources, persistence across cluster deletion, protected CI/CD or production release; those are pending S22 platform acceptance.

@@ -76,7 +76,7 @@ def test_empty_results_and_html_logical_page():
 
 
 @pytest.mark.parametrize("failure", ["model","dimension","nan","metadata","distance"])
-def test_conflicts_and_corrupt_hits_fail_closed(failure):
+def test_conflicts_and_corrupt_hits_fail_closed(failure,caplog):
     client = Client()
     if failure == "model":
         client.model = "other-model"
@@ -89,6 +89,9 @@ def test_conflicts_and_corrupt_hits_fail_closed(failure):
     from app.retrieval.index_state import IndexStateError
     with pytest.raises(IndexStateError):
         retrieve(client,vector=[float("nan"),1] if failure == "nan" else None)
+    if failure=="model":
+        assert any(getattr(r,"actual_model",None)=="other-model" and getattr(r,"expected_model",None)=="nomic-embed-text"
+                   for r in caplog.records)
 
 
 def test_constructor_does_not_connect():

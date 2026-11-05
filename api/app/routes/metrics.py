@@ -18,10 +18,10 @@ LATENCY = Histogram(
     "rahbar_request_seconds",
     "HTTP request latency",
     ["path"],
-    buckets=(0.05, 0.1, 0.25, 0.5, 1, 2, 5, 10, 30, 60),
+    buckets=(0.05, 0.1, 0.25, 0.5, 1, 2, 5, 10, 30, 60,90,120),
 )
 RETRIEVAL=Histogram("rahbar_retrieval_seconds","Retrieval and query embedding time")
-GENERATION=Histogram("rahbar_generation_seconds","All bounded generation attempts")
+GENERATION=Histogram("rahbar_generation_seconds","All bounded generation attempts",buckets=(.1,.5,1,2,5,10,20,30,60,90,120))
 CACHE_LOOKUPS=Counter("rahbar_cache_lookups_total","Eligible semantic cache lookups")
 CACHE_HITS=Counter("rahbar_cache_hits_total","Safe semantic cache hits")
 CACHE_OUTCOMES=Counter("rahbar_cache_outcomes_total","Request cache outcomes",["status"])

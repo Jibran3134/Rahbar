@@ -33,6 +33,8 @@ def ask(body: AskRequest, request: Request, response: Response) -> AskResponse:
             result,status=answer_question(question,state.retriever,state.provider,state.settings),"BYPASS"
         response.headers["X-Cache"]=status
         trace["cache"]=status
+        trace.update(top_k=state.settings.top_k,chunk_ids=[r.chunk_id for r in result.retrieved],
+                     scores=[round(r.score,4) for r in result.retrieved],abstained=not result.answered_from_context)
         metrics.CACHE_OUTCOMES.labels(status=status).inc()
         if turn:
             state.sessions.save(turn,result.answer)

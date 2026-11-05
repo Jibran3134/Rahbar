@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "first": "MISS",
+  "second": "HIT",
+  "outcomes": [
+    {
+      "ts": "2026-11-05T09:26:02Z",
+      "level": "INFO",
+      "logger": "rahbar.query",
+      "msg": "query outcome",
+      "request_id": "native-observe",
+      "cache": "MISS",
+      "fallback": false,
+      "tokens_in": 828,
+      "tokens_out": 86,
+      "prepare_ms": 1524.429200000668,
+      "retrieval_ms": 1545.87,
+      "token_kind": "actual",
+      "generation_ms": 26589.67,
+      "abstained": false,
+      "top_k": 5,
+      "chunk_ids": [
+        "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+        "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+        "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+        "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+        "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441"
+      ],
+      "scores": [
+        0.8292,
+        0.7817,
+        0.7805,
+        0.7777,
+        0.7698
+      ],
+      "ms": 28152.73
+    },
+    {
+      "ts": "2026-11-05T09:26:03Z",
+      "level": "INFO",
+      "logger": "rahbar.query",
+      "msg": "query outcome",
+      "request_id": "43c5f59097b64d8480804441e2e50e68",
+      "cache": "HIT",
+      "fallback": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "prepare_ms": 1119.6102000012615,
+      "retrieval_ms": 1119.61,
+      "generation_ms": 0,
+      "abstained": false,
+      "top_k": 5,
+      "chunk_ids": [
+        "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+        "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+        "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+        "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+        "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441"
+      ],
+      "scores": [
+        0.8292,
+        0.7817,
+        0.7805,
+        0.7777,
+        0.7698
+      ],
+      "ms": 1125.26
+    },
+    {
+      "ts": "2026-11-05T09:26:04Z",
+      "level": "INFO",
+      "logger": "rahbar.query",
+      "msg": "query outcome",
+      "request_id": "a94fde3bff7f48e3afa278ad1a350257",
+      "cache": "MISS",
+      "fallback": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "prepare_ms": 995.8019000005152,
+      "retrieval_ms": 1014.98,
+      "generation_ms": 0.03,
+      "abstained": true,
+      "top_k": 5,
+      "chunk_ids": [],
+      "scores": [],
+      "ms": 1019.01
+    }
+  ],
+  "metrics_file": "S21-metrics.prom"
+}

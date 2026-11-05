@@ -33,3 +33,30 @@ def test_success_abstention_fallback_metrics_and_safe_logs(monkeypatch,caplog):
     record.cache="BYPASS"
     parsed=json.loads(JsonFormatter().format(record))
     assert parsed["msg"]=="query outcome" and "reasoning" not in parsed
+
+
+def test_coherent_outcome_includes_evidence_for_bypass_and_hit(monkeypatch):
+    from app.main import app
+    from app.routes import ask
+    from app.schemas import AskResponse
+    monkeypatch.setenv("RETRIEVER","stub")
+    monkeypatch.setenv("LLM_PROVIDER","stub")
+    records=[]
+    class Capture(logging.Handler):
+        def emit(self,record):
+            if record.getMessage()=="query outcome":
+                records.append(record)
+    with TestClient(app) as client:
+        handler=Capture()
+        logging.getLogger().addHandler(handler)
+        try:
+            first=client.post("/api/ask",json={"question":"What is the rule?"}).json()
+            app.state.cache=object()
+            monkeypatch.setattr(ask,"answer_cached",lambda *a,**k:(AskResponse(**first),"HIT"))
+            client.post("/api/ask",json={"question":"What is the rule?"})
+        finally:
+            logging.getLogger().removeHandler(handler)
+    assert len(records)==2
+    assert records[-1].cache=="HIT" and records[-1].top_k==5
+    assert records[-1].chunk_ids and records[-1].scores
+    assert hasattr(records[-1],"abstained")

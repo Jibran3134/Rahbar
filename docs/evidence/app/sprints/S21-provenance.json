@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "normalization": "utf8-no-bom-lf",
+  "frozen_truth": [
+    {
+      "path": "eval/golden.yaml",
+      "sha256": "8fc89dcc1ee4b5eada586ff7d96d3c3692eb3c5afb4e6d19b3b8a200615912e1",
+      "expected": "8fc89dcc1ee4b5eada586ff7d96d3c3692eb3c5afb4e6d19b3b8a200615912e1",
+      "passed": true
+    },
+    {
+      "path": "corpus/sources.yaml",
+      "sha256": "8d91cc2b7c2ce2dc92dc61e8f55a058f4439a875a47a263fd7769c61c7405d87",
+      "expected": "8d91cc2b7c2ce2dc92dc61e8f55a058f4439a875a47a263fd7769c61c7405d87",
+      "passed": true
+    },
+    {
+      "path": "corpus/MANIFEST.md",
+      "sha256": "1a738659abd6aae5ac177bd3a3a290368fa2bcc09f6028faa3d9b2f84889eeed",
+      "expected": "1a738659abd6aae5ac177bd3a3a290368fa2bcc09f6028faa3d9b2f84889eeed",
+      "passed": true
+    }
+  ],
+  "historical_transcript_bytes_verified": true
+}
