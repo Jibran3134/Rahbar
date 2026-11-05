@@ -1,0 +1,50 @@
+{
+  "passed": false,
+  "checked_at_utc": "2026-11-05T07:15:15.922458+00:00",
+  "provisional_floor": 0.7817780999999999,
+  "model": "llama3.2:3b",
+  "scope": "Real services through ASGI HTTP; final case is explicit transport injection",
+  "probes": [
+    {
+      "probe": "current_withdrawal",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "historical_withdrawal",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "absent_deadline",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "absent_deposit",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "injected_malformed_provider_json",
+      "status": 503,
+      "passed": false,
+      "provider_calls": 0,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    }
+  ]
+}

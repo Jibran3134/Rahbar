@@ -1,0 +1,75 @@
+{"ts": "2026-11-05T07:15:03Z", "level": "INFO", "logger": "rahbar.api", "msg": "api started", "request_id": "-", "retriever": "chroma", "llm_provider": "ollama-host", "embed_model": "nomic-embed-text", "top_k": 5}
+{"ts": "2026-11-05T07:15:06Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "fb01123d6b3844eaa929dd7a1e922954", "path": "/api/ask", "status": 503, "ms": 3046.8}
+{"ts": "2026-11-05T07:15:06Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 503 Service Unavailable\"", "request_id": "-"}
+{"ts": "2026-11-05T07:15:09Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "009c28ef6e584c0984ae6c38b0ac3b7e", "path": "/api/ask", "status": 503, "ms": 2273.0}
+{"ts": "2026-11-05T07:15:09Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 503 Service Unavailable\"", "request_id": "-"}
+{"ts": "2026-11-05T07:15:11Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "1fec234e9ba6442dafb4d11e42967ac6", "path": "/api/ask", "status": 503, "ms": 2186.8}
+{"ts": "2026-11-05T07:15:11Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 503 Service Unavailable\"", "request_id": "-"}
+{"ts": "2026-11-05T07:15:13Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "bf39c5ccbd24496ea0035bdb0afbf174", "path": "/api/ask", "status": 503, "ms": 2213.4}
+{"ts": "2026-11-05T07:15:13Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 503 Service Unavailable\"", "request_id": "-"}
+{"ts": "2026-11-05T07:15:15Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "4806967c2d414b72ba6426802060660f", "path": "/api/ask", "status": 503, "ms": 2354.8}
+{"ts": "2026-11-05T07:15:15Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 503 Service Unavailable\"", "request_id": "-"}
+{
+  "passed": false,
+  "checked_at_utc": "2026-11-05T07:15:15.922458+00:00",
+  "provisional_floor": 0.7817780999999999,
+  "model": "llama3.2:3b",
+  "scope": "Real services through ASGI HTTP; final case is explicit transport injection",
+  "probes": [
+    {
+      "probe": "current_withdrawal",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "historical_withdrawal",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "absent_deadline",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "absent_deposit",
+      "passed": false,
+      "status": 503,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    },
+    {
+      "probe": "injected_malformed_provider_json",
+      "status": 503,
+      "passed": false,
+      "provider_calls": 0,
+      "response": {
+        "detail": "Retrieval dependencies are unavailable or returned invalid data"
+      }
+    }
+  ]
+}
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:2 char:1
++ .\.venv\Scripts\python.exe -u api/tests/live_grounding.py *> docs/evi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_grounding.py", line 70, in <module>
+    main()
+  File "C:\Users\Jibran\Desktop\Rahbar\api\tests\live_grounding.py", line 66, in main
+    assert report["passed"], "Inspect failed native answer or malformed-output probe"
+           ~~~~~~^^^^^^^^^^
+AssertionError: Inspect failed native answer or malformed-output probe
+NATIVE_EXIT=1

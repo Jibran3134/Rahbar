@@ -1,0 +1,29 @@
+﻿{
+  "passed": true,
+  "checks": {
+    "historical_load_clause_association": true,
+    "historical_deadline_clause_association": true,
+    "startup_eligibility_clause_association": true,
+    "current_load_clause_association": true,
+    "current_deadline_clause_association": true,
+    "student_definition_section_preserved": true,
+    "attendance_clause_and_percentages": true,
+    "cgpa_exact_decimal": true,
+    "fee_header_and_row": true,
+    "fee_units_and_effective_date": true,
+    "definition_body_words_preserved": true,
+    "observed_institutional_header_removed": true,
+    "all_source_bytes_and_extracted_page_hashes_verified": true,
+    "metadata_input_immutability_idempotence_and_nonempty_pages": true
+  },
+  "changed_pages": {
+    "undergraduate-academic-rules-aug-2023.pdf": 21,
+    "academic-rules-handbook-jun-2026.pdf": 51,
+    "student-handbook-jun-2026.pdf": 56,
+    "prospectus-academic-rules-and-regulations.pdf": 0,
+    "faculty-entrepreneurship-and-technical-start-ups-policy.pdf": 0,
+    "fee-structure-page.html": 1,
+    "grading-page.html": 1
+  }
+}
+NATIVE_EXIT=0

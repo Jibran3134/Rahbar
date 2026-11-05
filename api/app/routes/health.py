@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Request, Response
+from ..services import readiness
 
 router = APIRouter()
 
@@ -15,8 +16,19 @@ def healthz() -> dict[str, str]:
 
 @router.get("/readyz")
 def readyz(request: Request, response: Response) -> dict[str, object]:
-    # STARTER-TODO(4.3, 4.4): return 503, naming the failed dependency, unless Chroma is
-    # reachable, the collection exists and is non-empty, Redis is reachable, and the
-    # collection's embedding model matches EMBED_MODEL. Until then this always says yes,
-    # which is exactly the lie section 4.2 warns about.
-    return {"status": "ready", "checks": {}}
+    checks=readiness.check_dependencies(request.app.state)
+    ready=all(checks.values())
+    response.status_code=200 if ready else 503
+    return {"status":"ready" if ready else "not_ready","checks":checks}
+
+
+@router.get("/api/info")
+def info(request: Request) -> dict[str,object]:
+    from ..retrieval.index_state import resolve_active
+    state=request.app.state
+    active=(resolve_active(state.retriever.get_client(),state.settings.collection)[0].model_dump()
+            if state.settings.retriever=="chroma" else None)
+    s=state.settings
+    return {"active":active,"embed_model":s.embed_model,"llm_model":s.llm_model,"provider":s.llm_provider,
+            "top_k":s.top_k,"temperature":s.temperature,"relevance_floor":s.relevance_floor,
+            "cache_threshold":s.cache_threshold,"cache_ttl_seconds":s.cache_ttl_seconds}

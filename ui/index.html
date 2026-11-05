@@ -61,7 +61,8 @@
 <main>
   <header>
     <h1>RAHBAR</h1>
-    <p>Answers only from the indexed documents, with sources. If the documents do not cover it, it says so.</p>
+    <p>FAST-NUCES policy assistant. Answers from indexed documents with sources, and declines when information is missing.</p>
+    <button id="new-chat" type="button">New conversation</button>
   </header>
   <section id="thread" aria-live="polite"></section>
 </main>
@@ -83,6 +84,14 @@ const thread = document.getElementById("thread");
 const form = document.getElementById("ask");
 const input = document.getElementById("question");
 const send = document.getElementById("send");
+const newChat = document.getElementById("new-chat");
+let sessionId = null;
+newChat.addEventListener("click", () => {
+  if (send.disabled) return;
+  sessionId = null;
+  thread.replaceChildren();
+  input.focus();
+});
 
 // Model output and retrieved text are untrusted. Everything below is built with
 // textContent and createElement, never innerHTML, so a document or an answer
@@ -113,7 +122,8 @@ function renderAnswer(data, cacheHeader) {
   if (data.provider) chips.append(chip(`provider: ${data.provider}`));
   const cached = typeof data.cached === "boolean" ? data.cached
                : cacheHeader ? cacheHeader.toUpperCase() === "HIT" : null;
-  if (cached !== null) chips.append(chip(cached ? "cache: hit" : "cache: miss"));
+  if (cacheHeader?.toUpperCase() === "BYPASS") chips.append(chip("cache: bypass"));
+  else if (cached !== null) chips.append(chip(cached ? "cache: hit" : "cache: miss"));
   card.append(chips);
 
   card.append(el("p", { class: "text" }, data.answer ?? ""));
@@ -165,11 +175,12 @@ async function ask(question) {
   thread.append(pending);
   pending.scrollIntoView({ behavior: "smooth", block: "end" });
   send.disabled = true;
+  newChat.disabled = true;
   try {
     const res = await fetch(`${API_BASE}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question }),
+      body: JSON.stringify({ question, ...(sessionId ? { session_id: sessionId } : {}) }),
     });
     let body = null;
     try { body = await res.json(); } catch { /* non-JSON error page */ }
@@ -177,6 +188,8 @@ async function ask(question) {
     if (!res.ok) {
       thread.append(el("div", { class: "err" }, errorMessage(res.status, body)));
     } else {
+      sessionId = typeof body.session_id === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(body.session_id)
+        ? body.session_id : null;
       thread.append(renderAnswer(body, res.headers.get("X-Cache")));
     }
   } catch (err) {
@@ -184,6 +197,7 @@ async function ask(question) {
     thread.append(el("div", { class: "err" }, `Could not reach the API at ${API_BASE || location.origin}/api/ask.`));
   } finally {
     send.disabled = false;
+    newChat.disabled = false;
     input.focus();
     thread.lastElementChild?.scrollIntoView({ behavior: "smooth", block: "end" });
   }
@@ -191,6 +205,7 @@ async function ask(question) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (send.disabled) return;
   const q = input.value.trim();
   if (q.length < 3) return;
   input.value = "";

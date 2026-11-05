@@ -1,0 +1,13 @@
+# ADR 0003 — Shared bounded Redis state
+
+Implemented contracts: Redis sessions and semantic cache, under Jibran's ownership. Final threshold choice remains S19 work; human/platform review pending.
+
+Sessions use unpredictable bearer IDs, six bounded turns, transactional append/trim/expiry and a configurable TTL. No process-local history or authentication identity is inferred. Unknown/expired IDs rotate. Existing sessions bypass cache; simple elliptical questions append the previous user question to resolve context. Stored assistant answers never become trusted evidence. Concurrent requests on one session complete in completion order; clients should serialize turns. Shared Redis availability is required; errors yield sanitized 503s.
+
+Cache candidates are one bounded sorted set per SHA-256 index/config namespace. Generation, collection/model/dimension, provider/model/temperature, top_k, relevance/cache thresholds and prompt version isolate entries. Each entry expires independently; transactional writes remove expired candidates, trim to CACHE_MAX_ENTRIES and set key TTL. Namespace turnover makes old responses inaccessible immediately; old keys retire naturally. No indexer access to Redis is needed.
+
+Query preparation resolves one immutable active identity and computes one vector, reused by cache and retrieval. Similarity is cosine at/above CACHE_THRESHOLD. Numeric, version, scope, negation and course-code compatibility can veto even identical vectors. Only validated grounded non-low-confidence standalone answers with intact citation/reference consistency are stored. Refusals, fallbacks and existing sessions are excluded. Hits receive fresh request/session identities. X-Cache is HIT/MISS/BYPASS. Cached evidence belongs to an immutable generation; manual in-place mutation violates publication contracts. Redis is trusted internal state, not an adversarial user write surface.
+
+Alternative exact-text caching is simpler but cannot demonstrate semantic paraphrase reuse. An external approximate vector index adds another service; scanning a capped set in Redis keeps the two-day scope bounded. Signature rules deliberately favor false misses over risky numeric/version/topic reuse. They do not prove semantic equivalence. Measured threshold/near-miss results and residual limits are recorded by S19, not invented here.
+
+Native live checks use a separate owned policy collection; publishing Monday then Tuesday must produce a miss and changed answer. Normal corpus is never overwritten by that demonstration. Deployment keys and TTL defaults remain documented in config; secrets/Redis URLs/history are excluded from logs and metric labels.

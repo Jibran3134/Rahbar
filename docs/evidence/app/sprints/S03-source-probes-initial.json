@@ -1,0 +1,9 @@
+{
+  "historical_load_clause_association": true,
+  "historical_deadline_clause_association": true,
+  "startup_eligibility_clause_association": false,
+  "current_load_clause_association": true,
+  "current_deadline_clause_association": false,
+  "student_definition_section_preserved": true,
+  "scope": "Original-source extraction probes, not answer correctness or retrieval recall"
+}

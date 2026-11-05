@@ -1,0 +1,25 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_____________ test_reader_resolves_exact_identity_without_writes ______________
+tests\test_index_state.py:8: in test_reader_resolves_exact_identity_without_writes
+    from app.retrieval.index_state import resolve_active
+E   ModuleNotFoundError: No module named 'app.retrieval.index_state'
+____________________ test_reader_rejects_bad_identity[768] ____________________
+tests\test_index_state.py:25: in test_reader_rejects_bad_identity
+    from app.retrieval.index_state import IndexStateError, resolve_active
+E   ModuleNotFoundError: No module named 'app.retrieval.index_state'
+_____________________ test_reader_rejects_bad_identity[0] _____________________
+tests\test_index_state.py:25: in test_reader_rejects_bad_identity
+    from app.retrieval.index_state import IndexStateError, resolve_active
+E   ModuleNotFoundError: No module named 'app.retrieval.index_state'
+___________________ test_reader_rejects_bad_identity[True] ____________________
+tests\test_index_state.py:25: in test_reader_rejects_bad_identity
+    from app.retrieval.index_state import IndexStateError, resolve_active
+E   ModuleNotFoundError: No module named 'app.retrieval.index_state'
+=========================== short test summary info ===========================
+FAILED tests/test_index_state.py::test_reader_resolves_exact_identity_without_writes
+FAILED tests/test_index_state.py::test_reader_rejects_bad_identity[768] - Mod...
+FAILED tests/test_index_state.py::test_reader_rejects_bad_identity[0] - Modul...
+FAILED tests/test_index_state.py::test_reader_rejects_bad_identity[True] - Mo...
+4 failed in 0.19s
+NATIVE_EXIT=1

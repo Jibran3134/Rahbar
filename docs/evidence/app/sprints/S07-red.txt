@@ -1,0 +1,60 @@
+FFFFFFFFFFF                                                              [100%]
+================================== FAILURES ===================================
+______ test_two_builds_switch_only_after_validation_and_retain_old_data _______
+tests\test_store.py:63: in test_two_builds_switch_only_after_validation_and_retain_old_data
+    assert store(pieces(), [[1,0],[0,1]], get_settings(), client=client, generation="first") == 2
+E   TypeError: store() got an unexpected keyword argument 'client'
+__________ test_failure_keeps_old_publication_and_releases_lock[add] __________
+tests\test_store.py:76: in test_failure_keeps_old_publication_and_releases_lock
+    store(pieces(), [[1,0],[0,1]], get_settings(), client=client, generation="good")
+E   TypeError: store() got an unexpected keyword argument 'client'
+________ test_failure_keeps_old_publication_and_releases_lock[publish] ________
+tests\test_store.py:76: in test_failure_keeps_old_publication_and_releases_lock
+    store(pieces(), [[1,0],[0,1]], get_settings(), client=client, generation="good")
+E   TypeError: store() got an unexpected keyword argument 'client'
+__________________ test_existing_writer_lock_prevents_build ___________________
+tests\test_store.py:89: in test_existing_writer_lock_prevents_build
+    store(pieces(), [[1,0],[0,1]], get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors0] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors1] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors2] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors3] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors4] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+____________ test_bad_vectors_never_create_a_collection[vectors5] _____________
+tests\test_store.py:98: in test_bad_vectors_never_create_a_collection
+    store(pieces(), vectors, get_settings(), client=client)
+E   TypeError: store() got an unexpected keyword argument 'client'
+________________ test_bad_metadata_and_duplicate_ids_rejected _________________
+tests\test_store.py:106: in test_bad_metadata_and_duplicate_ids_rejected
+    store([bad], [[1]], get_settings(), client=Client())
+E   TypeError: store() got an unexpected keyword argument 'client'
+=========================== short test summary info ===========================
+FAILED tests/test_store.py::test_two_builds_switch_only_after_validation_and_retain_old_data
+FAILED tests/test_store.py::test_failure_keeps_old_publication_and_releases_lock[add]
+FAILED tests/test_store.py::test_failure_keeps_old_publication_and_releases_lock[publish]
+FAILED tests/test_store.py::test_existing_writer_lock_prevents_build - TypeEr...
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors0]
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors1]
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors2]
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors3]
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors4]
+FAILED tests/test_store.py::test_bad_vectors_never_create_a_collection[vectors5]
+FAILED tests/test_store.py::test_bad_metadata_and_duplicate_ids_rejected - Ty...
+11 failed in 0.12s
+NATIVE_EXIT=1

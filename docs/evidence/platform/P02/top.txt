@@ -1,0 +1,9 @@
+NAME                     CPU(cores)   MEMORY(bytes)   
+api-5c4688d769-b9l7p     17m          131Mi           
+api-5c4688d769-jmfrv     12m          129Mi           
+api-5c4688d769-xxpjc     23m          134Mi           
+chroma-0                 3m           274Mi           
+redis-7f546bdffd-k5x6d   11m          3Mi             
+ui-5c468b7bc4-9p5wm      1m           2Mi             
+
+NATIVE_EXIT=0

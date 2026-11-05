@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "steps": [
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-d",
+        "--name",
+        "rahbar-p01-api-eb491e79",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=128m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges:true",
+        "-p",
+        "127.0.0.1:8003:8000",
+        "-e",
+        "RETRIEVER=stub",
+        "-e",
+        "LLM_PROVIDER=stub",
+        "rahbar-api:platform-p01"
+      ],
+      "exit_code": 0,
+      "stdout": "be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "rahbar-p01-api-eb491e79"
+      ],
+      "exit_code": 0,
+      "stdout": "[\n    {\n        \"Id\": \"be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a\",\n        \"Created\": \"2026-11-05T11:30:24.550746492Z\",\n        \"Path\": \"uvicorn\",\n        \"Args\": [\n            \"app.main:app\",\n            \"--host\",\n            \"0.0.0.0\",\n            \"--port\",\n            \"8000\",\n            \"--timeout-graceful-shutdown\",\n            \"125\"\n        ],\n        \"State\": {\n            \"Status\": \"running\",\n            \"Running\": true,\n            \"Paused\": false,\n            \"Restarting\": false,\n            \"OOMKilled\": false,\n            \"Dead\": false,\n            \"Pid\": 2667,\n            \"ExitCode\": 0,\n            \"Error\": \"\",\n            \"StartedAt\": \"2026-11-05T11:30:24.691714052Z\",\n            \"FinishedAt\": \"0001-01-01T00:00:00Z\"\n        },\n        \"Image\": \"sha256:dcd4a80c4cbd91c0a1b0583a0e4039c5c9766853ada8f0805fa986f9fb51282f\",\n        \"ResolvConfPath\": \"/var/lib/docker/containers/be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a/resolv.conf\",\n        \"HostnamePath\": \"/var/lib/docker/containers/be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a/hostname\",\n        \"HostsPath\": \"/var/lib/docker/containers/be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a/hosts\",\n        \"LogPath\": \"/var/lib/docker/containers/be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a/be859ba08c362aa0594838aa2c9fbff421fa8194ce9a95b7e2448abc5f5f364a-json.log\",\n        \"Name\": \"/rahbar-p01-api-eb491e79\",\n        \"RestartCount\": 0,\n        \"Driver\": \"overlayfs\",\n        \"Platform\": \"linux\",\n        \"MountLabel\": \"\",\n        \"ProcessLabel\": \"\",\n        \"AppArmorProfile\": \"\",\n        \"ExecIDs\": null,\n        \"HostConfig\": {\n            \"Binds\": null,\n            \"ContainerIDFile\": \"\",\n            \"LogConfig\": {\n                \"Type\": \"json-file\",\n                \"Config\": {}\n            },\n            \"NetworkMode\": \"bridge\",\n            \"PortBindings\": {\n                \"8000/tcp\": [\n                    {\n                        \"HostIp\": \"127.0.0.1\",\n                        \"HostPort\": \"8003\"\n                    }\n                ]\n            },\n            \"RestartPolicy\": {\n                \"Name\": \"no\",\n                \"MaximumRetryCount\": 0\n            },\n            \"AutoRemove\": true,\n            \"VolumeDriver\": \"\",\n            \"VolumesFrom\": null,\n            \"ConsoleSize\": [\n                0,\n                0\n            ],\n            \"CapAdd\": null,\n            \"CapDrop\": [\n                \"ALL\"\n            ],\n            \"CgroupnsMode\": \"private\",\n            \"Dns\": null,\n            \"DnsOptions\": [],\n            \"DnsSearch\": [],\n            \"ExtraHosts\": null,\n            \"GroupAdd\": null,\n            \"IpcMode\": \"private\",\n            \"Cgroup\": \"\",\n            \"Links\": null,\n            \"OomScoreAdj\": 0,\n            \"PidMode\": \"\",\n            \"Privileged\": false,\n            \"PublishAllPorts\": false,\n            \"ReadonlyRootfs\": true,\n            \"SecurityOpt\": [\n                \"no-new-privileges:true\"\n            ],\n            \"Tmpfs\": {\n                \"/tmp\": \"rw,noexec,nosuid,size=128m\"\n            },\n            \"UTSMode\": \"\",\n            \"UsernsMode\": \"\",\n            \"ShmSize\": 67108864,\n            \"Runtime\": \"runc\",\n            \"Isolation\": \"\",\n            \"CpuShares\": 0,\n            \"Memory\": 0,\n            \"NanoCpus\": 0,\n            \"CgroupParent\": \"\",\n            \"BlkioWeight\": 0,\n            \"BlkioWeightDevice\": [],\n            \"BlkioDeviceReadBps\": [],\n            \"BlkioDeviceWriteBps\": [],\n            \"BlkioDeviceReadIOps\": [],\n            \"BlkioDeviceWriteIOps\": [],\n            \"CpuPeriod\": 0,\n            \"CpuQuota\": 0,\n            \"CpuRealtimePeriod\": 0,\n            \"CpuRealtimeRuntime\": 0,\n            \"CpusetCpus\": \"\",\n            \"CpusetMems\": \"\",\n            \"Devices\": [],\n            \"DeviceCgroupRules\": null,\n            \"DeviceRequests\": null,\n            \"MemoryReservation\": 0,\n            \"MemorySwap\": 0,\n            \"MemorySwappiness\": null,\n            \"OomKillDisable\": null,\n            \"PidsLimit\": null,\n            \"Ulimits\": null,\n            \"CpuCount\": 0,\n            \"CpuPercent\": 0,\n            \"IOMaximumIOps\": 0,\n            \"IOMaximumBandwidth\": 0,\n            \"MaskedPaths\": [\n                \"/proc/acpi\",\n                \"/proc/asound\",\n                \"/proc/interrupts\",\n                \"/proc/kcore\",\n                \"/proc/keys\",\n                \"/proc/latency_stats\",\n                \"/proc/sched_debug\",\n                \"/proc/scsi\",\n                \"/proc/timer_list\",\n                \"/proc/timer_stats\",\n                \"/sys/devices/virtual/powercap\",\n                \"/sys/firmware\"\n            ],\n            \"ReadonlyPaths\": [\n                \"/proc/bus\",\n                \"/proc/fs\",\n                \"/proc/irq\",\n                \"/proc/sys\",\n                \"/proc/sysrq-trigger\"\n            ]\n        },\n        \"Storage\": {\n            \"RootFS\": {\n                \"Snapshot\": {\n                    \"Name\": \"overlayfs\"\n                }\n            }\n        },\n        \"Mounts\": [],\n        \"Config\": {\n            \"Hostname\": \"be859ba08c36\",\n            \"Domainname\": \"\",\n            \"User\": \"10001:10001\",\n            \"AttachStdin\": false,\n            \"AttachStdout\": false,\n            \"AttachStderr\": false,\n            \"ExposedPorts\": {\n                \"8000/tcp\": {}\n            },\n            \"Tty\": false,\n            \"OpenStdin\": false,\n            \"StdinOnce\": false,\n            \"Env\": [\n                \"RETRIEVER=stub\",\n                \"LLM_PROVIDER=stub\",\n                \"PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\n                \"LANG=C.UTF-8\",\n                \"GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305\",\n                \"PYTHON_VERSION=3.12.16\",\n                \"PYTHON_SHA256=b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c\",\n                \"PYTHONUNBUFFERED=1\",\n                \"PYTHONDONTWRITEBYTECODE=1\",\n                \"HOME=/tmp\"\n            ],\n            \"Cmd\": [\n                \"uvicorn\",\n                \"app.main:app\",\n                \"--host\",\n                \"0.0.0.0\",\n                \"--port\",\n                \"8000\",\n                \"--timeout-graceful-shutdown\",\n                \"125\"\n            ],\n            \"Image\": \"rahbar-api:platform-p01\",\n            \"Volumes\": null,\n            \"WorkingDir\": \"/app\",\n            \"Entrypoint\": null,\n            \"Labels\": {}\n        },\n        \"NetworkSettings\": {\n            \"SandboxID\": \"a61622a4bc4067d100ab1360c5133eeffaa10b9de4a3f39717c34646ebe665d2\",\n            \"SandboxKey\": \"/var/run/docker/netns/a61622a4bc40\",\n            \"Ports\": {\n                \"8000/tcp\": [\n                    {\n                        \"HostIp\": \"127.0.0.1\",\n                        \"HostPort\": \"8003\"\n                    }\n                ]\n            },\n            \"Networks\": {\n                \"bridge\": {\n                    \"IPAMConfig\": null,\n                    \"Links\": null,\n                    \"Aliases\": null,\n                    \"DriverOpts\": null,\n                    \"GwPriority\": 0,\n                    \"NetworkID\": \"4e1aaa68bb1adbe02859684d859325f79f93855e66547e98758fd0844a69d228\",\n                    \"EndpointID\": \"a71afae46b1ff67ab6b97b0cf6dada26ec02788d443824cd7bc1597fc44349b9\",\n                    \"Gateway\": \"172.17.0.1\",\n                    \"IPAddress\": \"172.17.0.4\",\n                    \"MacAddress\": \"86:aa:97:1e:4c:8c\",\n                    \"IPPrefixLen\": 16,\n                    \"IPv6Gateway\": \"\",\n                    \"GlobalIPv6Address\": \"\",\n                    \"GlobalIPv6PrefixLen\": 0,\n                    \"DNSNames\": null\n                }\n            }\n        },\n        \"ImageManifestDescriptor\": {\n            \"mediaType\": \"application/vnd.oci.image.manifest.v1+json\",\n            \"digest\": \"sha256:6aea363b6a5576553efdb4bc858e8a0cffb6029ce90e44d56f6a37e19a8f574e\",\n            \"size\": 1625,\n            \"platform\": {\n                \"architecture\": \"amd64\",\n                \"os\": \"linux\"\n            }\n        }\n    }\n]\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "logs",
+        "rahbar-p01-api-eb491e79"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"ts\": \"2026-11-05T11:30:25Z\", \"level\": \"INFO\", \"logger\": \"rahbar.api\", \"msg\": \"api started\", \"request_id\": \"-\", \"retriever\": \"stub\", \"llm_provider\": \"stub\", \"embed_model\": \"nomic-embed-text\", \"top_k\": 5}\n{\"ts\": \"2026-11-05T11:30:26Z\", \"level\": \"INFO\", \"logger\": \"rahbar.answer\", \"msg\": \"answered\", \"request_id\": \"5287a383eb2c48079491fd2eb4270046\", \"retriever\": \"stub\", \"provider\": \"stub\", \"top_k\": 5, \"chunk_ids\": [\"stub-001\", \"stub-002\", \"stub-003\"], \"scores\": [0.91, 0.84, 0.77], \"answered_from_context\": true}\n{\"ts\": \"2026-11-05T11:30:26Z\", \"level\": \"INFO\", \"logger\": \"rahbar.query\", \"msg\": \"query outcome\", \"request_id\": \"5287a383eb2c48079491fd2eb4270046\", \"cache\": \"BYPASS\", \"fallback\": false, \"tokens_in\": 94, \"tokens_out\": 102, \"retrieval_ms\": 0.07, \"token_kind\": \"estimated\", \"generation_ms\": 0.74, \"abstained\": false, \"top_k\": 5, \"chunk_ids\": [\"stub-001\", \"stub-002\", \"stub-003\"], \"scores\": [0.91, 0.84, 0.77], \"ms\": 1.01}\n{\"ts\": \"2026-11-05T11:30:26Z\", \"level\": \"INFO\", \"logger\": \"rahbar.api\", \"msg\": \"request\", \"request_id\": \"5287a383eb2c48079491fd2eb4270046\", \"path\": \"/api/ask\", \"status\": 200, \"ms\": 3.7}\n",
+      "stderr": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\n"
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-d",
+        "--name",
+        "rahbar-p01-ui-011a5c74",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=128m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges:true",
+        "-p",
+        "127.0.0.1:8083:8080",
+        "-e",
+        "RETRIEVER=stub",
+        "-e",
+        "LLM_PROVIDER=stub",
+        "rahbar-ui:platform-p01"
+      ],
+      "exit_code": 0,
+      "stdout": "960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "rahbar-p01-ui-011a5c74"
+      ],
+      "exit_code": 0,
+      "stdout": "[\n    {\n        \"Id\": \"960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42\",\n        \"Created\": \"2026-11-05T11:30:26.509052881Z\",\n        \"Path\": \"nginx\",\n        \"Args\": [\n            \"-g\",\n            \"daemon off;\"\n        ],\n        \"State\": {\n            \"Status\": \"running\",\n            \"Running\": true,\n            \"Paused\": false,\n            \"Restarting\": false,\n            \"OOMKilled\": false,\n            \"Dead\": false,\n            \"Pid\": 2723,\n            \"ExitCode\": 0,\n            \"Error\": \"\",\n            \"StartedAt\": \"2026-11-05T11:30:26.637393777Z\",\n            \"FinishedAt\": \"0001-01-01T00:00:00Z\"\n        },\n        \"Image\": \"sha256:12fcd0c2d62cfe0ed5d72668633a8dfe6e1d33b7215ab6f1df659e9fea3c45d4\",\n        \"ResolvConfPath\": \"/var/lib/docker/containers/960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42/resolv.conf\",\n        \"HostnamePath\": \"/var/lib/docker/containers/960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42/hostname\",\n        \"HostsPath\": \"/var/lib/docker/containers/960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42/hosts\",\n        \"LogPath\": \"/var/lib/docker/containers/960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42/960a3dae10d8ab53e859b8b4c9743577d086257e6cfe921890e1ebe01420eb42-json.log\",\n        \"Name\": \"/rahbar-p01-ui-011a5c74\",\n        \"RestartCount\": 0,\n        \"Driver\": \"overlayfs\",\n        \"Platform\": \"linux\",\n        \"MountLabel\": \"\",\n        \"ProcessLabel\": \"\",\n        \"AppArmorProfile\": \"\",\n        \"ExecIDs\": null,\n        \"HostConfig\": {\n            \"Binds\": null,\n            \"ContainerIDFile\": \"\",\n            \"LogConfig\": {\n                \"Type\": \"json-file\",\n                \"Config\": {}\n            },\n            \"NetworkMode\": \"bridge\",\n            \"PortBindings\": {\n                \"8080/tcp\": [\n                    {\n                        \"HostIp\": \"127.0.0.1\",\n                        \"HostPort\": \"8083\"\n                    }\n                ]\n            },\n            \"RestartPolicy\": {\n                \"Name\": \"no\",\n                \"MaximumRetryCount\": 0\n            },\n            \"AutoRemove\": true,\n            \"VolumeDriver\": \"\",\n            \"VolumesFrom\": null,\n            \"ConsoleSize\": [\n                0,\n                0\n            ],\n            \"CapAdd\": null,\n            \"CapDrop\": [\n                \"ALL\"\n            ],\n            \"CgroupnsMode\": \"private\",\n            \"Dns\": null,\n            \"DnsOptions\": [],\n            \"DnsSearch\": [],\n            \"ExtraHosts\": null,\n            \"GroupAdd\": null,\n            \"IpcMode\": \"private\",\n            \"Cgroup\": \"\",\n            \"Links\": null,\n            \"OomScoreAdj\": 0,\n            \"PidMode\": \"\",\n            \"Privileged\": false,\n            \"PublishAllPorts\": false,\n            \"ReadonlyRootfs\": true,\n            \"SecurityOpt\": [\n                \"no-new-privileges:true\"\n            ],\n            \"Tmpfs\": {\n                \"/tmp\": \"rw,noexec,nosuid,size=128m\"\n            },\n            \"UTSMode\": \"\",\n            \"UsernsMode\": \"\",\n            \"ShmSize\": 67108864,\n            \"Runtime\": \"runc\",\n            \"Isolation\": \"\",\n            \"CpuShares\": 0,\n            \"Memory\": 0,\n            \"NanoCpus\": 0,\n            \"CgroupParent\": \"\",\n            \"BlkioWeight\": 0,\n            \"BlkioWeightDevice\": [],\n            \"BlkioDeviceReadBps\": [],\n            \"BlkioDeviceWriteBps\": [],\n            \"BlkioDeviceReadIOps\": [],\n            \"BlkioDeviceWriteIOps\": [],\n            \"CpuPeriod\": 0,\n            \"CpuQuota\": 0,\n            \"CpuRealtimePeriod\": 0,\n            \"CpuRealtimeRuntime\": 0,\n            \"CpusetCpus\": \"\",\n            \"CpusetMems\": \"\",\n            \"Devices\": [],\n            \"DeviceCgroupRules\": null,\n            \"DeviceRequests\": null,\n            \"MemoryReservation\": 0,\n            \"MemorySwap\": 0,\n            \"MemorySwappiness\": null,\n            \"OomKillDisable\": null,\n            \"PidsLimit\": null,\n            \"Ulimits\": null,\n            \"CpuCount\": 0,\n            \"CpuPercent\": 0,\n            \"IOMaximumIOps\": 0,\n            \"IOMaximumBandwidth\": 0,\n            \"MaskedPaths\": [\n                \"/proc/acpi\",\n                \"/proc/asound\",\n                \"/proc/interrupts\",\n                \"/proc/kcore\",\n                \"/proc/keys\",\n                \"/proc/latency_stats\",\n                \"/proc/sched_debug\",\n                \"/proc/scsi\",\n                \"/proc/timer_list\",\n                \"/proc/timer_stats\",\n                \"/sys/devices/virtual/powercap\",\n                \"/sys/firmware\"\n            ],\n            \"ReadonlyPaths\": [\n                \"/proc/bus\",\n                \"/proc/fs\",\n                \"/proc/irq\",\n                \"/proc/sys\",\n                \"/proc/sysrq-trigger\"\n            ]\n        },\n        \"Storage\": {\n            \"RootFS\": {\n                \"Snapshot\": {\n                    \"Name\": \"overlayfs\"\n                }\n            }\n        },\n        \"Mounts\": [],\n        \"Config\": {\n            \"Hostname\": \"960a3dae10d8\",\n            \"Domainname\": \"\",\n            \"User\": \"10001:10001\",\n            \"AttachStdin\": false,\n            \"AttachStdout\": false,\n            \"AttachStderr\": false,\n            \"ExposedPorts\": {\n                \"80/tcp\": {},\n                \"8080/tcp\": {}\n            },\n            \"Tty\": false,\n            \"OpenStdin\": false,\n            \"StdinOnce\": false,\n            \"Env\": [\n                \"RETRIEVER=stub\",\n                \"LLM_PROVIDER=stub\",\n                \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\n                \"NGINX_VERSION=1.30.6\",\n                \"PKG_RELEASE=1\",\n                \"DYNPKG_RELEASE=1\",\n                \"NJS_VERSION=1.0.2\",\n                \"NJS_RELEASE=1\",\n                \"ACME_VERSION=0.4.1\"\n            ],\n            \"Cmd\": [\n                \"-g\",\n                \"daemon off;\"\n            ],\n            \"Image\": \"rahbar-ui:platform-p01\",\n            \"Volumes\": null,\n            \"WorkingDir\": \"/\",\n            \"Entrypoint\": [\n                \"nginx\"\n            ],\n            \"Labels\": {\n                \"maintainer\": \"NGINX Docker Maintainers \\u003cdocker-maint@nginx.com\\u003e\"\n            },\n            \"StopSignal\": \"SIGQUIT\"\n        },\n        \"NetworkSettings\": {\n            \"SandboxID\": \"4d8d87022a90d6c3eed580b9484b9e31225d7738bac4cf54a210dd821a973875\",\n            \"SandboxKey\": \"/var/run/docker/netns/4d8d87022a90\",\n            \"Ports\": {\n                \"8080/tcp\": [\n                    {\n                        \"HostIp\": \"127.0.0.1\",\n                        \"HostPort\": \"8083\"\n                    }\n                ]\n            },\n            \"Networks\": {\n                \"bridge\": {\n                    \"IPAMConfig\": null,\n                    \"Links\": null,\n                    \"Aliases\": null,\n                    \"DriverOpts\": null,\n                    \"GwPriority\": 0,\n                    \"NetworkID\": \"4e1aaa68bb1adbe02859684d859325f79f93855e66547e98758fd0844a69d228\",\n                    \"EndpointID\": \"0b6717d6402cf2c0446b2486b066eb757cdbcf1d5e64d070aa5d2c56abfd5010\",\n                    \"Gateway\": \"172.17.0.1\",\n                    \"IPAddress\": \"172.17.0.5\",\n                    \"MacAddress\": \"96:62:76:df:b6:23\",\n                    \"IPPrefixLen\": 16,\n                    \"IPv6Gateway\": \"\",\n                    \"GlobalIPv6Address\": \"\",\n                    \"GlobalIPv6PrefixLen\": 0,\n                    \"DNSNames\": null\n                }\n            }\n        },\n        \"ImageManifestDescriptor\": {\n            \"mediaType\": \"application/vnd.oci.image.manifest.v1+json\",\n            \"digest\": \"sha256:a1627a4f470cf33fec30818d43481477a61c3e7b00ad06ba9c06d5158ed5ace9\",\n            \"size\": 2186,\n            \"platform\": {\n                \"architecture\": \"amd64\",\n                \"os\": \"linux\"\n            }\n        }\n    }\n]\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "logs",
+        "rahbar-p01-ui-011a5c74"
+      ],
+      "exit_code": 0,
+      "stdout": "172.17.0.1 - - [05/Nov/2026:11:30:27 +0000] \"GET / HTTP/1.1\" 200 9803 \"-\" \"python-httpx/0.28.1\"\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=128m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges:true",
+        "--mount",
+        "type=bind,source=C:\\Users\\Jibran\\Desktop\\Rahbar\\corpus\\raw\\faculty-entrepreneurship-and-technical-start-ups-policy.pdf,target=/corpus/scan.pdf,readonly",
+        "rahbar-indexer:platform-p01",
+        "python",
+        "-c",
+        "import json,os,pytesseract; from pipeline.extract import extract; d=extract('/corpus/scan.pdf','2022-05-30',False); assert os.getuid()==10001 and len(d.pages)==8 and sum(len(p.text) for p in d.pages)>2000; print(json.dumps(dict(uid=os.getuid(),pages=len(d.pages),characters=sum(len(p.text) for p in d.pages),tesseract=str(pytesseract.get_tesseract_version()))))"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"uid\": 10001, \"pages\": 8, \"characters\": 11647, \"tesseract\": \"5.3.0\"}\n",
+      "stderr": "CropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\nCropBox missing from /Page, defaulting to MediaBox\n"
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "rahbar-p01-api-eb491e79"
+      ],
+      "exit_code": 0,
+      "stdout": "rahbar-p01-api-eb491e79\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "stop",
+        "rahbar-p01-ui-011a5c74"
+      ],
+      "exit_code": 0,
+      "stdout": "rahbar-p01-ui-011a5c74\n",
+      "stderr": ""
+    }
+  ]
+}

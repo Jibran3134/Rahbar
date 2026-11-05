@@ -1,0 +1,90 @@
+﻿{
+  "passed": true,
+  "configurations": [
+    {
+      "size": 250,
+      "overlap": 30,
+      "chunk_count": 828,
+      "original_tokens": 60357,
+      "stored_tokens": 62457,
+      "amplification": 1.0347929817585366,
+      "max_chunk_tokens": 250,
+      "definition_chunk_tokens": [
+        236,
+        237,
+        107
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "chunk_ids_sha256": "8bfac5359f136a71522e1dc1bcc92e9f1615e50c571d42360a6a9caa892c5328"
+    },
+    {
+      "size": 400,
+      "overlap": 50,
+      "chunk_count": 778,
+      "original_tokens": 60357,
+      "stored_tokens": 61357,
+      "amplification": 1.0165680865516842,
+      "max_chunk_tokens": 400,
+      "definition_chunk_tokens": [
+        388,
+        182
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "chunk_ids_sha256": "708dd0eff62a8db04be0fe7d2d35b69bdb1ca466183f78c726cc97e5d631322c"
+    },
+    {
+      "size": 650,
+      "overlap": 80,
+      "chunk_count": 760,
+      "original_tokens": 60357,
+      "stored_tokens": 60517,
+      "amplification": 1.0026508938482694,
+      "max_chunk_tokens": 650,
+      "definition_chunk_tokens": [
+        520
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "chunk_ids_sha256": "ccc2842f4e4ea703392ab3c6e230c1f82c6023d1a447a139441bdc93b6caac7b"
+    }
+  ]
+}
+NATIVE_EXIT=0

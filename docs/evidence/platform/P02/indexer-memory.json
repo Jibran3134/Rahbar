@@ -1,0 +1,390 @@
+{
+  "pod": "indexer-mxhzr",
+  "samples": [
+    {
+      "time_utc": "2026-11-05T11:39:43Z",
+      "memory": {
+        "memory.current": "266887168",
+        "memory.peak": "267362304",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     10m          75Mi            \napi-5c4688d769-jmfrv     12m          75Mi            \napi-5c4688d769-xxpjc     12m          75Mi            \nchroma-0                 2m           34Mi            \nindexer-mxhzr            1466m        120Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:39:49Z",
+      "memory": {
+        "memory.current": "178905088",
+        "memory.peak": "267362304",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     10m          75Mi            \napi-5c4688d769-jmfrv     12m          75Mi            \napi-5c4688d769-xxpjc     12m          75Mi            \nchroma-0                 2m           34Mi            \nindexer-mxhzr            1466m        120Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:39:55Z",
+      "memory": {
+        "memory.current": "269815808",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     10m          75Mi            \napi-5c4688d769-jmfrv     12m          75Mi            \napi-5c4688d769-xxpjc     12m          75Mi            \nchroma-0                 2m           34Mi            \nindexer-mxhzr            1466m        120Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:00Z",
+      "memory": {
+        "memory.current": "198553600",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     10m          75Mi            \napi-5c4688d769-jmfrv     12m          75Mi            \napi-5c4688d769-xxpjc     12m          75Mi            \nchroma-0                 2m           34Mi            \nindexer-mxhzr            1466m        120Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:06Z",
+      "memory": {
+        "memory.current": "207302656",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:11Z",
+      "memory": {
+        "memory.current": "152588288",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:17Z",
+      "memory": {
+        "memory.current": "252489728",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:23Z",
+      "memory": {
+        "memory.current": "180658176",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:28Z",
+      "memory": {
+        "memory.current": "224489472",
+        "memory.peak": "270249984",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:34Z",
+      "memory": {
+        "memory.current": "343453696",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:40Z",
+      "memory": {
+        "memory.current": "222277632",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:45Z",
+      "memory": {
+        "memory.current": "311988224",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:52Z",
+      "memory": {
+        "memory.current": "146235392",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:40:57Z",
+      "memory": {
+        "memory.current": "146780160",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:03Z",
+      "memory": {
+        "memory.current": "146055168",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           81Mi            \napi-5c4688d769-jmfrv     11m          82Mi            \napi-5c4688d769-xxpjc     12m          81Mi            \nchroma-0                 2m           52Mi            \nindexer-mxhzr            1434m        183Mi           \nredis-7f546bdffd-k5x6d   18m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:09Z",
+      "memory": {
+        "memory.current": "146366464",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:15Z",
+      "memory": {
+        "memory.current": "146468864",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:22Z",
+      "memory": {
+        "memory.current": "147148800",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:28Z",
+      "memory": {
+        "memory.current": "146956288",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:35Z",
+      "memory": {
+        "memory.current": "145555456",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:42Z",
+      "memory": {
+        "memory.current": "145690624",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:50Z",
+      "memory": {
+        "memory.current": "147140608",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:41:58Z",
+      "memory": {
+        "memory.current": "146329600",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     9m           88Mi            \napi-5c4688d769-jmfrv     6m           86Mi            \napi-5c4688d769-xxpjc     9m           88Mi            \nchroma-0                 2m           79Mi            \nindexer-mxhzr            1403m        129Mi           \nredis-7f546bdffd-k5x6d   15m          4Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:06Z",
+      "memory": {
+        "memory.current": "146968576",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:14Z",
+      "memory": {
+        "memory.current": "146829312",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:21Z",
+      "memory": {
+        "memory.current": "146247680",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:28Z",
+      "memory": {
+        "memory.current": "145670144",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:37Z",
+      "memory": {
+        "memory.current": "145850368",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:44Z",
+      "memory": {
+        "memory.current": "146100224",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:51Z",
+      "memory": {
+        "memory.current": "146083840",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:42:57Z",
+      "memory": {
+        "memory.current": "146186240",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:43:03Z",
+      "memory": {
+        "memory.current": "146243584",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          93Mi            \napi-5c4688d769-jmfrv     13m          92Mi            \napi-5c4688d769-xxpjc     11m          92Mi            \nchroma-0                 4m           103Mi           \nindexer-mxhzr            71m          129Mi           \nredis-7f546bdffd-k5x6d   30m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:43:09Z",
+      "memory": {
+        "memory.current": "145772544",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          99Mi            \napi-5c4688d769-jmfrv     26m          99Mi            \napi-5c4688d769-xxpjc     40m          99Mi            \nchroma-0                 4m           125Mi           \nindexer-mxhzr            98m          130Mi           \nredis-7f546bdffd-k5x6d   45m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:43:15Z",
+      "memory": {
+        "memory.current": "146169856",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          99Mi            \napi-5c4688d769-jmfrv     26m          99Mi            \napi-5c4688d769-xxpjc     40m          99Mi            \nchroma-0                 4m           125Mi           \nindexer-mxhzr            98m          130Mi           \nredis-7f546bdffd-k5x6d   45m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    },
+    {
+      "time_utc": "2026-11-05T11:43:21Z",
+      "memory": {
+        "memory.current": "145907712",
+        "memory.peak": "343830528",
+        "memory.max": "1610612736"
+      },
+      "probe_exit": 0,
+      "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5c4688d769-b9l7p     20m          99Mi            \napi-5c4688d769-jmfrv     26m          99Mi            \napi-5c4688d769-xxpjc     40m          99Mi            \nchroma-0                 4m           125Mi           \nindexer-mxhzr            98m          130Mi           \nredis-7f546bdffd-k5x6d   45m          3Mi             \nui-5c468b7bc4-9p5wm      1m           2Mi             \n",
+      "top_exit": 0
+    }
+  ]
+}

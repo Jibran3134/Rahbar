@@ -1,0 +1,17 @@
+﻿..F......F......                                                         [100%]
+================================== FAILURES ===================================
+___ test_repeated_policy_and_headings_are_not_margin_noise[4.25 Withdrawal] ___
+tests\test_clean.py:43: in test_repeated_policy_and_headings_are_not_margin_noise
+    assert all(p.text.count(repeated) == 2 for p in clean(doc).pages)
+E   assert False
+E    +  where False = all(<generator object test_repeated_policy_and_headings_are_not_margin_noise.<locals>.<genexpr> at 0x000002038513A5E0>)
+____ test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed ____
+tests\test_clean.py:65: in test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed
+    assert all(p.text.endswith("Last body line.") for p in clean(doc).pages)
+E   assert False
+E    +  where False = all(<generator object test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed.<locals>.<genexpr> at 0x00000203850D1F20>)
+=========================== short test summary info ===========================
+FAILED tests/test_clean.py::test_repeated_policy_and_headings_are_not_margin_noise[4.25 Withdrawal]
+FAILED tests/test_clean.py::test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed
+2 failed, 14 passed in 0.06s
+NATIVE_EXIT=1

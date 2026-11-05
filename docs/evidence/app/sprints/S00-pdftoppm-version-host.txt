@@ -1,0 +1,10 @@
+﻿pdftoppm : pdftoppm version 24.04.0
+At line:5 char:1
++ pdftoppm -v 2>&1 | Out-File -LiteralPath docs/evidence/app/sprints/S0 ...
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (pdftoppm version 24.04.0:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Copyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+EXIT_CODE=0

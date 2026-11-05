@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:33:02.586600+00:00",
+  "first": {
+    "embed_model": "nomic-embed-text",
+    "dimension": 768,
+    "collection": "rahbar__g_6b9f5f84eb384ffbb41e358598c8608c",
+    "generation": "6b9f5f84eb384ffbb41e358598c8608c"
+  },
+  "second": {
+    "dimension": 768,
+    "embed_model": "nomic-embed-text",
+    "generation": "97765075e99c4e4fbf05bd0c6999eba0",
+    "collection": "rahbar__g_97765075e99c4e4fbf05bd0c6999eba0"
+  },
+  "first_count": 3,
+  "second_count": 760,
+  "failed_build_preserved_active": true,
+  "old_generation_retained": true,
+  "query_after_failed_build": [
+    [
+      "89d5b12951522990c13f5b1e58c673da0bdccb9ce9ccaa1be3fb89103912b268"
+    ]
+  ],
+  "dimension": 768,
+  "chunks_sha256": "3cf29d5a9db1d92ba7eff9ed6c4a68d133cdaa4d643d411f1cb2c737f24c1dc0",
+  "endpoint": "127.0.0.1:8001"
+}

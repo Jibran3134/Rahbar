@@ -1,0 +1,28 @@
+[
+  {
+    "id": "q03",
+    "valid": false,
+    "output": {
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.8",
+          "page": 20
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "low"
+    }
+  },
+  {
+    "id": "q11",
+    "valid": true,
+    "output": {
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low"
+    }
+  }
+]

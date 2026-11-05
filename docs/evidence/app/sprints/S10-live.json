@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:32:45.415776+00:00",
+  "model": "llama3.2:3b",
+  "answer": {
+    "answer": "The last day of the makeup week of every semester.[1/4.25]",
+    "citations": [
+      {
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.25",
+        "page": 23
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "high"
+  },
+  "source_chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+  "scope": "Real constrained provider; S11 validation separate"
+}

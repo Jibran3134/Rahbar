@@ -1,0 +1,48 @@
+﻿Extracting undergraduate-academic-rules-aug-2023.pdf
+  26 pages; [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25] OCR; 42.15s
+Extracting academic-rules-handbook-jun-2026.pdf
+.\.venv\Scripts\python.exe : CropBox missing from /Page, defaulting to MediaBox
+At line:3 char:1
++ .\.venv\Scripts\python.exe -u indexer/tests/live_extract.py 2>&1 | Te ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CropBox missing...ing to MediaBox:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+  58 pages; [1, 58] OCR; 5.09s
+Extracting student-handbook-jun-2026.pdf
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+  64 pages; [1, 64] OCR; 5.59s
+Extracting prospectus-academic-rules-and-regulations.pdf
+  5 pages; [] OCR; 0.71s
+Extracting faculty-entrepreneurship-and-technical-start-ups-policy.pdf
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+CropBox missing from /Page, defaulting to MediaBox
+  8 pages; [1, 2, 3, 4, 5, 6, 7, 8] OCR; 11.66s
+Extracting fee-structure-page.html
+  1 pages; [] OCR; 0.01s
+Extracting grading-page.html
+  1 pages; [] OCR; 0.01s
+LIVE_EXTRACTION_PASS=True
+EXIT_CODE=0

@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______________ test_numeric_fact_with_valid_citation_is_a_claim _______________
+tests\test_grounding.py:102: in test_numeric_fact_with_valid_citation_is_a_claim
+    assert validate_grounding(answer,passages()).answered_from_context
+app\services\grounding.py:57: in validate_grounding
+    invalid()
+app\services\grounding.py:29: in invalid
+    raise ProviderError(ProviderFailureKind.INVALID_CITATION)
+E   app.providers.llm.base.ProviderError: LLM provider failed: invalid_citation
+=========================== short test summary info ===========================
+FAILED tests/test_grounding.py::test_numeric_fact_with_valid_citation_is_a_claim
+1 failed, 18 deselected in 0.15s
+NATIVE_EXIT=1

@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "processes": 2,
+  "first": {
+    "request_id": "29ff9bbd1a0d4c0ca7270199cf05d376",
+    "answer": "(stub) 4.25 The deadline to withdraw from a course is the last day of the makeup week of every semester. [academic-rules-handbook-jun-2026.pdf / 4.25]",
+    "citations": [
+      {
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.25",
+        "page": 23
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "low",
+    "retrieved": [
+      {
+        "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.25",
+        "page": 23,
+        "score": 0.84677249
+      },
+      {
+        "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "D.6.8",
+        "page": 29,
+        "score": 0.78344703
+      },
+      {
+        "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.23",
+        "page": 22,
+        "score": 0.78042644
+      },
+      {
+        "chunk_id": "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.24",
+        "page": 22,
+        "score": 0.7556545100000001
+      },
+      {
+        "chunk_id": "ffa73f10a841a24404663430f2d91949478523a7ff00304fb3d93bdbb7fcaaae",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.74875373
+      }
+    ],
+    "provider": "stub",
+    "session_id": "faca494dd05e4225b909decf161ee180"
+  },
+  "follow_up": {
+    "request_id": "1ee20ee2ef084468bd6a1f7ac3f556c8",
+    "answer": "(stub) 4.25 Deadline to withdraw from a course is the last day of classes. [undergraduate-academic-rules-aug-2023.pdf / 4.25]",
+    "citations": [
+      {
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "4.25",
+        "page": 16
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "low",
+    "retrieved": [
+      {
+        "chunk_id": "96b759828454fed3b1960b5d5ac398fef5ecdf1e28dee5ff8fb313f21cc8f72d",
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "4.25",
+        "page": 16,
+        "score": 0.81407547
+      },
+      {
+        "chunk_id": "583c3b2b9423592f0c7e06d20ed13d0e55dd5be6e01d8ef364957d5d33a40004",
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "6.7",
+        "page": 20,
+        "score": 0.7483967499999999
+      },
+      {
+        "chunk_id": "cec5305a5f7616fc38eeb92e49bfafa57dd5a5fd2d370fcf3e6575aa7a494626",
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "4.23",
+        "page": 16,
+        "score": 0.73414254
+      },
+      {
+        "chunk_id": "682e863d75f5b57817fc0b6319564fae3e7d22cfab1298723c560c8dbd1ddbb0",
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "4.21",
+        "page": 16,
+        "score": 0.71180463
+      },
+      {
+        "chunk_id": "87b707c6a09c42340387e7f5737f8c1560a377b14a39be45bde3de3f4b673f04",
+        "source": "undergraduate-academic-rules-aug-2023.pdf",
+        "section": "4.26",
+        "page": 16,
+        "score": 0.70931637
+      }
+    ],
+    "provider": "stub",
+    "session_id": "faca494dd05e4225b909decf161ee180"
+  },
+  "scope": "Real Redis, Chroma and query embeddings; evidence-based stub generation"
+}

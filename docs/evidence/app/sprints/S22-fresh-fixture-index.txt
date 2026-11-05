@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T10:42:10Z", "logger": "rahbar.indexer", "msg": "indexer starting", "dummy": false, "embed_model": "nomic-embed-text", "collection": "rahbar_s22_fixtures_f6e92017", "chroma": "127.0.0.1:8001", "pod": "-"}
+{"ts": "2026-11-05T10:42:11Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2023.md", "chunks": 4, "original_tokens": 255, "stored_tokens": 255, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T10:42:11Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2026.md", "chunks": 4, "original_tokens": 299, "stored_tokens": 299, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T10:42:11Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "fees-2026.md", "chunks": 4, "original_tokens": 185, "stored_tokens": 185, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T10:42:13Z", "logger": "rahbar.indexer", "msg": "indexer finished", "chunks": 12, "seconds": 3.2}
+
+NATIVE_EXIT=0

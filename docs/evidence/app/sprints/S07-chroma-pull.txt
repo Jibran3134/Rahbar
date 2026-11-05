@@ -1,0 +1,21 @@
+1.0.12: Pulling from chromadb/chroma
+746ef2fd2385: Pulling fs layer
+236af3deb901: Pulling fs layer
+e885428be2f7: Pulling fs layer
+5dfe1b4650da: Pulling fs layer
+5bc4e1b10b41: Pulling fs layer
+111356746518: Download complete
+e885428be2f7: Download complete
+5bc4e1b10b41: Download complete
+236af3deb901: Download complete
+5dfe1b4650da: Download complete
+5dfe1b4650da: Pull complete
+236af3deb901: Pull complete
+e885428be2f7: Pull complete
+5bc4e1b10b41: Pull complete
+746ef2fd2385: Download complete
+746ef2fd2385: Pull complete
+Digest: sha256:28a3b2c05c74c83686c2273d4d0994b80c481805d0f47887f289c53a4616e592
+Status: Downloaded newer image for chromadb/chroma:1.0.12
+docker.io/chromadb/chroma:1.0.12
+NATIVE_EXIT=0

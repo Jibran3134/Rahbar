@@ -1,0 +1,20 @@
+[
+  {
+    "dpi": 150,
+    "clause_attached": true,
+    "numeric_eligibility_preserved": true,
+    "pipe_confusion": false
+  },
+  {
+    "dpi": 200,
+    "clause_attached": true,
+    "numeric_eligibility_preserved": false,
+    "pipe_confusion": true
+  },
+  {
+    "dpi": 300,
+    "clause_attached": true,
+    "numeric_eligibility_preserved": true,
+    "pipe_confusion": false
+  }
+]

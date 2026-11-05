@@ -1,0 +1,40 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+___________ test_wire_schema_delimiters_model_temperature_and_order ___________
+tests\test_ollama.py:30: in test_wire_schema_delimiters_model_temperature_and_order
+    provider = OllamaProvider(Settings(), client=client)
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+______________ test_errors_are_classified_and_sanitized[timeout] ______________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+_____________ test_errors_are_classified_and_sanitized[transport] _____________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+______________ test_errors_are_classified_and_sanitized[status] _______________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+_______________ test_errors_are_classified_and_sanitized[json] ________________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+______________ test_errors_are_classified_and_sanitized[schema] _______________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+_______________ test_errors_are_classified_and_sanitized[outer] _______________
+tests\test_ollama.py:59: in test_errors_are_classified_and_sanitized
+    OllamaProvider(Settings(), client=client).generate("Question", [passage()])
+E   TypeError: OllamaProvider.__init__() got an unexpected keyword argument 'client'
+=========================== short test summary info ===========================
+FAILED tests/test_ollama.py::test_wire_schema_delimiters_model_temperature_and_order
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[timeout]
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[transport]
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[status]
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[json]
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[schema]
+FAILED tests/test_ollama.py::test_errors_are_classified_and_sanitized[outer]
+7 failed in 0.82s
+NATIVE_EXIT=1

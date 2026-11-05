@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "context": "k3d-civicpulse-ci",
+  "images": [
+    {
+      "part": "api",
+      "tag": "platform-p04",
+      "id": "sha256:089f97a4c6f7c47eff138fa291f7720287d6ca656a5b88bbd9a834c626b4d428",
+      "rootfs_same_as_scan_passing_p03": true
+    },
+    {
+      "part": "indexer",
+      "tag": "platform-p04",
+      "id": "sha256:a16f738b9c3757960fb1e65094461951b3f1be02f8cbec2fe1b6778ee3fedd62",
+      "rootfs_same_as_scan_passing_p03": true
+    },
+    {
+      "part": "ui",
+      "tag": "platform-p04",
+      "id": "sha256:a269a95a9d360d344b119b20c81c8b6efde7eaabb658dc7dc87daadec4cf15e7",
+      "rootfs_same_as_scan_passing_p03": false
+    }
+  ],
+  "steps": [
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "get",
+        "pods,svc,ingress,pvc,hpa",
+        "-o",
+        "wide"
+      ],
+      "exit_code": 0,
+      "stdout": "NAME                                      READY   STATUS      RESTARTS   AGE     IP            NODE     NOMINATED NODE   READINESS GATES\npod/acceptance-reindex-1793883288-55jv6   0/1     Completed   0          26m     10.244.3.39   rahbar   <none>           <none>\npod/api-6675ffbc6b-ljfhs                  1/1     Running     0          2m8s    10.244.3.51   rahbar   <none>           <none>\npod/api-6675ffbc6b-nkqlz                  1/1     Running     0          116s    10.244.3.53   rahbar   <none>           <none>\npod/api-6675ffbc6b-vvsdx                  1/1     Running     0          2m2s    10.244.3.52   rahbar   <none>           <none>\npod/chroma-0                              1/1     Running     0          7m36s   10.244.3.47   rahbar   <none>           <none>\npod/indexer-mxhzr                         0/1     Completed   0          103m    <none>        rahbar   <none>           <none>\npod/redis-7f546bdffd-x2m64                1/1     Running     0          29m     10.244.3.30   rahbar   <none>           <none>\npod/ui-58c965b65f-wcrs8                   1/1     Running     0          5m32s   10.244.3.50   rahbar   <none>           <none>\n\nNAME             TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE    SELECTOR\nservice/api      ClusterIP   10.96.50.136   <none>        8000/TCP   103m   app.kubernetes.io/name=api,app.kubernetes.io/part-of=rahbar\nservice/chroma   ClusterIP   None           <none>        8000/TCP   103m   app.kubernetes.io/name=chroma,app.kubernetes.io/part-of=rahbar\nservice/redis    ClusterIP   10.99.93.79    <none>        6379/TCP   103m   app.kubernetes.io/name=redis,app.kubernetes.io/part-of=rahbar\nservice/ui       ClusterIP   10.98.81.56    <none>        8080/TCP   103m   app.kubernetes.io/name=ui,app.kubernetes.io/part-of=rahbar\n\nNAME                               CLASS   HOSTS          ADDRESS        PORTS   AGE\ningress.networking.k8s.io/rahbar   nginx   rahbar.local   192.168.49.2   80      103m\n\nNAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE    VOLUMEMODE\npersistentvolumeclaim/corpus-data     Bound    pvc-70f902d7-a95f-4c9d-b7e5-b1a690a275a7   1Gi        RWO            standard       <unset>                 103m   Filesystem\npersistentvolumeclaim/data-chroma-0   Bound    pvc-59e82ec7-7f34-4881-a47f-ed7eb82bd08e   4Gi        RWO            standard       <unset>                 103m   Filesystem\npersistentvolumeclaim/redis-data      Bound    pvc-31408b5d-3303-4283-8938-bde30c19ad6f   1Gi        RWO            standard       <unset>                 103m   Filesystem\n\nNAME                                      REFERENCE        TARGETS        MINPODS   MAXPODS   REPLICAS   AGE\nhorizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: 13%/70%   3         8         3          103m\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "get",
+        "endpoints",
+        "api"
+      ],
+      "exit_code": 0,
+      "stdout": "NAME   ENDPOINTS                                            AGE\napi    10.244.3.51:8000,10.244.3.52:8000,10.244.3.53:8000   103m\n",
+      "stderr": "Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice\n"
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "top",
+        "pods"
+      ],
+      "exit_code": 0,
+      "stdout": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-6675ffbc6b-ljfhs     13m          76Mi            \napi-6675ffbc6b-nkqlz     22m          76Mi            \napi-6675ffbc6b-vvsdx     60m          77Mi            \nchroma-0                 6m           161Mi           \nredis-7f546bdffd-x2m64   18m          8Mi             \nui-58c965b65f-wcrs8      1m           2Mi             \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kubectl",
+        "--context",
+        "rahbar",
+        "-n",
+        "rahbar",
+        "exec",
+        "deployment/api",
+        "--",
+        "python",
+        "-c",
+        "import httpx,json; print(json.dumps({p:dict(status=(r:=httpx.get('http://127.0.0.1:8000'+p,timeout=15)).status_code,body=r.json()) for p in ['/healthz','/readyz','/api/info']}))"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"/healthz\": {\"status\": 200, \"body\": {\"status\": \"alive\"}}, \"/readyz\": {\"status\": 200, \"body\": {\"status\": \"ready\", \"checks\": {\"chroma\": true, \"model\": true, \"dimension\": true, \"redis\": true}}}, \"/api/info\": {\"status\": 200, \"body\": {\"active\": {\"collection\": \"rahbar__g_dd2a2f173ca347229fcff3bb65dcf591\", \"generation\": \"dd2a2f173ca347229fcff3bb65dcf591\", \"embed_model\": \"nomic-embed-text\", \"dimension\": 768}, \"embed_model\": \"nomic-embed-text\", \"llm_model\": \"llama3.2:3b\", \"provider\": \"ollama-host\", \"top_k\": 5, \"temperature\": 0.2, \"relevance_floor\": 0.74, \"cache_threshold\": 0.95, \"cache_ttl_seconds\": 3600}}}\n",
+      "stderr": ""
+    }
+  ]
+}

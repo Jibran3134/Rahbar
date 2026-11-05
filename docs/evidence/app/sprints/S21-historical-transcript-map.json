@@ -1,0 +1,35 @@
+{
+  "purpose": "Historical test failures are terminal logs, not active source placeholders; bytes preserved. Original recorded command paths remain historical; this map resolves subsequent archive names.",
+  "renames": [
+    {
+      "original": "docs\\evidence\\app\\sprints\\S03-extract-red.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S03-extract-red.log",
+      "sha256": "b7c1af02c7abeb0df446521a9f1f2af1cdf48ec71b81d553877398927f134ca0"
+    },
+    {
+      "original": "docs\\evidence\\app\\sprints\\S04-red.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S04-red.log",
+      "sha256": "9d237a082aa2c66c9d190987afbbd9978c8573f8875895c806161b1e26fb32e4"
+    },
+    {
+      "original": "docs\\evidence\\app\\sprints\\S05-red.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S05-red.log",
+      "sha256": "dd3be254e76d9ca2cdcf1dded1b272b086ec571d0c4cd1a79a279a6340f181b5"
+    },
+    {
+      "original": "docs\\evidence\\app\\sprints\\S06-red.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S06-red.log",
+      "sha256": "1d41717809b38b1fbe091f95b9ce5ce8340525e7ef4296e5d6aa8edfd554d8ba"
+    },
+    {
+      "original": "docs\\evidence\\app\\sprints\\S17-red.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S17-red.log",
+      "sha256": "801d606e22cdcbf9c2107ec90ef445296ef0c2f901fc634e126bcd6a63cf0bf1"
+    },
+    {
+      "original": "docs\\evidence\\app\\sprints\\S18-submission-preview.txt",
+      "archive": "docs\\evidence\\app\\sprints\\S18-submission-preview.log",
+      "sha256": "8cd553834800973e9944fb25625afe53ea21119dbba7fcf37ed13fcd28afd49d"
+    }
+  ]
+}

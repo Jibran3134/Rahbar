@@ -1,0 +1,35 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+___________ test_readiness_dependency_failure_and_recovery[chroma] ____________
+tests\test_readiness.py:11: in test_readiness_dependency_failure_and_recovery
+    from app.services import readiness
+E   ImportError: cannot import name 'readiness' from 'app.services' (C:\Users\Jibran\Desktop\Rahbar\api\app\services\__init__.py)
+____________ test_readiness_dependency_failure_and_recovery[model] ____________
+tests\test_readiness.py:11: in test_readiness_dependency_failure_and_recovery
+    from app.services import readiness
+E   ImportError: cannot import name 'readiness' from 'app.services' (C:\Users\Jibran\Desktop\Rahbar\api\app\services\__init__.py)
+__________ test_readiness_dependency_failure_and_recovery[dimension] __________
+tests\test_readiness.py:11: in test_readiness_dependency_failure_and_recovery
+    from app.services import readiness
+E   ImportError: cannot import name 'readiness' from 'app.services' (C:\Users\Jibran\Desktop\Rahbar\api\app\services\__init__.py)
+____________ test_readiness_dependency_failure_and_recovery[redis] ____________
+tests\test_readiness.py:11: in test_readiness_dependency_failure_and_recovery
+    from app.services import readiness
+E   ImportError: cannot import name 'readiness' from 'app.services' (C:\Users\Jibran\Desktop\Rahbar\api\app\services\__init__.py)
+____________ test_readiness_dependency_failure_and_recovery[None] _____________
+tests\test_readiness.py:11: in test_readiness_dependency_failure_and_recovery
+    from app.services import readiness
+E   ImportError: cannot import name 'readiness' from 'app.services' (C:\Users\Jibran\Desktop\Rahbar\api\app\services\__init__.py)
+_______________________ test_stub_readiness_is_offline ________________________
+tests\test_readiness.py:27: in test_stub_readiness_is_offline
+    from app.services.readiness import check_dependencies
+E   ModuleNotFoundError: No module named 'app.services.readiness'
+=========================== short test summary info ===========================
+FAILED tests/test_readiness.py::test_readiness_dependency_failure_and_recovery[chroma]
+FAILED tests/test_readiness.py::test_readiness_dependency_failure_and_recovery[model]
+FAILED tests/test_readiness.py::test_readiness_dependency_failure_and_recovery[dimension]
+FAILED tests/test_readiness.py::test_readiness_dependency_failure_and_recovery[redis]
+FAILED tests/test_readiness.py::test_readiness_dependency_failure_and_recovery[None]
+FAILED tests/test_readiness.py::test_stub_readiness_is_offline - ModuleNotFou...
+6 failed in 0.52s
+NATIVE_EXIT=1

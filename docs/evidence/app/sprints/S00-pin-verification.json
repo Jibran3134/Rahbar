@@ -1,0 +1,159 @@
+{
+  "all_pins_match": true,
+  "checks": [
+    {
+      "file": "api/requirements.txt",
+      "package": "fastapi",
+      "expected": "0.115.12",
+      "actual": "0.115.12",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "uvicorn",
+      "expected": "0.34.2",
+      "actual": "0.34.2",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "pydantic",
+      "expected": "2.11.4",
+      "actual": "2.11.4",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "httpx",
+      "expected": "0.28.1",
+      "actual": "0.28.1",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "prometheus-client",
+      "expected": "0.21.1",
+      "actual": "0.21.1",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "chromadb-client",
+      "expected": "1.0.12",
+      "actual": "1.0.12",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "posthog",
+      "expected": "5.4.0",
+      "actual": "5.4.0",
+      "match": true
+    },
+    {
+      "file": "api/requirements.txt",
+      "package": "redis",
+      "expected": "5.2.1",
+      "actual": "5.2.1",
+      "match": true
+    },
+    {
+      "file": "api/requirements-dev.txt",
+      "package": "pytest",
+      "expected": "8.3.5",
+      "actual": "8.3.5",
+      "match": true
+    },
+    {
+      "file": "api/requirements-dev.txt",
+      "package": "ruff",
+      "expected": "0.11.8",
+      "actual": "0.11.8",
+      "match": true
+    },
+    {
+      "file": "api/requirements-dev.txt",
+      "package": "mypy",
+      "expected": "1.15.0",
+      "actual": "1.15.0",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "chromadb-client",
+      "expected": "1.0.12",
+      "actual": "1.0.12",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "posthog",
+      "expected": "5.4.0",
+      "actual": "5.4.0",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "httpx",
+      "expected": "0.28.1",
+      "actual": "0.28.1",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "pyyaml",
+      "expected": "6.0.2",
+      "actual": "6.0.2",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "pdfplumber",
+      "expected": "0.11.6",
+      "actual": "0.11.6",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "pypdf",
+      "expected": "5.4.0",
+      "actual": "5.4.0",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "pytesseract",
+      "expected": "0.3.13",
+      "actual": "0.3.13",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements.txt",
+      "package": "pdf2image",
+      "expected": "1.17.0",
+      "actual": "1.17.0",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements-dev.txt",
+      "package": "pytest",
+      "expected": "8.3.5",
+      "actual": "8.3.5",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements-dev.txt",
+      "package": "ruff",
+      "expected": "0.11.8",
+      "actual": "0.11.8",
+      "match": true
+    },
+    {
+      "file": "indexer/requirements-dev.txt",
+      "package": "mypy",
+      "expected": "1.15.0",
+      "actual": "1.15.0",
+      "match": true
+    }
+  ]
+}

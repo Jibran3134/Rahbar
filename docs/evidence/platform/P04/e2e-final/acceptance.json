@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tag": "platform-p03",
+  "registry": "",
+  "retrieval": "real Chroma and nomic embeddings",
+  "generation": "stub",
+  "ingress": "http://127.0.0.1:18080"
+}

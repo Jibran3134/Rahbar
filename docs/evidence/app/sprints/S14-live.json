@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "before": {
+    "status": "ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": true
+    }
+  },
+  "redis_stopped": {
+    "status": "not_ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": false
+    }
+  },
+  "restored": {
+    "status": "ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": true
+    }
+  },
+  "mismatch": {
+    "status": "not_ready",
+    "checks": {
+      "chroma": true,
+      "model": false,
+      "dimension": false,
+      "redis": true
+    }
+  },
+  "recovered": {
+    "status": "ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": true
+    }
+  },
+  "healthz_during_outage": 200
+}

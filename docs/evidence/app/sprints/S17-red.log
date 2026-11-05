@@ -1,0 +1,68 @@
+FFFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+____________ test_gate_exact_boundaries_wrong_and_missing_baseline ____________
+eval\tests\test_gate.py:14: in test_gate_exact_boundaries_wrong_and_missing_baseline
+    assert gate(metrics(),baseline)==[]
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+_ test_absolute_nonfinite_and_undefined_metrics_fail_closed[citation_validity-0.949] _
+eval\tests\test_gate.py:23: in test_absolute_nonfinite_and_undefined_metrics_fail_closed
+    assert gate({**metrics(),key:value},metrics())
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+_ test_absolute_nonfinite_and_undefined_metrics_fail_closed[abstention_correctness-0.5] _
+eval\tests\test_gate.py:23: in test_absolute_nonfinite_and_undefined_metrics_fail_closed
+    assert gate({**metrics(),key:value},metrics())
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+___ test_absolute_nonfinite_and_undefined_metrics_fail_closed[recall@5-nan] ___
+eval\tests\test_gate.py:23: in test_absolute_nonfinite_and_undefined_metrics_fail_closed
+    assert gate({**metrics(),key:value},metrics())
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+_ test_absolute_nonfinite_and_undefined_metrics_fail_closed[citation_validity-None] _
+eval\tests\test_gate.py:23: in test_absolute_nonfinite_and_undefined_metrics_fail_closed
+    assert gate({**metrics(),key:value},metrics())
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+___ test_absolute_nonfinite_and_undefined_metrics_fail_closed[recall@5-inf] ___
+eval\tests\test_gate.py:23: in test_absolute_nonfinite_and_undefined_metrics_fail_closed
+    assert gate({**metrics(),key:value},metrics())
+eval\run_eval.py:72: in gate
+    raise NotImplementedError("gate: see STARTER-TODO(5.4)")
+E   NotImplementedError: gate: see STARTER-TODO(5.4)
+_____________________ test_unique_recall_and_no_relevance _____________________
+eval\tests\test_metrics.py:10: in test_unique_recall_and_no_relevance
+    assert recall_at_k([a,a,b],[a,a,a,b],3)==.5
+eval\run_eval.py:52: in recall_at_k
+    raise NotImplementedError("recall_at_k: see STARTER-TODO(5.2)")
+E   NotImplementedError: recall_at_k: see STARTER-TODO(5.2)
+__________ test_citation_page_integrity_and_no_vacuous_grounded_pass __________
+eval\tests\test_metrics.py:17: in test_citation_page_integrity_and_no_vacuous_grounded_pass
+    assert citation_validity(dict(answered_from_context=True,citations=[],retrieved=[]))==0
+eval\run_eval.py:59: in citation_validity
+    raise NotImplementedError("citation_validity: see STARTER-TODO(5.3)")
+E   NotImplementedError: citation_validity: see STARTER-TODO(5.3)
+_______________ test_macro_denominators_abstention_and_by_type ________________
+eval\tests\test_metrics.py:29: in test_macro_denominators_abstention_and_by_type
+    result=summarise(rows)
+eval\run_eval.py:66: in summarise
+    raise NotImplementedError("summarise: see STARTER-TODO(5.2, 5.3)")
+E   NotImplementedError: summarise: see STARTER-TODO(5.2, 5.3)
+=========================== short test summary info ===========================
+FAILED eval/tests/test_gate.py::test_gate_exact_boundaries_wrong_and_missing_baseline
+FAILED eval/tests/test_gate.py::test_absolute_nonfinite_and_undefined_metrics_fail_closed[citation_validity-0.949]
+FAILED eval/tests/test_gate.py::test_absolute_nonfinite_and_undefined_metrics_fail_closed[abstention_correctness-0.5]
+FAILED eval/tests/test_gate.py::test_absolute_nonfinite_and_undefined_metrics_fail_closed[recall@5-nan]
+FAILED eval/tests/test_gate.py::test_absolute_nonfinite_and_undefined_metrics_fail_closed[citation_validity-None]
+FAILED eval/tests/test_gate.py::test_absolute_nonfinite_and_undefined_metrics_fail_closed[recall@5-inf]
+FAILED eval/tests/test_metrics.py::test_unique_recall_and_no_relevance - NotI...
+FAILED eval/tests/test_metrics.py::test_citation_page_integrity_and_no_vacuous_grounded_pass
+FAILED eval/tests/test_metrics.py::test_macro_denominators_abstention_and_by_type
+9 failed in 0.72s
+NATIVE_EXIT=1

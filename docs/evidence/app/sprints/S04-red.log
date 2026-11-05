@@ -1,0 +1,117 @@
+﻿FFFFFFFFFFFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+_______ test_running_margins_removed_without_mutating_metadata_or_input _______
+tests\test_clean.py:26: in test_running_margins_removed_without_mutating_metadata_or_input
+    result = clean(doc)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+_ test_repeated_policy_and_headings_are_not_margin_noise[Students must maintain CGPA 2.00.] _
+tests\test_clean.py:43: in test_repeated_policy_and_headings_are_not_margin_noise
+    assert all(p.text.count(repeated) == 2 for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+___ test_repeated_policy_and_headings_are_not_margin_noise[4.25 Withdrawal] ___
+tests\test_clean.py:43: in test_repeated_policy_and_headings_are_not_margin_noise
+    assert all(p.text.count(repeated) == 2 for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+__ test_repeated_policy_and_headings_are_not_margin_noise[## Academic Rules] __
+tests\test_clean.py:43: in test_repeated_policy_and_headings_are_not_margin_noise
+    assert all(p.text.count(repeated) == 2 for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+__ test_repeated_policy_and_headings_are_not_margin_noise[Academic Warning] ___
+tests\test_clean.py:43: in test_repeated_policy_and_headings_are_not_margin_noise
+    assert all(p.text.count(repeated) == 2 for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+____________ test_repeated_running_title_inside_body_is_preserved _____________
+tests\test_clean.py:48: in test_repeated_running_title_inside_body_is_preserved
+    assert all("Student Handbook 2026" in p.text for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+________ test_insufficient_pages_do_not_establish_repeated_margins[1] _________
+tests\test_clean.py:54: in test_insufficient_pages_do_not_establish_repeated_margins
+    assert all("Student Handbook 2026" in p.text for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+________ test_insufficient_pages_do_not_establish_repeated_margins[2] _________
+tests\test_clean.py:54: in test_insufficient_pages_do_not_establish_repeated_margins
+    assert all("Student Handbook 2026" in p.text for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+___________________ test_low_frequency_header_is_preserved ____________________
+tests\test_clean.py:60: in test_low_frequency_header_is_preserved
+    assert "Student Handbook 2026" in clean(doc).pages[0].text
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+____ test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed ____
+tests\test_clean.py:65: in test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed
+    assert all(p.text.endswith("Last body line.") for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+_______________ test_non_pdf_margins_remain_content[policy.md] ________________
+tests\test_clean.py:74: in test_non_pdf_margins_remain_content
+    for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+_______________ test_non_pdf_margins_remain_content[policy.txt] _______________
+tests\test_clean.py:74: in test_non_pdf_margins_remain_content
+    for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+______________ test_non_pdf_margins_remain_content[policy.html] _______________
+tests\test_clean.py:74: in test_non_pdf_margins_remain_content
+    for p in clean(doc).pages)
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+___________ test_structure_and_exact_evidence_survive_normalization ___________
+tests\test_clean.py:81: in test_structure_and_exact_evidence_survive_normalization
+    result = clean(document([text])).pages[0].text
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+_____________ test_only_discretionary_soft_hyphen_wrap_is_joined ______________
+tests\test_clean.py:88: in test_only_discretionary_soft_hyphen_wrap_is_joined
+    result = clean(document(["infor\u00ad\nmation and re\u00adentry; 4.25\nHeading"])).pages[0].text
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+______ test_empty_pages_and_document_survive_and_cleaning_is_idempotent _______
+tests\test_clean.py:93: in test_empty_pages_and_document_survive_and_cleaning_is_idempotent
+    assert clean(document([])).pages == []
+pipeline\clean.py:12: in clean
+    raise NotImplementedError("clean: see STARTER-TODO(3.1)")
+E   NotImplementedError: clean: see STARTER-TODO(3.1)
+=========================== short test summary info ===========================
+FAILED tests/test_clean.py::test_running_margins_removed_without_mutating_metadata_or_input
+FAILED tests/test_clean.py::test_repeated_policy_and_headings_are_not_margin_noise[Students must maintain CGPA 2.00.]
+FAILED tests/test_clean.py::test_repeated_policy_and_headings_are_not_margin_noise[4.25 Withdrawal]
+FAILED tests/test_clean.py::test_repeated_policy_and_headings_are_not_margin_noise[## Academic Rules]
+FAILED tests/test_clean.py::test_repeated_policy_and_headings_are_not_margin_noise[Academic Warning]
+FAILED tests/test_clean.py::test_repeated_running_title_inside_body_is_preserved
+FAILED tests/test_clean.py::test_insufficient_pages_do_not_establish_repeated_margins[1]
+FAILED tests/test_clean.py::test_insufficient_pages_do_not_establish_repeated_margins[2]
+FAILED tests/test_clean.py::test_low_frequency_header_is_preserved - NotImple...
+FAILED tests/test_clean.py::test_sequential_standalone_pdf_folios_removed_but_numbers_not_guessed
+FAILED tests/test_clean.py::test_non_pdf_margins_remain_content[policy.md] - ...
+FAILED tests/test_clean.py::test_non_pdf_margins_remain_content[policy.txt]
+FAILED tests/test_clean.py::test_non_pdf_margins_remain_content[policy.html]
+FAILED tests/test_clean.py::test_structure_and_exact_evidence_survive_normalization
+FAILED tests/test_clean.py::test_only_discretionary_soft_hyphen_wrap_is_joined
+FAILED tests/test_clean.py::test_empty_pages_and_document_survive_and_cleaning_is_idempotent
+16 failed in 0.09s
+NATIVE_EXIT=1

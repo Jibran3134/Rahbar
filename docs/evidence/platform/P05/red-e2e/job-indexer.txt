@@ -1,0 +1,5 @@
+{"ts": "2026-11-05T14:41:13Z", "logger": "rahbar.indexer", "msg": "indexer starting", "dummy": false, "embed_model": "nomic-embed-text", "collection": "rahbar_fixtures", "chroma": "chroma:8000", "pod": "indexer-8d8x9"}
+{"ts": "2026-11-05T14:41:14Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2023.md", "chunks": 4, "original_tokens": 255, "stored_tokens": 255, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T14:41:14Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "academic-rules-2026.md", "chunks": 4, "original_tokens": 299, "stored_tokens": 299, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T14:41:14Z", "logger": "rahbar.indexer", "msg": "chunked", "source": "fees-2026.md", "chunks": 4, "original_tokens": 185, "stored_tokens": 185, "amplification": 1.0, "token_counter": "unicode-word-4-and-punctuation-v1"}
+{"ts": "2026-11-05T14:41:16Z", "logger": "rahbar.indexer", "msg": "indexer finished", "chunks": 12, "seconds": 2.4}

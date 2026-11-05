@@ -1,0 +1,20 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+___________ test_hit_threshold_ttl_bounds_and_generation_namespace ____________
+tests\test_cache.py:38: in test_hit_threshold_ttl_bounds_and_generation_namespace
+    from app.services.cache import SemanticCache, namespace
+E   ModuleNotFoundError: No module named 'app.services.cache'
+___________ test_numeric_version_scope_and_unsafe_answer_exclusions ___________
+tests\test_cache.py:55: in test_numeric_version_scope_and_unsafe_answer_exclusions
+    from app.services.cache import SemanticCache
+E   ModuleNotFoundError: No module named 'app.services.cache'
+__________ test_cache_preparation_embeds_once_and_followup_bypasses ___________
+tests\test_cache.py:69: in test_cache_preparation_embeds_once_and_followup_bypasses
+    from app.services.cache import SemanticCache, answer_cached
+E   ModuleNotFoundError: No module named 'app.services.cache'
+=========================== short test summary info ===========================
+FAILED tests/test_cache.py::test_hit_threshold_ttl_bounds_and_generation_namespace
+FAILED tests/test_cache.py::test_numeric_version_scope_and_unsafe_answer_exclusions
+FAILED tests/test_cache.py::test_cache_preparation_embeds_once_and_followup_bypasses
+3 failed in 0.16s
+NATIVE_EXIT=1

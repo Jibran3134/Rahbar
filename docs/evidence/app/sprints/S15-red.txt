@@ -1,0 +1,22 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_success_abstention_fallback_metrics_and_safe_logs ____________
+tests\test_observability.py:26: in test_success_abstention_fallback_metrics_and_safe_logs
+    assert metric in text
+E   assert 'rahbar_retrieval_seconds' in '# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counte...\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path="/api/ask"} 1.793864987585427e+09\n'
+---------------------------- Captured stdout call -----------------------------
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "rahbar.api", "msg": "api started", "request_id": "-", "retriever": "stub", "llm_provider": "stub", "embed_model": "nomic-embed-text", "top_k": 5}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "observe-123", "retriever": "stub", "provider": "stub", "top_k": 5, "chunk_ids": ["stub-001", "stub-002", "stub-003"], "scores": [0.91, 0.84, 0.77], "answered_from_context": true}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "observe-123", "path": "/api/ask", "status": 200, "ms": 2.4}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:49:47Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation validation/failure", "request_id": "35445ea6357b4b2fa5c28055e979060d", "failure_kind": "invalid_json", "attempt": 1, "provider": "bad"}
+{"ts": "2026-11-05T07:49:47Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation validation/failure", "request_id": "35445ea6357b4b2fa5c28055e979060d", "failure_kind": "invalid_json", "attempt": 2, "provider": "bad"}
+{"ts": "2026-11-05T07:49:47Z", "level": "WARNING", "logger": "rahbar.generation", "msg": "generation fallback", "request_id": "35445ea6357b4b2fa5c28055e979060d", "fallback": true, "provider": "bad"}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "rahbar.answer", "msg": "answered", "request_id": "35445ea6357b4b2fa5c28055e979060d", "retriever": "stub", "provider": "bad", "top_k": 5, "chunk_ids": ["stub-001", "stub-002", "stub-003"], "scores": [0.91, 0.84, 0.77], "answered_from_context": false}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "rahbar.api", "msg": "request", "request_id": "35445ea6357b4b2fa5c28055e979060d", "path": "/api/ask", "status": 200, "ms": 1.3}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: POST http://testserver/api/ask \"HTTP/1.1 200 OK\"", "request_id": "-"}
+{"ts": "2026-11-05T07:49:47Z", "level": "INFO", "logger": "httpx", "msg": "HTTP Request: GET http://testserver/metrics \"HTTP/1.1 200 OK\"", "request_id": "-"}
+=========================== short test summary info ===========================
+FAILED tests/test_observability.py::test_success_abstention_fallback_metrics_and_safe_logs
+1 failed in 0.58s
+NATIVE_EXIT=1

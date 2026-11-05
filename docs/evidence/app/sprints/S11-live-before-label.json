@@ -1,0 +1,172 @@
+{
+  "passed": false,
+  "checked_at_utc": "2026-11-05T07:19:26.340917+00:00",
+  "provisional_floor": 0.75,
+  "previous_selected_pair_floor": 0.7817780999999999,
+  "model": "llama3.2:3b",
+  "scope": "Real services through ASGI HTTP; final case is explicit transport injection",
+  "probes": [
+    {
+      "probe": "current_withdrawal",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "ed072db318434cbd8c8649ddbdf586c6",
+        "answer": "The last day of the makeup week of every semester.[academic-rules-handbook-jun-2026.pdf / 4.25]",
+        "citations": [
+          {
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
+        "retrieved": [
+          {
+            "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23,
+            "score": 0.82920778
+          },
+          {
+            "chunk_id": "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.24",
+            "page": 22,
+            "score": 0.78173196
+          },
+          {
+            "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.23",
+            "page": 22,
+            "score": 0.78047496
+          },
+          {
+            "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "D.6.8",
+            "page": 29,
+            "score": 0.77765661
+          },
+          {
+            "chunk_id": "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "3.33",
+            "page": 18,
+            "score": 0.76983392
+          }
+        ],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "historical_withdrawal",
+      "passed": false,
+      "status": 200,
+      "response": {
+        "request_id": "7b3afde3d2264292b4ad1ed3ff843af2",
+        "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [
+          {
+            "chunk_id": "96b759828454fed3b1960b5d5ac398fef5ecdf1e28dee5ff8fb313f21cc8f72d",
+            "source": "undergraduate-academic-rules-aug-2023.pdf",
+            "section": "4.25",
+            "page": 16,
+            "score": 0.7664454
+          }
+        ],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "absent_deadline",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "451dd5c4a2fd46e5b04dee359ba89e2b",
+        "answer": "The supplied documents do not provide enough information to answer this question.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "absent_deposit",
+      "passed": true,
+      "status": 200,
+      "response": {
+        "request_id": "3da9cfdc709145919096b6b35d452636",
+        "answer": "The supplied documents do not provide enough information to answer this question.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [],
+        "provider": "ollama",
+        "session_id": null
+      }
+    },
+    {
+      "probe": "injected_malformed_provider_json",
+      "status": 200,
+      "passed": true,
+      "provider_calls": 2,
+      "response": {
+        "request_id": "1e697691dcec48de931a8710192653ba",
+        "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+        "citations": [],
+        "answered_from_context": false,
+        "confidence": "low",
+        "retrieved": [
+          {
+            "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.25",
+            "page": 23,
+            "score": 0.82920778
+          },
+          {
+            "chunk_id": "daaff931b5744b96dced71e4a3aa291f14caef5620dd4fa91f63a83f893b6764",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.24",
+            "page": 22,
+            "score": 0.78173196
+          },
+          {
+            "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.23",
+            "page": 22,
+            "score": 0.78047496
+          },
+          {
+            "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "D.6.8",
+            "page": 29,
+            "score": 0.77765661
+          },
+          {
+            "chunk_id": "2333daa52d1658a8089b97801c5f0da544e906011b1659b22b4cf299074e6441",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "3.33",
+            "page": 18,
+            "score": 0.76983392
+          }
+        ],
+        "provider": "ollama",
+        "session_id": null
+      }
+    }
+  ]
+}

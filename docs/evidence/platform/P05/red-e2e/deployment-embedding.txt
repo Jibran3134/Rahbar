@@ -1,0 +1,150 @@
+slot launch_slot_: id  0 | task 22 | processing task, is_child = 0
+slot   operator(): id  0 | task 22 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 56
+slot   operator(): id  0 | task 22 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 22 | stop processing: n_tokens = 56, truncated = 0
+slot prompt_clear: id  0 | task 22 | clearing prompt with 56 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:15 | 200 |     1.3s |  192.168.92.146 | POST     "/api/embed"
+[GIN] 2026/11/05 - 14:41:17 | 200 | 37.378µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2026/11/05 - 14:41:17 | 200 | 905.578µs |       127.0.0.1 | POST     "/api/show"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 294350532
+slot launch_slot_: id  0 | task 24 | processing task, is_child = 0
+slot   operator(): id  0 | task 24 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 24 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 24 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 24 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:24 | 200 |  26.96ms |  192.168.92.138 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 303107829
+slot launch_slot_: id  0 | task 26 | processing task, is_child = 0
+slot   operator(): id  0 | task 26 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 26 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 26 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 26 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:24 | 200 |  36.12ms |  192.168.92.137 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 303195826
+slot launch_slot_: id  0 | task 28 | processing task, is_child = 0
+slot   operator(): id  0 | task 28 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 28 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 28 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 28 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:24 | 200 |  30.19ms |  192.168.92.140 | POST     "/api/embed"
+[GIN] 2026/11/05 - 14:41:32 | 200 | 32.571µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2026/11/05 - 14:41:32 | 200 | 761.408µs |       127.0.0.1 | POST     "/api/show"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 303349154
+slot launch_slot_: id  0 | task 30 | processing task, is_child = 0
+slot   operator(): id  0 | task 30 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 30 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/05 - 14:41:39 | 200 |  33.81ms |  192.168.92.138 | POST     "/api/embed"
+slot      release: id  0 | task 30 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 30 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 318116070
+slot launch_slot_: id  0 | task 32 | processing task, is_child = 0
+slot   operator(): id  0 | task 32 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 32 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 32 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 32 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:39 | 200 |  30.52ms |  192.168.92.137 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 318157181
+slot launch_slot_: id  0 | task 34 | processing task, is_child = 0
+slot   operator(): id  0 | task 34 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 34 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 34 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 34 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:39 | 200 |  28.26ms |  192.168.92.140 | POST     "/api/embed"
+[GIN] 2026/11/05 - 14:41:47 | 200 | 28.844µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2026/11/05 - 14:41:47 | 200 | 797.498µs |       127.0.0.1 | POST     "/api/show"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 318296617
+slot launch_slot_: id  0 | task 36 | processing task, is_child = 0
+slot   operator(): id  0 | task 36 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 36 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/05 - 14:41:54 | 200 |  32.71ms |  192.168.92.138 | POST     "/api/embed"
+slot      release: id  0 | task 36 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 36 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 333118073
+slot launch_slot_: id  0 | task 38 | processing task, is_child = 0
+slot   operator(): id  0 | task 38 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 38 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 38 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 38 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:54 | 200 |  30.07ms |  192.168.92.137 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 333151370
+slot launch_slot_: id  0 | task 40 | processing task, is_child = 0
+slot   operator(): id  0 | task 40 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 7
+slot   operator(): id  0 | task 40 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 40 | stop processing: n_tokens = 7, truncated = 0
+slot prompt_clear: id  0 | task 40 | clearing prompt with 7 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:41:54 | 200 |  22.52ms |  192.168.92.140 | POST     "/api/embed"
+[GIN] 2026/11/05 - 14:42:02 | 200 | 62.374µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2026/11/05 - 14:42:02 | 200 |   1.16ms |       127.0.0.1 | POST     "/api/show"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 333291599
+slot launch_slot_: id  0 | task 42 | processing task, is_child = 0
+slot   operator(): id  0 | task 42 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 15
+slot   operator(): id  0 | task 42 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 42 | stop processing: n_tokens = 15, truncated = 0
+slot prompt_clear: id  0 | task 42 | clearing prompt with 15 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:03 | 200 |  38.18ms |  192.168.92.138 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 341980030
+slot launch_slot_: id  0 | task 44 | processing task, is_child = 0
+slot   operator(): id  0 | task 44 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 18
+slot   operator(): id  0 | task 44 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 44 | stop processing: n_tokens = 18, truncated = 0
+slot prompt_clear: id  0 | task 44 | clearing prompt with 18 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:03 | 200 |  35.54ms |  192.168.92.137 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 342093432
+slot launch_slot_: id  0 | task 46 | processing task, is_child = 0
+slot   operator(): id  0 | task 46 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 17
+slot   operator(): id  0 | task 46 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 46 | stop processing: n_tokens = 17, truncated = 0
+slot prompt_clear: id  0 | task 46 | clearing prompt with 17 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:03 | 200 |  34.31ms |  192.168.92.140 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 342206151
+slot launch_slot_: id  0 | task 48 | processing task, is_child = 0
+slot   operator(): id  0 | task 48 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 16
+slot   operator(): id  0 | task 48 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 48 | stop processing: n_tokens = 16, truncated = 0
+slot prompt_clear: id  0 | task 48 | clearing prompt with 16 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:03 | 200 |  32.95ms |  192.168.92.138 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 342316148
+slot launch_slot_: id  0 | task 50 | processing task, is_child = 0
+slot   operator(): id  0 | task 50 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 15
+slot   operator(): id  0 | task 50 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 50 | stop processing: n_tokens = 15, truncated = 0
+slot prompt_clear: id  0 | task 50 | clearing prompt with 15 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:03 | 200 |  32.54ms |  192.168.92.137 | POST     "/api/embed"
+slot get_availabl: id  0 | task -1 |  - skipping, slot is empty
+slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = 342419927
+slot launch_slot_: id  0 | task 52 | processing task, is_child = 0
+slot   operator(): id  0 | task 52 | new prompt, n_ctx_slot = 2048, n_keep = 0, task.n_tokens = 19
+slot   operator(): id  0 | task 52 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot      release: id  0 | task 52 | stop processing: n_tokens = 19, truncated = 0
+slot prompt_clear: id  0 | task 52 | clearing prompt with 19 tokens
+srv  update_slots: all slots are idle
+[GIN] 2026/11/05 - 14:42:04 | 200 |  59.88ms |  192.168.92.140 | POST     "/api/embed"

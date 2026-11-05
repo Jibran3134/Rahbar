@@ -1,0 +1,14 @@
+{
+  "indexer/pipeline/embed.py": "cc12a9b6dd550a42f6bd0072193d0175360dbb6455e6f6afa2c7d15cf7c3882f",
+  "indexer/pipeline/store.py": "a0769190f453237e1549c152be59dfa378d2226376a8982cb051cec5980ad806",
+  "api/app/retrieval/chroma.py": "6a39034c744ecce07ec2253f73676682a3a768676b9f85cd33058db75d40cf8e",
+  "api/app/retrieval/index_state.py": "9c508af3137875599ca4670673cb1ddd836d26db104b7a6efb3961258026d694",
+  "api/app/routes/ask.py": "ee5439a11c45fc83d80b14a3488d61a7ac8d19dc5829a226ed92fcafeed54f3c",
+  "api/app/services/answer.py": "8f6e490cea1bc526d8b6fd066b889837c37cbb1098b9a62fee7021c0e278a95b",
+  "api/app/services/relevance.py": "89b679b38c276ee3d1980dfc71342e1bcab114ce0eb96eb73c8a94f8bb550e08",
+  "api/app/services/grounding.py": "6fe0a797d54358826cdb3e54f8593094d9d107580aa5d7ed7ef243b9bf6db2bd",
+  "api/app/services/generation.py": "26b2b05f0a816e866fda6475aed26c03bf51c8a3991b98217051bbc0ae59b103",
+  "api/app/providers/llm/base.py": "57b7729509e6ac8762d3dda0e02d26cf8b1f95f1a4321e9a890fcfc1f59ff934",
+  "api/app/providers/llm/ollama.py": "b33d13a707466e34394402ff10b92d3723f8273f14c7d1da30d22de31fc115aa",
+  "api/app/providers/llm/stub.py": "37779aae105291aaa0ccd67d9fb41d5344f440614aa5e235f85848aff5e3421f"
+}

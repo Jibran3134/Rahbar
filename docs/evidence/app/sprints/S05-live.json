@@ -1,0 +1,269 @@
+{
+  "checked_at_utc": "2026-11-04T20:17:34.497581+00:00",
+  "passed": true,
+  "token_counter": "unicode-word-4-and-punctuation-v1",
+  "document_count": 7,
+  "page_count": 163,
+  "scope": "Structural/source checks only; no recall, indexing, models or chosen final size",
+  "checks": [
+    "original/source page hashes",
+    "stable output and unique IDs",
+    "metadata and size bounds",
+    "lossless nonspace content/order without overlap",
+    "original/stored token accounting",
+    "12 real canonical-section probes per setting"
+  ],
+  "configurations": [
+    {
+      "size": 250,
+      "overlap": 30,
+      "chunk_count": 813,
+      "original_tokens": 60357,
+      "stored_tokens": 62412,
+      "amplification": 1.034047417863711,
+      "max_chunk_tokens": 250,
+      "definition_chunk_tokens": [
+        236,
+        237,
+        107
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "documents": [
+        {
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "original_tokens": 10092,
+          "stored_tokens": 10121,
+          "chunk_count": 192,
+          "amplification": 1.0028735632183907
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "original_tokens": 17158,
+          "stored_tokens": 17595,
+          "chunk_count": 280,
+          "amplification": 1.0254691689008042
+        },
+        {
+          "source": "student-handbook-jun-2026.pdf",
+          "original_tokens": 20565,
+          "stored_tokens": 21482,
+          "chunk_count": 204,
+          "amplification": 1.0445903233649405
+        },
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "original_tokens": 6248,
+          "stored_tokens": 6716,
+          "chunk_count": 42,
+          "amplification": 1.0749039692701665
+        },
+        {
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "original_tokens": 3595,
+          "stored_tokens": 3653,
+          "chunk_count": 76,
+          "amplification": 1.0161335187760778
+        },
+        {
+          "source": "fee-structure-page.html",
+          "original_tokens": 1149,
+          "stored_tokens": 1207,
+          "chunk_count": 10,
+          "amplification": 1.050478677110531
+        },
+        {
+          "source": "grading-page.html",
+          "original_tokens": 1550,
+          "stored_tokens": 1638,
+          "chunk_count": 9,
+          "amplification": 1.0567741935483872
+        }
+      ],
+      "chunk_ids_sha256": "08fec2d44d045e6a26c1284f8a56c635145dfd06e349b36bffe8ce20295f1627"
+    },
+    {
+      "size": 400,
+      "overlap": 50,
+      "chunk_count": 760,
+      "original_tokens": 60357,
+      "stored_tokens": 61254,
+      "amplification": 1.0148615736368607,
+      "max_chunk_tokens": 400,
+      "definition_chunk_tokens": [
+        388,
+        181
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "documents": [
+        {
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "original_tokens": 10092,
+          "stored_tokens": 10092,
+          "chunk_count": 191,
+          "amplification": 1.0
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "original_tokens": 17158,
+          "stored_tokens": 17302,
+          "chunk_count": 268,
+          "amplification": 1.0083925865485488
+        },
+        {
+          "source": "student-handbook-jun-2026.pdf",
+          "original_tokens": 20565,
+          "stored_tokens": 21023,
+          "chunk_count": 181,
+          "amplification": 1.0222708485290541
+        },
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "original_tokens": 6248,
+          "stored_tokens": 6494,
+          "chunk_count": 31,
+          "amplification": 1.0393725992317542
+        },
+        {
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "original_tokens": 3595,
+          "stored_tokens": 3595,
+          "chunk_count": 74,
+          "amplification": 1.0
+        },
+        {
+          "source": "fee-structure-page.html",
+          "original_tokens": 1149,
+          "stored_tokens": 1149,
+          "chunk_count": 8,
+          "amplification": 1.0
+        },
+        {
+          "source": "grading-page.html",
+          "original_tokens": 1550,
+          "stored_tokens": 1599,
+          "chunk_count": 7,
+          "amplification": 1.0316129032258063
+        }
+      ],
+      "chunk_ids_sha256": "67365dc1a9535075c00ac454aad58430edb0b0c9b7485cfe7d3716472a85a450"
+    },
+    {
+      "size": 650,
+      "overlap": 80,
+      "chunk_count": 742,
+      "original_tokens": 60357,
+      "stored_tokens": 60445,
+      "amplification": 1.0014579916165482,
+      "max_chunk_tokens": 641,
+      "definition_chunk_tokens": [
+        520
+      ],
+      "source_probes": {
+        "current_prerequisite_1_20": true,
+        "current_attendance_1_21": true,
+        "current_warning_5_7": true,
+        "current_withdrawal_4_25": true,
+        "historical_withdrawal_4_25": true,
+        "current_load_4_3": true,
+        "historical_load_4_3": true,
+        "scanned_startup_4_2": true,
+        "long_definition_XII_1": true,
+        "fee_heading_and_table": true,
+        "security_deposit": true,
+        "grading_text_heading": true
+      },
+      "documents": [
+        {
+          "source": "undergraduate-academic-rules-aug-2023.pdf",
+          "original_tokens": 10092,
+          "stored_tokens": 10092,
+          "chunk_count": 191,
+          "amplification": 1.0
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "original_tokens": 17158,
+          "stored_tokens": 17158,
+          "chunk_count": 265,
+          "amplification": 1.0
+        },
+        {
+          "source": "student-handbook-jun-2026.pdf",
+          "original_tokens": 20565,
+          "stored_tokens": 20575,
+          "chunk_count": 171,
+          "amplification": 1.00048626306832
+        },
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "original_tokens": 6248,
+          "stored_tokens": 6326,
+          "chunk_count": 27,
+          "amplification": 1.012483994878361
+        },
+        {
+          "source": "faculty-entrepreneurship-and-technical-start-ups-policy.pdf",
+          "original_tokens": 3595,
+          "stored_tokens": 3595,
+          "chunk_count": 74,
+          "amplification": 1.0
+        },
+        {
+          "source": "fee-structure-page.html",
+          "original_tokens": 1149,
+          "stored_tokens": 1149,
+          "chunk_count": 8,
+          "amplification": 1.0
+        },
+        {
+          "source": "grading-page.html",
+          "original_tokens": 1550,
+          "stored_tokens": 1550,
+          "chunk_count": 6,
+          "amplification": 1.0
+        }
+      ],
+      "chunk_ids_sha256": "64fb5dcb8586acf56f0f839bd251bb7aa95109adaf76cfbe87b5fddf3b5291ee"
+    }
+  ],
+  "text_outputs": "corpus\\raw\\_s05-chunks",
+  "fixtures": {
+    "source_section_contracts": {
+      "f01": true,
+      "f02": true,
+      "f03": true,
+      "f04": true,
+      "f06": true
+    },
+    "planted_instruction_retained_as_source_data": true,
+    "document_count": 3,
+    "chunk_count": 12,
+    "note": "Structural compatibility only; provider attack testing is S16"
+  }
+}

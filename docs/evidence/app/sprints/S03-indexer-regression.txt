@@ -1,0 +1,13 @@
+﻿................................................F....                    [100%]
+================================== FAILURES ===================================
+_____________ test_ocr_failure_closes_bitmap_and_restores_command _____________
+tests\test_extract.py:267: in test_ocr_failure_closes_bitmap_and_restores_command
+    with pytest.raises(ValueError, match="closed image"):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+------------------------------ Captured log call ------------------------------
+WARNING  pdfminer.pdfpage:pdfpage.py:202 CropBox missing from /Page, defaulting to MediaBox
+WARNING  pdfminer.pdfpage:pdfpage.py:202 CropBox missing from /Page, defaulting to MediaBox
+=========================== short test summary info ===========================
+FAILED tests/test_extract.py::test_ocr_failure_closes_bitmap_and_restores_command
+1 failed, 52 passed in 1.82s
+EXIT_CODE=1

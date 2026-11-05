@@ -1,0 +1,44 @@
+[
+  {
+    "name": "fresh-checks",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\sprint_checks.py",
+      "S22",
+      "--eval",
+      "--indexer"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-api-coverage",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+      "api"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-indexer-coverage",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+      "indexer"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "exit_code": 0
+  },
+  {
+    "name": "fresh-fixture-index",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pipeline.run"
+    ],
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\indexer",
+    "exit_code": 1
+  }
+]

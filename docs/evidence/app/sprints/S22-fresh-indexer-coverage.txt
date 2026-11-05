@@ -1,0 +1,15 @@
+........................................................................ [ 55%]
+..........................................................               [100%]
+130 passed in 17.94s
+{
+  "passed": true,
+  "component": "indexer",
+  "tool": "Python 3.12 stdlib trace",
+  "executable": 710,
+  "covered": 632,
+  "line_coverage": 0.8901408450704226,
+  "minimum": 0.6,
+  "scope": "Owned production Python modules only; line coverage, not branch coverage"
+}
+
+NATIVE_EXIT=0

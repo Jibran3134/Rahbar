@@ -1,0 +1,18 @@
+﻿pdftoppm : log4cxx: setFile(C:\Users\Jibran\AppData\Local\MiKTeX\miktex\log/pdftoppm.log,true) call failed.
+At line:8 char:1
++ pdftoppm -v 2>&1 | Out-File -LiteralPath docs/evidence/app/sprints/S0 ...
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (log4cxx: setFil...e) call failed.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+log4cxx: IO Exception : status code = 720005(Access is denied.  )
+pdftoppm version 24.04.0
+Copyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org
+Copyright 1996-2011, 2022 Glyph & Cog, LLC
+
+Sorry, but C:\Users\Jibran\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdftoppm.exe did not succeed.
+
+The log file hopefully contains the information to get MiKTeX going again:
+
+  C:\Users\Jibran\AppData\Local\MiKTeX\miktex\log\pdftoppm.log
+EXIT_CODE=-1073740791

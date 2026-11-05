@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "selected": {
+    "size": 250,
+    "overlap": 30,
+    "relevance_floor": 0.74,
+    "cache_threshold": 0.95
+  },
+  "reports": [
+    {
+      "kind": "real",
+      "exit_code": 0,
+      "recall5": 0.9333333333333333,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "expect_failures": [
+        "q01",
+        "q07",
+        "q08",
+        "q15",
+        "q17"
+      ]
+    },
+    {
+      "kind": "fixture",
+      "exit_code": 0,
+      "recall5": 1.0,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "expect_failures": []
+    }
+  ],
+  "final_baselines": [
+    "eval/baseline.json",
+    "eval/fixtures/baseline.json"
+  ]
+}

@@ -1,0 +1,18 @@
+﻿[
+    {
+        "file":  "api/requirements.txt",
+        "sha256":  "9d9763858da9270ddad3f522f79cd5f375e169cfe2954a5f0e39290c9e2ad03e"
+    },
+    {
+        "file":  "api/requirements-dev.txt",
+        "sha256":  "d7f1b04bb5ead6f45b45c986cc3133138ea9253475e01048d8c52f5774120d50"
+    },
+    {
+        "file":  "indexer/requirements.txt",
+        "sha256":  "86b4c47d286157e1c38de24fb1d2e0c86065f059d486779b0f86e047f9f0bbaa"
+    },
+    {
+        "file":  "indexer/requirements-dev.txt",
+        "sha256":  "d7f1b04bb5ead6f45b45c986cc3133138ea9253475e01048d8c52f5774120d50"
+    }
+]

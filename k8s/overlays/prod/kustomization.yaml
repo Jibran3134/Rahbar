@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: rahbar
+resources:
+- ../../base
+images:
+- name: rahbar-api
+  newName: docker.io/jibran3134/rahbar-api
+  newTag: release-not-configured
+- name: rahbar-indexer
+  newName: docker.io/jibran3134/rahbar-indexer
+  newTag: release-not-configured
+- name: rahbar-ui
+  newName: docker.io/jibran3134/rahbar-ui
+  newTag: release-not-configured

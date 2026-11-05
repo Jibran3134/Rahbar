@@ -1,18 +1,21 @@
-"""Turns a question into an AskResponse. This is where the query pipeline lives.
+"""Retrieve, gate evidence, verify bounded generation and expose public fields.
 
-The version below is the bare minimum that works with the stubs: retrieve,
-generate, return. Section 3.2 lists eight steps; this file does two of them.
+Shared sessions and semantic cache remain S12/S13 work.
 """
 
 from __future__ import annotations
 
 import logging
+import time
 
 from ..config import Settings
 from ..logjson import request_id_var
 from ..providers.llm.base import LLMProvider
 from ..retrieval.base import Retriever
 from ..schemas import AskResponse, RetrievedRef
+from .generation import generate_verified
+from .relevance import abstention, usable_passages
+from ..routes import metrics
 
 log = logging.getLogger("rahbar.answer")
 
@@ -20,13 +23,21 @@ log = logging.getLogger("rahbar.answer")
 def answer_question(
     question: str, retriever: Retriever, provider: LLMProvider, settings: Settings
 ) -> AskResponse:
-    # STARTER-TODO(3.2-3.4): add the production steps around these two calls:
-    # the semantic cache (3.3), the relevance floor and honest abstention (3.4),
-    # validation with one retry and a safe fallback (3.4), and the check that every
-    # citation matches a retrieved passage (3.4). Keep this function thin: put each
-    # step in its own module under services/ so each can be unit-tested.
-    passages = retriever.retrieve(question, k=settings.top_k)
-    answer = provider.generate(question, passages)
+    # Sessions/semantic cache are added in S12/S13 around this verified path.
+    started=time.perf_counter()
+    passages = usable_passages(retriever.retrieve(question, k=settings.top_k), settings.relevance_floor)
+    trace=metrics.QUERY.get() or {}
+    elapsed=time.perf_counter()-started+trace.get("prepare_ms",0)/1000
+    metrics.RETRIEVAL.observe(elapsed)
+    metrics.field("retrieval_ms",round(elapsed*1000,2))
+    started=time.perf_counter()
+    answer = generate_verified(question, passages, provider) if passages else abstention()
+    elapsed=time.perf_counter()-started
+    metrics.GENERATION.observe(elapsed)
+    metrics.field("generation_ms",round(elapsed*1000,2))
+    if not answer.answered_from_context:
+        metrics.ABSTENTIONS.inc()
+    metrics.field("abstained",not answer.answered_from_context)
 
     log.info(
         "answered",

@@ -1,0 +1,5 @@
+NAME   ENDPOINTS                                            AGE
+api    10.244.3.36:8000,10.244.3.37:8000,10.244.3.38:8000   95m
+Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
+
+NATIVE_EXIT=0

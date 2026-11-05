@@ -1,0 +1,94 @@
+﻿.FFFFFFFFFFFFFFFF..                                                      [100%]
+================================== FAILURES ===================================
+__________ test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE-0] ___________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__________ test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE--1] __________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_________ test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE-abc] __________
+tests\test_config.py:52: in test_invalid_indexer_settings_fail_clearly
+    get_settings()
+pipeline\config.py:28: in get_settings
+    chunk_size=int(os.environ.get("CHUNK_SIZE", 400)),
+E   ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'CHUNK_SIZE'
+E    Input: "invalid literal for int() with base 10: 'abc'"
+________ test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP--1] _________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP-400] ________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP-401] ________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__________ test_invalid_indexer_settings_fail_clearly[CHROMA_PORT-0] __________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_invalid_indexer_settings_fail_clearly[CHROMA_PORT-65536] ________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__________ test_invalid_indexer_settings_fail_clearly[EMBED_MODEL-] ___________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__________ test_invalid_indexer_settings_fail_clearly[CHROMA_HOST-] ___________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_______ test_invalid_indexer_settings_fail_clearly[CHROMA_COLLECTION-] ________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___________ test_invalid_indexer_settings_fail_clearly[CORPUS_DIR-] ___________
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-localhost:11434] ____
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-http://localhost:invalid] _
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-http://localhost#fragment] _
+tests\test_config.py:51: in test_invalid_indexer_settings_fail_clearly
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_____________ test_direct_indexer_construction_validates_overlap ______________
+tests\test_config.py:56: in test_direct_indexer_construction_validates_overlap
+    with pytest.raises(ValueError, match="CHUNK_OVERLAP"):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+=========================== short test summary info ===========================
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE-0]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE--1]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_SIZE-abc]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP--1]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP-400]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHUNK_OVERLAP-401]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHROMA_PORT-0]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHROMA_PORT-65536]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[EMBED_MODEL-]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHROMA_HOST-]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CHROMA_COLLECTION-]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[CORPUS_DIR-]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-localhost:11434]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-http://localhost:invalid]
+FAILED tests/test_config.py::test_invalid_indexer_settings_fail_clearly[OLLAMA_URL-http://localhost#fragment]
+FAILED tests/test_config.py::test_direct_indexer_construction_validates_overlap
+16 failed, 3 passed in 0.09s
+EXIT_CODE=1 (expected failure before S02 implementation)

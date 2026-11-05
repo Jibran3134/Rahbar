@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-05T05:25:47.521798+00:00",
+  "model": "nomic-embed-text",
+  "dimension": 768,
+  "vectors": 3,
+  "batch_size": 2,
+  "document_prefix": "search_document: ",
+  "truncate": false,
+  "repeat_vector_max_difference": 0.0,
+  "vectors_sha256": "33a8bbb8e5b3d282761dd20c33689aa1d706f231299cf7aec35d657b68af7bf8"
+}
+NATIVE_EXIT=0

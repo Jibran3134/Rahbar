@@ -1,0 +1,108 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: reindex
+  namespace: rahbar
+spec:
+  schedule: 0 2 * * 0
+  timeZone: Etc/UTC
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 600
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      activeDeadlineSeconds: 1800
+      ttlSecondsAfterFinished: 86400
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: indexer
+            app.kubernetes.io/part-of: rahbar
+        spec:
+          restartPolicy: OnFailure
+          serviceAccountName: indexer
+          automountServiceAccountToken: false
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 10001
+            runAsGroup: 10001
+            fsGroup: 10001
+            seccompProfile:
+              type: RuntimeDefault
+          terminationGracePeriodSeconds: 140
+          containers:
+          - name: indexer
+            image: rahbar-indexer:dev
+            imagePullPolicy: IfNotPresent
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities:
+                drop:
+                - ALL
+            resources:
+              requests:
+                cpu: 250m
+                memory: 384Mi
+              limits:
+                cpu: '2'
+                memory: 1536Mi
+            volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: corpus
+              mountPath: /corpus
+              readOnly: true
+            envFrom:
+            - configMapRef:
+                name: rahbar-config
+            command:
+            - python
+            - -m
+            - pipeline.run
+          volumes:
+          - name: tmp
+            emptyDir:
+              sizeLimit: 256Mi
+          - name: corpus
+            persistentVolumeClaim:
+              claimName: corpus-data
+          - name: snapshot
+            configMap:
+              name: snapshot-config
+          initContainers:
+          - name: fetch-corpus
+            image: rahbar-indexer:dev
+            imagePullPolicy: IfNotPresent
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities:
+                drop:
+                - ALL
+            resources:
+              requests:
+                cpu: 50m
+                memory: 64Mi
+              limits:
+                cpu: 500m
+                memory: 256Mi
+            volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: corpus
+              mountPath: /corpus
+            - name: snapshot
+              mountPath: /snapshot
+              readOnly: true
+            command:
+            - python
+            - /snapshot/fetch_snapshot.py
+            - --sources
+            - /snapshot/sources.yaml
+            - --manifest
+            - /snapshot/MANIFEST.md
+            - --out
+            - /corpus

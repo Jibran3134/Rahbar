@@ -1,0 +1,111 @@
+{
+  "local_checks_passed": true,
+  "release_status": "BLOCKED",
+  "tested_commit": "f6e92017aae2b311cad119f7a9cf5be05d6db77d",
+  "checkout": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+  "source_digest_before": "baf0a8d1790a6db5ab7f338e4215aa93647a04887d7e17699116393eed41304e",
+  "source_digest_after": "baf0a8d1790a6db5ab7f338e4215aa93647a04887d7e17699116393eed41304e",
+  "reports": [
+    {
+      "kind": "fixture",
+      "recall5": 1.0,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "expect_misses": []
+    },
+    {
+      "kind": "real",
+      "recall5": 0.9333333333333333,
+      "citations": 1.0,
+      "abstention": 1.0,
+      "expect_misses": [
+        "q01",
+        "q07",
+        "q08",
+        "q15"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "name": "fresh-checks",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\sprint_checks.py",
+        "S22",
+        "--eval",
+        "--indexer"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh-api-coverage",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+        "api"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh-indexer-coverage",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api\\tests\\coverage_audit.py",
+        "indexer"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh-fixture-index",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pipeline.run"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\indexer",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh-fixture-eval",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\run_eval.py",
+        "--api",
+        "http://127.0.0.1:8002",
+        "--golden",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\fixtures\\golden.fixture.yaml",
+        "--baseline",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\fixtures\\baseline.json",
+        "--out",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\sprints\\S22-fixture-results.json",
+        "--bypass-cache"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh-real-eval",
+      "command": [
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\run_eval.py",
+        "--api",
+        "http://127.0.0.1:8002",
+        "--golden",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\golden.yaml",
+        "--baseline",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\eval\\baseline.json",
+        "--out",
+        "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\sprints\\S22-real-results.json",
+        "--bypass-cache"
+      ],
+      "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+      "exit_code": 0
+    }
+  ],
+  "environment": "Fresh source checkout; reused installed Python/dependencies and native services. Fixture index freshly built; real index was previously provisioned. No new isolated machine or Kubernetes release is claimed.",
+  "blockers": "Platform Dockerfiles/manifests/workflows/final assembly and protected CD evidence absent; Jibran confirmed these will be developed separately."
+}

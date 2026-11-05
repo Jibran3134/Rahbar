@@ -1,0 +1,634 @@
+verify / e2e-eval	UNKNOWN STEP	﻿2026-11-05T14:37:22.5980380Z Current runner version: '2.338.2'
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6001585Z ##[group]Runner Image Provisioner
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6002346Z Hosted Compute Agent
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6002833Z Version: 20261028.624
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6003436Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6004051Z Build Date: 2026-10-28T21:51:42Z
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6004660Z Worker ID: {aedd3644-02d8-4357-be72-74f2f426aa3c}
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6005529Z Region: westus2
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6006038Z Cloud: Azure
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6006573Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6008014Z ##[group]Operating System
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6008610Z Ubuntu
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6009116Z 24.04.5
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6009564Z LTS
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6010058Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6010540Z ##[group]Runner Image
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6011044Z Image: ubuntu-24.04
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6011652Z Version: 20261101.360.1
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6012678Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6013997Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6014856Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6016016Z ##[group]GITHUB_TOKEN Permissions
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6017703Z Contents: read
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6018228Z Metadata: read
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6018718Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6020541Z Secret source: Actions
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6021367Z Cache mode: write
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6022003Z Prepare workflow directory
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6286831Z Prepare all required actions
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:22.6326816Z Getting action download info
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.0053890Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.1118578Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.3581287Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.6259201Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.8706735Z Uses: Jibran3134/Rahbar/.github/workflows/verify.yml@refs/pull/1/merge (f10e2b38ff6284ac83b4f4596fe734a9669904c6)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.8710417Z Complete job name: verify / e2e-eval
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9429523Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9430417Z with:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9430819Z   persist-credentials: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9431276Z   repository: Jibran3134/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9434534Z   token: ***
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9434920Z   ssh-strict: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9435449Z   ssh-user: git
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9435829Z   clean: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9436221Z   sparse-checkout-cone-mode: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9436714Z   fetch-depth: 1
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9437095Z   fetch-tags: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9437486Z   show-progress: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9437888Z   lfs: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9438260Z   submodules: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9438653Z   set-safe-directory: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9439094Z   allow-unsafe-pr-checkout: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:23.9439718Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3426909Z Syncing repository: Jibran3134/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3428703Z ##[group]Getting Git version info
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3429393Z Working directory is '/home/runner/work/Rahbar/Rahbar'
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3430218Z [command]/usr/bin/git version
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3509916Z git version 2.56.0
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3526581Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3538177Z Temporarily overriding HOME='/home/runner/work/_temp/a76597a2-1b66-4817-a342-eaf7505acff5' before making global git config changes
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3540040Z Adding repository directory to the temporary git global config as a safe directory
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3542187Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3587389Z Deleting the contents of '/home/runner/work/Rahbar/Rahbar'
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3594239Z ##[group]Initializing the repository
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3595134Z [command]/usr/bin/git init /home/runner/work/Rahbar/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3720658Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3722448Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3723815Z hint: to use in all of your new repositories, which will suppress this warning,
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3724959Z hint: call:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3725958Z hint:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3726527Z hint: 	git config --global init.defaultBranch <name>
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3727050Z hint:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3727739Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3728843Z hint: 'development'. The just-created branch can be renamed via this command:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3729765Z hint:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3730289Z hint: 	git branch -m <name>
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3730819Z hint:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3731532Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3732874Z Initialized empty Git repository in /home/runner/work/Rahbar/Rahbar/.git/
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3742820Z [command]/usr/bin/git remote add origin https://github.com/Jibran3134/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3786939Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3787863Z ##[group]Disabling automatic garbage collection
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3789318Z [command]/usr/bin/git config --local gc.auto 0
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3818960Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3819826Z ##[group]Setting up auth
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3824288Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.3857535Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4393927Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4430852Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4697169Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4701917Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4877697Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4919856Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4920634Z ##[group]Fetching the repository
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.4930029Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f10e2b38ff6284ac83b4f4596fe734a9669904c6:refs/remotes/pull/1/merge
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8167823Z From https://github.com/Jibran3134/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8168941Z  * [new ref]         f10e2b38ff6284ac83b4f4596fe734a9669904c6 -> pull/1/merge
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8171736Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8172678Z ##[group]Determining the checkout info
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8174447Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8180783Z [command]/usr/bin/git sparse-checkout disable
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8234190Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8273655Z ##[group]Checking out the ref
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8276789Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8671447Z Note: switching to 'refs/remotes/pull/1/merge'.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8672188Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8672526Z You are in 'detached HEAD' state. You can look around, make experimental
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8673531Z changes and commit them, and you can discard any commits you make in this
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8674233Z state without impacting any branches by switching back to a branch.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8674646Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8674928Z If you want to create a new branch to retain commits you create, you may
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8675829Z do so (now or later) by using -c with the switch command. Example:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8676217Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8676435Z   git switch -c <new-branch-name>
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8676701Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8676907Z Or undo this operation with:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8677159Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8677320Z   git switch -
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8677517Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8677832Z Turn off this advice by setting config variable advice.detachedHead to false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8678265Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8678745Z HEAD is now at f10e2b3 Merge e75df082269b68b4319146726a5e42afe4b33c67 into 5a40788c505481486700fa2f057822460f9d51c5
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8682115Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8727798Z [command]/usr/bin/git log -1 --format=%H
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8756341Z f10e2b38ff6284ac83b4f4596fe734a9669904c6
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8764944Z ##[group]Removing auth
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8768513Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.8802395Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9005705Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9035945Z http.https://github.com/.extraheader
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9041954Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9081336Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9282619Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9316768Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9514531Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9753069Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9753673Z with:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9754014Z   python-version: 3.12
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9754386Z   check-latest: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9757427Z   token: ***
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9757786Z   update-environment: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9758188Z   allow-prereleases: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9758577Z   freethreaded: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:24.9758933Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.0856580Z ##[group]Installed versions
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.0929394Z (node:2209) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.0930829Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.0931471Z Successfully set up CPython (3.12.16)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.0932501Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1139282Z ##[group]Run python -m pip install -r api/requirements-dev.txt -r indexer/requirements-dev.txt
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1140886Z ^[[36;1mpython -m pip install -r api/requirements-dev.txt -r indexer/requirements-dev.txt^[[0m
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1393453Z shell: /usr/bin/bash -e {0}
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1394028Z env:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1394475Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1395150Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1395922Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1396509Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1397106Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1397949Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:25.1398460Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.2144686Z Collecting fastapi==0.162.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.2696647Z   Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.2996882Z Collecting starlette==1.10.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 3))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.3063187Z   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.3276861Z Collecting uvicorn==0.34.2 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.3343986Z   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5049810Z Collecting pydantic==2.11.4 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5119102Z   Downloading pydantic-2.11.4-py3-none-any.whl.metadata (66 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5362046Z Collecting httpx==0.28.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5428766Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5575815Z Collecting prometheus-client==0.21.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 7))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5643273Z   Downloading prometheus_client-0.21.1-py3-none-any.whl.metadata (1.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5838946Z Collecting chromadb-client==1.0.12 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.5913048Z   Downloading chromadb_client-1.0.12-py3-none-any.whl.metadata (2.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.6266407Z Collecting posthog==5.4.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.6334019Z   Downloading posthog-5.4.0-py3-none-any.whl.metadata (5.7 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.6554522Z Collecting redis==5.2.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 13))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.6625158Z   Downloading redis-5.2.1-py3-none-any.whl.metadata (9.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.7613176Z Collecting pytest==8.3.5 (from -r api/requirements-dev.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.7692824Z   Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.7841798Z Collecting pytest-cov==6.1.1 (from -r api/requirements-dev.txt (line 3))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:30.7910162Z   Downloading pytest_cov-6.1.1-py3-none-any.whl.metadata (28 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.0488783Z Collecting ruff==0.11.8 (from -r api/requirements-dev.txt (line 4))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.0573023Z   Downloading ruff-0.11.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.1583760Z Collecting mypy==1.15.0 (from -r api/requirements-dev.txt (line 5))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.1653219Z   Downloading mypy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.1950396Z Collecting pyyaml==6.0.2 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 6))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2018174Z   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2219102Z Collecting pdfplumber==0.11.10 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2286898Z   Downloading pdfplumber-0.11.10-py3-none-any.whl.metadata (43 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2422102Z Collecting pytesseract==0.3.13 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 9))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2498176Z   Downloading pytesseract-0.3.13-py3-none-any.whl.metadata (11 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2731950Z Collecting pdf2image==1.17.0 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2798581Z   Downloading pdf2image-1.17.0-py3-none-any.whl.metadata (6.2 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.2976261Z Collecting pypdf==6.21.4 (from -r indexer/requirements-dev.txt (line 3))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3041614Z   Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3243297Z Collecting typing-extensions>=4.8.0 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3319676Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3456446Z Collecting typing-inspection>=0.4.2 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3522660Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3638086Z Collecting annotated-doc>=0.0.2 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3704047Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3881119Z Collecting opentelemetry-api>=1.44.0 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.3949375Z   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4116083Z Collecting anyio<5,>=4.0.0 (from starlette==1.10.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 3))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4181683Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4362474Z Collecting click>=7.0 (from uvicorn==0.34.2->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4429833Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4550853Z Collecting h11>=0.8 (from uvicorn==0.34.2->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4617433Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4825996Z Collecting annotated-types>=0.6.0 (from pydantic==2.11.4->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:31.4892415Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0283936Z Collecting pydantic-core==2.33.2 (from pydantic==2.11.4->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0354718Z   Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0550310Z Collecting certifi (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0616747Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0874474Z Collecting httpcore==1.* (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.0939780Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.1097982Z Collecting idna (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.1164816Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.2778068Z Collecting numpy>=1.22.5 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.2846224Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3031121Z Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3098725Z   Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl.metadata (2.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3285553Z Collecting opentelemetry-sdk>=1.2.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3352650Z   Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3482746Z Collecting overrides>=7.3.1 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.3553168Z   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.4598635Z Collecting tenacity>=8.2.3 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.4676153Z   Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.6405507Z Collecting orjson>=3.9.12 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.6474535Z   Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.6683231Z Collecting jsonschema>=4.19.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.6751012Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.7639827Z Collecting requests<3.0,>=2.7 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.7709998Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.7856906Z Collecting six>=1.5 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.7925165Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9086727Z Collecting python-dateutil>=2.2 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9155145Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9289700Z Collecting backoff>=1.10.0 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9355839Z   Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9485093Z Collecting distro>=1.5.0 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9551409Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9691227Z Collecting iniconfig (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9758281Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9913034Z Collecting packaging (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:32.9978012Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.0106866Z Collecting pluggy<2,>=1.5 (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.0172393Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.3997978Z Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov==6.1.1->-r api/requirements-dev.txt (line 3))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.4069858Z   Downloading coverage-7.17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.4212454Z Collecting mypy_extensions>=1.0.0 (from mypy==1.15.0->-r api/requirements-dev.txt (line 5))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.4279732Z   Downloading mypy_extensions-1.2.0-py3-none-any.whl.metadata (1.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.4419022Z Collecting pdfminer.six==20260107 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.4486297Z   Downloading pdfminer_six-20260107-py3-none-any.whl.metadata (4.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.6346169Z Collecting Pillow>=12.2.0 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.6417113Z   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.7453000Z Collecting pypdfium2>=5.9.0 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.7523778Z   Downloading pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.8502908Z Collecting charset-normalizer>=2.0.0 (from pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:33.8573693Z   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.0574628Z Collecting cryptography>=36.0.0 (from pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.0643247Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.0920981Z Collecting urllib3<3,>=1.26 (from requests<3.0,>=2.7->posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.0989091Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.1842548Z Collecting cffi>=2.0.0 (from cryptography>=36.0.0->pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.1914083Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2046669Z Collecting pycparser (from cffi>=2.0.0->cryptography>=36.0.0->pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2114684Z   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2269024Z Collecting attrs>=22.2.0 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2340785Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2476271Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2553082Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2780661Z Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.2865719Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.5234434Z Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.5305821Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.5522098Z Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.5590214Z   Downloading googleapis_common_protos-1.76.0-py3-none-any.whl.metadata (8.5 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9193628Z Collecting grpcio<2.0.0,>=1.63.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9264584Z   Downloading grpcio-1.85.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9396052Z Collecting opentelemetry-exporter-otlp-common==0.66b2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9461013Z   Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl.metadata (1.9 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9696535Z Collecting opentelemetry-exporter-otlp-proto-common==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:34.9763764Z   Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl.metadata (1.8 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.0005833Z Collecting opentelemetry-proto==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.0072391Z   Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.1714499Z Collecting protobuf<8.0,>=5.0 (from opentelemetry-proto==1.45.2->opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.1784460Z   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.2139400Z Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.2207815Z   Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3271568Z Collecting tzdata (from python-dateutil>=2.2->posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3341907Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3505981Z Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3601143Z Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3689476Z Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3776216Z Downloading pydantic-2.11.4-py3-none-any.whl (443 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.3916306Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.4003179Z Downloading prometheus_client-0.21.1-py3-none-any.whl (54 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.4111449Z Downloading chromadb_client-1.0.12-py3-none-any.whl (631 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.4869875Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 631.8/631.8 kB 5.0 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.4939080Z Downloading posthog-5.4.0-py3-none-any.whl (105 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.5021558Z Downloading redis-5.2.1-py3-none-any.whl (261 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.5127444Z Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.5214343Z Downloading pytest_cov-6.1.1-py3-none-any.whl (23 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.5372234Z Downloading ruff-0.11.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.5 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.6843279Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 77.6 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.6938080Z Downloading mypy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8045074Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 111.9 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8117873Z Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8163196Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 189.8 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8233225Z Downloading pdfplumber-0.11.10-py3-none-any.whl (60 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8316012Z Downloading pytesseract-0.3.13-py3-none-any.whl (14 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8399678Z Downloading pdf2image-1.17.0-py3-none-any.whl (11 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8482011Z Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.8591714Z Downloading pdfminer_six-20260107-py3-none-any.whl (6.6 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9317175Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 89.8 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9389835Z Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9606429Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 87.8 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9678789Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9761081Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9845907Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:35.9932242Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0016837Z Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0104449Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0190622Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0275028Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0354922Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0433235Z Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0513522Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0597466Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0748829Z Downloading coverage-7.17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.0836544Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.2593036Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 25.9 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.2663912Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.2760827Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.2843776Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.2926072Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.3010885Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.3096552Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.3179316Z Downloading mypy_extensions-1.2.0-py3-none-any.whl (5.1 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.3261796Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4413573Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 145.9 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4484930Z Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4573392Z Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl (19 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4657810Z Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4738266Z Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl (15 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.4820785Z Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5032343Z Downloading googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5120509Z Downloading grpcio-1.85.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.4 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5582049Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.4/7.4 MB 161.6 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5651433Z Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5739971Z Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5833776Z Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.5922634Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6010618Z Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6097107Z Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6179745Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6268049Z Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6669961Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 184.1 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6738964Z Downloading pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6861882Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 336.7 MB/s  0:00:00
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.6929851Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7050589Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7130483Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7216532Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7418124Z Downloading tenacity-9.2.1-py3-none-any.whl (32 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7498282Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7578443Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7659931Z Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:36.7741224Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:37.2268061Z Installing collected packages: urllib3, tzdata, typing-extensions, tenacity, six, ruff, rpds-py, redis, pyyaml, pypdfium2, pypdf, pycparser, protobuf, prometheus-client, pluggy, Pillow, packaging, overrides, orjson, numpy, mypy_extensions, iniconfig, idna, h11, distro, coverage, click, charset-normalizer, certifi, backoff, attrs, annotated-types, annotated-doc, uvicorn, typing-inspection, requests, referencing, python-dateutil, pytest, pytesseract, pydantic-core, pdf2image, opentelemetry-proto, opentelemetry-api, mypy, httpcore, grpcio, googleapis-common-protos, cffi, anyio, starlette, pytest-cov, pydantic, posthog, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, jsonschema-specifications, httpx, cryptography, pdfminer.six, opentelemetry-sdk, jsonschema, fastapi, pdfplumber, opentelemetry-exporter-otlp-common, opentelemetry-exporter-otlp-proto-grpc, chromadb-client
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:44.8569778Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:44.8612139Z Successfully installed Pillow-13.0.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 backoff-2.2.1 certifi-2026.10.23 cffi-2.1.1 charset-normalizer-3.5.2 chromadb-client-1.0.12 click-8.5.0 coverage-7.17.2 cryptography-50.0.2 distro-1.9.0 fastapi-0.162.0 googleapis-common-protos-1.76.0 grpcio-1.85.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 mypy-1.15.0 mypy_extensions-1.2.0 numpy-2.5.4 opentelemetry-api-1.45.2 opentelemetry-exporter-otlp-common-0.66b2 opentelemetry-exporter-otlp-proto-common-1.45.2 opentelemetry-exporter-otlp-proto-grpc-1.45.2 opentelemetry-proto-1.45.2 opentelemetry-sdk-1.45.2 opentelemetry-semantic-conventions-0.66b2 orjson-3.13.0 overrides-7.7.0 packaging-26.3 pdf2image-1.17.0 pdfminer.six-20260107 pdfplumber-0.11.10 pluggy-1.7.0 posthog-5.4.0 prometheus-client-0.21.1 protobuf-7.36.2 pycparser-3.12 pydantic-2.11.4 pydantic-core-2.33.2 pypdf-6.21.4 pypdfium2-5.14.0 pytesseract-0.3.13 pytest-8.3.5 pytest-cov-6.1.1 python-dateutil-4.0.0 pyyaml-6.0.2 redis-5.2.1 referencing-0.37.0 requests-2.34.2 rpds-py-2026.9.1 ruff-0.11.8 six-1.17.0 starlette-1.10.0 tenacity-9.2.1 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 uvicorn-0.34.2
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:44.8622516Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:44.8622714Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1732462Z [notice] To update, run: pip install --upgrade pip
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1772221Z ##[group]Run python scripts/bootstrap_tools.py kind --manifests
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1772666Z ^[[36;1mpython scripts/bootstrap_tools.py kind --manifests^[[0m
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1790880Z shell: /usr/bin/bash -e {0}
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1791084Z env:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1791308Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1791657Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1792006Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1792318Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1792615Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1792916Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:45.1793176Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:37:55.7238701Z kind 0.31.0 checksum verified
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:05.9824774Z Tool directory: /home/runner/work/Rahbar/Rahbar/.venv/tools/bin
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0086662Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0087149Z with:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0087318Z   pattern: image-*
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0087494Z   path: artifacts
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0087671Z   merge-multiple: true
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0087861Z   repository: Jibran3134/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0088060Z   run-id: 42046173348
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0088229Z env:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0088437Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0088787Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0089124Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0089430Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0089726Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0090022Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.0090309Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.2939609Z (node:2260) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.2940221Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.6993042Z Found 7 artifact(s)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.6993772Z Filtering artifacts by pattern 'image-*'
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.7009691Z Preparing to download the following artifacts:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.7010552Z - image-indexer (ID: 13425690521, Size: 151085331, Expected Digest: sha256:bf77f51fa82eda2e924303e05417823eff1dc19e606c9b610369e7da7f550b5f)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.7011808Z - image-api (ID: 13425110995, Size: 90933801, Expected Digest: sha256:46c1eea042e74839681600dcf13c84ac7d7c4df7a6e41aae9da71577b1cef98f)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:06.7012987Z - image-ui (ID: 13424353276, Size: 27343108, Expected Digest: sha256:cf9f9a495f212217f5788732098f240963357cd348a8dcc90d9fb5d3be39eb52)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.0571792Z Redirecting to blob download url: https://productionresultssa32.blob.core.windows.net/actions-results/b312f40a-c2f1-80e9-a986-3085f6d8cd14/workflow-job-run-7265e59f-dfc4-5ef4-be08-721a2c4edd23/artifacts/47a861a7b1f152587aa2dd6ce8b6ce1f6094ae76c332a2ecbd8b7b7b5d3c87b5.zip
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.0573533Z Starting download of artifact to: /home/runner/work/Rahbar/Rahbar/artifacts
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.1871596Z Redirecting to blob download url: https://productionresultssa32.blob.core.windows.net/actions-results/b312f40a-c2f1-80e9-a986-3085f6d8cd14/workflow-job-run-25579303-2c3f-5a9f-b3ac-ea2b015c4fb3/artifacts/657ba30d0a4ae183529290ba7e4e78163444223a20ac76941665db29b9b2b097.zip
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.1872624Z Starting download of artifact to: /home/runner/work/Rahbar/Rahbar/artifacts
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.2018560Z Redirecting to blob download url: https://productionresultssa32.blob.core.windows.net/actions-results/b312f40a-c2f1-80e9-a986-3085f6d8cd14/workflow-job-run-41fe2726-3614-5899-8a76-76609acbaa61/artifacts/df9878af1b97306c013ffa9e8ace0b43306c09a8c7ffeaa9ffaffd8bba084bc4.zip
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.2019579Z Starting download of artifact to: /home/runner/work/Rahbar/Rahbar/artifacts
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:07.4638280Z (node:2260) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:09.4508439Z SHA256 digest of downloaded artifact is cf9f9a495f212217f5788732098f240963357cd348a8dcc90d9fb5d3be39eb52
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:09.4509133Z Artifact download completed successfully.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:11.4719262Z SHA256 digest of downloaded artifact is 46c1eea042e74839681600dcf13c84ac7d7c4df7a6e41aae9da71577b1cef98f
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:11.4719856Z Artifact download completed successfully.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.4571960Z SHA256 digest of downloaded artifact is bf77f51fa82eda2e924303e05417823eff1dc19e606c9b610369e7da7f550b5f
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.4572760Z Artifact download completed successfully.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.4573184Z Total of 3 artifact(s) downloaded
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.4578777Z Download artifact has finished successfully
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5151360Z ##[group]Run for image in artifacts/*.tar; do docker load --input "$image"; done
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5152021Z ^[[36;1mfor image in artifacts/*.tar; do docker load --input "$image"; done^[[0m
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5152465Z ^[[36;1mpython -u scripts/ci_e2e.py --tag "f10e2b38ff6284ac83b4f4596fe734a9669904c6"^[[0m
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5170818Z shell: /usr/bin/bash -e {0}
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5171039Z env:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5171278Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5171651Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5172005Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5172332Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5172650Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5172993Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:12.5173269Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:23.7280010Z Loaded image: rahbar-api:f10e2b38ff6284ac83b4f4596fe734a9669904c6
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:29.7065002Z Loaded image: rahbar-indexer:f10e2b38ff6284ac83b4f4596fe734a9669904c6
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:31.6063376Z Loaded image: rahbar-ui:f10e2b38ff6284ac83b4f4596fe734a9669904c6
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:38:55.8359602Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3061637Z poddisruptionbudget.policy/calico-kube-controllers created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3062219Z serviceaccount/calico-kube-controllers created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3062582Z serviceaccount/calico-node created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3062830Z serviceaccount/calico-cni-plugin created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3063080Z configmap/calico-config created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3063561Z customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3064302Z customresourcedefinition.apiextensions.k8s.io/bgpfilters.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3065034Z customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3066052Z customresourcedefinition.apiextensions.k8s.io/blockaffinities.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3066716Z customresourcedefinition.apiextensions.k8s.io/caliconodestatuses.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3067569Z customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3068522Z customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3069474Z customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3070419Z customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3071333Z customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3072195Z customresourcedefinition.apiextensions.k8s.io/ipamblocks.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3073114Z customresourcedefinition.apiextensions.k8s.io/ipamconfigs.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3073990Z customresourcedefinition.apiextensions.k8s.io/ipamhandles.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3075023Z customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3076024Z customresourcedefinition.apiextensions.k8s.io/ipreservations.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3077032Z customresourcedefinition.apiextensions.k8s.io/kubecontrollersconfigurations.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3078096Z customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3079017Z customresourcedefinition.apiextensions.k8s.io/networksets.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3080035Z customresourcedefinition.apiextensions.k8s.io/stagedglobalnetworkpolicies.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3084399Z customresourcedefinition.apiextensions.k8s.io/stagedkubernetesnetworkpolicies.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3086592Z customresourcedefinition.apiextensions.k8s.io/stagednetworkpolicies.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3087666Z customresourcedefinition.apiextensions.k8s.io/tiers.crd.projectcalico.org created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3088808Z customresourcedefinition.apiextensions.k8s.io/clusternetworkpolicies.policy.networking.k8s.io created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3089805Z clusterrole.rbac.authorization.k8s.io/calico-kube-controllers created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3090565Z clusterrole.rbac.authorization.k8s.io/calico-node created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3091298Z clusterrole.rbac.authorization.k8s.io/calico-cni-plugin created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3092052Z clusterrole.rbac.authorization.k8s.io/calico-tier-getter created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3093338Z clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3094636Z clusterrolebinding.rbac.authorization.k8s.io/calico-node created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3095660Z clusterrolebinding.rbac.authorization.k8s.io/calico-cni-plugin created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3096536Z clusterrolebinding.rbac.authorization.k8s.io/calico-tier-getter created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3097275Z daemonset.apps/calico-node created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3097821Z deployment.apps/calico-kube-controllers created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:03.3098280Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:16.9584426Z node/rahbar-ci-control-plane condition met
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:16.9584782Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6833134Z serviceaccount/metrics-server created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6833820Z clusterrole.rbac.authorization.k8s.io/system:aggregated-metrics-reader created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6834558Z clusterrole.rbac.authorization.k8s.io/system:metrics-server created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6835298Z rolebinding.rbac.authorization.k8s.io/metrics-server-auth-reader created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6847147Z clusterrolebinding.rbac.authorization.k8s.io/metrics-server:system:auth-delegator created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6847996Z clusterrolebinding.rbac.authorization.k8s.io/system:metrics-server created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6848600Z service/metrics-server created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6848978Z deployment.apps/metrics-server created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6849504Z apiservice.apiregistration.k8s.io/v1beta1.metrics.k8s.io created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:17.6849895Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5318128Z namespace/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5318627Z serviceaccount/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5319052Z serviceaccount/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5319562Z role.rbac.authorization.k8s.io/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5320092Z role.rbac.authorization.k8s.io/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5320588Z clusterrole.rbac.authorization.k8s.io/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5321109Z clusterrole.rbac.authorization.k8s.io/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5321616Z rolebinding.rbac.authorization.k8s.io/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5322170Z rolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5322907Z clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5323659Z clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5324323Z configmap/ingress-nginx-controller created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5324732Z service/ingress-nginx-controller created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5325163Z service/ingress-nginx-controller-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5325803Z deployment.apps/ingress-nginx-controller created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5326277Z job.batch/ingress-nginx-admission-create created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5326724Z job.batch/ingress-nginx-admission-patch created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5327162Z ingressclass.networking.k8s.io/nginx created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5327825Z validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admission created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:18.5328369Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:49.4839996Z Waiting for deployment "ingress-nginx-controller" rollout to finish: 0 of 1 updated replicas are available...
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:49.4841323Z deployment "ingress-nginx-controller" successfully rolled out
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:49.4841718Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:39:59.5791095Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:11.2860045Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:14.9684022Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:15.4100993Z namespace/rahbar created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1553542Z serviceaccount/api created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1553872Z serviceaccount/chroma created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1554122Z serviceaccount/embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1554461Z serviceaccount/indexer created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1554756Z serviceaccount/redis created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1555164Z serviceaccount/ui created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1556109Z configmap/fixture-corpus created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1556457Z configmap/rahbar-config created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1556803Z configmap/snapshot-config created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1557140Z service/api created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1557418Z service/chroma created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1557714Z service/embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1557953Z service/redis created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1558175Z service/ui created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1558391Z persistentvolumeclaim/corpus-data created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1558678Z persistentvolumeclaim/redis-data created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1558938Z deployment.apps/api created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1559169Z deployment.apps/embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1559407Z deployment.apps/redis created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1559637Z deployment.apps/ui created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1559870Z statefulset.apps/chroma created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1560097Z cronjob.batch/reindex created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1560364Z horizontalpodautoscaler.autoscaling/api created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1560650Z ingress.networking.k8s.io/rahbar created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1560956Z networkpolicy.networking.k8s.io/allow-api-egress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1561313Z networkpolicy.networking.k8s.io/allow-api-embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1561673Z networkpolicy.networking.k8s.io/allow-api-ingress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1562033Z networkpolicy.networking.k8s.io/allow-chroma-ingress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1562365Z networkpolicy.networking.k8s.io/allow-dns created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1562693Z networkpolicy.networking.k8s.io/allow-embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1563028Z networkpolicy.networking.k8s.io/allow-indexer-egress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1563395Z networkpolicy.networking.k8s.io/allow-indexer-embedding created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1563752Z networkpolicy.networking.k8s.io/allow-redis-ingress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1564103Z networkpolicy.networking.k8s.io/allow-ui-api created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1564421Z networkpolicy.networking.k8s.io/allow-ui-ingress created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:40:17.1564776Z networkpolicy.networking.k8s.io/default-deny created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:11.8189858Z Waiting for 1 pods to be ready...
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:11.8190727Z partitioned roll out complete: 1 new pods have been updated...
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:11.9136895Z deployment "redis" successfully rolled out
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:12.0032791Z deployment "embedding" successfully rolled out
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:12.1898848Z job.batch/indexer created
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:24.8645123Z job.batch/indexer condition met
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:25.0108394Z deployment "api" successfully rolled out
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:41:25.1427812Z deployment "ui" successfully rolled out
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:03.0117724Z horizontalpodautoscaler.autoscaling/api condition met
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:03.0118122Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1775800Z   f01     0.13s  When is a student placed on academic warning?
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1776471Z   f02     0.11s  What is the minimum attendance needed to sit the final exam?
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1777027Z   f03     0.11s  If I repeat a course, is my grade capped?
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1777474Z   f04     0.11s  How much is the BS fee per credit hour?
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1777984Z   f05     0.11s  How do I apply for a hostel room?
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1778467Z   f06     0.13s  Is attendance optional now? The rules say to ignore earlier 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1778828Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1779139Z results written to /home/runner/work/Rahbar/Rahbar/.venv/e2e/fixture-results.json
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1779950Z 
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1780231Z GATE FAILED
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1780550Z   - Undefined/nonfinite/out-of-range citation_validity
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:04.1780958Z   - recall@5 regression exceeds 0.05
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1050564Z Traceback (most recent call last):
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1116260Z   File "/home/runner/work/Rahbar/Rahbar/scripts/ci_e2e.py", line 85, in <module>
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1117029Z     e2e(arguments.tag, arguments.registry, arguments.resume)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1117502Z   File "/home/runner/work/Rahbar/Rahbar/scripts/ci_e2e.py", line 65, in e2e
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1117939Z     raise RuntimeError("Actual fixture evaluation gate failed")
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1118268Z RuntimeError: Actual fixture evaluation gate failed
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1275908Z ##[error]Process completed with exit code 1.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1400098Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1400445Z with:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1400627Z   name: e2e-evidence
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1400838Z   path: .venv/e2e/*.json
+verify / e2e-eval	UNKNOWN STEP	.venv/e2e/*.txt
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1401101Z   if-no-files-found: warn
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1401306Z   retention-days: 1
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1401502Z   compression-level: 6
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1401693Z   overwrite: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1401894Z   include-hidden-files: false
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1402105Z env:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1402335Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1402700Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1403174Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1403518Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1403843Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1404184Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.1404454Z ##[endgroup]
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.2976547Z (node:11616) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.2977283Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.3029902Z With the provided path, there will be 5 files uploaded
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.3036245Z Artifact name is valid!
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.3036619Z Root directory input is valid!
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.6964960Z Beginning upload of artifact content to blob storage
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:05.7172457Z (node:11616) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.0353157Z Uploaded bytes 5644
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.1143536Z Finished uploading artifact content to blob storage!
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.1144314Z SHA256 digest of uploaded artifact zip is 29f1378619cbee4f54aee847049053f6985db18fcd7207ccac87370a2a37d5c5
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.1145613Z Finalizing artifact upload
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.6502997Z Artifact e2e-evidence.zip successfully finalized. Artifact ID 13424802535
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.6503973Z Artifact e2e-evidence has been successfully uploaded! Final size is 5644 bytes. Artifact ID is 13424802535
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.6513704Z Artifact download URL: https://github.com/Jibran3134/Rahbar/actions/runs/42046173348/artifacts/13424802535
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:06.6707697Z Post job cleanup.
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1154971Z [command]/usr/bin/git version
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1194230Z git version 2.56.0
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1229727Z Temporarily overriding HOME='/home/runner/work/_temp/686635a4-d709-425e-84ad-47a4d99d9fb9' before making global git config changes
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1230788Z Adding repository directory to the temporary git global config as a safe directory
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1235569Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1275863Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1311288Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1551956Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1615668Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1849948Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.1892681Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.2254990Z Cleaning up orphan processes
+verify / e2e-eval	UNKNOWN STEP	2026-11-05T14:42:07.3754482Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

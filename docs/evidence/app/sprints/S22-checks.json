@@ -1,0 +1,82 @@
+[
+  {
+    "check": "api-tests",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--tb=short"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "api-mypy",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\api",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "app"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "ruff",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "api",
+      "indexer",
+      "eval",
+      "corpus"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "indexer-tests",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\indexer",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--tb=short"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "indexer-mypy",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201\\indexer",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "pipeline"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "eval-tests",
+    "cwd": "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\fresh-acceptance-f6e9201",
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "eval/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--tb=short"
+    ],
+    "exit_code": 0
+  }
+]

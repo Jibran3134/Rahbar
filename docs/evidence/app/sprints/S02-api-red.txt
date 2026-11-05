@@ -1,0 +1,395 @@
+﻿FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFFFFFFFF    [100%]
+================================== FAILURES ===================================
+____________ test_defaults_remain_offline_and_expose_s02_settings _____________
+tests\test_config.py:30: in test_defaults_remain_offline_and_expose_s02_settings
+    assert settings.redis_url == "redis://redis:6379/0"
+E   AttributeError: 'Settings' object has no attribute 'redis_url'
+____________________ test_environment_overrides_are_typed _____________________
+tests\test_config.py:51: in test_environment_overrides_are_typed
+    assert settings.relevance_floor == 0.4 and settings.cache_threshold == 0.97
+E   AttributeError: 'Settings' object has no attribute 'relevance_floor'
+_____ test_bad_environment_fails_with_configuration_key[RETRIEVER-other] ______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_bad_environment_fails_with_configuration_key[RETRIEVER-] ________
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-other] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+______ test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-] _______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-hosted] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-ollama-incluster] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_______ test_bad_environment_fails_with_configuration_key[EMBED_MODEL-] _______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_____ test_bad_environment_fails_with_configuration_key[EMBED_MODEL-   ] ______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_bad_environment_fails_with_configuration_key[LLM_MODEL-] ________
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_______ test_bad_environment_fails_with_configuration_key[CHROMA_HOST-] _______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[CHROMA_COLLECTION-] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+______ test_bad_environment_fails_with_configuration_key[CHROMA_PORT-0] _______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[CHROMA_PORT-65536] _____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_____ test_bad_environment_fails_with_configuration_key[CHROMA_PORT-abc] ______
+tests\test_config.py:86: in test_bad_environment_fails_with_configuration_key
+    get_settings()
+app\config.py:53: in get_settings
+    chroma_port=_int("CHROMA_PORT", 8000),
+app\config.py:15: in _int
+    return int(os.environ.get(name, default))
+E   ValueError: invalid literal for int() with base 10: 'abc'
+
+During handling of the above exception, another exception occurred:
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'CHROMA_PORT'
+E    Input: "invalid literal for int() with base 10: 'abc'"
+_________ test_bad_environment_fails_with_configuration_key[TOP_K-0] __________
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_________ test_bad_environment_fails_with_configuration_key[TOP_K--1] _________
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________ test_bad_environment_fails_with_configuration_key[TOP_K-1.5] _________
+tests\test_config.py:86: in test_bad_environment_fails_with_configuration_key
+    get_settings()
+app\config.py:55: in get_settings
+    top_k=_int("TOP_K", 5),
+app\config.py:15: in _int
+    return int(os.environ.get(name, default))
+E   ValueError: invalid literal for int() with base 10: '1.5'
+
+During handling of the above exception, another exception occurred:
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'TOP_K'
+E    Input: "invalid literal for int() with base 10: '1.5'"
+____ test_bad_environment_fails_with_configuration_key[TEMPERATURE--0.01] _____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_____ test_bad_environment_fails_with_configuration_key[TEMPERATURE-2.01] _____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_____ test_bad_environment_fails_with_configuration_key[TEMPERATURE-nan] ______
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__ test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR--1.01] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR-1.01] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR-inf] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__ test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD--0.01] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD-1.01] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD-nan] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[CACHE_TTL_SECONDS-0] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_bad_environment_fails_with_configuration_key[CACHE_MAX_ENTRIES--1] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__ test_bad_environment_fails_with_configuration_key[SESSION_TTL_SECONDS-0] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__ test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-0] ___
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-inf] __
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-invalid] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[OLLAMA_URL-localhost:11434] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[OLLAMA_URL-ftp://localhost] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://localhost:invalid] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://localhost:11434?model=wrong] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[REDIS_URL-http://redis:6379] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://] ____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://localhost:99999/0] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://localhost/not-a-db] _
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_bad_environment_fails_with_configuration_key[LOG_LEVEL-VERBOSE] _____
+tests\test_config.py:85: in test_bad_environment_fails_with_configuration_key
+    with pytest.raises(ValueError, match=key):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+________________ test_direct_settings_cannot_bypass_validation ________________
+tests\test_config.py:90: in test_direct_settings_cannot_bypass_validation
+    with pytest.raises(ValueError, match="TOP_K"):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_______________________ test_boundary_values_are_valid ________________________
+tests\test_config.py:99: in test_boundary_values_are_valid
+    assert (settings.relevance_floor, settings.cache_threshold, settings.temperature) == (-1, 1, 0)
+E   AttributeError: 'Settings' object has no attribute 'relevance_floor'
+__________ test_credentials_stay_out_of_repr_and_bad_url_diagnostics __________
+tests\test_config.py:120: in test_credentials_stay_out_of_repr_and_bad_url_diagnostics
+    with pytest.raises(ValueError, match="REDIS_URL") as error:
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_______________ test_request_without_session_remains_compatible _______________
+tests\test_contracts.py:17: in test_request_without_session_remains_compatible
+    assert request.session_id is None
+..\.venv\Lib\site-packages\pydantic\main.py:989: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'AskRequest' object has no attribute 'session_id'
+_________________________ test_session_id_is_retained _________________________
+tests\test_contracts.py:22: in test_session_id_is_retained
+    assert request.session_id == "session-123_ABC"
+..\.venv\Lib\site-packages\pydantic\main.py:989: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'AskRequest' object has no attribute 'session_id'
+_____________________ test_invalid_session_ids_rejected[] _____________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+____________________ test_invalid_session_ids_rejected[ ] _____________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+_ test_invalid_session_ids_rejected[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx] _
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+_________________ test_invalid_session_ids_rejected[../other] _________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+___________________ test_invalid_session_ids_rejected[a b] ____________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+___________________ test_invalid_session_ids_rejected[id\n] ___________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+___________________ test_invalid_session_ids_rejected[123] ____________________
+tests\test_contracts.py:27: in test_invalid_session_ids_rejected
+    with pytest.raises(ValidationError):
+E   Failed: DID NOT RAISE <class 'pydantic_core._pydantic_core.ValidationError'>
+___________ test_response_session_is_optional_and_reasoning_absent ____________
+tests\test_contracts.py:36: in test_response_session_is_optional_and_reasoning_absent
+    assert response.session_id is None
+..\.venv\Lib\site-packages\pydantic\main.py:989: in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+E   AttributeError: 'AskResponse' object has no attribute 'session_id'
+____________ test_active_index_validates_metadata_and_is_immutable ____________
+tests\test_contracts.py:41: in test_active_index_validates_metadata_and_is_immutable
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes0] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes1] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes2] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes3] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes4] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes5] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes6] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+____________ test_active_index_rejects_invalid_identity[changes7] _____________
+tests\test_contracts.py:56: in test_active_index_rejects_invalid_identity
+    assert hasattr(schemas, "ActiveIndex"), "S02 requires the ActiveIndex contract"
+E   AssertionError: S02 requires the ActiveIndex contract
+E   assert False
+E    +  where False = hasattr(schemas, 'ActiveIndex')
+_________ test_api_and_indexer_share_model_and_publication_semantics __________
+tests\test_contracts.py:77: in test_api_and_indexer_share_model_and_publication_semantics
+    assert hasattr(index_models, "ActiveIndex"), "Indexer must publish the agreed identity shape"
+E   AssertionError: Indexer must publish the agreed identity shape
+E   assert False
+E    +  where False = hasattr(<module 'pipeline.models' from 'C:\\Users\\Jibran\\Desktop\\Rahbar\\indexer\\pipeline\\models.py'>, 'ActiveIndex')
+________ test_provider_failures_are_typed_and_attempt_budget_is_fixed _________
+tests\test_contracts.py:87: in test_provider_failures_are_typed_and_attempt_budget_is_fixed
+    assert hasattr(base, "ProviderFailureKind"), "S02 requires explicit failure categories"
+E   AssertionError: S02 requires explicit failure categories
+E   assert False
+E    +  where False = hasattr(<module 'app.providers.llm.base' from 'C:\\Users\\Jibran\\Desktop\\Rahbar\\api\\app\\providers\\llm\\base.py'>, 'ProviderFailureKind')
+=========================== short test summary info ===========================
+FAILED tests/test_config.py::test_defaults_remain_offline_and_expose_s02_settings
+FAILED tests/test_config.py::test_environment_overrides_are_typed - Attribute...
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[RETRIEVER-other]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[RETRIEVER-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-other]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-hosted]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_PROVIDER-ollama-incluster]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[EMBED_MODEL-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[EMBED_MODEL-   ]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_MODEL-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CHROMA_HOST-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CHROMA_COLLECTION-]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CHROMA_PORT-0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CHROMA_PORT-65536]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CHROMA_PORT-abc]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TOP_K-0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TOP_K--1]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TOP_K-1.5]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TEMPERATURE--0.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TEMPERATURE-2.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[TEMPERATURE-nan]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR--1.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR-1.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[RELEVANCE_FLOOR-inf]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD--0.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD-1.01]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CACHE_THRESHOLD-nan]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CACHE_TTL_SECONDS-0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[CACHE_MAX_ENTRIES--1]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[SESSION_TTL_SECONDS-0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-inf]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LLM_TIMEOUT_SECONDS-invalid]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[OLLAMA_URL-localhost:11434]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[OLLAMA_URL-ftp://localhost]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://localhost:invalid]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[OLLAMA_URL-http://localhost:11434?model=wrong]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[REDIS_URL-http://redis:6379]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://localhost:99999/0]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[REDIS_URL-redis://localhost/not-a-db]
+FAILED tests/test_config.py::test_bad_environment_fails_with_configuration_key[LOG_LEVEL-VERBOSE]
+FAILED tests/test_config.py::test_direct_settings_cannot_bypass_validation - ...
+FAILED tests/test_config.py::test_boundary_values_are_valid - AttributeError:...
+FAILED tests/test_config.py::test_credentials_stay_out_of_repr_and_bad_url_diagnostics
+FAILED tests/test_contracts.py::test_request_without_session_remains_compatible
+FAILED tests/test_contracts.py::test_session_id_is_retained - AttributeError:...
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[] - Failed:...
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[ ] - Failed...
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[../other]
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[a b] - Fail...
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[id\n] - Fai...
+FAILED tests/test_contracts.py::test_invalid_session_ids_rejected[123] - Fail...
+FAILED tests/test_contracts.py::test_response_session_is_optional_and_reasoning_absent
+FAILED tests/test_contracts.py::test_active_index_validates_metadata_and_is_immutable
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes0]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes1]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes2]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes3]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes4]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes5]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes6]
+FAILED tests/test_contracts.py::test_active_index_rejects_invalid_identity[changes7]
+FAILED tests/test_contracts.py::test_api_and_indexer_share_model_and_publication_semantics
+FAILED tests/test_contracts.py::test_provider_failures_are_typed_and_attempt_budget_is_fixed
+68 failed, 1 passed in 0.51s
+EXIT_CODE=1 (expected failure before S02 implementation)

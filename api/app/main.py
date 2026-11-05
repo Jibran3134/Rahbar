@@ -21,6 +21,8 @@ from .logjson import configure_logging, request_id_var
 from .providers.llm import get_provider
 from .retrieval import get_retriever
 from .routes import ask, health, metrics
+from .services.sessions import SessionStore, redis_client
+from .services.cache import SemanticCache
 
 log = logging.getLogger("rahbar.api")
 
@@ -32,15 +34,19 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.settings = settings
     app.state.retriever = get_retriever(settings)
     app.state.provider = get_provider(settings)
-    # STARTER-TODO(4.4): compare the collection's embedding-model metadata with
-    # settings.embed_model here, and make /readyz fail on a mismatch.
-    # This process only reads the index. The indexer Job writes it.
+    app.state.redis = redis_client(settings.redis_url) if settings.retriever == "chroma" else None
+    app.state.sessions = SessionStore(app.state.redis,settings.session_ttl_seconds) if app.state.redis else None
+    app.state.cache = SemanticCache(app.state.redis,settings) if app.state.redis else None
+    # Dependencies remain lazy so healthz works during outages. readyz validates
+    # the currently published identity; this process never builds an index.
     log.info(
         "api started",
         extra={"retriever": settings.retriever, "llm_provider": settings.llm_provider,
                "embed_model": settings.embed_model, "top_k": settings.top_k},
     )
     yield
+    if app.state.redis is not None:
+        app.state.redis.close()
 
 
 app = FastAPI(title="RAHBAR API", lifespan=lifespan)

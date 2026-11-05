@@ -1,0 +1,18 @@
+﻿{
+  "passed": false,
+  "document_count": 7,
+  "pdf_pages": 161,
+  "questions": 16,
+  "question_types": {
+    "ordinary": 8,
+    "version": 4,
+    "exact": 2,
+    "abstain": 1,
+    "injection": 1
+  },
+  "errors": [
+    "Insufficient abstain questions",
+    "Invalid physical PDF page: q01"
+  ]
+}
+EXIT_CODE=1 (expected 1)

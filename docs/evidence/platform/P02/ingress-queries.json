@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What is the last date to withdraw from a course under the current academic rules?",
+    "status": 200,
+    "cache": "MISS",
+    "response": {
+      "request_id": "c7456ad248314454e6f865e007e2c1e2",
+      "answer": "The last day of the makeup week of every semester. [academic-rules-handbook-jun-2026.pdf / 4.25]",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.25",
+          "page": 23
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "ecee4bb1794be06a78e95c5fa008173472df540c86a7b699dd1755162cd79650",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.25",
+          "page": 23,
+          "score": 0.83059466
+        },
+        {
+          "chunk_id": "c1fd98c7070e35cbca1b8bc1abb86b6ca14f2797ab3c8d6651e2fd348377f6f6",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "D.6.8",
+          "page": 29,
+          "score": 0.81837481
+        },
+        {
+          "chunk_id": "538ca2eb3d5bb0767559aa27adc4229042ba1ae429fc05f4bd53f3cb1eb7f6cc",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.26",
+          "page": 23,
+          "score": 0.75013804
+        },
+        {
+          "chunk_id": "762984e178bb7d0f713dfe6700ab518c4dc0d641f892dc75eb70b4955338e6dd",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.6",
+          "page": 20,
+          "score": 0.7499627
+        },
+        {
+          "chunk_id": "5913a7e491df87027d1360f8a233a34070ab2d2049c547ac67305c9f74e5fa97",
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.23",
+          "page": 22,
+          "score": 0.74993217
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "2af88d5a54d9424596425eb53d1b3beb"
+    }
+  },
+  {
+    "question": "What is the hostel room booking deadline?",
+    "status": 200,
+    "cache": "MISS",
+    "response": {
+      "request_id": "772327d3ff00a069d889b7e019edb704",
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [],
+      "provider": "ollama",
+      "session_id": "976f115dea884cc9ba8e2a924fccf8b2"
+    }
+  }
+]

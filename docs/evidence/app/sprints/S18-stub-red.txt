@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______ test_repeat_policy_second_sentence_and_poison_are_handled_as_data ______
+tests\test_fixture_answer.py:11: in test_repeat_policy_second_sentence_and_poison_are_handled_as_data
+    assert "most recent" in answer.answer
+E   AssertionError: assert 'most recent' in '(stub) 3.1 A course may be repeated. [owned.md / 3. Repeating a course]'
+E    +  where '(stub) 3.1 A course may be repeated. [owned.md / 3. Repeating a course]' = Answer(reasoning='stub: cites the first retrieved passage', answer='(stub) 3.1 A course may be repeated. [owned.md / 3...s=[Citation(source='owned.md', section='3. Repeating a course', page=1)], answered_from_context=True, confidence='low').answer
+=========================== short test summary info ===========================
+FAILED tests/test_fixture_answer.py::test_repeat_policy_second_sentence_and_poison_are_handled_as_data
+1 failed in 0.60s
+NATIVE_EXIT=1

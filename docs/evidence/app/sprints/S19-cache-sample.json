@@ -1,0 +1,70 @@
+{
+  "pairs": [
+    {
+      "positive": true,
+      "a": "What is the course withdrawal deadline?",
+      "b": "When is the course withdrawal deadline?",
+      "cosine": 0.9737792547751439,
+      "compatible": true
+    },
+    {
+      "positive": true,
+      "a": "What is the admission security deposit?",
+      "b": "How much is the admission security deposit?",
+      "cosine": 0.9197702569834459,
+      "compatible": true
+    },
+    {
+      "positive": false,
+      "a": "Attendance is 80 percent?",
+      "b": "Attendance is 90 percent?",
+      "cosine": 0.9094064850562309,
+      "compatible": false
+    },
+    {
+      "positive": false,
+      "a": "Is CS101 required?",
+      "b": "Is CS102 required?",
+      "cosine": 0.8916592114709463,
+      "compatible": false
+    },
+    {
+      "positive": false,
+      "a": "What is the admission deposit?",
+      "b": "What is the hostel deposit?",
+      "cosine": 0.7728668518893995,
+      "compatible": false
+    },
+    {
+      "positive": false,
+      "a": "Withdrawal under August 2023 rules?",
+      "b": "Withdrawal under June 2026 rules?",
+      "cosine": 0.833361082986307,
+      "compatible": false
+    },
+    {
+      "positive": false,
+      "a": "Can students drop a course in a regular semester?",
+      "b": "Can students drop a course in a summer semester?",
+      "cosine": 0.9128822269816489,
+      "compatible": true
+    }
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.9,
+      "positive_hits": 2,
+      "false_hits": 1
+    },
+    {
+      "threshold": 0.95,
+      "positive_hits": 1,
+      "false_hits": 0
+    },
+    {
+      "threshold": 0.98,
+      "positive_hits": 0,
+      "false_hits": 0
+    }
+  ]
+}

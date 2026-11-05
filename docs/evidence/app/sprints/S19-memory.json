@@ -1,0 +1,9 @@
+﻿{
+    "passed":  true,
+    "scope":  "Windows actual interpreter child OS peak sampled every 500ms; venv launcher reported separately; OCR children excluded; not a pod/cgroup peak or limit margin",
+    "launcher_peak_bytes":  4431872,
+    "native_exit":  0,
+    "python_peak_working_set_bytes":  238583808,
+    "collection":  "rahbar_memory_audit",
+    "seconds":  199.14536999999999
+}

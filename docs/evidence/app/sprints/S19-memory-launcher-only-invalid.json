@@ -1,0 +1,8 @@
+﻿{
+    "passed":  true,
+    "scope":  "Windows Python process OS peak sampled every 200ms; separate OCR child processes excluded; not a Kubernetes pod/cgroup measurement or limit margin",
+    "native_exit":  0,
+    "python_peak_working_set_bytes":  4427776,
+    "collection":  "rahbar_memory_audit",
+    "seconds":  185.41540129999998
+}

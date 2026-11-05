@@ -1,0 +1,9 @@
+  q09     0.00s  Under the current undergraduate rules, what is the course-wi
+  q13     0.00s  What is the hostel-room allotment application deadline for t
+
+results written to C:\Users\Jibran\Desktop\Rahbar\docs\evidence\app\sprints\S17-degraded-results.json
+
+GATE FAILED
+  - citation validity below 0.95
+
+NATIVE_EXIT=1

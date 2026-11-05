@@ -1,0 +1,10 @@
+**
+!requirements.txt
+!app/
+!app/**
+**/__pycache__/
+**/*.pyc
+.git/
+__pycache__/
+.venv/
+corpus/

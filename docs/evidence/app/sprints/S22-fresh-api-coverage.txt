@@ -1,0 +1,16 @@
+........................................................................ [ 45%]
+........................................................................ [ 90%]
+................                                                         [100%]
+160 passed in 5.32s
+{
+  "passed": true,
+  "component": "api",
+  "tool": "Python 3.12 stdlib trace",
+  "executable": 1047,
+  "covered": 779,
+  "line_coverage": 0.7440305635148042,
+  "minimum": 0.6,
+  "scope": "Owned production Python modules only; line coverage, not branch coverage"
+}
+
+NATIVE_EXIT=0
