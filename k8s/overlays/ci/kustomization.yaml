@@ -20,5 +20,5 @@ patches:
     kind: ConfigMap
     name: rahbar-config
   patch: "- op: replace\n  path: /data/LLM_PROVIDER\n  value: stub\n- op: replace\n\
-    \  path: /data/RELEVANCE_FLOOR\n  value: \"0.99\"\n- op: replace\n  path: /data/CHROMA_COLLECTION\n\
+    \  path: /data/RELEVANCE_FLOOR\n  value: \"0.65\"\n- op: replace\n  path: /data/CHROMA_COLLECTION\n\
     \  value: rahbar_fixtures\n- op: replace\n  path: /data/OLLAMA_URL\n  value: http://embedding:11434\n"
