@@ -6,6 +6,7 @@ import json
 import os
 import platform
 import tarfile
+import time
 import zipfile
 from pathlib import Path
 
@@ -15,8 +16,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def verified(spec):
-    response = httpx.get(spec["url"], follow_redirects=True, timeout=180)
-    response.raise_for_status()
+    for attempt in range(4):
+        try:
+            response = httpx.get(spec["url"], follow_redirects=True, timeout=180)
+            if response.status_code != 429 and response.status_code < 500:
+                response.raise_for_status()
+                break
+            response.raise_for_status()
+        except (httpx.TransportError, httpx.HTTPStatusError) as error:
+            transient = (isinstance(error, httpx.TransportError) or
+                         error.response.status_code == 429 or error.response.status_code >= 500)
+            if not transient or attempt == 3:
+                raise
+            print("Transient tool download failure; retry", attempt + 1, "of 3", flush=True)
+            time.sleep(2 ** (attempt + 1))
     if hashlib.sha256(response.content).hexdigest() != spec["sha256"]:
         raise ValueError("Official download checksum mismatch: " + spec["url"])
     return response.content
