@@ -1,10 +1,10 @@
-﻿# RAHBAR
+# RAHBAR
 
 [![CI](https://github.com/Jibran3134/Rahbar/actions/workflows/ci.yml/badge.svg)](https://github.com/Jibran3134/Rahbar/actions/workflows/ci.yml)
 
 RAHBAR answers FAST-NUCES policy questions from seven verified public documents instead of relying on a model's general knowledge. It distinguishes current and historical rules, returns request-verified citations, and declines when the selected evidence is insufficient. A separate indexing Job publishes versioned Chroma collections; three API replicas share Redis conversations/cache and serve a small chat UI through Kubernetes Ingress. Team: **Jibran** (application/RAG) and **Alishba** (platform/delivery). Codex implemented the current work at Jibran's request; human review remains pending.
 
-Local minikube and CI-equivalent kind verification are recorded under [platform evidence](docs/evidence/platform). **Remote protection, blocked-regression PR evidence, Docker Hub publication and a successful GitHub CD run are still pending.** The badge is a real workflow link, not a claim that an unpushed workflow has run.
+Local minikube and CI-equivalent kind verification are recorded under [platform evidence](docs/evidence/platform). **Remote protection is configured and [PR #1](https://github.com/Jibran3134/Rahbar/pull/1) is exercising the regression/fix gate. Docker Hub publication and a successful GitHub CD run remain pending.** Live remote runs are linked under P05 evidence; earlier P01-P04 reports describe their historical local-only checkpoints.
 
 ![Actual cited answer through Kubernetes Ingress](docs/evidence/platform/P04/ui.png)
 
@@ -165,7 +165,7 @@ The shipped real native baseline is recall@3/@5 **.933333**, citation integrity 
 
 CI runs on PRs to main and pushes to dev. It gates Ruff/mypy/workflow syntax, tests with >=60% coverage, strict Kustomize/kubeconform, builds without publishing, Trivy fixable HIGH/CRITICAL scans and actual kind/Ingress fixture evaluation. Local coverage.py results are API 90.12%, indexer 90.26%; all three fixed images passed the scan gate. CD on main depends on the complete verifier, promotes the same scanned image artifacts to **docker.io/jibran3134/rahbar-{api,indexer,ui}:<40-character-Git-SHA>**, then pulls those exact published images into an ephemeral cluster for rollout/Ingress/eval checks. It never deploys :latest.
 
-Configure GitHub Actions secrets DOCKERHUB_USERNAME=jibran3134 and DOCKERHUB_TOKEN using a Docker Hub access token. Never paste the token into chat or commit it. Main must require PRs, passing verifier checks and one approval. The user requested local main commits; no remote main push, branch-protection change, registry publication or CD success has been claimed. An actual failing-evaluation PR, blocked merge proof, correction/green proof and successful CD link remain release gates. Required submission links: [repository](https://github.com/Jibran3134/Rahbar), successful CD run, and three Docker Hub image pages showing SHA tags. Do not substitute local evidence for those links.
+Configure GitHub Actions secrets DOCKERHUB_USERNAME=jibran3134 and DOCKERHUB_TOKEN using a Docker Hub access token. Never paste the token into chat or commit it. The assignment requires PRs, passing CI and one approval. Jibran explicitly requested zero required approvals; current protection therefore enforces PRs and seven GitHub-Actions-bound checks for administrators too, with approval count zero. The assignment's one-approval criterion remains unmet by that choice. Local main commits continue as requested; review branches are pushed and no direct remote-main push is used. The regression/fix PR and successful registry/CD links are recorded only after actual completion. Required submission links: [repository](https://github.com/Jibran3134/Rahbar), successful CD run, and three Docker Hub image pages showing SHA tags. Do not substitute local evidence for those links.
 
 For SHA-tagged registry deployment to the local real profile:
 

@@ -1,0 +1,219 @@
+verify / scan (indexer)	UNKNOWN STEP	ï»¿2026-11-05T14:31:01.3272940Z Current runner version: '2.338.2'
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3294623Z ##[group]Runner Image Provisioner
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3295403Z Hosted Compute Agent
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3295923Z Version: 20261021.618
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3296637Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3297303Z Build Date: 2026-10-21T00:45:21Z
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3297926Z Worker ID: {d4e98d51-f30c-43c5-a0dc-977c3cf0e672}
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3298501Z Region: westus2
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3299024Z Cloud: Azure
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3299484Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3300716Z ##[group]Operating System
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3301249Z Ubuntu
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3301681Z 24.04.5
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3302181Z LTS
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3302626Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3303120Z ##[group]Runner Image
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3303676Z Image: ubuntu-24.04
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3304161Z Version: 20261025.353.1
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3305264Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3306717Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3307592Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3308573Z ##[group]GITHUB_TOKEN Permissions
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3310107Z Contents: read
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3310609Z Metadata: read
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3311189Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3313343Z Secret source: Actions
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3314189Z Cache mode: write
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3314772Z Prepare workflow directory
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3580289Z Prepare all required actions
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.3619758Z Getting action download info
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.7195744Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.8213346Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:01.9372764Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.2082459Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.4589070Z Uses: Jibran3134/Rahbar/.github/workflows/verify.yml@refs/heads/dev (cc7c58c14963a3b38cc0252276fe69ebdaa2c2b9)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.4593233Z Complete job name: verify / scan (indexer)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5287775Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5288566Z with:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5288934Z   persist-credentials: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5289358Z   repository: Jibran3134/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5292519Z   token: ***
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5292872Z   ssh-strict: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5293233Z   ssh-user: git
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5293584Z   clean: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5293938Z   sparse-checkout-cone-mode: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5294394Z   fetch-depth: 1
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5294746Z   fetch-tags: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5295104Z   show-progress: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5295463Z   lfs: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5295801Z   submodules: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5296290Z   set-safe-directory: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5296700Z   allow-unsafe-pr-checkout: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.5297268Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7352485Z Syncing repository: Jibran3134/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7354840Z ##[group]Getting Git version info
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7355867Z Working directory is '/home/runner/work/Rahbar/Rahbar'
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7357341Z [command]/usr/bin/git version
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7407249Z git version 2.56.0
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7422975Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7436095Z Temporarily overriding HOME='/home/runner/work/_temp/9b09d02a-c1a5-4748-8945-1a0ce9198509' before making global git config changes
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7438246Z Adding repository directory to the temporary git global config as a safe directory
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7440297Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7482407Z Deleting the contents of '/home/runner/work/Rahbar/Rahbar'
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7488965Z ##[group]Initializing the repository
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7498596Z [command]/usr/bin/git init /home/runner/work/Rahbar/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7572848Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7574219Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7575428Z hint: to use in all of your new repositories, which will suppress this warning,
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7576094Z hint: call:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7576617Z hint:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7577085Z hint: 	git config --global init.defaultBranch <name>
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7577604Z hint:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7578089Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7578853Z hint: 'development'. The just-created branch can be renamed via this command:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7579558Z hint:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7580107Z hint: 	git branch -m <name>
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7580748Z hint:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7581389Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7582708Z Initialized empty Git repository in /home/runner/work/Rahbar/Rahbar/.git/
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7590640Z [command]/usr/bin/git remote add origin https://github.com/Jibran3134/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7631697Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7632727Z ##[group]Disabling automatic garbage collection
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7634229Z [command]/usr/bin/git config --local gc.auto 0
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7664427Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7665399Z ##[group]Setting up auth
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7670184Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.7701185Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8010407Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8049014Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8280312Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8316967Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8521416Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8563941Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8573395Z ##[group]Fetching the repository
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:02.8574656Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cc7c58c14963a3b38cc0252276fe69ebdaa2c2b9:refs/remotes/origin/dev
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2199853Z From https://github.com/Jibran3134/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2201168Z  * [new ref]         cc7c58c14963a3b38cc0252276fe69ebdaa2c2b9 -> origin/dev
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2204614Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2205911Z ##[group]Determining the checkout info
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2207513Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2212057Z [command]/usr/bin/git sparse-checkout disable
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2263766Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2298796Z ##[group]Checking out the ref
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2301392Z [command]/usr/bin/git checkout --progress --force -B dev refs/remotes/origin/dev
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2711408Z Switched to a new branch 'dev'
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2715210Z branch 'dev' set up to track 'origin/dev'.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2722903Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2766865Z [command]/usr/bin/git log -1 --format=%H
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2795496Z cc7c58c14963a3b38cc0252276fe69ebdaa2c2b9
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2804050Z ##[group]Removing auth
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2806990Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.2840849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3126594Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3128554Z http.https://github.com/.extraheader
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3131487Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3135655Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3332693Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3366843Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3563847Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3827254Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3828193Z with:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3828810Z   python-version: 3.12
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3829482Z   check-latest: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3833162Z   token: ***
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3833822Z   update-environment: true
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3834542Z   allow-prereleases: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3835240Z   freethreaded: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.3835887Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5022382Z ##[group]Installed versions
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5092002Z (node:2160) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5093824Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5095165Z Successfully set up CPython (3.12.15)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5096968Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5297456Z ##[group]Run python -m pip install httpx==0.28.1
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5298793Z ^[[36;1mpython -m pip install httpx==0.28.1^[[0m
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5299922Z ^[[36;1mpython scripts/bootstrap_tools.py trivy^[[0m
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5335890Z shell: /usr/bin/bash -e {0}
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5337075Z env:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5338060Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5339474Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5340910Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5342313Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5343594Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5344599Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:03.5345406Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.2817998Z Collecting httpx==0.28.1
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.3322830Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.3535257Z Collecting anyio (from httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.3601079Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.3794954Z Collecting certifi (from httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.3862667Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4022400Z Collecting httpcore==1.* (from httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4101423Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4294117Z Collecting idna (from httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4359216Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4492586Z Collecting h11>=0.16 (from httpcore==1.*->httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4557150Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4727655Z Collecting typing_extensions>=4.16.0 (from anyio->httpx==0.28.1)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.4792602Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5023796Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5162890Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5253593Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5338321Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5439009Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5519970Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.5602563Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.6151400Z Installing collected packages: typing_extensions, idna, h11, certifi, httpcore, anyio, httpx
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.8845346Z 
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.8857362Z Successfully installed anyio-4.16.0 certifi-2026.10.23 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 typing_extensions-4.16.0
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.8862689Z 
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.8863571Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:04.8865065Z [notice] To update, run: pip install --upgrade pip
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0498704Z Traceback (most recent call last):
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0505100Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 60, in <module>
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0505802Z     install(args.names, args.manifests)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0506588Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 33, in install
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0507156Z     data = verified(spec)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0507424Z            ^^^^^^^^^^^^^^
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0507768Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 19, in verified
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0508168Z     response.raise_for_status()
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0508638Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0509200Z     raise HTTPStatusError(message, request=request, response=self)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0510275Z httpx.HTTPStatusError: Server error '504 Gateway Time-out' for url 'https://github.com/aquasecurity/trivy/releases/download/v0.76.1/trivy_0.76.1_Linux-64bit.tar.gz'
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0510963Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0680983Z ##[error]Process completed with exit code 1.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0823960Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0824288Z with:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0824457Z   name: scan-indexer
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0824647Z   path: artifacts/*-scan.json
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0824850Z   if-no-files-found: warn
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0825043Z   retention-days: 1
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0825226Z   compression-level: 6
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0825423Z   overwrite: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0825598Z   include-hidden-files: false
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0825794Z env:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0826002Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0826676Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0827019Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0827319Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0827644Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0827975Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.0828232Z ##[endgroup]
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.2191244Z (node:2228) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.2191873Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.2217478Z ##[warning]No files were found with the provided path: artifacts/*-scan.json. No artifacts will be uploaded.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.2489557Z Post job cleanup.
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3238481Z [command]/usr/bin/git version
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3270300Z git version 2.56.0
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3301523Z Temporarily overriding HOME='/home/runner/work/_temp/3ece74e1-891c-4a17-94d5-8e7371b41990' before making global git config changes
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3302694Z Adding repository directory to the temporary git global config as a safe directory
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3308575Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3344026Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3387394Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3626889Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3661543Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3885713Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.3925054Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.4289148Z Cleaning up orphan processes
+verify / scan (indexer)	UNKNOWN STEP	2026-11-05T14:31:16.4620989Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
