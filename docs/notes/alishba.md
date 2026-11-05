@@ -5,7 +5,7 @@ Jibran authorized implementation of Alishba's scope on 5 November 2026 and conti
 | Stage | Scope | Status | Evidence |
 | --- | --- | --- | --- |
 | P01 | Non-root images, runtime/OCR checks, UI shared sessions | PASS | P01/container-smoke.json; images.json; node UI test |
-| P02 | Kustomize, isolated minikube cluster, corpus delivery and network security | Pending | Not run |
+| P02 | Kustomize and isolated real-corpus minikube deployment | PASS; failure/network experiments continue in P04 | P02 Ingress, Job, endpoints/HPA and cgroup evidence |
 | P03 | CI/CD with real fixture retrieval and immutable release tags | Pending | Not run |
 | P04 | Cluster failure/resource/rollout evidence, docs and acceptance | Pending | Not run |
 

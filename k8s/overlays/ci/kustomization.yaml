@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: rahbar
+resources:
+- ../../base
+- fixtures.yaml
+- embedding.yaml
+patches:
+- target:
+    kind: Job
+    name: indexer
+  patch: "- op: remove\n  path: /spec/template/spec/initContainers\n- op: replace\n\
+    \  path: /spec/template/spec/volumes/1\n  value:\n    name: corpus\n    configMap:\n\
+    \      name: fixture-corpus\n"
+- target:
+    kind: CronJob
+    name: reindex
+  patch: "- op: add\n  path: /spec/suspend\n  value: true\n"
+- target:
+    kind: ConfigMap
+    name: rahbar-config
+  patch: "- op: replace\n  path: /data/LLM_PROVIDER\n  value: stub\n- op: replace\n\
+    \  path: /data/RELEVANCE_FLOOR\n  value: \"0.65\"\n- op: replace\n  path: /data/CHROMA_COLLECTION\n\
+    \  value: rahbar_fixtures\n- op: replace\n  path: /data/OLLAMA_URL\n  value: http://embedding:11434\n"

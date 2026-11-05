@@ -1,0 +1,52 @@
+{
+  "kubeconform": {
+    "version": "0.8.0",
+    "linux": {
+      "url": "https://github.com/yannh/kubeconform/releases/download/v0.8.0/kubeconform-linux-amd64.tar.gz",
+      "sha256": "9bc2bffbf71f261128533edaf912153948b7ff238f9a531ae6d34466ec287883"
+    },
+    "windows": {
+      "url": "https://github.com/yannh/kubeconform/releases/download/v0.8.0/kubeconform-windows-amd64.zip",
+      "sha256": "e3f56102bcf4f50b034a567e2482a1c5330799983ddd655952310211aef73d93"
+    }
+  },
+  "trivy": {
+    "version": "0.76.1",
+    "linux": {
+      "url": "https://github.com/aquasecurity/trivy/releases/download/v0.76.1/trivy_0.76.1_Linux-64bit.tar.gz",
+      "sha256": "c7cbe3137fb8a48a17574bede3dd6beb16742d1e9772929940fc90082c39d9c0"
+    },
+    "windows": {
+      "url": "https://github.com/aquasecurity/trivy/releases/download/v0.76.1/trivy_0.76.1_windows-64bit.zip",
+      "sha256": "1051f49cb22d5284f43425f72aad9cda63ca12ceb92e7caa06903490c82dc9bf"
+    }
+  },
+  "kind": {
+    "version": "0.31.0",
+    "linux": {
+      "url": "https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-linux-amd64",
+      "sha256": "eb244cbafcc157dff60cf68693c14c9a75c4e6e6fedaf9cd71c58117cb93e3fa"
+    },
+    "windows": {
+      "url": "https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-windows-amd64",
+      "sha256": "2c3a9ff954de16244380778683cf99e271bfc2fac9c6c4e797e4623c45e59d9d"
+    }
+  },
+  "minikube": {
+    "version": "1.39.0",
+    "windows": {
+      "url": "https://github.com/kubernetes/minikube/releases/download/v1.39.0/minikube-windows-amd64.exe",
+      "sha256": "776386465ded2cf610ae397fe302de32c44d12134b5ce7ce98ab05bd7713b360"
+    }
+  },
+  "upstream": {
+    "calico": {
+      "url": "https://raw.githubusercontent.com/projectcalico/calico/v3.33.0/manifests/calico.yaml",
+      "sha256": "2de8f47595fb9c41b3f47d7b767a1f8e72ecf84057af834738ff12689a234da5"
+    },
+    "ingress": {
+      "url": "https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/kind/deploy.yaml",
+      "sha256": "2a3ae008c8786431115502644e77ab398fdebfb721a5d1195ed3089cde3299df"
+    }
+  }
+}

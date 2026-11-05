@@ -1,0 +1,10 @@
+NAME                     READY   STATUS      RESTARTS   AGE   IP            NODE     NOMINATED NODE   READINESS GATES
+api-5c4688d769-b9l7p     1/1     Running     0          10m   10.244.3.7    rahbar   <none>           <none>
+api-5c4688d769-jmfrv     1/1     Running     0          10m   10.244.3.8    rahbar   <none>           <none>
+api-5c4688d769-xxpjc     1/1     Running     0          10m   10.244.3.9    rahbar   <none>           <none>
+chroma-0                 1/1     Running     0          10m   10.244.3.12   rahbar   <none>           <none>
+indexer-mxhzr            0/1     Completed   0          10m   10.244.3.13   rahbar   <none>           <none>
+redis-7f546bdffd-k5x6d   1/1     Running     0          10m   10.244.3.10   rahbar   <none>           <none>
+ui-5c468b7bc4-9p5wm      1/1     Running     0          10m   10.244.3.11   rahbar   <none>           <none>
+
+NATIVE_EXIT=0

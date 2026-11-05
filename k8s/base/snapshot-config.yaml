@@ -1,0 +1,121 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: snapshot-config
+  namespace: rahbar
+data:
+  fetch_snapshot.py: |
+    """Provision public corpus bytes from the committed manifest without rewriting truth."""
+    import argparse
+    import hashlib
+    import json
+    import time
+    import uuid
+    from pathlib import Path
+
+    import httpx
+    import yaml
+
+
+    def provision(sources: Path, manifest: Path, destination: Path) -> None:
+        expected = {}
+        for line in manifest.read_text(encoding="utf-8-sig").splitlines():
+            columns = [part.strip().strip("`<>") for part in line.split("|")[1:-1]]
+            if len(columns) == 7 and len(columns[5]) == 64:
+                name, _, _, filename, size, digest, url = columns
+                if Path(filename).name != filename or filename.startswith("."):
+                    raise ValueError("Unsafe corpus filename")
+                expected[name] = dict(file=filename, bytes=int(size.replace(",", "")), sha256=digest, url=url)
+        documents = yaml.safe_load(sources.read_text(encoding="utf-8-sig"))["documents"]
+        if len(expected) != len(documents) or not documents:
+            raise ValueError("Manifest and sources must describe the same nonempty snapshot")
+        destination.mkdir(parents=True, exist_ok=True)
+        entries = []
+        with httpx.Client(follow_redirects=True, timeout=90,
+                          headers={"User-Agent": "RAHBAR-snapshot-fetcher/1.0 (public coursework)"}) as client:
+            for doc in documents:
+                row = expected[doc["name"]]
+                path = destination / row["file"]
+                data = path.read_bytes() if path.exists() else b""
+                if len(data) != row["bytes"] or hashlib.sha256(data).hexdigest() != row["sha256"]:
+                    response = client.get(row["url"])
+                    response.raise_for_status()
+                    data = response.content
+                    if len(data) != row["bytes"] or hashlib.sha256(data).hexdigest() != row["sha256"]:
+                        raise ValueError(f"Source changed: {row['file']}; review the snapshot, never refresh truth automatically")
+                    temporary = destination / (row["file"] + "." + uuid.uuid4().hex + ".partial")
+                    temporary.write_bytes(data)
+                    temporary.replace(path)
+                    time.sleep(2)
+                entries.append({**row, "name": doc["name"], "doc_version": str(doc["doc_version"]),
+                                "superseded": bool(doc.get("superseded", False))})
+                print(json.dumps(dict(event="snapshot_verified", file=row["file"], sha256=row["sha256"])), flush=True)
+        temporary = destination / ("_index." + uuid.uuid4().hex + ".partial")
+        temporary.write_text(json.dumps(entries, indent=2), encoding="utf-8")
+        temporary.replace(destination / "_index.json")
+
+
+    if __name__ == "__main__":
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--sources", type=Path, required=True)
+        parser.add_argument("--manifest", type=Path, required=True)
+        parser.add_argument("--out", type=Path, required=True)
+        args = parser.parse_args()
+        provision(args.sources, args.manifest, args.out)
+  sources.yaml: |
+    # Real public corpus. Source selection precedes chunk/retrieval implementation.
+    # Downloaded PDFs/HTML remain under ignored corpus/raw/; commit the manifest.
+    documents:
+      - name: Undergraduate Academic Rules (Aug 2023)
+        url: https://nu.edu.pk/public/downloads/Academic-Rules-Undergrad-Aug-2023.pdf
+        doc_version: "2023-08"
+        superseded: true
+        policy_family: undergraduate-academic-rules
+        notes: Historical edition; compare original clauses before defining version questions.
+
+      - name: Academic Rules Handbook (Jun 2026)
+        url: https://nu.edu.pk/public/downloads/Academic_Rules_Handbook_2026.pdf
+        doc_version: "2026-06"
+        superseded: false
+        policy_family: undergraduate-academic-rules
+
+      - name: Student Handbook (Jun 2026)
+        url: https://nu.edu.pk/public/downloads/Student_Handbook_2026.pdf
+        doc_version: "2026-06"
+        superseded: false
+
+      - name: Prospectus Academic Rules and Regulations
+        url: https://nu.edu.pk/Admissions/ProspectusUpload/Academic Rules and Regulations.pdf
+        doc_version: "2026"
+        superseded: false
+        notes: Prospectus 2026 is printed in the PDF. Summary; the detailed June 2026 academic handbook is authoritative for clause-level questions.
+
+      - name: Faculty Entrepreneurship and Technical Start-ups Policy
+        url: https://nu.edu.pk/OricResources/ResearchPolicies/27.pdf?20220530
+        doc_version: "2022-05-30"
+        superseded: false
+        notes: Date 30.05.2022 visually verified on page 1; all 8 pages have no extractable text.
+
+      - name: Fee Structure page
+        url: https://www.nu.edu.pk/Admissions/FeeStructure
+        doc_version: "snapshot-2026-11-04"
+        superseded: false
+
+      - name: Grading page
+        url: https://www.nu.edu.pk/Student/Grading
+        doc_version: "snapshot-2026-11-04"
+        superseded: false
+  MANIFEST.md: |
+    # Corpus manifest
+
+    Generated by `corpus/fetch.py`. The documents themselves live in `corpus/raw/`, which is gitignored; run the script to download them, then `--verify` to check you have the same bytes.
+
+    | Document | Version | Superseded | File | Bytes | SHA-256 | URL |
+    | --- | --- | --- | --- | ---: | --- | --- |
+    | Undergraduate Academic Rules (Aug 2023) | 2023-08 | yes | `undergraduate-academic-rules-aug-2023.pdf` | 14,888,226 | `cddfe1f5e9770132e27d686abd1c2e6742ef4732f0c2f431ed514bc1691d2004` | <https://nu.edu.pk/public/downloads/Academic-Rules-Undergrad-Aug-2023.pdf> |
+    | Academic Rules Handbook (Jun 2026) | 2026-06 | no | `academic-rules-handbook-jun-2026.pdf` | 987,731 | `4cfee3e191b84aeb9168f17656c7642212ff52b90f2780d028b33c154aa74b62` | <https://nu.edu.pk/public/downloads/Academic_Rules_Handbook_2026.pdf> |
+    | Student Handbook (Jun 2026) | 2026-06 | no | `student-handbook-jun-2026.pdf` | 1,980,275 | `717eb4b8d37e50185ffe952735c08ef19edd16074d547f10ebd22cf23da67c4d` | <https://nu.edu.pk/public/downloads/Student_Handbook_2026.pdf> |
+    | Prospectus Academic Rules and Regulations | 2026 | no | `prospectus-academic-rules-and-regulations.pdf` | 7,066,767 | `a7e7f6896a59eb9413c9e8826e6c4c018ebe52045d10cebfcba92ded10a3174a` | <https://nu.edu.pk/Admissions/ProspectusUpload/Academic%20Rules%20and%20Regulations.pdf> |
+    | Faculty Entrepreneurship and Technical Start-ups Policy | 2022-05-30 | no | `faculty-entrepreneurship-and-technical-start-ups-policy.pdf` | 3,872,809 | `c2d5c7648d1593daf34d5c0596ede476e8984b0551830cc1690017e6e22f1359` | <https://nu.edu.pk/OricResources/ResearchPolicies/27.pdf?20220530> |
+    | Fee Structure page | snapshot-2026-11-04 | no | `fee-structure-page.html` | 91,429 | `ec8872ae77cac7e96e20e6979933f36b00aaeb0ab3f668a2116e521c655e7b90` | <https://www.nu.edu.pk/Admissions/FeeStructure> |
+    | Grading page | snapshot-2026-11-04 | no | `grading-page.html` | 95,673 | `66a995b4d8474e914d37bfa14755a5361f47327d5a7314f9b7ec15d9b6176e6e` | <https://www.nu.edu.pk/Student/Grading> |
