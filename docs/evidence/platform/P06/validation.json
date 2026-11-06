@@ -1,0 +1,17 @@
+{
+  "script_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "ruff": "passed",
+  "reuse_root_command": ".\\run.cmd -CheckOnly -NoBrowser",
+  "provision_root_command": ".\\run.cmd -Rebuild -CheckOnly -NoBrowser",
+  "reuse": "passed",
+  "provision": "passed",
+  "provider": "ollama-host",
+  "browser_url": "http://localhost:8090",
+  "new_index_job_duration": "5m40s",
+  "manual_hosts_edit_required": false,
+  "existing_user_port_8085": "left untouched",
+  "models_download_and_Docker_cold_start": "implemented; existing installations/services reused in this live test"
+}

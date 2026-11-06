@@ -1,0 +1,21 @@
+{
+  "url": "http://127.0.0.1:8090",
+  "info": {
+    "active": {
+      "collection": "rahbar__g_3141066362b242518011299c8ec54e1c",
+      "generation": "3141066362b242518011299c8ec54e1c",
+      "embed_model": "nomic-embed-text",
+      "dimension": 768
+    },
+    "embed_model": "nomic-embed-text",
+    "llm_model": "llama3.2:3b",
+    "provider": "ollama-host",
+    "top_k": 5,
+    "temperature": 0.2,
+    "relevance_floor": 0.74,
+    "cache_threshold": 0.95,
+    "cache_ttl_seconds": 3600
+  },
+  "ui_status": 200,
+  "real_rag": true
+}

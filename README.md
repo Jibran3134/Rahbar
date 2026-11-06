@@ -8,6 +8,20 @@ Local minikube and CI-equivalent kind verification are recorded under [platform 
 
 ![Actual cited answer through Kubernetes Ingress](docs/evidence/platform/P04/ui.png)
 
+## Run the app on Windows
+
+After installing the prerequisites below once, run this from the repository folder:
+
+```powershell
+.\run.cmd
+```
+
+The launcher starts Docker Desktop/Ollama if needed, downloads missing models, starts the dedicated Rahbar Kubernetes profile, builds/deploys/indexes on first use, waits for readiness, and opens **http://localhost:8090**. It serves the real corpus with Ollama through the actual Kubernetes Ingress. No hosts-file edit, administrator terminal or separate port-forward command is needed for normal startup. Docker Desktop may request its own first-time OS setup/elevation.
+
+Keep the terminal open; Ctrl+C closes browser access without deleting indexed data or stopping shared services. Later starts reuse the existing deployment/index. First provisioning and model downloads can take several minutes and require internet. After changing application/image/configuration source, use `.\run.cmd -Rebuild` to rebuild and apply; reindex corpus changes with the existing `scripts/dev.ps1 index` command. Use `-Port 8091` if port 8090 is occupied, `-NoBrowser` to suppress opening a tab, or `-CheckOnly -NoBrowser` for a startup smoke that exits and closes its own forwarding processes.
+
+The commands below describe individual setup, testing and diagnostic operations; they are not a daily startup checklist.
+
 ## Architecture
 
 ```mermaid
@@ -95,9 +109,9 @@ kubectl rollout status deployment/ui --context rahbar -n rahbar --timeout=600s
 
 The model-host policy defaults to the observed **192.168.65.254/32**, TCP 11434. Confirm your host address with `.venv/tools/bin/minikube.exe ssh -p rahbar -- getent hosts host.minikube.internal`. If it differs, use `scripts/dev.ps1 apply -HostCidr <actual-IP>/32 -OllamaUrl http://host.minikube.internal:11434`. The API/indexer must share this URL. Do not replace the narrow model rule with unrestricted egress.
 
-## Reach Ingress from Windows
+## Manual Ingress access (optional diagnostics)
 
-In another terminal:
+Normally use `.\run.cmd` for automatic localhost access. For manual Ingress troubleshooting, in another terminal:
 
 ```powershell
 kubectl --context rahbar -n ingress-nginx port-forward service/ingress-nginx-controller 8085:80 --address 127.0.0.1
