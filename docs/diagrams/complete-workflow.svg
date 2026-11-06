@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2200" viewBox="0 0 1800 2200" role="img" aria-labelledby="title desc">
+<title id="title">RAHBAR complete assignment workflow</title><desc id="desc">Windows startup, five-stage indexing, grounded question answering with sessions and cache, protected CI/CD and Kubernetes controls.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#61728a"/></marker></defs>
+<rect width="1800" height="2200" fill="#ffffff"/>
+<text x="45" y="52" font-family="Segoe UI,Arial,sans-serif" font-size="37" font-weight="700" text-anchor="start" fill="#142d4b">RAHBAR | Complete assignment workflow</text>
+<text x="45" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#526982">Jibran: application / RAG    •    Alishba: platform / delivery    •    Windows development + Kubernetes workloads</text>
+<rect x="35" y="112" width="1730" height="161" rx="14" fill="#f5f8fc" stroke="#d8e1ed" stroke-width="1.5"/>
+<text x="55" y="140" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#526982">ONE-COMMAND STARTUP</text>
+<rect x="55" y="157.5" width="350" height="95" rx="14" fill="#fff" stroke="#b2c3d8" stroke-width="1.5"/>
+<text x="230.0" y="198.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">run.cmd</text>
+<text x="230.0" y="224.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">One Windows command</text>
+<rect x="495" y="157.5" width="350" height="95" rx="14" fill="#fff" stroke="#b2c3d8" stroke-width="1.5"/>
+<text x="670.0" y="198.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">Docker Desktop + Ollama</text>
+<text x="670.0" y="224.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">Start/check services and models</text>
+<path d="M405,205 L495,205" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="935" y="157.5" width="350" height="95" rx="14" fill="#fff" stroke="#b2c3d8" stroke-width="1.5"/>
+<text x="1110.0" y="198.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">Rahbar minikube profile</text>
+<text x="1110.0" y="224.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">First use: build → apply → index</text>
+<path d="M845,205 L935,205" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1375" y="157.5" width="365" height="95" rx="14" fill="#fff" stroke="#b2c3d8" stroke-width="1.5"/>
+<text x="1557.5" y="198.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">localhost:8090 → Ingress</text>
+<text x="1557.5" y="224.65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" text-anchor="middle" fill="#20344f">Auto-open browser; no hosts edit</text>
+<path d="M1285,205 L1375,205" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="35" y="300" width="525" height="1515" rx="14" fill="#f0faf5" stroke="#c7e5d6" stroke-width="1.5"/>
+<rect x="590" y="300" width="660" height="1515" rx="14" fill="#f0f5ff" stroke="#c8d8f3" stroke-width="1.5"/>
+<rect x="1280" y="300" width="485" height="1515" rx="14" fill="#f7f3ff" stroke="#dccff0" stroke-width="1.5"/>
+<text x="297" y="341" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#176343">A. INDEX THE CORPUS</text>
+<text x="297" y="373" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#38755d">Indexer Job / weekly CronJob — sole writer</text>
+<text x="920" y="341" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#2457a0">B. ANSWER A QUESTION</text>
+<text x="920" y="373" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#426b9f">API reads the published index; never indexes</text>
+<text x="1522" y="341" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#6a419c">C. TEST AND DELIVER</text>
+<text x="1522" y="373" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#796392">GitHub Actions + SHA-tagged images</text>
+<rect x="55" y="398.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="443.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">7 verified public documents</text>
+<text x="297.5" y="470.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">PDF / HTML; current + historical rules</text>
+<rect x="55" y="568.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="613.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Fetch + SHA-256 verification</text>
+<text x="297.5" y="640.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Init container → corpus PVC</text>
+<path d="M297.5,502 L297.5,568" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="738.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="783.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">1. EXTRACT</text>
+<text x="297.5" y="810.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">PDF / HTML text; OCR scanned pages</text>
+<path d="M297.5,672 L297.5,738" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="908.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="953.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">2. CLEAN</text>
+<text x="297.5" y="980.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Normalize text; retain useful structure</text>
+<path d="M297.5,842 L297.5,908" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="1078.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="1110.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">3. CHUNK + METADATA</text>
+<text x="297.5" y="1137.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">250 tokens / 30 overlap</text>
+<text x="297.5" y="1164.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">source, section, page, doc_version, superseded</text>
+<path d="M297.5,1012 L297.5,1078" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="1248.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="1280.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">4. EMBED DOCUMENT CHUNKS</text>
+<text x="297.5" y="1307.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Ollama nomic-embed-text</text>
+<text x="297.5" y="1334.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">768-dimensional vectors</text>
+<path d="M297.5,1182 L297.5,1248" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="1418.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="1450.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">5. STORE IN CHROMA</text>
+<text x="297.5" y="1477.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Writer lock; create a new generation</text>
+<text x="297.5" y="1504.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Chroma StatefulSet + persistent volume</text>
+<path d="M297.5,1352 L297.5,1418" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="55" y="1588.0" width="485" height="104" rx="14" fill="#fff" stroke="#7fb59b" stroke-width="1.5"/>
+<text x="297.5" y="1620.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">VERIFY + PUBLISH ACTIVE IDENTITY</text>
+<text x="297.5" y="1647.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Collection, generation, model, dimension</text>
+<text x="297.5" y="1674.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Old readers remain available until switch</text>
+<path d="M297.5,1522 L297.5,1588" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="398.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="443.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Browser question → nginx UI</text>
+<text x="822.5" y="470.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Ingress routes /api to API Service</text>
+<rect x="610" y="538.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="583.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">FastAPI: 3–8 replicas</text>
+<text x="822.5" y="610.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Validate request; attach request ID</text>
+<path d="M822.5,502 L822.5,538" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="678.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="723.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Redis shared conversation history</text>
+<text x="822.5" y="750.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Bound context; follow-ups bypass cache</text>
+<path d="M822.5,642 L822.5,678" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="818.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="850.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Resolve active identity + embed query</text>
+<text x="822.5" y="877.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Same nomic model / 768 dimensions</text>
+<text x="822.5" y="904.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Mismatch / dependency failure → HTTP 503</text>
+<path d="M822.5,782 L822.5,818" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="958.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="990.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Standalone semantic cache: Redis</text>
+<text x="822.5" y="1017.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Similarity ≥ .95; namespace by generation</text>
+<text x="822.5" y="1044.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Follow-up / explicit bypass skips lookup</text>
+<path d="M822.5,922 L822.5,958" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="1098.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="1130.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Retrieve Chroma top 5</text>
+<text x="822.5" y="1157.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Current versions by default</text>
+<text x="822.5" y="1184.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Explicit edition → historical filter</text>
+<path d="M822.5,1062 L822.5,1098" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="1238.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="1283.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Evidence integrity + relevance gate</text>
+<text x="822.5" y="1310.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">At least one usable passage ≥ .74</text>
+<path d="M822.5,1202 L822.5,1238" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="1378.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="1410.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Quarantine obvious injected instructions</text>
+<text x="822.5" y="1437.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Question + evidence → Ollama llama3.2:3b</text>
+<text x="822.5" y="1464.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Constrained JSON generation</text>
+<path d="M822.5,1342 L822.5,1378" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="1518.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="1550.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Validate schema + citation grounding</text>
+<text x="822.5" y="1577.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">One validation retry with feedback</text>
+<text x="822.5" y="1604.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Transport failure / exhausted retry → fallback</text>
+<path d="M822.5,1482 L822.5,1518" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="610" y="1658.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
+<text x="822.5" y="1690.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Return verified answer / refusal / fallback</text>
+<text x="822.5" y="1717.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Citations + confidence + request / cache status</text>
+<text x="822.5" y="1744.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Save session; cache only safe eligible answers</text>
+<path d="M822.5,1622 L822.5,1658" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M1035,1010 L1230,1010 L1230,1778 L1020,1778 L1020,1762" fill="none" stroke="#386db8" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="1130" y="989" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#2457a0">HIT → return</text>
+<text x="910" y="1088" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#526982">MISS / BYPASS</text>
+<rect x="1055" y="1237.0" width="160" height="106" rx="14" fill="#fff1eb" stroke="#d99a83" stroke-width="1.5"/>
+<text x="1135.0" y="1271.3" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#20344f">Insufficient</text>
+<text x="1135.0" y="1296.3" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#20344f">evidence</text>
+<text x="1135.0" y="1321.3" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#20344f">Safe refusal</text>
+<path d="M1035,1290 L1055,1290" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M1135,1343 L1135,1690 L1035,1690" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="1060" y="1265" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#a84c2d">NO</text>
+<text x="870" y="1367" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="middle" fill="#526982">YES</text>
+<rect x="1055" y="1525.0" width="160" height="90" rx="14" fill="#fff1eb" stroke="#d99a83" stroke-width="1.5"/>
+<text x="1135.0" y="1563.8" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#20344f">Safe fallback</text>
+<text x="1135.0" y="1588.8" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="#20344f">Not verified</text>
+<path d="M1035,1570 L1055,1570" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M1135,1615 L1135,1735 L1035,1735" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M540,1640 L575,1640 L575,1150 L610,1150" fill="none" stroke="#23845b" stroke-width="2.3" marker-end="url(#arrow)" stroke-dasharray="7,5"/>
+<text x="297" y="1755" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#38755d">New generation → new cache namespace</text>
+<text x="920" y="1795" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#426b9f">No provider reasoning in HTTP or application logs</text>
+<rect x="1300" y="398.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="443.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Commit → review branch → PR</text>
+<text x="1522.5" y="470.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Target protected main</text>
+<rect x="1300" y="538.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="570.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Lint + types + tests</text>
+<text x="1522.5" y="597.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Coverage ≥ 60%</text>
+<text x="1522.5" y="624.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Strict manifests + workflow checks</text>
+<path d="M1522.5,502 L1522.5,538" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="678.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="710.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Build API / indexer / UI images</text>
+<text x="1522.5" y="737.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Trivy: no fixable HIGH / CRITICAL</text>
+<text x="1522.5" y="764.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Preserve the tested image artifacts</text>
+<path d="M1522.5,642 L1522.5,678" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="818.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="850.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Fresh kind + Calico + Ingress</text>
+<text x="1522.5" y="877.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Real fixture indexing / embeddings / retrieval</text>
+<text x="1522.5" y="904.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Deterministic grounded stub generation</text>
+<path d="M1522.5,782 L1522.5,818" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="958.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="990.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Frozen evaluation gate</text>
+<text x="1522.5" y="1017.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Recall@5 drop ≤ .05; citations ≥ .95</text>
+<text x="1522.5" y="1044.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Required abstentions = 1; finite metrics</text>
+<path d="M1522.5,922 L1522.5,958" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="1098.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="1130.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">FAIL → blocked merge → fix → rerun</text>
+<text x="1522.5" y="1157.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">PASS → protected PR merge</text>
+<text x="1522.5" y="1184.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Truth and baseline stay unchanged</text>
+<path d="M1522.5,1062 L1522.5,1098" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="1238.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="1283.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">CD: verify merged main SHA again</text>
+<text x="1522.5" y="1310.5" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Publishing depends on all verification</text>
+<path d="M1522.5,1202 L1522.5,1238" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="1378.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="1410.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Docker Hub: publish exact scanned images</text>
+<text x="1522.5" y="1437.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">jibran3134/rahbar-api, -indexer, -ui</text>
+<text x="1522.5" y="1464.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Use full Git SHA tags; GitHub Secrets</text>
+<path d="M1522.5,1342 L1522.5,1378" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="1300" y="1578.0" width="445" height="104" rx="14" fill="#fff" stroke="#b29acc" stroke-width="1.5"/>
+<text x="1522.5" y="1610.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Pull published SHA images → fresh kind</text>
+<text x="1522.5" y="1637.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Wait for rollout; Ingress UI / API smoke</text>
+<text x="1522.5" y="1664.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Evaluate again → retain actual evidence</text>
+<path d="M1522.5,1482 L1522.5,1578" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="1522" y="1740" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#796392">Hosted release cluster is ephemeral.</text>
+<text x="1522" y="1770" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#796392">Local profile uses real corpus + host Ollama.</text>
+<rect x="35" y="1840" width="1730" height="230" rx="14" fill="#f5f8fc" stroke="#d8e1ed" stroke-width="1.5"/>
+<text x="55" y="1875" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#223d60">KUBERNETES CONTROLS • namespace rahbar</text>
+<text x="65" y="1912" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#223d60">PERSISTENT STATE</text>
+<text x="65" y="1945" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Chroma: StatefulSet + 4 GiB PVC</text>
+<text x="65" y="1969" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Redis: 1 GiB PVC + AOF</text>
+<text x="65" y="1993" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Corpus: 1 GiB PVC</text>
+<text x="65" y="2017" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Data services are ClusterIP-only</text>
+<text x="495" y="1912" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#223d60">MODEL / CONFIGURATION</text>
+<text x="495" y="1945" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Shared embedding name + dimension</text>
+<text x="495" y="1969" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">ConfigMap for runtime settings</text>
+<text x="495" y="1993" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">No real Secret committed in Git</text>
+<text x="495" y="2017" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Generation-aware cache invalidation</text>
+<text x="925" y="1912" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#223d60">SECURITY / NETWORKING</text>
+<text x="925" y="1945" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Calico default deny + narrow allows</text>
+<text x="925" y="1969" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Non-root; read-only root; drop caps</text>
+<text x="925" y="1993" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">No mounted API tokens</text>
+<text x="925" y="2017" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Requests / limits on containers</text>
+<text x="1355" y="1912" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#223d60">HEALTH / OBSERVABILITY</text>
+<text x="1355" y="1945" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">startupProbe, /healthz, /readyz</text>
+<text x="1355" y="1969" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">/metrics + structured request logs</text>
+<text x="1355" y="1993" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">HPA: CPU 70%, API replicas 3–8</text>
+<text x="1355" y="2017" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Rolling updates: zero unavailable</text>
+<text x="45" y="2110" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">CACHE / SESSION RULES: sessions retain up to 6 turns (TTL 1800s); semantic cache TTL 3600s; never cache abstentions, fallbacks or follow-ups.</text>
+<text x="45" y="2143" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#9c4b31">ACTUAL REVIEW SETTING: required approvals = 0 at Jibran's request. The assignment's one independent approval criterion remains unmet.</text>
+<text x="45" y="2176" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#526982">Editable source: docs/diagrams/complete-workflow.mmd  |  Indexer and API share the embedding pin; generation remains outside the API pods.</text>
+</svg>

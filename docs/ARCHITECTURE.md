@@ -1,5 +1,7 @@
 # RAHBAR architecture
 
+The [complete assignment workflow](WORKFLOW.md) includes an exportable diagram and editable Mermaid source covering startup, indexing, grounded answers, Kubernetes controls and CI/CD.
+
 Jibran owns the RAG implementation; Alishba's platform scope is being implemented by Codex at Jibran's request. Linux containers run from native Windows/PowerShell development. The real local profile uses minikube with Calico and external Windows Ollama; CI provisions its own embedding server and uses deterministic grounded stub generation.
 
 ```mermaid

@@ -24,6 +24,8 @@ The commands below describe individual setup, testing and diagnostic operations;
 
 ## Architecture
 
+See the [complete assignment workflow](docs/WORKFLOW.md) for startup, indexing, question answering, Kubernetes controls and CI/CD, with downloadable PNG/SVG and editable Mermaid source.
+
 ```mermaid
 flowchart LR
   User --> Ingress
