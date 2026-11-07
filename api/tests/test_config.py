@@ -59,7 +59,7 @@ def test_environment_overrides_are_typed(monkeypatch: pytest.MonkeyPatch) -> Non
 @pytest.mark.parametrize(("key", "value"), [
     ("RETRIEVER", "other"), ("RETRIEVER", ""),
     ("LLM_PROVIDER", "other"), ("LLM_PROVIDER", ""),
-    ("LLM_PROVIDER", "hosted"), ("LLM_PROVIDER", "ollama-incluster"),
+    ("LLM_PROVIDER", "ollama-incluster"),
     ("EMBED_MODEL", ""), ("EMBED_MODEL", "   "), ("LLM_MODEL", ""),
     ("CHROMA_HOST", ""), ("CHROMA_COLLECTION", ""),
     ("CHROMA_PORT", "0"), ("CHROMA_PORT", "65536"), ("CHROMA_PORT", "abc"),

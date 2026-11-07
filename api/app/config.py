@@ -78,7 +78,7 @@ def _redis_url(value: str) -> None:
 class Settings:
     # Which implementations to load. "stub" needs no cluster, no model, no network.
     retriever: str = "stub"          # RETRIEVER: stub | chroma
-    llm_provider: str = "stub"       # LLM_PROVIDER: stub | ollama-host
+    llm_provider: str = "stub"       # LLM_PROVIDER: stub | ollama-host | hosted
 
     # The embedding pin (section 4.4). The indexer reads the same ConfigMap key.
     embed_model: str = "nomic-embed-text"
@@ -109,8 +109,12 @@ class Settings:
     def __post_init__(self) -> None:
         if self.retriever not in {"stub", "chroma"}:
             raise ValueError("RETRIEVER must be stub or chroma")
-        if self.llm_provider not in {"stub", "ollama-host"}:
-            raise ValueError("LLM_PROVIDER must be stub or ollama-host; other modes are unsupported")
+        if self.llm_provider not in {"stub", "ollama-host", "hosted"}:
+            raise ValueError("LLM_PROVIDER must be stub, ollama-host or hosted")
+        if self.llm_provider == "hosted" and not self.hosted_base_url:
+            raise ValueError("HOSTED_BASE_URL must be set when LLM_PROVIDER=hosted")
+        if self.llm_provider == "hosted" and not self.llm_api_key:
+            raise ValueError("LLM_API_KEY must be set when LLM_PROVIDER=hosted")
         for name, value in (("EMBED_MODEL", self.embed_model), ("LLM_MODEL", self.llm_model),
                             ("CHROMA_HOST", self.chroma_host),
                             ("CHROMA_COLLECTION", self.collection)):
