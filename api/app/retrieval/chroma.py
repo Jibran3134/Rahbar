@@ -39,7 +39,16 @@ def heading_only(text: str, section: str) -> bool:
     """A repeated section label has no policy facts; retain short numeric facts."""
     def normalize(value: str) -> str:
         return re.sub(r"[\W_]+", "", value.casefold())
-    return normalize(text) == normalize(section)
+    norm_text = normalize(text)
+    norm_sec = normalize(section)
+    if norm_text == norm_sec:
+        return True
+    stripped = text.strip()
+    if "\n" not in stripped and len(stripped.split()) <= 12:
+        if re.match(rf"^(?:#+\s*)?{re.escape(section)}\.\s+[A-Za-z]", stripped):
+            if not re.search(r"\b(?:must|shall|is|are|will|may|can|cannot|should)\b", stripped, re.I):
+                return True
+    return False
 
 
 def page_context(collection: Any, title: str, metadata: dict[str, Any]) -> str | None:
@@ -68,7 +77,15 @@ def page_context(collection: Any, title: str, metadata: dict[str, Any]) -> str |
             blocks.append((meta['section'],text))
     used=len(title)
     selected=[]
-    for section,text in sorted(set(blocks)):
+    sec = metadata.get('section', '')
+    def priority_key(item: tuple[str, str]) -> tuple[int, str]:
+        s = item[0]
+        if s == sec or s.startswith(sec + '.'):
+            return (0, s)
+        return (1, s)
+
+    ordered = sorted(set(blocks), key=priority_key)
+    for section,text in ordered:
         block=f'Section {section}: {text}'
         if used+len(block)+1<=1800:
             selected.append(block)
