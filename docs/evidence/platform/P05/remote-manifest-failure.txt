@@ -1,0 +1,402 @@
+verify / manifests	UNKNOWN STEP	﻿2026-11-05T14:33:59.1128900Z Current runner version: '2.338.2'
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1151908Z ##[group]Runner Image Provisioner
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1152966Z Hosted Compute Agent
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1153477Z Version: 20261021.618
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1154040Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1154698Z Build Date: 2026-10-21T00:45:21Z
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1155290Z Worker ID: {18b81e38-9e0b-4f7b-a9e3-d31ef59f68a8}
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1155920Z Region: westus2
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1156413Z Cloud: Azure
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1156869Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1158168Z ##[group]Operating System
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1158710Z Ubuntu
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1159257Z 24.04.5
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1159710Z LTS
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1160141Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1160712Z ##[group]Runner Image
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1161230Z Image: ubuntu-24.04
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1161738Z Version: 20261025.353.1
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1163052Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1164405Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1165224Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1166209Z ##[group]GITHUB_TOKEN Permissions
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1168037Z Contents: read
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1168908Z Metadata: read
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1169411Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1171161Z Secret source: Actions
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1172041Z Cache mode: write
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1172801Z Prepare workflow directory
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1431263Z Prepare all required actions
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.1474419Z Getting action download info
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.4663831Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.5560835Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.8266869Z Uses: Jibran3134/Rahbar/.github/workflows/verify.yml@refs/heads/dev (daa350b4b9fbcaff351a716f6b08cc8dc09f923f)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.8270707Z Complete job name: verify / manifests
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9220423Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9221228Z with:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9221595Z   persist-credentials: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9222022Z   repository: Jibran3134/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9225360Z   token: ***
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9225729Z   ssh-strict: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9226089Z   ssh-user: git
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9226435Z   clean: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9226796Z   sparse-checkout-cone-mode: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9227211Z   fetch-depth: 1
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9227562Z   fetch-tags: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9227920Z   show-progress: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9228278Z   lfs: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9228610Z   submodules: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9228967Z   set-safe-directory: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9229371Z   allow-unsafe-pr-checkout: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:33:59.9229969Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1556926Z Syncing repository: Jibran3134/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1559234Z ##[group]Getting Git version info
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1560240Z Working directory is '/home/runner/work/Rahbar/Rahbar'
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1561654Z [command]/usr/bin/git version
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1616983Z git version 2.56.0
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1632880Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1643969Z Temporarily overriding HOME='/home/runner/work/_temp/d3e69360-eaf2-4604-a2df-b94dac14f90e' before making global git config changes
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1646267Z Adding repository directory to the temporary git global config as a safe directory
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1648075Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1695518Z Deleting the contents of '/home/runner/work/Rahbar/Rahbar'
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1714236Z ##[group]Initializing the repository
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1716171Z [command]/usr/bin/git init /home/runner/work/Rahbar/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1787858Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1789522Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1791557Z hint: to use in all of your new repositories, which will suppress this warning,
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1792377Z hint: call:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1793305Z hint:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1794079Z hint: 	git config --global init.defaultBranch <name>
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1794879Z hint:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1795413Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1796405Z hint: 'development'. The just-created branch can be renamed via this command:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1797473Z hint:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1798270Z hint: 	git branch -m <name>
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1803659Z hint:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1813909Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1815638Z Initialized empty Git repository in /home/runner/work/Rahbar/Rahbar/.git/
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1825908Z [command]/usr/bin/git remote add origin https://github.com/Jibran3134/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1858705Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1859943Z ##[group]Disabling automatic garbage collection
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1863496Z [command]/usr/bin/git config --local gc.auto 0
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1896582Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1897960Z ##[group]Setting up auth
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1903469Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.1938561Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2263562Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2301604Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2521998Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2560952Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2760334Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2802522Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2803532Z ##[group]Fetching the repository
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.2812130Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +daa350b4b9fbcaff351a716f6b08cc8dc09f923f:refs/remotes/origin/dev
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6506471Z From https://github.com/Jibran3134/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6508080Z  * [new ref]         daa350b4b9fbcaff351a716f6b08cc8dc09f923f -> origin/dev
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6512116Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6513779Z ##[group]Determining the checkout info
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6515322Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6518859Z [command]/usr/bin/git sparse-checkout disable
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6570264Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6609424Z ##[group]Checking out the ref
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.6612712Z [command]/usr/bin/git checkout --progress --force -B dev refs/remotes/origin/dev
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7018978Z Switched to a new branch 'dev'
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7023821Z branch 'dev' set up to track 'origin/dev'.
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7031680Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7074332Z [command]/usr/bin/git log -1 --format=%H
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7101881Z daa350b4b9fbcaff351a716f6b08cc8dc09f923f
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7109886Z ##[group]Removing auth
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7112525Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7145944Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7338761Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7366929Z http.https://github.com/.extraheader
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7372344Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7415924Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7624329Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7658980Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.7851374Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8161937Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8163414Z with:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8164137Z   python-version: 3.12
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8164965Z   check-latest: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8172965Z   token: ***
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8173735Z   update-environment: true
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8174632Z   allow-prereleases: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8175490Z   freethreaded: false
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.8176293Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9323261Z ##[group]Installed versions
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9407782Z (node:2146) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9411055Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9413522Z Successfully set up CPython (3.12.15)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9415770Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9631123Z ##[group]Run python -m pip install -r api/requirements-dev.txt -r indexer/requirements-dev.txt
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9633647Z ^[[36;1mpython -m pip install -r api/requirements-dev.txt -r indexer/requirements-dev.txt^[[0m
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9671023Z shell: /usr/bin/bash -e {0}
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9671979Z env:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9673162Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9674678Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9676880Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9678861Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9680868Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9682984Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:00.9684652Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:01.8793050Z Collecting fastapi==0.162.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:01.9296352Z   Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.0778561Z Collecting starlette==1.10.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 3))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.0851301Z   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.2270495Z Collecting uvicorn==0.34.2 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.2341306Z   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.3429030Z Collecting pydantic==2.11.4 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.3500350Z   Downloading pydantic-2.11.4-py3-none-any.whl.metadata (66 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.3907315Z Collecting httpx==0.28.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.3976438Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4123127Z Collecting prometheus-client==0.21.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 7))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4191099Z   Downloading prometheus_client-0.21.1-py3-none-any.whl.metadata (1.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4374094Z Collecting chromadb-client==1.0.12 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4449824Z   Downloading chromadb_client-1.0.12-py3-none-any.whl.metadata (2.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4861226Z Collecting posthog==5.4.0 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.4928805Z   Downloading posthog-5.4.0-py3-none-any.whl.metadata (5.7 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5269894Z Collecting redis==5.2.1 (from -r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 13))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5341878Z   Downloading redis-5.2.1-py3-none-any.whl.metadata (9.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5581866Z Collecting pytest==8.3.5 (from -r api/requirements-dev.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5655425Z   Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5801319Z Collecting pytest-cov==6.1.1 (from -r api/requirements-dev.txt (line 3))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.5871665Z   Downloading pytest_cov-6.1.1-py3-none-any.whl.metadata (28 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.8691377Z Collecting ruff==0.11.8 (from -r api/requirements-dev.txt (line 4))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:02.8786902Z   Downloading ruff-0.11.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.0548116Z Collecting mypy==1.15.0 (from -r api/requirements-dev.txt (line 5))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.0620670Z   Downloading mypy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.1545630Z Collecting pyyaml==6.0.2 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 6))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.1613268Z   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.1758652Z Collecting pdfplumber==0.11.10 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.1832108Z   Downloading pdfplumber-0.11.10-py3-none-any.whl.metadata (43 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2032661Z Collecting pytesseract==0.3.13 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 9))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2106668Z   Downloading pytesseract-0.3.13-py3-none-any.whl.metadata (11 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2261777Z Collecting pdf2image==1.17.0 (from -r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2327473Z   Downloading pdf2image-1.17.0-py3-none-any.whl.metadata (6.2 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2518668Z Collecting pypdf==6.21.4 (from -r indexer/requirements-dev.txt (line 3))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2586834Z   Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2834895Z Collecting typing-extensions>=4.8.0 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.2903764Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3026791Z Collecting typing-inspection>=0.4.2 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3094323Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3221726Z Collecting annotated-doc>=0.0.2 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3292912Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3489691Z Collecting opentelemetry-api>=1.44.0 (from fastapi==0.162.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3559971Z   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3738977Z Collecting anyio<5,>=4.0.0 (from starlette==1.10.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 3))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.3813322Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4003303Z Collecting click>=7.0 (from uvicorn==0.34.2->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4071915Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4652119Z Collecting h11>=0.8 (from uvicorn==0.34.2->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 4))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4728505Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4915498Z Collecting annotated-types>=0.6.0 (from pydantic==2.11.4->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:03.4986139Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.0530798Z Collecting pydantic-core==2.33.2 (from pydantic==2.11.4->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 5))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.0603488Z   Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.0804733Z Collecting certifi (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.0872776Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.1032068Z Collecting httpcore==1.* (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.1101498Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.1264497Z Collecting idna (from httpx==0.28.1->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 6))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.1333369Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.2833625Z Collecting numpy>=1.22.5 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.2903069Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3188318Z Collecting opentelemetry-exporter-otlp-proto-grpc>=1.2.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3256387Z   Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl.metadata (2.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3441562Z Collecting opentelemetry-sdk>=1.2.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3509994Z   Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3658025Z Collecting overrides>=7.3.1 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3727203Z   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3913697Z Collecting tenacity>=8.2.3 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.3988213Z   Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.5738100Z Collecting orjson>=3.9.12 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.5810562Z   Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6030848Z Collecting jsonschema>=4.19.0 (from chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6102779Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6589471Z Collecting requests<3.0,>=2.7 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6660444Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6801616Z Collecting six>=1.5 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.6869933Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7029716Z Collecting python-dateutil>=2.2 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7098321Z   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7233029Z Collecting backoff>=1.10.0 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7300391Z   Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7429760Z Collecting distro>=1.5.0 (from posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7498656Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7632065Z Collecting iniconfig (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7704146Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7864492Z Collecting packaging (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.7932937Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.8085396Z Collecting pluggy<2,>=1.5 (from pytest==8.3.5->-r api/requirements-dev.txt (line 2))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:04.8152208Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1224203Z Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov==6.1.1->-r api/requirements-dev.txt (line 3))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1300139Z   Downloading coverage-7.17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1532685Z Collecting mypy_extensions>=1.0.0 (from mypy==1.15.0->-r api/requirements-dev.txt (line 5))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1603600Z   Downloading mypy_extensions-1.2.0-py3-none-any.whl.metadata (1.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1779290Z Collecting pdfminer.six==20260107 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.1846876Z   Downloading pdfminer_six-20260107-py3-none-any.whl.metadata (4.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.3062256Z Collecting Pillow>=12.2.0 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.3134009Z   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.4104810Z Collecting pypdfium2>=5.9.0 (from pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.4174303Z   Downloading pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.5143845Z Collecting charset-normalizer>=2.0.0 (from pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:05.5214578Z   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.0019800Z Collecting cryptography>=36.0.0 (from pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.0089649Z   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.2837021Z Collecting urllib3<3,>=1.26 (from requests<3.0,>=2.7->posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.2906402Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.3727632Z Collecting cffi>=2.0.0 (from cryptography>=36.0.0->pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.3801306Z   Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.3939284Z Collecting pycparser (from cffi>=2.0.0->cryptography>=36.0.0->pdfminer.six==20260107->pdfplumber==0.11.10->-r /home/runner/work/Rahbar/Rahbar/indexer/requirements.txt (line 8))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.4009605Z   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5167541Z Collecting attrs>=22.2.0 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5234949Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5372974Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5440636Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5624250Z Collecting referencing>=0.28.4 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.5690783Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.8064248Z Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.8144424Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.8362001Z Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:06.8435802Z   Downloading googleapis_common_protos-1.76.0-py3-none-any.whl.metadata (8.5 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2197641Z Collecting grpcio<2.0.0,>=1.63.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2275773Z   Downloading grpcio-1.85.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2414079Z Collecting opentelemetry-exporter-otlp-common==0.66b2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2481037Z   Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl.metadata (1.9 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2619690Z Collecting opentelemetry-exporter-otlp-proto-common==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2688980Z   Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl.metadata (1.8 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2846727Z Collecting opentelemetry-proto==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.2915315Z   Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.4492212Z Collecting protobuf<8.0,>=5.0 (from opentelemetry-proto==1.45.2->opentelemetry-exporter-otlp-proto-grpc>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.4565038Z   Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.4780006Z Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk>=1.2.0->chromadb-client==1.0.12->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 10))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.4848022Z   Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5038360Z Collecting tzdata (from python-dateutil>=2.2->posthog==5.4.0->-r /home/runner/work/Rahbar/Rahbar/api/requirements.txt (line 12))
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5106488Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5262889Z Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5399140Z Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5482869Z Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5566460Z Downloading pydantic-2.11.4-py3-none-any.whl (443 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5713045Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.5796229Z Downloading prometheus_client-0.21.1-py3-none-any.whl (54 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6040196Z Downloading chromadb_client-1.0.12-py3-none-any.whl (631 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6117640Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 631.8/631.8 kB 132.5 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6185594Z Downloading posthog-5.4.0-py3-none-any.whl (105 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6273953Z Downloading redis-5.2.1-py3-none-any.whl (261 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6366807Z Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6458342Z Downloading pytest_cov-6.1.1-py3-none-any.whl (23 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.6608901Z Downloading ruff-0.11.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.5 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.7977449Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 83.5 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.8052172Z Downloading mypy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9530241Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 83.7 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9608833Z Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9676427Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 105.6 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9750097Z Downloading pdfplumber-0.11.10-py3-none-any.whl (60 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9837529Z Downloading pytesseract-0.3.13-py3-none-any.whl (14 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:07.9929437Z Downloading pdf2image-1.17.0-py3-none-any.whl (11 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0014556Z Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0114528Z Downloading pdfminer_six-20260107-py3-none-any.whl (6.6 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0583951Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 141.0 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0654205Z Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0796998Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 138.8 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0867602Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.0951536Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1035877Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1120181Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1210038Z Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1295421Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1379539Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1464906Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1599635Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1682888Z Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1766247Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1854307Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.1938571Z Downloading coverage-7.17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (263 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2030575Z Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2380473Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 136.0 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2452168Z Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2540015Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2621956Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2706813Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2791491Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2874008Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.2956297Z Downloading mypy_extensions-1.2.0-py3-none-any.whl (5.1 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.3041984Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4244415Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 139.5 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4313253Z Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4398949Z Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl (19 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4481870Z Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4566409Z Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl (15 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4649354Z Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4732807Z Downloading googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.4873940Z Downloading grpcio-1.85.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.4 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5484858Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.4/7.4 MB 120.2 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5557635Z Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5646376Z Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5739129Z Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5831841Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.5922792Z Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6008522Z Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6091923Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6179737Z Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6662871Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 148.9 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6736733Z Downloading pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.6998311Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 146.7 MB/s  0:00:00
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7076294Z Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7163263Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7248791Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7353995Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7436961Z Downloading tenacity-9.2.1-py3-none-any.whl (32 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7523242Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7608115Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7694834Z Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:08.7778788Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:09.0630698Z Installing collected packages: urllib3, tzdata, typing-extensions, tenacity, six, ruff, rpds-py, redis, pyyaml, pypdfium2, pypdf, pycparser, protobuf, prometheus-client, pluggy, Pillow, packaging, overrides, orjson, numpy, mypy_extensions, iniconfig, idna, h11, distro, coverage, click, charset-normalizer, certifi, backoff, attrs, annotated-types, annotated-doc, uvicorn, typing-inspection, requests, referencing, python-dateutil, pytest, pytesseract, pydantic-core, pdf2image, opentelemetry-proto, opentelemetry-api, mypy, httpcore, grpcio, googleapis-common-protos, cffi, anyio, starlette, pytest-cov, pydantic, posthog, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, jsonschema-specifications, httpx, cryptography, pdfminer.six, opentelemetry-sdk, jsonschema, fastapi, pdfplumber, opentelemetry-exporter-otlp-common, opentelemetry-exporter-otlp-proto-grpc, chromadb-client
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.5693208Z 
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.5736108Z Successfully installed Pillow-13.0.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.16.0 attrs-26.1.0 backoff-2.2.1 certifi-2026.10.23 cffi-2.1.1 charset-normalizer-3.5.2 chromadb-client-1.0.12 click-8.5.0 coverage-7.17.2 cryptography-50.0.2 distro-1.9.0 fastapi-0.162.0 googleapis-common-protos-1.76.0 grpcio-1.85.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 mypy-1.15.0 mypy_extensions-1.2.0 numpy-2.5.4 opentelemetry-api-1.45.2 opentelemetry-exporter-otlp-common-0.66b2 opentelemetry-exporter-otlp-proto-common-1.45.2 opentelemetry-exporter-otlp-proto-grpc-1.45.2 opentelemetry-proto-1.45.2 opentelemetry-sdk-1.45.2 opentelemetry-semantic-conventions-0.66b2 orjson-3.13.0 overrides-7.7.0 packaging-26.3 pdf2image-1.17.0 pdfminer.six-20260107 pdfplumber-0.11.10 pluggy-1.7.0 posthog-5.4.0 prometheus-client-0.21.1 protobuf-7.36.2 pycparser-3.12 pydantic-2.11.4 pydantic-core-2.33.2 pypdf-6.21.4 pypdfium2-5.14.0 pytesseract-0.3.13 pytest-8.3.5 pytest-cov-6.1.1 python-dateutil-4.0.0 pyyaml-6.0.2 redis-5.2.1 referencing-0.37.0 requests-2.34.2 rpds-py-2026.9.1 ruff-0.11.8 six-1.17.0 starlette-1.10.0 tenacity-9.2.1 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 urllib3-2.8.0 uvicorn-0.34.2
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.5744047Z 
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.5744282Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.5744634Z [notice] To update, run: pip install --upgrade pip
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7953088Z ##[group]Run python scripts/bootstrap_tools.py kubeconform
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7953463Z ^[[36;1mpython scripts/bootstrap_tools.py kubeconform^[[0m
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7953741Z ^[[36;1mpython scripts/check_platform.py^[[0m
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7972259Z shell: /usr/bin/bash -e {0}
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7972468Z env:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7972838Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7973182Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7973528Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7973831Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7974139Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7974437Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.7974698Z ##[endgroup]
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:16.9364468Z Transient tool download failure; retry 1 of 3
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:18.9607642Z Transient tool download failure; retry 2 of 3
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:22.9882271Z Transient tool download failure; retry 3 of 3
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0275448Z Traceback (most recent call last):
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0280945Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 73, in <module>
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0281448Z     install(args.names, args.manifests)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0281869Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 46, in install
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0293198Z     data = verified(spec)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0293486Z            ^^^^^^^^^^^^^^
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0293895Z   File "/home/runner/work/Rahbar/Rahbar/scripts/bootstrap_tools.py", line 25, in verified
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0294266Z     response.raise_for_status()
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0294726Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0295277Z     raise HTTPStatusError(message, request=request, response=self)
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0295890Z httpx.HTTPStatusError: Server error '504 Gateway Time-out' for url 'https://github.com/yannh/kubeconform/releases/download/v0.8.0/kubeconform-linux-amd64.tar.gz'
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0296546Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0463351Z ##[error]Process completed with exit code 1.
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.0582769Z Post job cleanup.
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1304491Z [command]/usr/bin/git version
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1340645Z git version 2.56.0
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1369902Z Temporarily overriding HOME='/home/runner/work/_temp/2da4add4-4cef-4b56-9277-1cf9872b30fb' before making global git config changes
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1371002Z Adding repository directory to the temporary git global config as a safe directory
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1373836Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Rahbar/Rahbar
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1406904Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1438843Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1661929Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1695617Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1914845Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.1948703Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.2301444Z Cleaning up orphan processes
+verify / manifests	UNKNOWN STEP	2026-11-05T14:34:31.2628488Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

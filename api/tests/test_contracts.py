@@ -106,7 +106,8 @@ def test_provider_failures_are_typed_and_attempt_budget_is_fixed() -> None:
 
     assert hasattr(base, "ProviderFailureKind"), "S02 requires explicit failure categories"
     assert base.MAX_GENERATION_ATTEMPTS == 2
-    expected = {"timeout", "transport", "invalid_json", "invalid_schema", "invalid_citation"}
+    expected = {"timeout", "transport", "invalid_json", "invalid_schema", "invalid_citation",
+                "inconsistent_answer"}
     assert {kind.value for kind in base.ProviderFailureKind} == expected
     for kind in base.ProviderFailureKind:
         failure = base.ProviderError(kind)

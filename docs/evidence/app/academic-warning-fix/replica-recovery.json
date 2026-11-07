@@ -1,0 +1,25 @@
+[
+  {
+    "pod": "api-bd967bdf5-crtv2",
+    "last_state": {},
+    "restarts": 0
+  },
+  {
+    "pod": "api-bd967bdf5-nfq5c",
+    "last_state": {},
+    "restarts": 0
+  },
+  {
+    "pod": "api-bd967bdf5-s8pp9",
+    "last_state": {
+      "terminated": {
+        "containerID": "containerd://5db727322b8ec645d3c65ce65fbec26ed7c4ed43d236fad1dd5f93dbf49b4de3",
+        "exitCode": 137,
+        "finishedAt": "2026-11-07T09:55:37Z",
+        "reason": "OOMKilled",
+        "startedAt": "2026-11-07T08:54:58Z"
+      }
+    },
+    "restarts": 1
+  }
+]

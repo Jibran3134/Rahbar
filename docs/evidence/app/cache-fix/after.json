@@ -1,0 +1,192 @@
+[
+  {
+    "name": "standalone_first",
+    "cache": "MISS",
+    "reason": "miss_stored",
+    "seconds": 14.469,
+    "response": {
+      "request_id": "cb0f815033354383aabd1a5a30044879",
+      "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
+      "citations": [
+        {
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.84086251
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.73601907
+        },
+        {
+          "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+          "source": "fee-structure-page.html",
+          "section": "Admission Fee",
+          "page": null,
+          "score": 0.7002779800000001
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6914682999999999
+        },
+        {
+          "chunk_id": "1207dc53af4885f9a110e72b92b35105c3cfa471406e86dcae1f33d83720fa0a",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 22,
+          "score": 0.6816573699999999
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "3904f8737e6b4f28bc6f14209dad8dde"
+    }
+  },
+  {
+    "name": "standalone_repeat_without_reset",
+    "cache": "HIT",
+    "reason": "matched",
+    "seconds": 0.328,
+    "response": {
+      "request_id": "9531ef6bcae128fda4c5685aaa419bbf",
+      "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
+      "citations": [
+        {
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.84086251
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.73601907
+        },
+        {
+          "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+          "source": "fee-structure-page.html",
+          "section": "Admission Fee",
+          "page": null,
+          "score": 0.7002779800000001
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6914682999999999
+        },
+        {
+          "chunk_id": "1207dc53af4885f9a110e72b92b35105c3cfa471406e86dcae1f33d83720fa0a",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 22,
+          "score": 0.6816573699999999
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "c401f73e42c4488a970bb27c1dcab501"
+    }
+  },
+  {
+    "name": "conversation_repeat",
+    "cache": "BYPASS",
+    "reason": "conversation_context",
+    "seconds": 16.64,
+    "response": {
+      "request_id": "e43a7a5ad41752322b25483995135076",
+      "answer": "A refundable security deposit of Rs 20,000 is also payable at the time of admission.[fee-structure-page.html / Security Deposit]",
+      "citations": [
+        {
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.84086251
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.73601907
+        },
+        {
+          "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+          "source": "fee-structure-page.html",
+          "section": "Admission Fee",
+          "page": null,
+          "score": 0.7002779800000001
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6914682999999999
+        },
+        {
+          "chunk_id": "1207dc53af4885f9a110e72b92b35105c3cfa471406e86dcae1f33d83720fa0a",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 22,
+          "score": 0.6816573699999999
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "3904f8737e6b4f28bc6f14209dad8dde"
+    }
+  },
+  {
+    "name": "unsafe_near_miss_hostel_deposit",
+    "cache": "MISS",
+    "reason": "not_grounded",
+    "seconds": 0.438,
+    "response": {
+      "request_id": "fc7e6132718c2cad960e66abd46bbd4d",
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [],
+      "provider": "ollama",
+      "session_id": "92103a7e513f44e7a2683b1c031e352e"
+    }
+  }
+]

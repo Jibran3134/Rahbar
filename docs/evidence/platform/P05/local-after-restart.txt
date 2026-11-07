@@ -1,0 +1,17 @@
+NAME                                      READY   STATUS      RESTARTS       AGE     IP            NODE     NOMINATED NODE   READINESS GATES
+pod/acceptance-reindex-1793883288-55jv6   0/1     Completed   0              6h15m   <none>        rahbar   <none>           <none>
+pod/api-6675ffbc6b-ljfhs                  1/1     Running     2 (109s ago)   5h51m   10.244.3.56   rahbar   <none>           <none>
+pod/api-6675ffbc6b-nkqlz                  1/1     Running     2 (109s ago)   5h51m   10.244.3.57   rahbar   <none>           <none>
+pod/api-6675ffbc6b-vvsdx                  1/1     Running     2 (109s ago)   5h51m   10.244.3.63   rahbar   <none>           <none>
+pod/chroma-0                              1/1     Running     2 (109s ago)   5h56m   10.244.3.58   rahbar   <none>           <none>
+pod/indexer-mxhzr                         0/1     Completed   0              7h32m   <none>        rahbar   <none>           <none>
+pod/redis-7f546bdffd-x2m64                1/1     Running     1 (109s ago)   6h18m   10.244.3.62   rahbar   <none>           <none>
+pod/ui-58c965b65f-wcrs8                   1/1     Running     1 (109s ago)   5h54m   10.244.3.54   rahbar   <none>           <none>
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/corpus-data     Bound    pvc-70f902d7-a95f-4c9d-b7e5-b1a690a275a7   1Gi        RWO            standard       <unset>                 7h32m   Filesystem
+persistentvolumeclaim/data-chroma-0   Bound    pvc-59e82ec7-7f34-4881-a47f-ed7eb82bd08e   4Gi        RWO            standard       <unset>                 7h32m   Filesystem
+persistentvolumeclaim/redis-data      Bound    pvc-31408b5d-3303-4283-8938-bde30c19ad6f   1Gi        RWO            standard       <unset>                 7h32m   Filesystem
+
+NAME                                      REFERENCE        TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: <unknown>/70%   3         8         3          7h32m

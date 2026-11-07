@@ -1,14 +1,30 @@
-﻿# RAHBAR
+# RAHBAR
 
 [![CI](https://github.com/Jibran3134/Rahbar/actions/workflows/ci.yml/badge.svg)](https://github.com/Jibran3134/Rahbar/actions/workflows/ci.yml)
 
 RAHBAR answers FAST-NUCES policy questions from seven verified public documents instead of relying on a model's general knowledge. It distinguishes current and historical rules, returns request-verified citations, and declines when the selected evidence is insufficient. A separate indexing Job publishes versioned Chroma collections; three API replicas share Redis conversations/cache and serve a small chat UI through Kubernetes Ingress. Team: **Jibran** (application/RAG) and **Alishba** (platform/delivery). Codex implemented the current work at Jibran's request; human review remains pending.
 
-Local minikube and CI-equivalent kind verification are recorded under [platform evidence](docs/evidence/platform). **Remote protection, blocked-regression PR evidence, Docker Hub publication and a successful GitHub CD run are still pending.** The badge is a real workflow link, not a claim that an unpushed workflow has run.
+Local minikube and CI-equivalent kind verification are recorded under [platform evidence](docs/evidence/platform). **[PR #1](https://github.com/Jibran3134/Rahbar/pull/1) demonstrated a blocked evaluation regression, passed after correction and merged through required CI. [CD passed](https://github.com/Jibran3134/Rahbar/actions/runs/42090196319), publishing the three SHA-tagged Docker Hub images and validating their rollout/Ingress/evaluation in an ephemeral cluster.** [Submission links and remaining rubric exceptions](docs/SUBMISSION.md) are recorded separately. Live remote runs are linked under P05 evidence; earlier P01-P04 reports describe their historical local-only checkpoints.
 
 ![Actual cited answer through Kubernetes Ingress](docs/evidence/platform/P04/ui.png)
 
+## Run the app on Windows
+
+After installing the prerequisites below once, run this from the repository folder:
+
+```powershell
+.\run.cmd
+```
+
+The launcher starts Docker Desktop/Ollama if needed, downloads missing models, starts the dedicated Rahbar Kubernetes profile, builds/deploys/indexes on first use, waits for readiness, and opens **http://localhost:8090**. It serves the real corpus with Ollama through the actual Kubernetes Ingress. No hosts-file edit, administrator terminal or separate port-forward command is needed for normal startup. Docker Desktop may request its own first-time OS setup/elevation.
+
+Keep the terminal open; Ctrl+C closes browser access without deleting indexed data or stopping shared services. Later starts reuse the existing deployment/index. First provisioning and model downloads can take several minutes and require internet. After changing application/image/configuration source, use `.\run.cmd -Rebuild` to rebuild and apply; reindex corpus changes with the existing `scripts/dev.ps1 index` command. Use `-Port 8091` if port 8090 is occupied, `-NoBrowser` to suppress opening a tab, or `-CheckOnly -NoBrowser` for a startup smoke that exits and closes its own forwarding processes.
+
+The commands below describe individual setup, testing and diagnostic operations; they are not a daily startup checklist.
+
 ## Architecture
+
+See the [complete assignment workflow](docs/WORKFLOW.md) for startup, indexing, question answering, Kubernetes controls and CI/CD, with downloadable PNG/SVG and editable Mermaid source.
 
 ```mermaid
 flowchart LR
@@ -45,7 +61,7 @@ Start Ollama and provision the two selected models:
 
 ```powershell
 ollama pull nomic-embed-text
-ollama pull llama3.2:3b
+ollama pull qwen3:4b-instruct-2507-q4_K_M
 Invoke-RestMethod http://127.0.0.1:11434/api/tags
 ```
 
@@ -95,9 +111,9 @@ kubectl rollout status deployment/ui --context rahbar -n rahbar --timeout=600s
 
 The model-host policy defaults to the observed **192.168.65.254/32**, TCP 11434. Confirm your host address with `.venv/tools/bin/minikube.exe ssh -p rahbar -- getent hosts host.minikube.internal`. If it differs, use `scripts/dev.ps1 apply -HostCidr <actual-IP>/32 -OllamaUrl http://host.minikube.internal:11434`. The API/indexer must share this URL. Do not replace the narrow model rule with unrestricted egress.
 
-## Reach Ingress from Windows
+## Manual Ingress access (optional diagnostics)
 
-In another terminal:
+Normally use `.\run.cmd` for automatic localhost access. For manual Ingress troubleshooting, in another terminal:
 
 ```powershell
 kubectl --context rahbar -n ingress-nginx port-forward service/ingress-nginx-controller 8085:80 --address 127.0.0.1
@@ -115,7 +131,9 @@ Invoke-RestMethod http://127.0.0.1:8085/api/ask -Method Post -Headers $headers -
 
 For the browser add `127.0.0.1 rahbar.local` to the Windows hosts file using an elevated editor, then open http://rahbar.local:8085. No system hosts file is changed by the scripts. Alternatively use minikube tunnel in its own terminal and follow its elevation prompt, with the same hostname on port 80. Docker-driver node IPs are not directly reachable from a Windows browser. Stop a port forward/tunnel with Ctrl+C.
 
-Use **New conversation** to reset browser-held session state. Server-issued IDs are held in memory for this page, shared turns reside in Redis, and follow-ups bypass semantic cache. The UI renders model/source strings as text.
+The UI defaults to **Independent question**: each submission omits conversation history, so an eligible repeated question can produce MISS then HIT without clearing the thread. Choose **Conversation / follow-up** to use the previous question/session; contextual turns deliberately return BYPASS. **New conversation** resets browser-held session state. Shared turns reside in Redis. The UI renders model/source strings as text.
+
+Cache status also includes a plain-language explanation (`X-Cache-Reason` in HTTP). `miss_stored` means the verified answer was stored and can be reused; `matched` means HIT. Refusals, generation fallbacks, low-confidence output and follow-ups are not cached. A first request that times out or fails validation can therefore MISS again until a safe answer is generated. Similarity must still clear .95 with matching scope/version/numeric guards and the same active generation/configuration; not every paraphrase should hit. The launcher preloads the generation model before opening the browser to reduce cold-start delays.
 
 ## Reindex without an API redeploy
 
@@ -129,7 +147,7 @@ The CronJob runs Sunday 02:00 UTC with concurrencyPolicy Forbid. The application
 
 ## Configuration and API
 
-Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache threshold **.95**, temperature **.2**, llama3.2:3b, nomic-embed-text. Settings are in k8s/base/configmap.yaml and read at process start. Restart affected API pods after changing configuration. Unsupported hosted/in-cluster generation modes fail configuration; the CI embedding server is reached through OLLAMA_URL with generation explicitly stubbed.
+Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache threshold **.95**, temperature **.2**, qwen3:4b-instruct-2507-q4_K_M, nomic-embed-text. Settings are in k8s/base/configmap.yaml and read at process start. Restart affected API pods after changing configuration. Unsupported hosted/in-cluster generation modes fail configuration; the CI embedding server is reached through OLLAMA_URL with generation explicitly stubbed.
 
 | Method | Path | Behavior |
 | --- | --- | --- |
@@ -139,7 +157,7 @@ Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache th
 | GET | /readyz | Compatible index, embedding dimension and Redis; 503 when unavailable |
 | GET | /metrics | Prometheus HTTP/stage/cache/refusal/fallback/token metrics |
 
-Ingress routes /api to API and / to UI. Probe/metrics endpoints are internal API endpoints; use a separate temporary API Service port forward for debugging them. Responses include X-Request-ID and X-Cache HIT/MISS/BYPASS. X-Bypass-Cache:true supports clean regression runs.
+Ingress routes /api to API and / to UI. Probe/metrics endpoints are internal API endpoints; use a separate temporary API Service port forward for debugging them. Responses include X-Request-ID, X-Cache HIT/MISS/BYPASS and X-Cache-Reason. X-Bypass-Cache:true supports clean regression runs.
 
 Redis retains up to six bounded turns with a default 1800-second TTL. Cache candidates are bounded to 256 per namespace with 3600-second logical TTL/key expiry; logical expiry does not promise immediate physical erasure or backup deletion. IDs are bearer access to conversations, not authenticated identities.
 
@@ -150,6 +168,10 @@ kubectl --context rahbar -n rahbar create secret generic rahbar-secret --from-li
 ```
 
 k8s/secret-placeholder.yaml is excluded from Kustomize. Do not apply it over a real Secret. Selecting hosted mode remains unsupported even if a key is present.
+
+CPU generation is allowed 120 seconds per attempt, with at most one validation retry. Ingress, the Windows gateway and the evaluator use 360-second read budgets. A generation deadline still produces a safe, uncached fallback, now explained as `generation_timeout`. Title-only PDF matches are expanded with bounded facts from the same source page/version; scores and citation identities remain those of the matched headings.
+
+The exact model JSON shape, completion checks and public response rules are documented in [MODEL-RESPONSE-CONTRACT.md](docs/MODEL-RESPONSE-CONTRACT.md). A valid structured response is still subject to evidence/citation checks; no fixed wording or perfect semantic accuracy is promised.
 
 ## Evaluation and CI/CD
 
@@ -163,9 +185,9 @@ The real evaluator uses eval/golden.yaml and eval/baseline.json. The kind fixtur
 
 The shipped real native baseline is recall@3/@5 **.933333**, citation integrity **1.0**, required abstentions **1.0**. Ordinary recall is .875, other answerable categories 1.0. Five original expect-string misses remain recorded, including a conservative scan refusal, a verification fallback and an incomplete historical heading; later runs can differ. Perfect citation syntax is not perfect answer correctness. Fixture scores are all 1. See [pipeline measurements](docs/PIPELINE.md), [failure analysis](docs/FAILURE-ANALYSIS.md) and actual result files for limitations.
 
-CI runs on PRs to main and pushes to dev. It gates Ruff/mypy/workflow syntax, tests with >=60% coverage, strict Kustomize/kubeconform, builds without publishing, Trivy fixable HIGH/CRITICAL scans and actual kind/Ingress fixture evaluation. Local coverage.py results are API 90.12%, indexer 90.26%; all three fixed images passed the scan gate. CD on main depends on the complete verifier, promotes the same scanned image artifacts to **docker.io/jibran3134/rahbar-{api,indexer,ui}:<40-character-Git-SHA>**, then pulls those exact published images into an ephemeral cluster for rollout/Ingress/eval checks. It never deploys :latest.
+CI runs on PRs to dev/main and pushes to dev. It gates Ruff/mypy/workflow syntax, tests with >=60% coverage, strict Kustomize/kubeconform, builds without publishing, Trivy fixable HIGH/CRITICAL scans and actual kind/Ingress fixture evaluation. Local coverage.py results are API 90.12%, indexer 90.26%; all three fixed images passed the scan gate. CD on main depends on the complete verifier, promotes the same scanned image artifacts to **docker.io/jibran3134/rahbar-{api,indexer,ui}:<40-character-Git-SHA>**, then pulls those exact published images into an ephemeral cluster for rollout/Ingress/eval checks. It never deploys :latest.
 
-Configure GitHub Actions secrets DOCKERHUB_USERNAME=jibran3134 and DOCKERHUB_TOKEN using a Docker Hub access token. Never paste the token into chat or commit it. Main must require PRs, passing verifier checks and one approval. The user requested local main commits; no remote main push, branch-protection change, registry publication or CD success has been claimed. An actual failing-evaluation PR, blocked merge proof, correction/green proof and successful CD link remain release gates. Required submission links: [repository](https://github.com/Jibran3134/Rahbar), successful CD run, and three Docker Hub image pages showing SHA tags. Do not substitute local evidence for those links.
+Configure GitHub Actions secrets DOCKERHUB_USERNAME=jibran3134 and DOCKERHUB_TOKEN using a Docker Hub access token. Never paste the token into chat or commit it. The assignment requires PRs, passing CI and one approval. Jibran explicitly requested zero required approvals; current protection therefore enforces PRs and seven GitHub-Actions-bound checks for administrators too, with approval count zero. The assignment's one-approval criterion remains unmet by that choice. Development now follows topic branches (fix/, feat/, docs/ or chore/) -> PR into dev -> PR into main, using merge commits and passing automated checks at both stages; no teammate approval is required. See [AGENTS.md](AGENTS.md). The regression/fix PR and successful registry/CD links are recorded only after actual completion. Required submission links: [repository](https://github.com/Jibran3134/Rahbar), successful CD run, and three Docker Hub image pages showing SHA tags. Do not substitute local evidence for those links.
 
 For SHA-tagged registry deployment to the local real profile:
 

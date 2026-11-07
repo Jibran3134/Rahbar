@@ -1,0 +1,33 @@
+{
+  "readiness_status": 200,
+  "readiness": {
+    "status": "ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": true
+    }
+  },
+  "ui_status": 200,
+  "info_status": 200,
+  "info": {
+    "active": {
+      "collection": "rahbar__g_dd2a2f173ca347229fcff3bb65dcf591",
+      "generation": "dd2a2f173ca347229fcff3bb65dcf591",
+      "embed_model": "nomic-embed-text",
+      "dimension": 768
+    },
+    "embed_model": "nomic-embed-text",
+    "llm_model": "llama3.2:3b",
+    "provider": "ollama-host",
+    "top_k": 5,
+    "temperature": 0.2,
+    "relevance_floor": 0.74,
+    "cache_threshold": 0.95,
+    "cache_ttl_seconds": 3600
+  },
+  "context_after": "k3d-civicpulse-ci",
+  "operation": "restart existing Rahbar profile and Ollama after Docker restart; no reindex or unrelated resource operation",
+  "smoke_correction": "Initial /api/readyz Ingress check was invalid: probes live at /readyz on the API Service and only /api routes are exposed by Ingress. Correct service probe and Ingress UI/info all passed."
+}

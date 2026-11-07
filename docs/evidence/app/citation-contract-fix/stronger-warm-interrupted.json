@@ -1,0 +1,11 @@
+{
+  "model": "qwen3:14b",
+  "preload_completed": true,
+  "generation_completed": false,
+  "status": "interrupted",
+  "reason": "Host responsiveness degraded during warm diagnostic; no public answer accepted. Model unloaded from RAM, weights retained.",
+  "observed_host_memory_kib": {
+    "total": 33231568,
+    "free": 2137536
+  }
+}

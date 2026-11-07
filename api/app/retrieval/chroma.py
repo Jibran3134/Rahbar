@@ -35,6 +35,49 @@ def version_filter(question: str) -> dict[str, Any]:
     return {"doc_version": {"$in": [year] + [f"{year}-{i:02d}" for i in range(1,13)]}}
 
 
+def heading_only(text: str, section: str) -> bool:
+    """A repeated section label has no policy facts; retain short numeric facts."""
+    def normalize(value: str) -> str:
+        return re.sub(r"[\W_]+", "", value.casefold())
+    return normalize(text) == normalize(section)
+
+
+def page_context(collection: Any, title: str, metadata: dict[str, Any]) -> str | None:
+    """Expand a matched PDF heading with authentic, bounded same-page context.
+
+    The score remains the heading's actual query similarity. Context is fetched
+    from the same immutable collection/source/page/version, never another edition.
+    Short facts are retained whole; no new policy text or citation IDs are invented.
+    """
+    if Path(metadata['source']).suffix.lower() != '.pdf':
+        return None  # HTML's logical page 1 is not a physical parent-page boundary.
+    fields=('source','page','doc_version','superseded')
+    rows=collection.get(where={'$and':[{key:metadata[key]} for key in fields]},
+                        include=['documents','metadatas'],limit=32)
+    documents,metadatas=rows.get('documents'),rows.get('metadatas')
+    if not isinstance(documents,list) or not isinstance(metadatas,list) or len(documents)!=len(metadatas):
+        raise IndexStateError('Parent-page context columns disagree')
+    blocks=[]
+    for text,meta in zip(documents,metadatas,strict=True):
+        if (not isinstance(meta,dict) or any(type(meta.get(key)) is not type(metadata[key])
+                                            or meta.get(key)!=metadata[key] for key in fields)
+                or not isinstance(meta.get('section'),str) or not meta['section'].strip()
+                or not isinstance(text,str) or not text.strip()):
+            raise IndexStateError('Parent-page context identity is invalid')
+        if not heading_only(text,meta['section']):
+            blocks.append((meta['section'],text))
+    used=len(title)
+    selected=[]
+    for section,text in sorted(set(blocks)):
+        block=f'Section {section}: {text}'
+        if used+len(block)+1<=1800:
+            selected.append(block)
+            used+=len(block)+1
+        if len(selected)==8:
+            break
+    return '\n'.join([title,*selected]) if selected else None
+
+
 class ChromaRetriever:
     name = "chroma"
 
@@ -96,7 +139,9 @@ class ChromaRetriever:
         try:
             active, collection, vector = prepared
             where = version_filter(question)
-            rows = collection.query(query_embeddings=[vector],n_results=min(k,collection.count()),
+            # Fetch a bounded candidate pool so title-only chunks do not crowd
+            # actual policy clauses out of the requested top-k evidence.
+            rows = collection.query(query_embeddings=[vector],n_results=min(k*3,collection.count()),
                                     where=where,include=["documents","metadatas","distances"])
             columns = [rows[key][0] for key in ("ids","documents","metadatas","distances")]
             if len({len(col) for col in columns}) != 1:
@@ -119,9 +164,16 @@ class ChromaRetriever:
                     if meta["doc_version"] not in (wanted["$in"] if isinstance(wanted,dict) else [wanted]):
                         raise IndexStateError("Unexpected historical version result")
                 page = None if Path(meta["source"]).suffix.lower() in {".html",".htm"} else meta["page"]
+                if heading_only(text,meta["section"]):
+                    expanded=page_context(collection,text,meta)
+                    if not expanded:
+                        continue
+                    text=expanded
                 passages.append(Passage(chunk_id=identifier,text=text,source=meta["source"],
                                         section=meta["section"],page=page,score=1-float(distance)))
-            return passages
+                if len(passages)==k:
+                    break
+            return passages[:k]
         except IndexStateError:
             raise
         except Exception:

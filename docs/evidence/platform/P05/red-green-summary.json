@@ -1,0 +1,46 @@
+{
+  "pr": "https://github.com/Jibran3134/Rahbar/pull/1",
+  "red_run": "https://github.com/Jibran3134/Rahbar/actions/runs/42046173348",
+  "green_run": "https://github.com/Jibran3134/Rahbar/actions/runs/42088730566",
+  "red": {
+    "recall@5": 0.0,
+    "citation_validity": null,
+    "abstention_correctness": 1.0,
+    "execution_errors": 0
+  },
+  "green": {
+    "recall@5": 1.0,
+    "citation_validity": 1.0,
+    "abstention_correctness": 1.0,
+    "execution_errors": 0
+  },
+  "golden_and_baseline_checks": [
+    {
+      "path": "eval/fixtures/baseline.json",
+      "sha256_by_commit": {
+        "e75df08": "d7e50dea229f95fcd48f54a89127586e6f6ebbeb36ad8bfefaa7630b159558cf",
+        "90961a4": "d7e50dea229f95fcd48f54a89127586e6f6ebbeb36ad8bfefaa7630b159558cf",
+        "47fdad9": "d7e50dea229f95fcd48f54a89127586e6f6ebbeb36ad8bfefaa7630b159558cf"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "eval/fixtures/golden.fixture.yaml",
+      "sha256_by_commit": {
+        "e75df08": "7c0d4f273eaaad61a24f9c186c5034b43569dd089f65ffc288d1936c5969fb4a",
+        "90961a4": "7c0d4f273eaaad61a24f9c186c5034b43569dd089f65ffc288d1936c5969fb4a",
+        "47fdad9": "7c0d4f273eaaad61a24f9c186c5034b43569dd089f65ffc288d1936c5969fb4a"
+      },
+      "unchanged": true
+    }
+  ],
+  "required_approvals": 0,
+  "independent_approval": "unmet by user instruction",
+  "merge_button_screenshot": "not captured; anonymous GitHub hides the merge box",
+  "screenshots": [
+    "remote-red-run.png",
+    "remote-green-run.png"
+  ],
+  "release_run": "https://github.com/Jibran3134/Rahbar/actions/runs/42090196319",
+  "release_commit": "47fdad99c57f5bddf437bcf318fe1eaee22e1763"
+}

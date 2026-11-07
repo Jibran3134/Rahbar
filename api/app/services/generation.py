@@ -30,10 +30,16 @@ def generate_verified(question: str, passages: list[Passage], provider: LLMProvi
                                (len(str(output))+3)//4,"estimated")
             return validate_grounding(output,passages)
         except ProviderError as exc:
+            metrics.field("generation_failure",exc.kind.value)
             log.warning("generation validation/failure",extra={"failure_kind":exc.kind.value,
                         "attempt":attempt+1,"provider":provider.name})
             if exc.kind in {ProviderFailureKind.TIMEOUT,ProviderFailureKind.TRANSPORT}:
                 break
+            if exc.kind == ProviderFailureKind.INCONSISTENT_ANSWER:
+                feedback = ("inconsistent_answer: Apply the documented rule to the user's facts. "
+                            "Supported conditional: answered_from_context=true + exact citations. "
+                            "Missing rule: false + confidence=low + citations=[].")
+                continue
             label = f"[{passages[0].source} / {passages[0].section}]" if passages else "[source / section]"
             feedback = (f"{exc.kind.value}: Every factual sentence needs an exact filename citation, "
                         f"e.g. {label}. Never use evidence numbers. Match citation object pages.")

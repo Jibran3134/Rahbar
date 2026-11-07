@@ -52,3 +52,6 @@ Platform work also preserved genuine failures: original image vulnerability scan
 ## Final local platform evaluation
 
 P04 real Ingress evaluation after Linux reindexing and the security updates passed the committed baseline: recall@3/@5=.933333, citation integrity=1, required abstentions=1. Diagnostic expect misses in that run were q01, q07 and q15; original S19 misses are retained rather than rewritten. A separate live CI-fixture threshold regression exited 1; restoring .65 exited 0 with the baseline unchanged. The UI visible update/rollback returned identical old-page hashes, then the new version was redeployed. No remote blocked-merge/CI/CD outcome is inferred.
+
+
+P05 remote follow-through: actual fixture regression CI failed (recall@5=0), the corrected same PR passed (recall@5/citation validity/required abstentions=1), and PR #1 merged with required CI enforced. Golden questions and baseline hashes are identical across the red, corrected and merged commits. GitHub Actions published the three exact tested images as 47fdad99c57f5bddf437bcf318fe1eaee22e1763; registry digests and original hosted artifacts are retained in P05. See SUBMISSION.md for the final release outcome and remaining rubric exceptions. This supplements, rather than rewrites, the earlier local experiment reports.
