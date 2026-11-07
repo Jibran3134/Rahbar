@@ -13,6 +13,7 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import httpx
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 HOP_HEADERS = {'connection', 'transfer-encoding', 'keep-alive', 'upgrade',
@@ -90,7 +91,8 @@ def services():
         detached([shutil.which('ollama') or 'ollama', 'serve'])
         tags = ready('http://127.0.0.1:11434/api/tags', timeout=60).json()
     names = {model['name'] for model in tags['models']}
-    for model in ['nomic-embed-text', 'llama3.2:3b']:
+    config=yaml.safe_load((ROOT/'k8s/base/configmap.yaml').read_text(encoding='utf-8'))['data']
+    for model in [config['EMBED_MODEL'],config['LLM_MODEL']]:
         if model not in names and model + ':latest' not in names:
             print(f'Downloading required model {model} (first run only)...', flush=True)
             command(['ollama', 'pull', model])
@@ -169,6 +171,14 @@ def proxy_handler(backend_port):
 def warm_generation(model):
     print(f'Preloading generation model {model} before opening the app...', flush=True)
     try:
+        metadata=httpx.post('http://127.0.0.1:11434/api/show',json={'model':model},
+                            timeout=10,trust_env=False)
+        metadata.raise_for_status()
+        thinking=metadata.json().get('thinking',{})
+        values=thinking.get('values')
+        if isinstance(values,list) and not any(value is False for value in values):
+            raise RuntimeError('This model requires thinking. Use the configured Instruct model '
+                               'for bounded JSON generation.')
         response = httpx.post('http://127.0.0.1:11434/api/generate',
             json={'model':model,'stream':False,'keep_alive':'5m','options':{'num_ctx':4096}},
             timeout=180,trust_env=False)

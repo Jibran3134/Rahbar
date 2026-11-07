@@ -5,6 +5,7 @@ from pathlib import Path
 import threading
 import subprocess
 import sys
+from types import SimpleNamespace
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import httpx
@@ -93,6 +94,8 @@ def test_preload_uses_empty_request_and_checks_completion(monkeypatch,result):
     seen=[]
     def post(url,**kwargs):
         seen.append((url,kwargs))
+        if url.endswith('/api/show'):
+            return httpx.Response(200,json={'thinking':{'values':[False]}},request=httpx.Request('POST',url))
         return httpx.Response(200,json=result,request=httpx.Request('POST',url))
     monkeypatch.setattr(launcher.httpx,'post',post)
     if result['done'] and result['model']=='llama3.2:3b':
@@ -100,7 +103,32 @@ def test_preload_uses_empty_request_and_checks_completion(monkeypatch,result):
     else:
         with pytest.raises(RuntimeError,match='could not preload'):
             launcher.warm_generation('llama3.2:3b')
-    body=seen[0][1]['json']
+    assert seen[0][0].endswith('/api/show')
+    body=seen[-1][1]['json']
     assert 'prompt' not in body and 'messages' not in body
     assert body['model']=='llama3.2:3b' and body['stream'] is False
-    assert body['options']['num_ctx']==4096 and seen[0][1]['timeout']==180
+    assert body['options']['num_ctx']==4096 and seen[-1][1]['timeout']==180
+
+
+@pytest.mark.parametrize('values', [[True],['low','medium','high']])
+def test_thinking_only_model_fails_before_loading_or_generating(monkeypatch,values):
+    def post(url,**kwargs):
+        assert url.endswith('/api/show'), 'Reject an incompatible model before spending time loading it'
+        return httpx.Response(200,json={'thinking':{'values':values}},request=httpx.Request('POST',url))
+    monkeypatch.setattr(launcher.httpx,'post',post)
+    with pytest.raises(RuntimeError,match='Instruct'):
+        launcher.warm_generation('thinking-only-model')
+
+
+def test_startup_pulls_the_models_in_the_actual_configmap(monkeypatch,tmp_path):
+    config=tmp_path/'k8s/base/configmap.yaml'
+    config.parent.mkdir(parents=True)
+    config.write_text('data:\n  EMBED_MODEL: example-embed\n  LLM_MODEL: example-instruct:7b\n')
+    monkeypatch.setattr(launcher,'ROOT',tmp_path)
+    calls=[]
+    monkeypatch.setattr(launcher,'command',lambda args,**kwargs:calls.append(args) or '')
+    monkeypatch.setattr(launcher,'ready',lambda *args,**kwargs:SimpleNamespace(json=lambda:{
+        'models':[{'name':'example-embed:latest'}]}))
+    launcher.services()
+    assert ['ollama','pull','example-instruct:7b'] in calls
+    assert not any('llama3.2:3b' in args for args in calls)
