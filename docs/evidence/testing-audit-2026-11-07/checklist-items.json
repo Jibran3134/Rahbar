@@ -1,0 +1,670 @@
+[
+  {
+    "id": "1.1",
+    "requirement": "No secret, key or password anywhere in Git history"
+  },
+  {
+    "id": "1.2",
+    "requirement": "No committed Secret manifest with a real base64 value"
+  },
+  {
+    "id": "1.3",
+    "requirement": "Indexing is not done at API startup"
+  },
+  {
+    "id": "1.4",
+    "requirement": "Every returned citation matches a retrieved chunk"
+  },
+  {
+    "id": "1.5",
+    "requirement": "All must-abstain golden questions abstain"
+  },
+  {
+    "id": "1.6",
+    "requirement": "Chroma and Redis have a PVC and are not NodePort or LoadBalancer"
+  },
+  {
+    "id": "1.7",
+    "requirement": "Embedding model pinned, and indexer and API cannot disagree silently"
+  },
+  {
+    "id": "1.8",
+    "requirement": "Every container has requests and limits; HPA never shows <unknown>"
+  },
+  {
+    "id": "1.9",
+    "requirement": "Every publishing or deploying job has needs:; no :latest deploy"
+  },
+  {
+    "id": "1.10",
+    "requirement": "Nothing in the default namespace"
+  },
+  {
+    "id": "1.11",
+    "requirement": "README apply order works from a clean clone"
+  },
+  {
+    "id": "1.12",
+    "requirement": "No direct commits to main"
+  },
+  {
+    "id": "1.13",
+    "requirement": ".gitignore contains *-secret.yaml and any .env"
+  },
+  {
+    "id": "1.14",
+    "requirement": "python scripts/check_submission.py exits clean"
+  },
+  {
+    "id": "2.1",
+    "requirement": "Directories exist: api/, indexer/, ui/, corpus/, eval/, k8s/base/, k8s/overlays/dev/, k8s/overlays/prod/, docs/, docs/adr/, docs/evidence/, scripts/, .github/workflows/."
+  },
+  {
+    "id": "2.2",
+    "requirement": "api/app/schemas.py defines Answer and Citation exactly per the brief: reasoning, answer, citations, answered_from_context, confidence as Literal[\"high\",\"medium\",\"low\"]."
+  },
+  {
+    "id": "2.3",
+    "requirement": "Provider files exist: api/app/providers/llm/{base,ollama,hosted,stub}.py."
+  },
+  {
+    "id": "2.4",
+    "requirement": "Pipeline files exist: indexer/pipeline/{extract,clean,chunk,embed,store}.py."
+  },
+  {
+    "id": "2.5",
+    "requirement": "Each of api, indexer, ui has a Dockerfile (and .dockerignore for api and indexer)."
+  },
+  {
+    "id": "2.6",
+    "requirement": "LICENSE, Makefile, README.md, .gitignore present."
+  },
+  {
+    "id": "2.7",
+    "requirement": "eval/results.json and eval/baseline.json are committed and contain real numbers."
+  },
+  {
+    "id": "2.8",
+    "requirement": "corpus/MANIFEST.md lists every URL with SHA-256, plus a fetch script. Source PDFs from third parties are not committed."
+  },
+  {
+    "id": "2.9",
+    "requirement": "README states the corpus is fetched, not committed, and says whether embedding goes through the Ollama host."
+  },
+  {
+    "id": "3.1",
+    "requirement": "At least 6 documents and 40 pages in total, all public or the team's own. Verify against MANIFEST."
+  },
+  {
+    "id": "3.2",
+    "requirement": "At least 2 versions of one policy (for example Academic Rules 2023 and the 2026 Handbook), with a clear statement of which is superseded."
+  },
+  {
+    "id": "3.3",
+    "requirement": "At least 1 scanned image-only PDF with no text layer, proven with pdffonts <file> showing an empty font list."
+  },
+  {
+    "id": "3.4",
+    "requirement": "At least 1 document with an information-bearing table."
+  },
+  {
+    "id": "3.5",
+    "requirement": "At least 1 document with long definitions a fixed-size chunker would split."
+  },
+  {
+    "id": "3.6",
+    "requirement": "At least 1 deliberately absent topic, named explicitly, with evidence it is really absent."
+  },
+  {
+    "id": "3.7",
+    "requirement": "Exact-term content (course code, clause number, CGPA threshold, fee)."
+  },
+  {
+    "id": "3.8",
+    "requirement": "Not lecture slides, not LLM-generated, not paywalled or private."
+  },
+  {
+    "id": "3.9",
+    "requirement": "Every URL in MANIFEST still downloads (curl -sI) and the SHA-256 matches a fresh download."
+  },
+  {
+    "id": "3.10",
+    "requirement": "Fetch script: pauses between requests, URL-encodes file names, converts Google Drive /file/d/<ID>/view links, and touches no login-protected site."
+  },
+  {
+    "id": "4.1",
+    "requirement": "Extract: detects pages with no text layer and OCRs them (or documents the loss honestly). Repeating headers and footers are stripped, but headings and section boundaries are kept."
+  },
+  {
+    "id": "4.2",
+    "requirement": "Clean: removes artefacts without destroying structure. PIPELINE.md lists the rules and one thing deliberately not stripped."
+  },
+  {
+    "id": "4.3",
+    "requirement": "Chunk: structure-aware (sections, then paragraphs, then sentences) with overlap and a target size. Not a naive fixed-size splitter."
+  },
+  {
+    "id": "4.4",
+    "requirement": "Embed: one vector per chunk, model read from EMBED_MODEL, never hard-coded."
+  },
+  {
+    "id": "4.5",
+    "requirement": "Store: writes id, text, vector, metadata to ChromaDB. Chunk ids are stable and deterministic, so re-indexing does not duplicate chunks."
+  },
+  {
+    "id": "4.6",
+    "requirement": "Metadata is complete on every chunk: source, section, page, doc_version, superseded (boolean). Query Chroma and confirm no chunk is missing a field and no superseded is null."
+  },
+  {
+    "id": "4.7",
+    "requirement": "The superseded document's chunks carry superseded: true; current ones carry false."
+  },
+  {
+    "id": "4.8",
+    "requirement": "Collection metadata contains the embedding model name and vector dimension (see section 8)."
+  },
+  {
+    "id": "4.9",
+    "requirement": "Re-running the indexer is idempotent: chunk count is unchanged after a second run (collection rebuilt or upserted, not appended twice)."
+  },
+  {
+    "id": "4.10",
+    "requirement": "On success the indexer expires the semantic cache (see section 6)."
+  },
+  {
+    "id": "4.11",
+    "requirement": "A bad document (corrupt PDF) does not crash the whole job silently: it logs the failure and either skips with a clear message or fails with a non-zero exit."
+  },
+  {
+    "id": "4.12",
+    "requirement": "docs/PIPELINE.md contains: which documents needed OCR, one before-and-after example of a mangled table, what could not be recovered, chunk size and overlap, storage amplification (stored tokens divided by original tokens), model name, vector dimension, where the pin lives, chunk count, and the metadata schema."
+  },
+  {
+    "id": "4.13",
+    "requirement": "Chunk tuning table: at least three (size, overlap) configurations, each with measured recall@5 on the golden set, and a justification for the shipped one. A number with no measurement scores zero on that line."
+  },
+  {
+    "id": "5.1",
+    "requirement": "Step 1: validates question length 3 to 500 characters. Out-of-range returns 4xx, never 500."
+  },
+  {
+    "id": "5.2",
+    "requirement": "Step 2: cache check, skipped for follow-up questions."
+  },
+  {
+    "id": "5.3",
+    "requirement": "Step 3: embeds with the same model as the indexer."
+  },
+  {
+    "id": "5.4",
+    "requirement": "Step 4: top-k read from ConfigMap; metadata filter excludes superseded: true unless the user explicitly asks about an older version."
+  },
+  {
+    "id": "5.5",
+    "requirement": "Step 5: prompt order is instructions, then numbered evidence, then the question. Retrieved text is delimited."
+  },
+  {
+    "id": "5.6",
+    "requirement": "Step 6: generation uses structured output enforcement (Ollama format= or hosted JSON mode/response schema) at low temperature."
+  },
+  {
+    "id": "5.7",
+    "requirement": "Step 7: Pydantic validation, retry once, then a safe canned fallback. Confirm with a stub that returns invalid output twice that the HTTP status is 200 and the body is a valid Answer."
+  },
+  {
+    "id": "5.8",
+    "requirement": "Step 8: stores the turn, and a cache entry only when safe."
+  },
+  {
+    "id": "5.9",
+    "requirement": "Relevance floor: when nothing retrieved clears the floor, returns answered_from_context: false with a message that the corpus does not cover it, without calling the LLM (or with a guarded call)."
+  },
+  {
+    "id": "5.10",
+    "requirement": "reasoning is stripped before display."
+  },
+  {
+    "id": "5.11",
+    "requirement": "Every citation is checked against the retrieved chunk ids for that request; unmatched citations are removed or trigger fallback."
+  },
+  {
+    "id": "5.12",
+    "requirement": "The API code never writes to Chroma (grep for add(, upsert(, delete(, create_collection( in api/)."
+  },
+  {
+    "id": "5.13",
+    "requirement": "No eval(), exec(), or SQL built from model output or retrieved text."
+  },
+  {
+    "id": "6.1",
+    "requirement": "Redis or a second Chroma collection, with the choice defended in an ADR."
+  },
+  {
+    "id": "6.2",
+    "requirement": "Hit means cosine similarity at or above a threshold read from the ConfigMap, not hard-coded."
+  },
+  {
+    "id": "6.3",
+    "requirement": "Threshold chosen with data: the ADR reports two or three thresholds tried and the specific false hit that ruled one out."
+  },
+  {
+    "id": "6.4",
+    "requirement": "Never cached: follow-up questions, abstentions, out-of-scope answers, anything that failed validation or used the fallback. Verify in code and with tests."
+  },
+  {
+    "id": "6.5",
+    "requirement": "Invalidated on re-index: after the indexer Job, a previously cached question is a miss. Run the sequence in test script G8."
+  },
+  {
+    "id": "6.6",
+    "requirement": "Redis has persistence (PVC) and a Service that is ClusterIP only."
+  },
+  {
+    "id": "6.7",
+    "requirement": "Cache hit ratio is exposed in /metrics."
+  },
+  {
+    "id": "7.1",
+    "requirement": "Provider is chosen by LLM_PROVIDER from the ConfigMap, behind the interface in base.py. Swapping providers touches one file."
+  },
+  {
+    "id": "7.2",
+    "requirement": "At least one mode is fully working (ollama-host default: host.minikube.internal:11434, or hosted)."
+  },
+  {
+    "id": "7.3",
+    "requirement": "If hosted: the key comes from a Kubernetes Secret via env, never from a committed manifest."
+  },
+  {
+    "id": "7.4",
+    "requirement": "Temperature is in the ConfigMap, in the range 0 to 0.3, with a one-line justification beside it."
+  },
+  {
+    "id": "7.5",
+    "requirement": "The system prompt says to use only supplied context and to abstain when the context lacks the answer."
+  },
+  {
+    "id": "7.6",
+    "requirement": "Prompt-injection defence: retrieved text is delimited and treated as data. A pytest exists that indexes a poisoned chunk and asserts the system does not obey it."
+  },
+  {
+    "id": "7.7",
+    "requirement": "Tokens in and out per request are recorded."
+  },
+  {
+    "id": "8.1",
+    "requirement": "EMBED_MODEL lives in the ConfigMap and is read by both the indexer and the API (check both envFrom/valueFrom blocks)."
+  },
+  {
+    "id": "8.2",
+    "requirement": "The indexer writes model name and vector dimension into Chroma collection metadata."
+  },
+  {
+    "id": "8.3",
+    "requirement": "At API startup, the API compares collection metadata with its own EMBED_MODEL and dimension."
+  },
+  {
+    "id": "8.4",
+    "requirement": "On mismatch the API refuses to become ready and logs exactly what conflicts (both values)."
+  },
+  {
+    "id": "8.5",
+    "requirement": "Live demo: change EMBED_MODEL in the ConfigMap, kubectl rollout restart deploy/api -n rahbar, and capture the pod at 0/1 READY with the conflict log line. Save to docs/evidence/."
+  },
+  {
+    "id": "8.6",
+    "requirement": "Revert the ConfigMap and confirm recovery to 1/1."
+  },
+  {
+    "id": "8.7",
+    "requirement": "A unit test covers the mismatch path."
+  },
+  {
+    "id": "9.1",
+    "requirement": "Namespace rahbar exists; every manifest sets it (or a kustomization does)."
+  },
+  {
+    "id": "9.2",
+    "requirement": "Deployment api: 3 replicas; startup, liveness and readiness probes; requests and limits; maxSurge: 1, maxUnavailable: 0; terminationGracePeriodSeconds; preStop sleep."
+  },
+  {
+    "id": "9.3",
+    "requirement": "Deployment ui: 1 or more replicas, nginx serving the chat UI."
+  },
+  {
+    "id": "9.4",
+    "requirement": "StatefulSet chroma: 1 replica with volumeClaimTemplates. ARCHITECTURE.md explains why a StatefulSet, not a Deployment."
+  },
+  {
+    "id": "9.5",
+    "requirement": "Deployment redis with a PVC."
+  },
+  {
+    "id": "9.6",
+    "requirement": "Job indexer: restartPolicy: OnFailure, backoffLimit set, requests and limits."
+  },
+  {
+    "id": "9.7",
+    "requirement": "CronJob reindex: weekly schedule; same image and args as the Job."
+  },
+  {
+    "id": "9.8",
+    "requirement": "Four Services, all ClusterIP (api, ui, chroma, redis)."
+  },
+  {
+    "id": "9.9",
+    "requirement": "Ingress: / to ui, /api to api, one host. minikube addons enable ingress done."
+  },
+  {
+    "id": "9.10",
+    "requirement": "ConfigMap holds: chunk size, overlap, top_k, relevance floor, cache threshold, temperature, EMBED_MODEL, LLM_PROVIDER, CHROMA_HOST."
+  },
+  {
+    "id": "9.11",
+    "requirement": "Secret: only a placeholder is committed; the README shows kubectl create secret generic rahbar-secret -n rahbar --from-literal=LLM_API_KEY=...."
+  },
+  {
+    "id": "9.12",
+    "requirement": "HPA on api: min 3, max 8, CPU target set."
+  },
+  {
+    "id": "9.13",
+    "requirement": "imagePullPolicy: IfNotPresent for locally loaded images."
+  },
+  {
+    "id": "9.14",
+    "requirement": "kustomize build k8s/overlays/dev and k8s/overlays/prod both succeed and kubeconform -strict is clean."
+  },
+  {
+    "id": "10.1",
+    "requirement": "startupProbe: /healthz, failureThreshold: 30, periodSeconds: 2."
+  },
+  {
+    "id": "10.2",
+    "requirement": "livenessProbe: /healthz, periodSeconds: 20, failureThreshold: 3."
+  },
+  {
+    "id": "10.3",
+    "requirement": "readinessProbe: /readyz, periodSeconds: 10, failureThreshold: 3."
+  },
+  {
+    "id": "10.4",
+    "requirement": "/healthz touches no dependency: read the handler. No Chroma, Redis or LLM call."
+  },
+  {
+    "id": "10.5",
+    "requirement": "/readyz returns 200 only if Chroma is reachable, the collection is non-empty, and Redis is reachable. Otherwise 503 naming the failed dependency."
+  },
+  {
+    "id": "10.6",
+    "requirement": "Live: kubectl scale sts/chroma --replicas=0 -n rahbar, then curl /readyz on an api pod returns 503 naming Chroma, and the pod is not restarted (restart count unchanged). Restore afterwards."
+  },
+  {
+    "id": "10.7",
+    "requirement": "Live: with an empty collection (fresh cluster, before the Job), api pods are 0/1 and out of the Service endpoints."
+  },
+  {
+    "id": "11.1",
+    "requirement": "Every container (api, ui, chroma, redis, indexer Job, CronJob) has requests and limits for CPU and memory."
+  },
+  {
+    "id": "11.2",
+    "requirement": "kubectl top pods -n rahbar output is committed under docs/evidence/, and the numbers justify the requests and limits."
+  },
+  {
+    "id": "11.3",
+    "requirement": "Indexer memory limit leaves margin above its measured peak. Documented. Exit 137 means the limit is too low."
+  },
+  {
+    "id": "11.4",
+    "requirement": "minikube addons enable metrics-server done; kubectl get hpa -n rahbar shows a real percentage, not <unknown>."
+  },
+  {
+    "id": "11.5",
+    "requirement": "HPA screenshot or output in docs/evidence/."
+  },
+  {
+    "id": "12.1",
+    "requirement": "kubectl set image ships a visible change; kubectl rollout status completes with no downtime."
+  },
+  {
+    "id": "12.2",
+    "requirement": "kubectl rollout undo brings the previous version back."
+  },
+  {
+    "id": "12.3",
+    "requirement": "Scale to 3 or more; kubectl get endpoints api -n rahbar lists that many IPs."
+  },
+  {
+    "id": "12.4",
+    "requirement": "Deleting one api pod during a request loop causes no failed requests."
+  },
+  {
+    "id": "12.5",
+    "requirement": "Deleting chroma-0 and waiting for restart keeps the data (PVC), no re-index needed."
+  },
+  {
+    "id": "13.1",
+    "requirement": "Secrets: *-secret.yaml gitignored, placeholders committed."
+  },
+  {
+    "id": "13.2",
+    "requirement": "A dedicated ServiceAccount per workload; automountServiceAccountToken: false on pods that never call the API server."
+  },
+  {
+    "id": "13.3",
+    "requirement": "securityContext: runAsNonRoot: true, readOnlyRootFilesystem: true, capabilities: drop: [ALL], allowPrivilegeEscalation: false. Writable paths use emptyDir volumes."
+  },
+  {
+    "id": "13.4",
+    "requirement": "Dockerfiles use a non-root USER and a pinned base image tag."
+  },
+  {
+    "id": "13.5",
+    "requirement": "NetworkPolicy deny-all by default, then allow only: ui from Ingress; api from ui and Ingress; chroma from api and indexer only; redis from api only."
+  },
+  {
+    "id": "13.6",
+    "requirement": "DNS egress to kube-dns on port 53, UDP and TCP, in kube-system is allowed."
+  },
+  {
+    "id": "13.7",
+    "requirement": "api egress to the LLM host (ipBlock for the host IP) is allowed."
+  },
+  {
+    "id": "13.8",
+    "requirement": "Minikube was started with --cni=calico."
+  },
+  {
+    "id": "13.9",
+    "requirement": "Live: ui pod cannot reach chroma; api pod can reach chroma and redis; api pod cannot reach the indexer's Chroma writes except through the allowed path."
+  },
+  {
+    "id": "13.10",
+    "requirement": "Model output and retrieved text are never passed to eval, shell, or SQL."
+  },
+  {
+    "id": "14.1",
+    "requirement": "Logs are JSON, written to stdout only. No log files."
+  },
+  {
+    "id": "14.2",
+    "requirement": "Every log line carries request_id (from X-Request-ID or generated)."
+  },
+  {
+    "id": "14.3",
+    "requirement": "/metrics exposes Prometheus text with: request count, request latency, retrieval latency, generation latency, cache hit ratio, abstention count, fallback count, tokens in and out."
+  },
+  {
+    "id": "14.4",
+    "requirement": "One log line per request includes: top_k, retrieved chunk ids, their similarity scores, and whether the answer was an abstention."
+  },
+  {
+    "id": "15.1",
+    "requirement": "eval/golden.yaml has at least 15 questions, each listing its relevant chunk ids (or document and section). It was written before tuning."
+  },
+  {
+    "id": "15.2",
+    "requirement": "Mix meets minimums: 8 ordinary, 2 version-sensitive, 2 exact-term, 2 must-abstain, 1 prompt-injection."
+  },
+  {
+    "id": "15.3",
+    "requirement": "eval/run_eval.py runs against a live stack and writes eval/results.json."
+  },
+  {
+    "id": "15.4",
+    "requirement": "Results report recall@3 and recall@5 overall and by question type."
+  },
+  {
+    "id": "15.5",
+    "requirement": "Results report citation validity (%) and abstention correctness (%)."
+  },
+  {
+    "id": "15.6",
+    "requirement": "Exact-term recall is visibly lower than definitional recall, and ENGINEERING-NOTES.md explains why (embeddings blur exact terms) and names hybrid retrieval."
+  },
+  {
+    "id": "15.7",
+    "requirement": "eval/baseline.json holds the shipped numbers."
+  },
+  {
+    "id": "15.8",
+    "requirement": "Gate logic fails when: recall@5 drops more than 5 percentage points below baseline; any must-abstain is answered from context; citation validity is below 95%. Prove each with a synthetic degraded results.json."
+  },
+  {
+    "id": "15.9",
+    "requirement": "eval/fixtures/ holds a tiny corpus used by CI."
+  },
+  {
+    "id": "16.1",
+    "requirement": "Stage letter and how it was broken (A extraction, B chunking, C retrieval, D prompt, E source, F generation)."
+  },
+  {
+    "id": "16.2",
+    "requirement": "The symptom observed."
+  },
+  {
+    "id": "16.3",
+    "requirement": "The diagnosis and the stage it points to."
+  },
+  {
+    "id": "16.4",
+    "requirement": "The remedy applied."
+  },
+  {
+    "id": "16.5",
+    "requirement": "How you would have diagnosed it if you had not caused it, naming the metric or log field that would have shown it."
+  },
+  {
+    "id": "16.6",
+    "requirement": "Before-and-after numbers from the eval, not just prose."
+  },
+  {
+    "id": "17.1",
+    "requirement": "Jobs: lint (ruff, mypy), test (pytest, coverage at or above 60% on the app package, stub provider, no network), manifests (kustomize build k8s/overlays/prod \\| kubeconform -strict), build (api, ui, indexer; no push on PR), scan (Trivy, failing on HIGH or CRITICAL with a fix available), e2e-eval (kind or k3d, apply manifests, run the indexer Job on fixtures, wait for rollout, run run_eval.py, enforce the gate)."
+  },
+  {
+    "id": "17.2",
+    "requirement": "Coverage threshold is enforced (--cov-fail-under=60), not just reported."
+  },
+  {
+    "id": "17.3",
+    "requirement": "test, then build-push with needs: test, then deploy with needs: build-push."
+  },
+  {
+    "id": "17.4",
+    "requirement": "Images are pushed to Docker Hub tagged ${{ github.sha }}. Deploy uses the SHA, never :latest."
+  },
+  {
+    "id": "17.5",
+    "requirement": "Deploy job: ephemeral cluster, kubectl rollout status, smoke test through the Ingress."
+  },
+  {
+    "id": "17.6",
+    "requirement": "Credentials from GitHub Secrets (a Docker Hub access token, not a password)."
+  },
+  {
+    "id": "17.7",
+    "requirement": "Every workflow has a least-privilege permissions: block."
+  },
+  {
+    "id": "17.8",
+    "requirement": "A cd.yml run exists that tested, published and deployed successfully (green)."
+  },
+  {
+    "id": "17.9",
+    "requirement": "main is protected: no direct pushes, PR required, CI required, one approval. Evidence in docs/evidence/."
+  },
+  {
+    "id": "17.10",
+    "requirement": "Gate demo: a PR that failed the eval gate (greyed-out merge button screenshot) and the fixed green PR, both in docs/evidence/."
+  },
+  {
+    "id": "17.11",
+    "requirement": "Docker Hub shows SHA-tagged images for api, ui and indexer."
+  },
+  {
+    "id": "18.1",
+    "requirement": "pytest passes in api/tests/ and indexer/tests/ with no network and no model."
+  },
+  {
+    "id": "18.2",
+    "requirement": "Tests cover: input validation boundaries (2, 3, 500, 501 chars), /healthz independence, /readyz failure modes, validation retry then fallback, citation matching, relevance-floor abstention, cache never stores abstentions or follow-ups, superseded filter, embedding-pin mismatch, poisoned-chunk injection."
+  },
+  {
+    "id": "18.3",
+    "requirement": "Tests are deterministic. They do not assert on model wording."
+  },
+  {
+    "id": "19.1",
+    "requirement": "docs/adr/0001-indexer-as-job.md: the reasoning in the author's own words (three writers racing one volume, restart cost, readiness becoming a lie, no re-index without redeploy)."
+  },
+  {
+    "id": "19.2",
+    "requirement": "ADRs 0002 to 0004 exist, including cache store choice and 0004-llm-provider-and-data-governance.md."
+  },
+  {
+    "id": "19.3",
+    "requirement": "docs/ARCHITECTURE.md explains StatefulSet for Chroma."
+  },
+  {
+    "id": "19.4",
+    "requirement": "docs/ENGINEERING-NOTES.md answers all seven questions, each pointing to real files and line numbers (spot check that the lines exist and say what is claimed):"
+  },
+  {
+    "id": "19.5",
+    "requirement": "docs/AI-USAGE.md names the tools, what they wrote or shaped, and what was changed afterwards and why. Specific, not generic."
+  },
+  {
+    "id": "19.6",
+    "requirement": "README: apply order, secret creation command, Ollama setup (OLLAMA_HOST=0.0.0.0), minikube image load, how to reindex, how to run eval."
+  },
+  {
+    "id": "19.7",
+    "requirement": "The README make cluster and apply sequence works start to finish."
+  },
+  {
+    "id": "20.1",
+    "requirement": "Sections A to C: all answers match ground truth, all citations validate."
+  },
+  {
+    "id": "20.2",
+    "requirement": "Section D: 5 of 5 must-abstain questions abstain."
+  },
+  {
+    "id": "20.3",
+    "requirement": "Sections E and F: no injection obeyed; no 5xx anywhere."
+  },
+  {
+    "id": "20.4",
+    "requirement": "Section G: cache hits, misses, non-caching and post-reindex expiry all correct."
+  },
+  {
+    "id": "20.5",
+    "requirement": "Section H: retry once, then fallback with HTTP 200."
+  },
+  {
+    "id": "20.6",
+    "requirement": "Section I: delete-pod, scale, rollout and undo, embed-pin mismatch, reindex, NetworkPolicy checks all behave."
+  }
+]

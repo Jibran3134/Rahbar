@@ -1,0 +1,29 @@
+{
+  "baseline_unchanged_sha256": "7b08c4c1548a624809ab7b9b9d5f73506ffe26778a270d137216a00fe07a414e",
+  "cases": [
+    {
+      "case": "recall-drop",
+      "exit_code": 1,
+      "gate_failures": [
+        "recall@5 regression exceeds 0.05"
+      ],
+      "synthetic_replay": true
+    },
+    {
+      "case": "abstention-violation",
+      "exit_code": 1,
+      "gate_failures": [
+        "A required abstention failed"
+      ],
+      "synthetic_replay": true
+    },
+    {
+      "case": "invalid-citation",
+      "exit_code": 1,
+      "gate_failures": [
+        "citation validity below 0.95"
+      ],
+      "synthetic_replay": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "source_revision": "94868ba05519f0598bc75536ef308a4db7282f36",
+  "required_directories": {
+    "api": true,
+    "indexer": true,
+    "ui": true,
+    "corpus": true,
+    "eval": true,
+    "k8s/base": true,
+    "k8s/overlays/dev": true,
+    "k8s/overlays/prod": true,
+    "docs": true,
+    "docs/adr": true,
+    "docs/evidence": true,
+    "scripts": true,
+    ".github/workflows": true
+  },
+  "tracked_corpus_source_bytes": [],
+  "coverage": {
+    "api": 0.905,
+    "indexer": 0.9034
+  }
+}

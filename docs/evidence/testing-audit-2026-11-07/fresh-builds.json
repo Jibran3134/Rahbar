@@ -1,0 +1,35 @@
+[
+  {
+    "image": "api",
+    "exit_code": 0,
+    "command": [
+      "docker",
+      "build",
+      "-t",
+      "rahbar-api:audit-94868ba",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\clean-clone\\api"
+    ]
+  },
+  {
+    "image": "indexer",
+    "exit_code": 0,
+    "command": [
+      "docker",
+      "build",
+      "-t",
+      "rahbar-indexer:audit-94868ba",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\clean-clone\\indexer"
+    ]
+  },
+  {
+    "image": "ui",
+    "exit_code": 0,
+    "command": [
+      "docker",
+      "build",
+      "-t",
+      "rahbar-ui:audit-94868ba",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\clean-clone\\ui"
+    ]
+  }
+]

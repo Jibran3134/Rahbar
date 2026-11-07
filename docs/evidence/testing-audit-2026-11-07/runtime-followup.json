@@ -1,0 +1,576 @@
+{
+  "checks": {
+    "outage_corrected_harness": {
+      "passed": true,
+      "evidence": {
+        "health": {
+          "status": 200,
+          "body": "{\"status\":\"alive\"}"
+        },
+        "ready": {
+          "status": 503,
+          "body": "{\"status\":\"not_ready\",\"checks\":{\"chroma\":false,\"model\":false,\"dimension\":false,\"redis\":true}}"
+        },
+        "before": {
+          "api-5cdc4f9949-48fn2": 0,
+          "api-5cdc4f9949-8p7sp": 0,
+          "api-5cdc4f9949-hm7zl": 0
+        },
+        "after": {
+          "api-5cdc4f9949-48fn2": 0,
+          "api-5cdc4f9949-8p7sp": 0,
+          "api-5cdc4f9949-hm7zl": 0
+        },
+        "unready_pods": "NAME                             READY   STATUS      RESTARTS   AGE\napi-5cdc4f9949-48fn2             0/1     Running     0          101s\napi-5cdc4f9949-8p7sp             0/1     Running     0          94s\napi-5cdc4f9949-hm7zl             0/1     Running     0          109s\naudit-reindex-1794078583-wf78j   0/1     Completed   0          10m\nindexer-872zp                    0/1     Completed   0          22m\nredis-7f546bdffd-fgprh           1/1     Running     0          35m\nui-587c8b97dc-rpvnm              1/1     Running     0          13m\n"
+      }
+    },
+    "G1": {
+      "passed": true,
+      "first": {
+        "status": 200,
+        "seconds": 2.2810000000026776,
+        "cache": "MISS",
+        "body": {
+          "request_id": "6795d4382c24b327df92f15b64fd3a2f",
+          "answer": "The minimum attendance required to sit the final examination is 80% [prospectus-academic-rules-and-regulations.pdf / 1] [academic-rules-handbook-jun-2026.pdf / 1.21] [academic-rules-handbook-jun-2026.pdf / D.6.7].",
+          "citations": [
+            {
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1
+            },
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10
+            },
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "D.6.7",
+              "page": 28
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1,
+              "score": 0.76722407
+            },
+            {
+              "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.22",
+              "page": 10,
+              "score": 0.76387489
+            },
+            {
+              "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10,
+              "score": 0.761253
+            },
+            {
+              "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "5.24",
+              "page": 27,
+              "score": 0.73856068
+            },
+            {
+              "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "D.6.7",
+              "page": 28,
+              "score": 0.729203
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "f7d182dbaf9c4cf8847b92c36823daa0"
+        }
+      },
+      "second": {
+        "status": 200,
+        "seconds": 0.31199999999807915,
+        "cache": "HIT",
+        "body": {
+          "request_id": "ae50abbdaeea1e6ee03f06bf6410261a",
+          "answer": "The minimum attendance required to sit the final examination is 80% [prospectus-academic-rules-and-regulations.pdf / 1] [academic-rules-handbook-jun-2026.pdf / 1.21] [academic-rules-handbook-jun-2026.pdf / D.6.7].",
+          "citations": [
+            {
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1
+            },
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10
+            },
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "D.6.7",
+              "page": 28
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1,
+              "score": 0.76722407
+            },
+            {
+              "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.22",
+              "page": 10,
+              "score": 0.76387489
+            },
+            {
+              "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10,
+              "score": 0.761253
+            },
+            {
+              "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "5.24",
+              "page": 27,
+              "score": 0.73856068
+            },
+            {
+              "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "D.6.7",
+              "page": 28,
+              "score": 0.729203
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "2bceb6f45eb349b380fcac97a85e0bb2"
+        }
+      },
+      "metrics_before": {
+        "api-5cdc4f9949-48fn2": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 2602.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 215.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 9.45311744e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.10501888e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79407914109e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 5.47\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 20.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 7.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 5.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 6.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791443694582e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.7940791460544868e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.7940791929960513e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_count{path=\"/healthz\"} 7.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.013956953007436823\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 3.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_count{path=\"/readyz\"} 11.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 17.155932166991988\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.7940791443694894e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791460545518e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_retrieval_seconds_count 0.0\nrahbar_retrieval_seconds_sum 0.0\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.794079142935935e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_generation_seconds_count 0.0\nrahbar_generation_seconds_sum 0.0\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.794079142936012e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 0.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.794079142936049e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.7940791429360616e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791429360828e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.7940791429360924e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\n",
+        "api-5cdc4f9949-8p7sp": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 2387.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 214.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 8.70797312e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.09572096e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.794079147e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 4.63\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 18.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 6.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 4.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 5.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791506718233e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.794079152062066e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.794079184015135e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_count{path=\"/healthz\"} 6.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.011213458004931454\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 3.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 3.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 9.0\nrahbar_request_seconds_count{path=\"/readyz\"} 9.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 12.33622118299536\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.794079150671871e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791520621164e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_retrieval_seconds_count 0.0\nrahbar_retrieval_seconds_sum 0.0\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.7940791491320803e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_generation_seconds_count 0.0\nrahbar_generation_seconds_sum 0.0\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.7940791491322603e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 0.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.794079149132323e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.7940791491323454e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791491323833e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.7940791491323977e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\n",
+        "api-5cdc4f9949-hm7zl": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 2602.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 215.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 9.45307648e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.10075904e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79407913472e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 5.4399999999999995\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 20.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 7.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 5.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 5.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791384405944e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.794079139594613e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.7940791865485651e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_count{path=\"/healthz\"} 7.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.019675727999128867\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 3.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 5.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_count{path=\"/readyz\"} 10.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 12.505817281991767\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.7940791384406312e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791395946846e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_retrieval_seconds_count 0.0\nrahbar_retrieval_seconds_sum 0.0\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.7940791380316083e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_generation_seconds_count 0.0\nrahbar_generation_seconds_sum 0.0\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.7940791380316765e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 0.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.7940791380317113e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.794079138031724e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791380317469e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.794079138031757e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\n"
+      },
+      "metrics_after": {
+        "api-5cdc4f9949-48fn2": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 3019.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 216.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 9.45311744e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.10501888e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79407914109e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 5.489999999999999\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 20.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 8.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 5.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 6.0\nrahbar_requests_total{path=\"/metrics\",status=\"200\"} 1.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791443694582e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.7940791460544868e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.7940791929960513e+09\nrahbar_requests_created{path=\"/metrics\",status=\"200\"} 1.7940792581418753e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 8.0\nrahbar_request_seconds_count{path=\"/healthz\"} 8.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.015537033003056422\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 3.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_count{path=\"/readyz\"} 11.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 17.155932166991988\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_count{path=\"/metrics\"} 1.0\nrahbar_request_seconds_sum{path=\"/metrics\"} 0.004177466995315626\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.7940791443694894e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791460545518e+09\nrahbar_request_seconds_created{path=\"/metrics\"} 1.7940792581419048e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_retrieval_seconds_count 0.0\nrahbar_retrieval_seconds_sum 0.0\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.794079142935935e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_generation_seconds_count 0.0\nrahbar_generation_seconds_sum 0.0\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.794079142936012e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 0.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.794079142936049e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.7940791429360616e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791429360828e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.7940791429360924e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\n",
+        "api-5cdc4f9949-8p7sp": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 3124.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 216.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 8.70797312e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.1286528e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.794079147e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 4.97\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 23.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 6.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 5.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 5.0\nrahbar_requests_total{path=\"/metrics\",status=\"200\"} 1.0\nrahbar_requests_total{path=\"/api/ask\",status=\"200\"} 1.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791506718233e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.794079152062066e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.794079184015135e+09\nrahbar_requests_created{path=\"/metrics\",status=\"200\"} 1.7940792586506526e+09\nrahbar_requests_created{path=\"/api/ask\",status=\"200\"} 1.7940792615177224e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 6.0\nrahbar_request_seconds_count{path=\"/healthz\"} 6.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.011213458004931454\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 5.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 10.0\nrahbar_request_seconds_count{path=\"/readyz\"} 10.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 12.512583760995767\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_count{path=\"/metrics\"} 1.0\nrahbar_request_seconds_sum{path=\"/metrics\"} 0.003188914997735992\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_count{path=\"/api/ask\"} 1.0\nrahbar_request_seconds_sum{path=\"/api/ask\"} 2.2501977660067496\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.794079150671871e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791520621164e+09\nrahbar_request_seconds_created{path=\"/metrics\"} 1.7940792586506724e+09\nrahbar_request_seconds_created{path=\"/api/ask\"} 1.7940792615177448e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 1.0\nrahbar_retrieval_seconds_count 1.0\nrahbar_retrieval_seconds_sum 0.22920102699572453\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.7940791491320803e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 1.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 1.0\nrahbar_generation_seconds_count 1.0\nrahbar_generation_seconds_sum 2.0079445899973507\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.7940791491322603e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 1.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.794079149132323e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.7940791491323454e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\nrahbar_cache_outcomes_total{status=\"MISS\"} 1.0\n# HELP rahbar_cache_outcomes_created Request cache outcomes\n# TYPE rahbar_cache_outcomes_created gauge\nrahbar_cache_outcomes_created{status=\"MISS\"} 1.794079261516056e+09\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791491323833e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.7940791491323977e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\nrahbar_tokens_total{direction=\"in\",kind=\"actual\"} 1299.0\nrahbar_tokens_total{direction=\"out\",kind=\"actual\"} 605.0\nrahbar_tokens_total{direction=\"in\",kind=\"estimated\"} 398.0\nrahbar_tokens_total{direction=\"out\",kind=\"estimated\"} 211.0\n# HELP rahbar_tokens_created Generation token usage or labeled estimates\n# TYPE rahbar_tokens_created gauge\nrahbar_tokens_created{direction=\"in\",kind=\"actual\"} 1.79407926151093e+09\nrahbar_tokens_created{direction=\"out\",kind=\"actual\"} 1.7940792615109499e+09\nrahbar_tokens_created{direction=\"in\",kind=\"estimated\"} 1.7940792615114021e+09\nrahbar_tokens_created{direction=\"out\",kind=\"estimated\"} 1.794079261511425e+09\n",
+        "api-5cdc4f9949-hm7zl": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 3522.0\npython_gc_objects_collected_total{generation=\"1\"} 424.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 218.0\npython_gc_collections_total{generation=\"1\"} 19.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 9.45324032e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.13876992e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79407913472e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 5.74\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 25.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 7.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 6.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 5.0\nrahbar_requests_total{path=\"/metrics\",status=\"200\"} 1.0\nrahbar_requests_total{path=\"/api/ask\",status=\"200\"} 1.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791384405944e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.794079139594613e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.7940791865485651e+09\nrahbar_requests_created{path=\"/metrics\",status=\"200\"} 1.794079259200959e+09\nrahbar_requests_created{path=\"/api/ask\",status=\"200\"} 1.7940792618265805e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 7.0\nrahbar_request_seconds_count{path=\"/healthz\"} 7.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.019675727999128867\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 4.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 5.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 6.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 11.0\nrahbar_request_seconds_count{path=\"/readyz\"} 11.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 12.823112688995025\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/metrics\"} 1.0\nrahbar_request_seconds_count{path=\"/metrics\"} 1.0\nrahbar_request_seconds_sum{path=\"/metrics\"} 0.006226709003385622\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_count{path=\"/api/ask\"} 1.0\nrahbar_request_seconds_sum{path=\"/api/ask\"} 0.3020628980011679\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.7940791384406312e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791395946846e+09\nrahbar_request_seconds_created{path=\"/metrics\"} 1.794079259200996e+09\nrahbar_request_seconds_created{path=\"/api/ask\"} 1.7940792618266227e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 1.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 1.0\nrahbar_retrieval_seconds_count 1.0\nrahbar_retrieval_seconds_sum 0.2925668730022153\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.7940791380316083e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 0.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 0.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 0.0\nrahbar_generation_seconds_count 0.0\nrahbar_generation_seconds_sum 0.0\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.7940791380316765e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 1.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.7940791380317113e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 1.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.794079138031724e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\nrahbar_cache_outcomes_total{status=\"HIT\"} 1.0\n# HELP rahbar_cache_outcomes_created Request cache outcomes\n# TYPE rahbar_cache_outcomes_created gauge\nrahbar_cache_outcomes_created{status=\"HIT\"} 1.794079261824002e+09\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 0.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791380317469e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.794079138031757e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\n"
+      }
+    },
+    "G2": {
+      "passed": true,
+      "cosine": 0.8849781705067508,
+      "threshold": 0.95,
+      "result": {
+        "status": 200,
+        "seconds": 2.3430000000007567,
+        "cache": "MISS",
+        "body": {
+          "request_id": "c417b7b03c1ea0bba6bde5eb9d379f4d",
+          "answer": "You need to meet the attendance requirement \u2013 generally at least 80% of all scheduled lectures, labs, tutorials and seminars \u2013 otherwise you will be ineligible to sit the final exam (graduate programmes require a minimum of 75%). [academic-rules-handbook-jun-2026.pdf / 1.21] [academic-rules-handbook-jun-2026.pdf / 1.22] [prospectus-academic-rules-and-regulations.pdf / 1]",
+          "citations": [
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10
+            },
+            {
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.22",
+              "page": 10
+            },
+            {
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.21",
+              "page": 10,
+              "score": 0.78635943
+            },
+            {
+              "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.22",
+              "page": 10,
+              "score": 0.75885487
+            },
+            {
+              "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "D.6.7",
+              "page": 28,
+              "score": 0.7455281
+            },
+            {
+              "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1,
+              "score": 0.74140173
+            },
+            {
+              "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "5.24",
+              "page": 27,
+              "score": 0.7327845
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "b19a7864eeed43479af7a7ec66388677"
+        }
+      }
+    },
+    "G3": {
+      "passed": true,
+      "result": {
+        "status": 200,
+        "seconds": 1.4219999999986612,
+        "cache": "MISS",
+        "body": {
+          "request_id": "76602acbc91b3130ea69c10178cd2454",
+          "answer": "The tuition fee is Rs\u202f12,000 per credit hour for all programs [fee-structure-page.html / Tuition Fee (w.e.f. Fall 2026 semester)].",
+          "citations": [
+            {
+              "source": "fee-structure-page.html",
+              "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+              "page": null
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+              "source": "fee-structure-page.html",
+              "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+              "page": null,
+              "score": 0.80096734
+            },
+            {
+              "chunk_id": "dcf8b6cafb524cb3ae66d26541537b770a031104a7b7a928c662c8228a86b66b",
+              "source": "prospectus-academic-rules-and-regulations.pdf",
+              "section": "1",
+              "page": 1,
+              "score": 0.719608
+            },
+            {
+              "chunk_id": "363c06ecb038fd88a91f46bcc906521425d8ba4ebff3da78f143350305b2d65f",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.12",
+              "page": 8,
+              "score": 0.7195152
+            },
+            {
+              "chunk_id": "5db5564a4dc5ff08102b2e741bb429fb7752c79d690847ce85b871adbbe4e654",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.7",
+              "page": 7,
+              "score": 0.69748247
+            },
+            {
+              "chunk_id": "c42e01eb7960f9389eaa4f548729471251f59ca2e0b4cb103e8e047d9ed7eb39",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "1.11",
+              "page": 8,
+              "score": 0.69173127
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "c2eb7dfc67204392a12990ecfbadf3fe"
+        }
+      }
+    },
+    "G4": {
+      "passed": null,
+      "first": {
+        "status": 200,
+        "seconds": 0.20300000000133878,
+        "cache": "MISS",
+        "body": {
+          "request_id": "ff80ffc56c7d67146699fa3b4f9efb8b",
+          "answer": "The supplied documents do not provide enough information to answer this question.",
+          "citations": [],
+          "answered_from_context": false,
+          "confidence": "low",
+          "retrieved": [],
+          "provider": "hosted",
+          "session_id": "227b3410c92a4877bbeb422172f0bc04"
+        }
+      },
+      "second": {
+        "status": 200,
+        "seconds": 1.5469999999986612,
+        "cache": "MISS",
+        "body": {
+          "request_id": "af16313fc68c128684248e28d2e53972",
+          "answer": "The Campus Transfer Fee is Rs. 5,000[fee-structure-page.html / Miscellaneous Fees].",
+          "citations": [
+            {
+              "source": "fee-structure-page.html",
+              "section": "Miscellaneous Fees",
+              "page": null
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "917f9627efe9f1a1b3b753b325714daaf8f932d589fcbff9b4c62f9fbcee02e9",
+              "source": "fee-structure-page.html",
+              "section": "Miscellaneous Fees",
+              "page": null,
+              "score": 0.7297632700000001
+            },
+            {
+              "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+              "source": "fee-structure-page.html",
+              "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+              "page": null,
+              "score": 0.6806819399999999
+            },
+            {
+              "chunk_id": "9f933f7095f813470f9d7897d5b5683ae972e717f980153a868cc5e5755f4832",
+              "source": "academic-rules-handbook-jun-2026.pdf",
+              "section": "3.24",
+              "page": 16,
+              "score": 0.6739856
+            },
+            {
+              "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+              "source": "fee-structure-page.html",
+              "section": "Admission Fee",
+              "page": null,
+              "score": 0.6481683899999999
+            },
+            {
+              "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+              "source": "fee-structure-page.html",
+              "section": "Fee Refund Policy",
+              "page": null,
+              "score": 0.64800656
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "5a2f8eb42beb47e89c64233984e4fd8f"
+        }
+      },
+      "ground_truth": "Additional Transcript Rs300; Campus Transfer Rs5000; chosen before requests from source Fee Structure table.",
+      "outcome": "INCONCLUSIVE: first answer abstained, so no eligible near-miss candidate was warmed.",
+      "replacement_evidence": "cache-near-miss-transfer.json: source-verified5000/2000 pair, eligible HIT then correct MISS."
+    },
+    "G5": {
+      "passed": true,
+      "result": {
+        "status": 200,
+        "seconds": 1.9060000000026776,
+        "cache": "BYPASS",
+        "body": {
+          "request_id": "cf74513747e120d264fd804b90e9f2ad",
+          "answer": "The 2023 rules require at least 80% attendance (no more than 20% absence) to be eligible for the final exam [undergraduate-academic-rules-aug-2023.pdf / 1.21]. Failure to meet this threshold makes a student ineligible to sit the final exam [undergraduate-academic-rules-aug-2023.pdf / 1.22].",
+          "citations": [
+            {
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "1.21",
+              "page": 7
+            },
+            {
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "1.22",
+              "page": 8
+            }
+          ],
+          "answered_from_context": true,
+          "confidence": "high",
+          "retrieved": [
+            {
+              "chunk_id": "aa19c193896e38d196e9a55408f1122452af13fe40db2e9782348a263b1b202d",
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "1.21",
+              "page": 7,
+              "score": 0.7233533999999999
+            },
+            {
+              "chunk_id": "63ccb7483d5493f9bfc680c8c7e1e869673579f7ba2b59c669bb9300dbc63e53",
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "1.22",
+              "page": 8,
+              "score": 0.71824354
+            },
+            {
+              "chunk_id": "feb0d0e5c9320c9b5e094fb09a2182ac8f58c7bf288bcd31e2432b0d9b23952b",
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "5.12",
+              "page": 18,
+              "score": 0.7010638
+            },
+            {
+              "chunk_id": "e3de46c189d04bfc5427f3090aeb574844746da23fb78aaa14175c5401e94b71",
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "5.24",
+              "page": 19,
+              "score": 0.69177544
+            },
+            {
+              "chunk_id": "55101152efb108be340b9c50b713e0112e7c27814d5b5bc8e544c1fa2b03af6f",
+              "source": "undergraduate-academic-rules-aug-2023.pdf",
+              "section": "5.17",
+              "page": 18,
+              "score": 0.6813037399999999
+            }
+          ],
+          "provider": "hosted",
+          "session_id": "f7d182dbaf9c4cf8847b92c36823daa0"
+        }
+      }
+    },
+    "G6": {
+      "passed": true,
+      "first": {
+        "status": 200,
+        "seconds": 0.20300000000133878,
+        "cache": "MISS",
+        "body": {
+          "request_id": "9df96d17a7cf6eb0ba1fe3ffe3494899",
+          "answer": "The supplied documents do not provide enough information to answer this question.",
+          "citations": [],
+          "answered_from_context": false,
+          "confidence": "low",
+          "retrieved": [],
+          "provider": "hosted",
+          "session_id": "76533035ac294e54a5b98913d3a6791c"
+        }
+      },
+      "second": {
+        "status": 200,
+        "seconds": 0.625,
+        "cache": "MISS",
+        "body": {
+          "request_id": "3671f1d0e34ca2701b7b7c5509cbc169",
+          "answer": "The supplied documents do not provide enough information to answer this question.",
+          "citations": [],
+          "answered_from_context": false,
+          "confidence": "low",
+          "retrieved": [],
+          "provider": "hosted",
+          "session_id": "ef2a1292f43745778184fe59b6c38151"
+        }
+      }
+    }
+  },
+  "cache_reset": "isolated audit cache keys removed 1\n",
+  "direct_metrics": {
+    "status": 200,
+    "body": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 10617.0\npython_gc_objects_collected_total{generation=\"1\"} 1198.0\npython_gc_objects_collected_total{generation=\"2\"} 20.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 230.0\npython_gc_collections_total{generation=\"1\"} 20.0\npython_gc_collections_total{generation=\"2\"} 1.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"16\",version=\"3.12.16\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 9.45311744e+08\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.48676608e+08\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.79407914109e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 11.08\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 73.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP rahbar_requests_total HTTP requests\n# TYPE rahbar_requests_total counter\nrahbar_requests_total{path=\"/healthz\",status=\"200\"} 24.0\nrahbar_requests_total{path=\"/readyz\",status=\"200\"} 27.0\nrahbar_requests_total{path=\"/readyz\",status=\"503\"} 6.0\nrahbar_requests_total{path=\"/metrics\",status=\"200\"} 2.0\nrahbar_requests_total{path=\"/api/ask\",status=\"200\"} 4.0\n# HELP rahbar_requests_created HTTP requests\n# TYPE rahbar_requests_created gauge\nrahbar_requests_created{path=\"/healthz\",status=\"200\"} 1.7940791443694582e+09\nrahbar_requests_created{path=\"/readyz\",status=\"200\"} 1.7940791460544868e+09\nrahbar_requests_created{path=\"/readyz\",status=\"503\"} 1.7940791929960513e+09\nrahbar_requests_created{path=\"/metrics\",status=\"200\"} 1.7940792581418753e+09\nrahbar_requests_created{path=\"/api/ask\",status=\"200\"} 1.794079265828081e+09\n# HELP rahbar_request_seconds HTTP request latency\n# TYPE rahbar_request_seconds histogram\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/healthz\"} 24.0\nrahbar_request_seconds_count{path=\"/healthz\"} 24.0\nrahbar_request_seconds_sum{path=\"/healthz\"} 0.03563497000141069\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/readyz\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/readyz\"} 19.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/readyz\"} 24.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/readyz\"} 25.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/readyz\"} 26.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/readyz\"} 33.0\nrahbar_request_seconds_count{path=\"/readyz\"} 33.0\nrahbar_request_seconds_sum{path=\"/readyz\"} 22.53768531098467\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/metrics\"} 2.0\nrahbar_request_seconds_count{path=\"/metrics\"} 2.0\nrahbar_request_seconds_sum{path=\"/metrics\"} 0.006579211993084755\nrahbar_request_seconds_bucket{le=\"0.05\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.1\",path=\"/api/ask\"} 0.0\nrahbar_request_seconds_bucket{le=\"0.25\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"0.5\",path=\"/api/ask\"} 1.0\nrahbar_request_seconds_bucket{le=\"1.0\",path=\"/api/ask\"} 2.0\nrahbar_request_seconds_bucket{le=\"2.0\",path=\"/api/ask\"} 2.0\nrahbar_request_seconds_bucket{le=\"5.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"10.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"30.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"60.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"90.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"120.0\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_bucket{le=\"+Inf\",path=\"/api/ask\"} 4.0\nrahbar_request_seconds_count{path=\"/api/ask\"} 4.0\nrahbar_request_seconds_sum{path=\"/api/ask\"} 5.0993261210023775\n# HELP rahbar_request_seconds_created HTTP request latency\n# TYPE rahbar_request_seconds_created gauge\nrahbar_request_seconds_created{path=\"/healthz\"} 1.7940791443694894e+09\nrahbar_request_seconds_created{path=\"/readyz\"} 1.7940791460545518e+09\nrahbar_request_seconds_created{path=\"/metrics\"} 1.7940792581419048e+09\nrahbar_request_seconds_created{path=\"/api/ask\"} 1.7940792658281262e+09\n# HELP rahbar_retrieval_seconds Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds histogram\nrahbar_retrieval_seconds_bucket{le=\"0.005\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.01\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.025\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.05\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.075\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.1\"} 0.0\nrahbar_retrieval_seconds_bucket{le=\"0.25\"} 3.0\nrahbar_retrieval_seconds_bucket{le=\"0.5\"} 3.0\nrahbar_retrieval_seconds_bucket{le=\"0.75\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"1.0\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"2.5\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"5.0\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"7.5\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"10.0\"} 4.0\nrahbar_retrieval_seconds_bucket{le=\"+Inf\"} 4.0\nrahbar_retrieval_seconds_count 4.0\nrahbar_retrieval_seconds_sum 1.0789196079786052\n# HELP rahbar_retrieval_seconds_created Retrieval and query embedding time\n# TYPE rahbar_retrieval_seconds_created gauge\nrahbar_retrieval_seconds_created 1.794079142935935e+09\n# HELP rahbar_generation_seconds All bounded generation attempts\n# TYPE rahbar_generation_seconds histogram\nrahbar_generation_seconds_bucket{le=\"0.1\"} 2.0\nrahbar_generation_seconds_bucket{le=\"0.5\"} 2.0\nrahbar_generation_seconds_bucket{le=\"1.0\"} 2.0\nrahbar_generation_seconds_bucket{le=\"2.0\"} 3.0\nrahbar_generation_seconds_bucket{le=\"5.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"10.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"20.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"30.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"60.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"90.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"120.0\"} 4.0\nrahbar_generation_seconds_bucket{le=\"+Inf\"} 4.0\nrahbar_generation_seconds_count 4.0\nrahbar_generation_seconds_sum 3.965008086008311\n# HELP rahbar_generation_seconds_created All bounded generation attempts\n# TYPE rahbar_generation_seconds_created gauge\nrahbar_generation_seconds_created 1.794079142936012e+09\n# HELP rahbar_cache_lookups_total Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_total counter\nrahbar_cache_lookups_total 3.0\n# HELP rahbar_cache_lookups_created Eligible semantic cache lookups\n# TYPE rahbar_cache_lookups_created gauge\nrahbar_cache_lookups_created 1.794079142936049e+09\n# HELP rahbar_cache_hits_total Safe semantic cache hits\n# TYPE rahbar_cache_hits_total counter\nrahbar_cache_hits_total 0.0\n# HELP rahbar_cache_hits_created Safe semantic cache hits\n# TYPE rahbar_cache_hits_created gauge\nrahbar_cache_hits_created 1.7940791429360616e+09\n# HELP rahbar_cache_outcomes_total Request cache outcomes\n# TYPE rahbar_cache_outcomes_total counter\nrahbar_cache_outcomes_total{status=\"MISS\"} 3.0\nrahbar_cache_outcomes_total{status=\"BYPASS\"} 1.0\n# HELP rahbar_cache_outcomes_created Request cache outcomes\n# TYPE rahbar_cache_outcomes_created gauge\nrahbar_cache_outcomes_created{status=\"MISS\"} 1.7940792658248796e+09\nrahbar_cache_outcomes_created{status=\"BYPASS\"} 1.7940795892739084e+09\n# HELP rahbar_abstentions_total Ungrounded responses including fallback\n# TYPE rahbar_abstentions_total counter\nrahbar_abstentions_total 3.0\n# HELP rahbar_abstentions_created Ungrounded responses including fallback\n# TYPE rahbar_abstentions_created gauge\nrahbar_abstentions_created 1.7940791429360828e+09\n# HELP rahbar_fallbacks_total Generation failures safely declined\n# TYPE rahbar_fallbacks_total counter\nrahbar_fallbacks_total 0.0\n# HELP rahbar_fallbacks_created Generation failures safely declined\n# TYPE rahbar_fallbacks_created gauge\nrahbar_fallbacks_created 1.7940791429360924e+09\n# HELP rahbar_tokens_total Generation token usage or labeled estimates\n# TYPE rahbar_tokens_total counter\nrahbar_tokens_total{direction=\"in\",kind=\"actual\"} 2898.0\nrahbar_tokens_total{direction=\"out\",kind=\"actual\"} 1113.0\nrahbar_tokens_total{direction=\"in\",kind=\"estimated\"} 1076.0\nrahbar_tokens_total{direction=\"out\",kind=\"estimated\"} 338.0\n# HELP rahbar_tokens_created Generation token usage or labeled estimates\n# TYPE rahbar_tokens_created gauge\nrahbar_tokens_created{direction=\"in\",kind=\"actual\"} 1.7940792658147295e+09\nrahbar_tokens_created{direction=\"out\",kind=\"actual\"} 1.7940792658147564e+09\nrahbar_tokens_created{direction=\"in\",kind=\"estimated\"} 1.794079265815412e+09\nrahbar_tokens_created{direction=\"out\",kind=\"estimated\"} 1.794079265815437e+09\n"
+  },
+  "ingress_metrics": {
+    "status": 200,
+    "content_type": "text/html",
+    "body_prefix": "<!doctype html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"utf-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n<title>RAHBAR",
+    "prometheus": false
+  },
+  "final_collection": {
+    "collection": {
+      "id": "4f7c2ae6-40de-4e52-b81e-f307c5b10961",
+      "name": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+      "configuration_json": {
+        "hnsw": {
+          "space": "cosine",
+          "ef_construction": 100,
+          "ef_search": 100,
+          "max_neighbors": 16,
+          "resize_factor": 1.2,
+          "sync_threshold": 1000
+        },
+        "spann": null,
+        "embedding_function": null
+      },
+      "metadata": {
+        "dimension": 768,
+        "hnsw:space": "cosine",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text"
+      },
+      "dimension": 768,
+      "tenant": "default_tenant",
+      "database": "default_database",
+      "log_position": 0,
+      "version": 0
+    },
+    "count": 813
+  },
+  "fresh_sha_hostel_variant": {
+    "status": 200,
+    "body": {
+      "request_id": "41d7aae695d84899b3cdad728e229967",
+      "answer": "The supplied documents do not provide enough information to answer this question.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.7565661
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.6885572
+        },
+        {
+          "chunk_id": "917f9627efe9f1a1b3b753b325714daaf8f932d589fcbff9b4c62f9fbcee02e9",
+          "source": "fee-structure-page.html",
+          "section": "Miscellaneous Fees",
+          "page": null,
+          "score": 0.66438144
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6395560499999999
+        },
+        {
+          "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+          "source": "fee-structure-page.html",
+          "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+          "page": null,
+          "score": 0.63038003
+        }
+      ],
+      "provider": "hosted",
+      "session_id": "9d9619a5432f45da8c10d265f8dfe83f"
+    },
+    "passed": true,
+    "question": "How much is the refundable hostel-room security deposit at the university?",
+    "scope": "Diagnostic variant, NOT the exact frozen q14 (which specifies Chiniot-Faisalabad campus). Initial harness field was misnamed; original file retained."
+  }
+}

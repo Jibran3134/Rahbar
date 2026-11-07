@@ -1,0 +1,7 @@
+94868ba|d8e7723aa0cf0fcbd085d929c5b42548ccc01087 ef8b8dfb51085d8d1df28b86da92f2e029d2ecb8|Merge pull request #16 from Jibran3134/dev
+d8e7723|b3955e12410240f8042b2bbd3deab01107529158 01bba72cb1ab8f4079191a160b21279393dd0e5c|fix(network): promote API egress fix and relevance floor calibration to main
+b3955e1|a2565b176766b97b8bb4337a9c943f4196860b10 40cf4afa6e77e6a170b910740a8b37ead5dc77a9|feat(llm): promote hosted Groq provider implementation to main
+a2565b1|e5d86b42289aa6b36edb30cf1534c045f0e96a37 da887ea42f13ba2db61c3a7c41840cb98e4bf742|feat(model): promote qwen3 instruct model upgrade to main
+e5d86b4|47fdad99c57f5bddf437bcf318fe1eaee22e1763 1dbfe614080b0ab2403950fb91157963d3af1f09|Merge pull request #2 from Jibran3134/delivery/release-evidence
+47fdad9|5a40788c505481486700fa2f057822460f9d51c5 90961a4372ee2161d45a738095cb48fa5528382a|Merge pull request #1 from Jibran3134/evidence/eval-gate
+5a40788||Initial Commit
