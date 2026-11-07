@@ -16,6 +16,10 @@ _NUMBER = r"(?:0|[1-9]\d*)"
 _CLAUSE = re.compile(rf"^({_NUMBER}(?:\.{_NUMBER})+)\.?\s+\S")
 _INTEGER_HEADING = re.compile(r"^([1-9]\d*)\.\s+\S")
 _ROMAN_HEADING = re.compile(r"^([IVXLCDM]+)\.\s+\S")
+_MARKDOWN_HEADING = re.compile(r"^#{1,6}\s+(.+?)(?:\s+#+)?$")
+_MARKDOWN_PREFIX = re.compile(r"^#{1,6}\s+")
+_PARAGRAPH_BOUNDARY = re.compile(r"\n[ \t]*\n")
+_SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?])[ \t\n]+(?=[A-Z(])")
 
 
 def count_tokens(text: str) -> int:
@@ -45,7 +49,7 @@ def chunking_stats(doc: Document, chunks: list[Chunk]) -> ChunkingStats:
 
 
 def _heading(line: str, roman: str | None) -> tuple[str, str | None] | None:
-    markdown = re.match(r"^#{1,6}\s+(.+?)(?:\s+#+)?$", line)
+    markdown = _MARKDOWN_HEADING.match(line)
     if markdown:
         # Explicit authored headings are authoritative, including their number
         # and title (the existing CI fixture truth uses this convention).
@@ -76,10 +80,10 @@ def _plain_heading(line: str, following: str) -> bool:
 def _boundaries(text: str, token_ends: list[int]) -> tuple[list[int], list[int]]:
     """Map paragraph/sentence ends to token offsets without rebuilding text."""
     paragraphs = [bisect_right(token_ends, m.start())
-                  for m in re.finditer(r"\n[ \t]*\n", text)]
+                  for m in _PARAGRAPH_BOUNDARY.finditer(text)]
     # Decimal points and ordinary lower-case abbreviations aren't boundaries.
     sentences = [bisect_right(token_ends, m.start())
-                 for m in re.finditer(r"(?<=[.!?])[ \t\n]+(?=[A-Z(])", text)]
+                 for m in _SENTENCE_BOUNDARY.finditer(text)]
     return paragraphs, sentences
 
 
@@ -104,7 +108,7 @@ def chunk(doc: Document, size: int, overlap: int) -> list[Chunk]:
         lines = page.text.splitlines(keepends=True)
         for index, line in enumerate(lines):
             stripped = line.strip()
-            is_markdown = bool(re.match(r"^#{1,6}\s+", stripped))
+            is_markdown = bool(_MARKDOWN_PREFIX.match(stripped))
             heading = _heading(stripped, roman) if is_markdown or not markdown_scope else None
             following = lines[index + 1].strip() if index + 1 < len(lines) else ""
             if heading or (not markdown_scope and _plain_heading(stripped, following)):

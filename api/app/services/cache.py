@@ -16,6 +16,13 @@ from .grounding import validate_grounding
 from ..routes import metrics
 
 PROMPT_VERSION="grounded-v12-instruct-decimal-policy"
+_NUMBERS = re.compile(r"(?<!\w)[+-]?\d+(?:[.,]\d+)*(?:%)?(?!\w)")
+_SCOPE_TERMS = re.compile(r"hostel|admission|withdraw\w*|tuition|deposit|prerequisite|"
+                          r"lab|theory|not|never|without|cannot|optional|[a-z]{2,}-\d+")
+_CUMULATIVE_GPA = re.compile(r"\bcgpa\b|\bcumulative\b")
+_SEMESTER_GPA = re.compile(r"\bsgpa\b|\bsemester\b")
+_UNSPECIFIED_GPA = re.compile(r"\bgpa\b")
+_COURSE_CODES = re.compile(r"\b[a-z]{2,}[- ]?\d{2,}\b")
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:
@@ -26,21 +33,20 @@ def namespace(active: ActiveIndex, settings: Settings) -> str:
 
 def signature(question: str) -> tuple[Any,...]:
     text=question.lower()
-    numbers=tuple(sorted(re.findall(r"(?<!\w)[+-]?\d+(?:[.,]\d+)*(?:%)?(?!\w)",text)))
-    scope=tuple(sorted(set(re.findall(r"hostel|admission|withdraw\w*|tuition|deposit|prerequisite|"
-                                    r"lab|theory|not|never|without|cannot|optional|[a-z]{2,}-\d+",text))))
+    numbers=tuple(sorted(_NUMBERS.findall(text)))
+    scope=tuple(sorted(set(_SCOPE_TERMS.findall(text))))
     # A semester result cannot stand in for a cumulative result, even when the
     # embeddings and numbers match. Normalize abbreviations without equating an
     # unspecified GPA with either interpretation.
     gpa_scope=[]
-    if re.search(r"\bcgpa\b|\bcumulative\b",text):
+    if _CUMULATIVE_GPA.search(text):
         gpa_scope.append("gpa:cumulative")
-    if re.search(r"\bsgpa\b|\bsemester\b",text):
+    if _SEMESTER_GPA.search(text):
         gpa_scope.append("gpa:semester")
-    if not gpa_scope and re.search(r"\bgpa\b",text):
+    if not gpa_scope and _UNSPECIFIED_GPA.search(text):
         gpa_scope.append("gpa:unspecified")
     scope=tuple(sorted((*scope,*gpa_scope)))
-    courses=tuple(sorted(re.findall(r"\b[a-z]{2,}[- ]?\d{2,}\b",text)))
+    courses=tuple(sorted(_COURSE_CODES.findall(text)))
     return numbers,scope,courses,json.dumps(version_filter(question),sort_keys=True)
 
 

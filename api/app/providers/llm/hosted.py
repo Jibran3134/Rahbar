@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import json
 import logging
-import re
 
 import httpx
 from pydantic import ValidationError
@@ -25,6 +24,7 @@ from pydantic import ValidationError
 from ...config import Settings
 from ...schemas import Answer, Passage
 from .base import ProviderError, ProviderFailureKind
+from .citations import normalize_inline_citations
 from ...routes import metrics
 from ...services.arithmetic import comparison_hints
 from .ollama import SYSTEM_PROMPT  # shared prompt keeps both paths aligned
@@ -149,45 +149,7 @@ class HostedProvider:
             parsed = json.loads(content)
             answer = Answer.model_validate(parsed, strict=True)
 
-            # Apply the same inline-citation normalisation as the Ollama provider:
-            # if the model omitted inline tags but cited exactly one source/section,
-            # append the tag to every sentence.
-            for p in passages:
-                label = f"[{p.source} / {p.section}]"
-                if answer.answer.startswith(label + " "):
-                    answer = answer.model_copy(
-                        update={"answer": answer.answer[len(label):].strip() + " " + label}
-                    )
-                    break
-
-            triples = {(p.source, p.section, p.page) for p in passages}
-            cited = {(c.source, c.section, c.page) for c in answer.citations}
-            pairs = {(c.source, c.section) for c in answer.citations}
-            if (
-                answer.answered_from_context
-                and cited
-                and cited <= triples
-                and len(pairs) == 1
-                and "[" not in answer.answer
-                and "]" not in answer.answer
-            ):
-                source, section = next(iter(pairs))
-                label = f"[{source} / {section}]"
-                protected = re.sub(
-                    r"\b(?:Rs|Dr|Mr|Ms|Prof)\.",
-                    lambda m: m.group()[:-1] + "\ufff2",
-                    answer.answer,
-                )
-                sentences = [
-                    s.strip().replace("\ufff2", ".")
-                    for s in re.split(r"(?<=[.!?])\s+|\n+", protected)
-                    if s.strip()
-                ]
-                answer = answer.model_copy(
-                    update={"answer": " ".join(s + " " + label for s in sentences)}
-                )
-
-            return answer
+            return normalize_inline_citations(answer,passages)
 
         except httpx.TimeoutException:
             raise ProviderError(ProviderFailureKind.TIMEOUT) from None
