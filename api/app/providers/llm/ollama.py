@@ -40,6 +40,7 @@ Copy each evidence record's inline_citation string verbatim into the answer.
 The API can render inline labels when you cite one verified source section;
 never invent citation objects or refer to a source not supplied in evidence.
 Never cite evidence numbers. Use concise prose without headings or bullet lists.
+Do not substitute general admission security deposits or general fees for specific facility requests (such as hostel or transport) that are absent from evidence.
 If evidence does not answer the question, explicitly say the supplied documents do not
 provide that information, set answered_from_context=false, confidence=low, citations=[].
 Keep reasoning brief and do not place reasoning in the answer field.

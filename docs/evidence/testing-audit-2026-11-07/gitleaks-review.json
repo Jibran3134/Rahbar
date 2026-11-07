@@ -1,0 +1,178 @@
+[
+  {
+    "file": "docs/evidence/platform/P03/api-scan-fixed.json",
+    "line": 62,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan-fixed.json",
+    "line": 161,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan.json",
+    "line": 62,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan.json",
+    "line": 161,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P05/published-images.json",
+    "line": 3,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED\"",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P05/published-images.json",
+    "line": 4,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED\\n",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P05/remote-red-eval.log",
+    "line": 442,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan-fixed.json",
+    "line": 63,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan-fixed.json",
+    "line": 157,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P05/published-images.json",
+    "line": 3,
+    "commit": "1dbfe614080b0ab2403950fb91157963d3af1f09",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED\"",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P05/published-images.json",
+    "line": 4,
+    "commit": "1dbfe614080b0ab2403950fb91157963d3af1f09",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED\\n",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan.json",
+    "line": 63,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan.json",
+    "line": 157,
+    "commit": "afe3363cd2134bdaa5ff11a99a65904867187efe",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P05/remote-red-eval.log",
+    "line": 442,
+    "commit": "a988c641758a9ac2a7322ad140497f4de0cc2112",
+    "rule": "generic-api-key",
+    "redacted_match": "rahbar-api:REDACTED",
+    "classification": "Container image SHA tag in scan evidence"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan-fixed.json",
+    "line": 62,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan-fixed.json",
+    "line": 161,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan.json",
+    "line": 62,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/api-scan.json",
+    "line": 161,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan-fixed.json",
+    "line": 63,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan-fixed.json",
+    "line": 157,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan.json",
+    "line": 63,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  },
+  {
+    "file": "docs/evidence/platform/P03/indexer-scan.json",
+    "line": 157,
+    "commit": "ef57ee9200032f6d13da976d4fc9cd1f7e44a07f",
+    "rule": "generic-api-key",
+    "redacted_match": "GPG_KEY=REDACTED\"",
+    "classification": "Public container signing-key fingerprint"
+  }
+]

@@ -1,0 +1,291 @@
+{
+  "scope": "Real Ingress against isolated audit cluster; scripted provider, non-secret API key override; production provider unchanged.",
+  "checks": {
+    "H1": {
+      "passed": true,
+      "provider_calls": 2,
+      "results": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "94ac6ad0e3d8d1c62adcbc33066dd449",
+            "answer": "A student must pass all prerequisite courses before registration. [academic-rules-handbook-jun-2026.pdf / 1.20]",
+            "citations": [
+              {
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9
+              }
+            ],
+            "answered_from_context": true,
+            "confidence": "high",
+            "retrieved": [
+              {
+                "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9,
+                "score": 0.80076915
+              },
+              {
+                "chunk_id": "e2707e7babb395c2e51e3a2db9538c2675e029fd3b4f6f8b0beab1e72503b53b",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D",
+                "page": 28,
+                "score": 0.78784472
+              },
+              {
+                "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.8",
+                "page": 25,
+                "score": 0.7779302
+              },
+              {
+                "chunk_id": "821a1f2b2e4da8ab44989b05b6fd80f54bf58a3e1e74b670ec1d832037a4831c",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "4.1",
+                "page": 19,
+                "score": 0.75457829
+              },
+              {
+                "chunk_id": "cc60b823034b854f45c31871c2fcdc01dcaf940e9d6e0c426db9e91ea69f6f6b",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "9",
+                "page": 2,
+                "score": 0.7512524700000001
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "f47353112c374943a68b1c129ae5bcea"
+          },
+          "cache": "BYPASS"
+        }
+      ]
+    },
+    "H2-G7": {
+      "passed": true,
+      "provider_calls": 4,
+      "results": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "b761637818260c0bb7598c1619794699",
+            "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+            "citations": [],
+            "answered_from_context": false,
+            "confidence": "low",
+            "retrieved": [
+              {
+                "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9,
+                "score": 0.80076915
+              },
+              {
+                "chunk_id": "e2707e7babb395c2e51e3a2db9538c2675e029fd3b4f6f8b0beab1e72503b53b",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D",
+                "page": 28,
+                "score": 0.78784472
+              },
+              {
+                "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.8",
+                "page": 25,
+                "score": 0.7779302
+              },
+              {
+                "chunk_id": "821a1f2b2e4da8ab44989b05b6fd80f54bf58a3e1e74b670ec1d832037a4831c",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "4.1",
+                "page": 19,
+                "score": 0.75457829
+              },
+              {
+                "chunk_id": "cc60b823034b854f45c31871c2fcdc01dcaf940e9d6e0c426db9e91ea69f6f6b",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "9",
+                "page": 2,
+                "score": 0.7512524700000001
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "9eab2bbd3a574440abe02ab5b89443d0"
+          },
+          "cache": "MISS"
+        },
+        {
+          "status": 200,
+          "body": {
+            "request_id": "161b8747d75d0bad4123d3597be43e74",
+            "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+            "citations": [],
+            "answered_from_context": false,
+            "confidence": "low",
+            "retrieved": [
+              {
+                "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9,
+                "score": 0.80076915
+              },
+              {
+                "chunk_id": "e2707e7babb395c2e51e3a2db9538c2675e029fd3b4f6f8b0beab1e72503b53b",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D",
+                "page": 28,
+                "score": 0.78784472
+              },
+              {
+                "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.8",
+                "page": 25,
+                "score": 0.7779302
+              },
+              {
+                "chunk_id": "821a1f2b2e4da8ab44989b05b6fd80f54bf58a3e1e74b670ec1d832037a4831c",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "4.1",
+                "page": 19,
+                "score": 0.75457829
+              },
+              {
+                "chunk_id": "cc60b823034b854f45c31871c2fcdc01dcaf940e9d6e0c426db9e91ea69f6f6b",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "9",
+                "page": 2,
+                "score": 0.7512524700000001
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "f843b61db6b64147a774a1cb21b441b4"
+          },
+          "cache": "MISS"
+        }
+      ]
+    },
+    "H3": {
+      "passed": true,
+      "provider_calls": 2,
+      "results": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "a9508ade7a189bbf065052d56de7216c",
+            "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+            "citations": [],
+            "answered_from_context": false,
+            "confidence": "low",
+            "retrieved": [
+              {
+                "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9,
+                "score": 0.80076915
+              },
+              {
+                "chunk_id": "e2707e7babb395c2e51e3a2db9538c2675e029fd3b4f6f8b0beab1e72503b53b",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D",
+                "page": 28,
+                "score": 0.78784472
+              },
+              {
+                "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.8",
+                "page": 25,
+                "score": 0.7779302
+              },
+              {
+                "chunk_id": "821a1f2b2e4da8ab44989b05b6fd80f54bf58a3e1e74b670ec1d832037a4831c",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "4.1",
+                "page": 19,
+                "score": 0.75457829
+              },
+              {
+                "chunk_id": "cc60b823034b854f45c31871c2fcdc01dcaf940e9d6e0c426db9e91ea69f6f6b",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "9",
+                "page": 2,
+                "score": 0.7512524700000001
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "64ec07650c1c4d568ed486f62d218332"
+          },
+          "cache": "BYPASS"
+        }
+      ]
+    },
+    "H4": {
+      "passed": true,
+      "provider_calls": 1,
+      "results": [
+        {
+          "status": 200,
+          "body": {
+            "request_id": "ff4e89270545eebac6d35cb885df4682",
+            "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+            "citations": [],
+            "answered_from_context": false,
+            "confidence": "low",
+            "retrieved": [
+              {
+                "chunk_id": "d5ff3588165736051f86141b37725deeb47060350f9da36c42917cdbfd17babe",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.20",
+                "page": 9,
+                "score": 0.80076915
+              },
+              {
+                "chunk_id": "e2707e7babb395c2e51e3a2db9538c2675e029fd3b4f6f8b0beab1e72503b53b",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D",
+                "page": 28,
+                "score": 0.78784472
+              },
+              {
+                "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.8",
+                "page": 25,
+                "score": 0.7779302
+              },
+              {
+                "chunk_id": "821a1f2b2e4da8ab44989b05b6fd80f54bf58a3e1e74b670ec1d832037a4831c",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "4.1",
+                "page": 19,
+                "score": 0.75457829
+              },
+              {
+                "chunk_id": "cc60b823034b854f45c31871c2fcdc01dcaf940e9d6e0c426db9e91ea69f6f6b",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "9",
+                "page": 2,
+                "score": 0.7512524700000001
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "b8d53c46bacf49fe85da49e4292c803c"
+          },
+          "cache": "BYPASS"
+        }
+      ]
+    }
+  },
+  "ingress_metrics": {
+    "status": 200,
+    "content_type": "text/html",
+    "body_prefix": "<!doctype html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"utf-8\">\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n<title>RAHBAR",
+    "prometheus": false
+  }
+}

@@ -13,6 +13,13 @@ spec:
   - host: rahbar.local
     http:
       paths:
+      - path: /metrics
+        pathType: Exact
+        backend:
+          service:
+            name: api
+            port:
+              number: 8000
       - path: /api
         pathType: Prefix
         backend:

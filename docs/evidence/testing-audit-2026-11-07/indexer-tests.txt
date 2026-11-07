@@ -1,0 +1,22 @@
+........................................................................ [ 55%]
+..........................................................               [100%]
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                   Stmts   Miss  Cover
+------------------------------------------
+pipeline\__init__.py       0      0   100%
+pipeline\chunk.py        110      2    98%
+pipeline\clean.py         52      1    98%
+pipeline\config.py        47      1    98%
+pipeline\dummy.py         26      0   100%
+pipeline\embed.py         43      1    98%
+pipeline\extract.py      168      9    95%
+pipeline\models.py        40      0   100%
+pipeline\run.py           75     39    48%
+pipeline\store.py         60      7    88%
+------------------------------------------
+TOTAL                    621     60    90%
+Coverage XML written to file C:\Users\Jibran\Desktop\Rahbar\.venv\testing-audit\indexer-coverage.xml
+Required test coverage of 60% reached. Total coverage: 90.34%
+130 passed in 33.00s

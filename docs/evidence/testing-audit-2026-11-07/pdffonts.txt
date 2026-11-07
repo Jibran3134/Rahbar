@@ -1,0 +1,4 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+log4cxx: setFile(C:\Users\Jibran\AppData\Local\MiKTeX\miktex\log/pdffonts.log,true) call failed.
+log4cxx: IO Exception : status code = 720005(Access is denied.  )

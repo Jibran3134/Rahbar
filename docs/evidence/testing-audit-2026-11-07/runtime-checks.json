@@ -1,0 +1,1001 @@
+{
+  "context": "rahbar-audit",
+  "checks": {
+    "fresh_indexer": {
+      "passed": true,
+      "evidence": {
+        "job": "indexer",
+        "samples": [
+          {
+            "at": 1794078094.9793985,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078101.6225216,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078108.5265102,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078115.099492,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078122.3267207,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078129.2849894,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078136.2766957,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078144.1789563,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078150.989589,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078157.7150905,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078164.590695,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078171.3025174,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078177.7286572,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078187.1159215,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078194.4744687,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078201.7841704,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078208.3579338,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078215.6625037,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078222.783287,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078229.943653,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078237.2147229,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078245.0896869,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078251.7401452,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078259.7139425,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078266.9911716,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078275.3417215,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078282.3779275,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          },
+          {
+            "at": 1794078288.3771067,
+            "pod": "indexer-872zp",
+            "peak_and_limit": "508141568\n 1610612736\n\n"
+          }
+        ],
+        "logs": "{\"ts\": \"2026-11-07T18:58:43Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"indexer starting\", \"dummy\": false, \"embed_model\": \"nomic-embed-text\", \"collection\": \"rahbar\", \"chroma\": \"chroma:8000\", \"pod\": \"indexer-872zp\"}\n{\"ts\": \"2026-11-07T19:00:40Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"undergraduate-academic-rules-aug-2023.pdf\", \"chunks\": 192, \"original_tokens\": 10085, \"stored_tokens\": 10114, \"amplification\": 1.002876, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:00:52Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"academic-rules-handbook-jun-2026.pdf\", \"chunks\": 280, \"original_tokens\": 17169, \"stored_tokens\": 17607, \"amplification\": 1.025511, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:01:05Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"student-handbook-jun-2026.pdf\", \"chunks\": 204, \"original_tokens\": 20587, \"stored_tokens\": 21504, \"amplification\": 1.044543, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:01:07Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"prospectus-academic-rules-and-regulations.pdf\", \"chunks\": 42, \"original_tokens\": 6248, \"stored_tokens\": 6716, \"amplification\": 1.074904, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:01:36Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"faculty-entrepreneurship-and-technical-start-ups-policy.pdf\", \"chunks\": 76, \"original_tokens\": 3594, \"stored_tokens\": 3652, \"amplification\": 1.016138, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:01:36Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"fee-structure-page.html\", \"chunks\": 10, \"original_tokens\": 1149, \"stored_tokens\": 1207, \"amplification\": 1.050479, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:01:36Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"grading-page.html\", \"chunks\": 9, \"original_tokens\": 1550, \"stored_tokens\": 1638, \"amplification\": 1.056774, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:04:48Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"indexer finished\", \"chunks\": 813, \"seconds\": 366.0}\n"
+      }
+    },
+    "network": {
+      "passed": true,
+      "evidence": {
+        "ui_chroma": "curl exit28",
+        "api_paths": "200\nRedis socket connected\n",
+        "note": "L3/L4 policy does not authorize individual Chroma HTTP methods; API read-only verified separately."
+      }
+    },
+    "dependency_outage": {
+      "passed": false,
+      "error": "('exec', 'api-67bfc87bf9-4jfvk', '--', 'python', '-c', \"import urllib.request,urllib.error,json;\\ntry:\\n r=urllib.request.urlopen('http://127.0.0.1:8000/healthz',timeout=20);print(json.dumps({'status':r.status,'body':json.loads(r.read())}))\\nexcept urllib.error.HTTPError as e:print(json.dumps({'status':e.code,'body':json.loads(e.read())}))\"): Error from server (NotFound): pods \"api-67bfc87bf9-4jfvk\" not found\n",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\runtime_audit.py\", line 18, in check\n    try:report['checks'][name]={'passed':True,'evidence':fn()}\n                                                         ^^^^\n  File \"C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\runtime_audit.py\", line 58, in outage\n    health=local(pod,'/healthz');ready=local(pod,'/readyz');after=pods('api');end={x['metadata']['name']:x['status']['containerStatuses'][0]['restartCount'] for x in after}\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\runtime_audit.py\", line 23, in local\n    return json.loads(run('exec',pod,'--','python','-c',code))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\runtime_audit.py\", line 11, in run\n    if r.returncode not in ok:raise RuntimeError(str(args)+': '+r.stderr)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: ('exec', 'api-67bfc87bf9-4jfvk', '--', 'python', '-c', \"import urllib.request,urllib.error,json;\\ntry:\\n r=urllib.request.urlopen('http://127.0.0.1:8000/healthz',timeout=20);print(json.dumps({'status':r.status,'body':json.loads(r.read())}))\\nexcept urllib.error.HTTPError as e:print(json.dumps({'status':e.code,'body':json.loads(e.read())}))\"): Error from server (NotFound): pods \"api-67bfc87bf9-4jfvk\" not found\n\n"
+    },
+    "model_mismatch_and_recovery": {
+      "passed": true,
+      "evidence": {
+        "health": {
+          "status": 200,
+          "body": {
+            "status": "alive"
+          }
+        },
+        "ready": {
+          "status": 503,
+          "body": {
+            "status": "not_ready",
+            "checks": {
+              "chroma": true,
+              "model": false,
+              "dimension": false,
+              "redis": true
+            }
+          }
+        },
+        "pods": "NAME                     READY   STATUS      RESTARTS   AGE\napi-698955cbdf-bldrh     1/1     Running     0          92s\napi-698955cbdf-cbknj     1/1     Running     0          88s\napi-698955cbdf-z4glr     1/1     Running     0          9m15s\napi-7757979c6b-qkphf     0/1     Running     0          5s\nchroma-0                 1/1     Running     0          22s\nindexer-872zp            0/1     Completed   0          8m23s\nredis-7f546bdffd-fgprh   1/1     Running     0          21m\nui-587c8b97dc-f7cnd      1/1     Running     0          21m\n",
+        "logs": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\n{\"ts\": \"2026-11-07T19:06:29Z\", \"level\": \"INFO\", \"logger\": \"rahbar.api\", \"msg\": \"api started\", \"request_id\": \"-\", \"retriever\": \"chroma\", \"llm_provider\": \"hosted\", \"embed_model\": \"nomic-embed-text-audit-mismatch\", \"top_k\": 5}\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/auth/identity \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar_active \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database/collections/rahbar__g_395679ee63dd4a72b404141c6cbc4e46 \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database/collections/2169200a-842e-4ec2-a138-48ce858d6542/count \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"ERROR\", \"logger\": \"rahbar.readiness\", \"msg\": \"embedding model conflict\", \"request_id\": \"cd2beed8d0ab420bb255a18c90f23efa\", \"expected_model\": \"nomic-embed-text-audit-mismatch\", \"actual_model\": \"nomic-embed-text\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"ERROR\", \"logger\": \"rahbar.readiness\", \"msg\": \"embedding model conflict\", \"request_id\": \"21eaf0f3e6554063aa12328a2c9980a7\", \"expected_model\": \"nomic-embed-text-audit-mismatch\", \"actual_model\": \"nomic-embed-text\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"WARNING\", \"logger\": \"rahbar.readiness\", \"msg\": \"not ready\", \"request_id\": \"21eaf0f3e6554063aa12328a2c9980a7\", \"checks\": {\"chroma\": true, \"model\": false, \"dimension\": false, \"redis\": true}, \"expected_model\": \"nomic-embed-text-audit-mismatch\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"WARNING\", \"logger\": \"rahbar.readiness\", \"msg\": \"not ready\", \"request_id\": \"cd2beed8d0ab420bb255a18c90f23efa\", \"checks\": {\"chroma\": true, \"model\": false, \"dimension\": false, \"redis\": true}, \"expected_model\": \"nomic-embed-text-audit-mismatch\"}\n{\"ts\": \"2026-11-07T19:06:31Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/auth/identity \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:32Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n{\"ts\": \"2026-11-07T19:06:32Z\", \"level\": \"INFO\", \"logger\": \"httpx\", \"msg\": \"HTTP Request: GET http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database \\\"HTTP/1.1 200 OK\\\"\", \"request_id\": \"-\"}\n"
+      }
+    },
+    "five_replicas": {
+      "passed": true,
+      "evidence": {
+        "ready_endpoints": 5,
+        "output": "NAME   ENDPOINTS                                                              AGE\napi    10.244.56.211:8000,10.244.56.212:8000,10.244.56.213:8000 + 2 more...   22m\n"
+      }
+    },
+    "api_pod_replacement": {
+      "passed": true,
+      "evidence": {
+        "deleted": "api-5cdc4f9949-htm2s",
+        "requests": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "endpoints": "NAME   ENDPOINTS                                                  AGE\napi    10.244.56.212:8000,10.244.56.213:8000,10.244.56.216:8000   22m\n"
+      }
+    },
+    "chroma_pvc_replacement": {
+      "passed": true,
+      "evidence": {
+        "before": {
+          "collection": "rahbar__g_395679ee63dd4a72b404141c6cbc4e46",
+          "generation": "395679ee63dd4a72b404141c6cbc4e46",
+          "embed_model": "nomic-embed-text",
+          "dimension": 768
+        },
+        "after": {
+          "collection": "rahbar__g_395679ee63dd4a72b404141c6cbc4e46",
+          "generation": "395679ee63dd4a72b404141c6cbc4e46",
+          "embed_model": "nomic-embed-text",
+          "dimension": 768
+        },
+        "old_uid": "d348c127-f9ea-4a47-afeb-fa817aa53bf4",
+        "new_uid": "17d6d87a-dd29-40ea-b2a5-83cd43692031",
+        "pvc": "NAME            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE\ncorpus-data     Bound    pvc-a6ec1599-29af-4d11-a64b-46fa96995af0   1Gi        RWO            standard       <unset>                 22m\ndata-chroma-0   Bound    pvc-7244d65c-40f5-45df-9063-30cd2eaf2cde   4Gi        RWO            standard       <unset>                 22m\nredis-data      Bound    pvc-0b610ff2-e6a7-4c47-ad07-1177ee89ad16   1Gi        RWO            standard       <unset>                 22m\n"
+      }
+    },
+    "visible_rollout_undo": {
+      "passed": true,
+      "evidence": {
+        "initial_image": "rahbar-ui:audit-94868ba",
+        "changed_image": "rahbar-ui:platform-p03",
+        "before_hash": "0ed0ae97de3432a342b8d89144c7f3a037b1fe6dc5ef451c307aabb38d529f5a",
+        "changed_hash": "68d134acfad4824c87f916bb6276d2d61c04322f4b30e25819a7fab1945d8539",
+        "rollback_hash": "0ed0ae97de3432a342b8d89144c7f3a037b1fe6dc5ef451c307aabb38d529f5a",
+        "request_statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    "cache_hit_and_reindex": {
+      "passed": true,
+      "evidence": {
+        "trials": [
+          {
+            "first": {
+              "status": 200,
+              "cache": "MISS",
+              "seconds": 2.125,
+              "body": {
+                "request_id": "f724d12b9c75fe055ab2da22debbb390",
+                "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+                "citations": [],
+                "answered_from_context": false,
+                "confidence": "low",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "1a21e384d42b469293af355069a212e7"
+              }
+            },
+            "second": {
+              "status": 200,
+              "cache": "MISS",
+              "seconds": 4.014999999999418,
+              "body": {
+                "request_id": "92f8cdaa2e13258876fd231f9f409d69",
+                "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+                "citations": [],
+                "answered_from_context": false,
+                "confidence": "low",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "1b8c75f0e3d34daa851b82b137331297"
+              }
+            }
+          },
+          {
+            "first": {
+              "status": 200,
+              "cache": "MISS",
+              "seconds": 4.7189999999973224,
+              "body": {
+                "request_id": "ecc2edea700ef4a4e44ec1a2de51a37d",
+                "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+                "citations": [],
+                "answered_from_context": false,
+                "confidence": "low",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "12e98896fad74fbe94e4b01ba3f48b94"
+              }
+            },
+            "second": {
+              "status": 200,
+              "cache": "MISS",
+              "seconds": 4.296999999998661,
+              "body": {
+                "request_id": "8e95a1e7baad3b0ee01146ba614ab121",
+                "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+                "citations": [],
+                "answered_from_context": false,
+                "confidence": "low",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "ba44000cd34944328835dfb57d05a94d"
+              }
+            }
+          },
+          {
+            "first": {
+              "status": 200,
+              "cache": "MISS",
+              "seconds": 3.1090000000040163,
+              "body": {
+                "request_id": "d20611607301cd627a566234668fecac",
+                "answer": "The minimum attendance required to sit the final exam is 80% of scheduled classes[prospectus-academic-rules-and-regulations.pdf / 1][academic-rules-handbook-jun-2026.pdf / D.6.7].",
+                "citations": [
+                  {
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1
+                  },
+                  {
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28
+                  }
+                ],
+                "answered_from_context": true,
+                "confidence": "high",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "401a55908c624b108d9798e83c0b1268"
+              }
+            },
+            "second": {
+              "status": 200,
+              "cache": "HIT",
+              "seconds": 0.75,
+              "body": {
+                "request_id": "5f14c669129ba3e2a6031735200ce2a7",
+                "answer": "The minimum attendance required to sit the final exam is 80% of scheduled classes[prospectus-academic-rules-and-regulations.pdf / 1][academic-rules-handbook-jun-2026.pdf / D.6.7].",
+                "citations": [
+                  {
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1
+                  },
+                  {
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28
+                  }
+                ],
+                "answered_from_context": true,
+                "confidence": "high",
+                "retrieved": [
+                  {
+                    "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                    "source": "prospectus-academic-rules-and-regulations.pdf",
+                    "section": "1",
+                    "page": 1,
+                    "score": 0.76722407
+                  },
+                  {
+                    "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.22",
+                    "page": 10,
+                    "score": 0.76387489
+                  },
+                  {
+                    "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "1.21",
+                    "page": 10,
+                    "score": 0.761253
+                  },
+                  {
+                    "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "5.24",
+                    "page": 27,
+                    "score": 0.73856068
+                  },
+                  {
+                    "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                    "source": "academic-rules-handbook-jun-2026.pdf",
+                    "section": "D.6.7",
+                    "page": 28,
+                    "score": 0.729203
+                  }
+                ],
+                "provider": "hosted",
+                "session_id": "30af77f643b340a9ac46d66312a92843"
+              }
+            }
+          }
+        ],
+        "before": {
+          "collection": "rahbar__g_395679ee63dd4a72b404141c6cbc4e46",
+          "generation": "395679ee63dd4a72b404141c6cbc4e46",
+          "embed_model": "nomic-embed-text",
+          "dimension": 768
+        },
+        "after": {
+          "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+          "generation": "4bb1ea338ab84ca8a685596333f390aa",
+          "embed_model": "nomic-embed-text",
+          "dimension": 768
+        },
+        "fresh": {
+          "status": 200,
+          "cache": "MISS",
+          "seconds": 3.4219999999986612,
+          "body": {
+            "request_id": "d4e6cd4f3125f58615e7605d11f31f5c",
+            "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+            "citations": [],
+            "answered_from_context": false,
+            "confidence": "low",
+            "retrieved": [
+              {
+                "chunk_id": "e704fdd414422e7932e41390389612ed288cc84b56746b3b449febb5d448f837",
+                "source": "prospectus-academic-rules-and-regulations.pdf",
+                "section": "1",
+                "page": 1,
+                "score": 0.76722407
+              },
+              {
+                "chunk_id": "c3271540c4e3e494793e7bb3ce80f04ac6bf12c7bb753019cd24752169e22052",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.22",
+                "page": 10,
+                "score": 0.76387489
+              },
+              {
+                "chunk_id": "de90e13ced4b35903142394488949cc41901898b914869ac581ee7f1e005b0ed",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "1.21",
+                "page": 10,
+                "score": 0.761253
+              },
+              {
+                "chunk_id": "7cf00970a865fd3322556b6d66b89a8179ca5d2b42aeaef0f33898ac61a5e076",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "5.24",
+                "page": 27,
+                "score": 0.73856068
+              },
+              {
+                "chunk_id": "eb7f75998ea9ab2006e06b150a91f86eefeb42b624a67269586187a84169e3d6",
+                "source": "academic-rules-handbook-jun-2026.pdf",
+                "section": "D.6.7",
+                "page": 28,
+                "score": 0.729203
+              }
+            ],
+            "provider": "hosted",
+            "session_id": "f48efefcfc4549ae878dae651b864b5c"
+          }
+        },
+        "job": {
+          "job": "audit-reindex-1794078583",
+          "samples": [
+            {
+              "at": 1794078591.3534548,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "52772864\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078597.366566,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "240943104\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078603.8680627,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "241819648\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078609.5954175,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "241819648\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078615.4544823,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "255610880\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078621.2785075,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "255610880\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078626.9456177,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "255610880\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078632.9399185,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "255610880\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078638.7689624,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "256131072\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078644.5247593,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "257855488\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078650.1296341,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "259969024\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078655.771282,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "259969024\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078661.4956987,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "259969024\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078667.2388341,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "259969024\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078673.0326123,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078679.0630012,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078684.7451766,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078690.6683288,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078696.4398148,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078702.0831416,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078708.4492466,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078714.2708426,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078720.250378,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "269291520\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078726.269208,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078732.1404526,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078738.5570264,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078744.2835732,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078749.928062,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078757.4389725,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078764.7575328,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078772.7789779,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078779.7840226,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078786.50192,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078793.0894165,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078800.3025699,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078807.4604375,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078814.7827027,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078821.555522,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078829.2508125,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078836.026066,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078842.6818185,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078850.1356704,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078857.3364172,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078866.5756712,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078879.7028923,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078898.0046513,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078915.9241154,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078938.8098466,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078952.5596476,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078960.9241126,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078970.533008,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            },
+            {
+              "at": 1794078976.3374164,
+              "pod": "audit-reindex-1794078583-wf78j",
+              "peak_and_limit": "335826944\n 1610612736\n\n"
+            }
+          ],
+          "logs": "{\"ts\": \"2026-11-07T19:09:50Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"indexer starting\", \"dummy\": false, \"embed_model\": \"nomic-embed-text\", \"collection\": \"rahbar\", \"chroma\": \"chroma:8000\", \"pod\": \"audit-reindex-1794078583-wf78j\"}\n{\"ts\": \"2026-11-07T19:11:38Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"undergraduate-academic-rules-aug-2023.pdf\", \"chunks\": 192, \"original_tokens\": 10085, \"stored_tokens\": 10114, \"amplification\": 1.002876, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:11:49Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"academic-rules-handbook-jun-2026.pdf\", \"chunks\": 280, \"original_tokens\": 17169, \"stored_tokens\": 17607, \"amplification\": 1.025511, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:12:00Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"student-handbook-jun-2026.pdf\", \"chunks\": 204, \"original_tokens\": 20587, \"stored_tokens\": 21504, \"amplification\": 1.044543, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:12:03Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"prospectus-academic-rules-and-regulations.pdf\", \"chunks\": 42, \"original_tokens\": 6248, \"stored_tokens\": 6716, \"amplification\": 1.074904, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:12:33Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"faculty-entrepreneurship-and-technical-start-ups-policy.pdf\", \"chunks\": 76, \"original_tokens\": 3594, \"stored_tokens\": 3652, \"amplification\": 1.016138, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:12:33Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"fee-structure-page.html\", \"chunks\": 10, \"original_tokens\": 1149, \"stored_tokens\": 1207, \"amplification\": 1.050479, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:12:33Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"chunked\", \"source\": \"grading-page.html\", \"chunks\": 9, \"original_tokens\": 1550, \"stored_tokens\": 1638, \"amplification\": 1.056774, \"token_counter\": \"unicode-word-4-and-punctuation-v1\"}\n{\"ts\": \"2026-11-07T19:16:17Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"indexer finished\", \"chunks\": 813, \"seconds\": 387.3}\n"
+        },
+        "api_uids_unchanged": true
+      }
+    }
+  },
+  "objects": "NAME                                 READY   STATUS      RESTARTS   AGE     IP              NODE           NOMINATED NODE   READINESS GATES\npod/api-5cdc4f9949-9pqmd             1/1     Running     0          9m30s   10.244.56.216   rahbar-audit   <none>           <none>\npod/api-5cdc4f9949-kv6lg             1/1     Running     0          9m44s   10.244.56.213   rahbar-audit   <none>           <none>\npod/api-5cdc4f9949-l2ww4             1/1     Running     0          9m47s   10.244.56.212   rahbar-audit   <none>           <none>\npod/audit-reindex-1794078583-wf78j   0/1     Completed   0          6m41s   10.244.56.220   rahbar-audit   <none>           <none>\npod/chroma-0                         1/1     Running     0          9m15s   10.244.56.217   rahbar-audit   <none>           <none>\npod/indexer-872zp                    0/1     Completed   0          18m     10.244.56.206   rahbar-audit   <none>           <none>\npod/redis-7f546bdffd-fgprh           1/1     Running     0          31m     10.244.56.202   rahbar-audit   <none>           <none>\npod/ui-587c8b97dc-rpvnm              1/1     Running     0          9m5s    10.244.56.219   rahbar-audit   <none>           <none>\n\nNAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE   SELECTOR\nservice/api      ClusterIP   10.100.238.83    <none>        8000/TCP   31m   app.kubernetes.io/name=api,app.kubernetes.io/part-of=rahbar\nservice/chroma   ClusterIP   None             <none>        8000/TCP   31m   app.kubernetes.io/name=chroma,app.kubernetes.io/part-of=rahbar\nservice/redis    ClusterIP   10.105.214.243   <none>        6379/TCP   31m   app.kubernetes.io/name=redis,app.kubernetes.io/part-of=rahbar\nservice/ui       ClusterIP   10.103.74.23     <none>        8080/TCP   31m   app.kubernetes.io/name=ui,app.kubernetes.io/part-of=rahbar\n\nNAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE\npersistentvolumeclaim/corpus-data     Bound    pvc-a6ec1599-29af-4d11-a64b-46fa96995af0   1Gi        RWO            standard       <unset>                 31m   Filesystem\npersistentvolumeclaim/data-chroma-0   Bound    pvc-7244d65c-40f5-45df-9063-30cd2eaf2cde   4Gi        RWO            standard       <unset>                 31m   Filesystem\npersistentvolumeclaim/redis-data      Bound    pvc-0b610ff2-e6a7-4c47-ad07-1177ee89ad16   1Gi        RWO            standard       <unset>                 31m   Filesystem\n\nNAME                               CLASS   HOSTS          ADDRESS        PORTS   AGE\ningress.networking.k8s.io/rahbar   nginx   rahbar.local   192.168.58.2   80      31m\n\nNAME                                      REFERENCE        TARGETS        MINPODS   MAXPODS   REPLICAS   AGE\nhorizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: 72%/70%   3         8         3          31m\n",
+  "top": "NAME                     CPU(cores)   MEMORY(bytes)   \napi-5cdc4f9949-9pqmd     84m          135Mi           \napi-5cdc4f9949-kv6lg     78m          152Mi           \napi-5cdc4f9949-l2ww4     56m          148Mi           \nchroma-0                 10m          227Mi           \nredis-7f546bdffd-fgprh   67m          8Mi             \nui-587c8b97dc-rpvnm      1m           2Mi             \n",
+  "final_info": {
+    "active": {
+      "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+      "generation": "4bb1ea338ab84ca8a685596333f390aa",
+      "embed_model": "nomic-embed-text",
+      "dimension": 768
+    },
+    "embed_model": "nomic-embed-text",
+    "llm_model": "openai/gpt-oss-120b",
+    "provider": "hosted",
+    "top_k": 5,
+    "temperature": 0.2,
+    "relevance_floor": 0.7,
+    "cache_threshold": 0.95,
+    "cache_ttl_seconds": 3600
+  },
+  "metrics": "{\"detail\":\"Not Found\"}"
+}

@@ -1,0 +1,123 @@
+{
+  "protection_exit": 0,
+  "protection": {
+    "url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection",
+    "required_status_checks": {
+      "url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection/required_status_checks",
+      "strict": true,
+      "contexts": [
+        "verify / e2e-eval",
+        "verify / lint",
+        "verify / test",
+        "verify / manifests",
+        "verify / scan (api)",
+        "verify / scan (indexer)",
+        "verify / scan (ui)"
+      ],
+      "contexts_url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection/required_status_checks/contexts",
+      "checks": [
+        {
+          "context": "verify / e2e-eval",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / lint",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / test",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / manifests",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / scan (api)",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / scan (indexer)",
+          "app_id": 15368
+        },
+        {
+          "context": "verify / scan (ui)",
+          "app_id": 15368
+        }
+      ]
+    },
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "required_signatures": {
+      "url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection/required_signatures",
+      "enabled": false
+    },
+    "enforce_admins": {
+      "url": "https://api.github.com/repos/Jibran3134/Rahbar/branches/main/protection/enforce_admins",
+      "enabled": true
+    },
+    "required_linear_history": {
+      "enabled": false
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    },
+    "block_creations": {
+      "enabled": false
+    },
+    "required_conversation_resolution": {
+      "enabled": true
+    },
+    "lock_branch": {
+      "enabled": false
+    },
+    "allow_fork_syncing": {
+      "enabled": false
+    }
+  },
+  "cd_runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 42393183003,
+      "headSha": "94868ba05519f0598bc75536ef308a4db7282f36",
+      "status": "completed",
+      "url": "https://github.com/Jibran3134/Rahbar/actions/runs/42393183003"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42378847679,
+      "headSha": "d8e7723aa0cf0fcbd085d929c5b42548ccc01087",
+      "status": "completed",
+      "url": "https://github.com/Jibran3134/Rahbar/actions/runs/42378847679"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42375327258,
+      "headSha": "b3955e12410240f8042b2bbd3deab01107529158",
+      "status": "completed",
+      "url": "https://github.com/Jibran3134/Rahbar/actions/runs/42375327258"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42372448998,
+      "headSha": "a2565b176766b97b8bb4337a9c943f4196860b10",
+      "status": "completed",
+      "url": "https://github.com/Jibran3134/Rahbar/actions/runs/42372448998"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42093707398,
+      "headSha": "e5d86b42289aa6b36edb30cf1534c045f0e96a37",
+      "status": "completed",
+      "url": "https://github.com/Jibran3134/Rahbar/actions/runs/42093707398"
+    }
+  ]
+}

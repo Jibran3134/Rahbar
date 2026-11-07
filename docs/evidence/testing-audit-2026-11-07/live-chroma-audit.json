@@ -1,0 +1,55 @@
+{
+  "active": {
+    "collection": "rahbar__g_3141066362b242518011299c8ec54e1c",
+    "generation": "3141066362b242518011299c8ec54e1c",
+    "embed_model": "nomic-embed-text",
+    "dimension": 768
+  },
+  "collection_metadata": {
+    "generation": "3141066362b242518011299c8ec54e1c",
+    "dimension": 768,
+    "embed_model": "nomic-embed-text",
+    "hnsw:space": "cosine"
+  },
+  "count": 813,
+  "unique_ids": 813,
+  "batch_limit": 128,
+  "invalid_metadata_ids": [],
+  "sources": {
+    "undergraduate-academic-rules-aug-2023.pdf": 192,
+    "academic-rules-handbook-jun-2026.pdf": 280,
+    "student-handbook-jun-2026.pdf": 204,
+    "prospectus-academic-rules-and-regulations.pdf": 42,
+    "faculty-entrepreneurship-and-technical-start-ups-policy.pdf": 76,
+    "fee-structure-page.html": 10,
+    "grading-page.html": 9
+  },
+  "versions": [
+    {
+      "version": "2023-08",
+      "superseded": true,
+      "count": 192
+    },
+    {
+      "version": "2026-06",
+      "superseded": false,
+      "count": 484
+    },
+    {
+      "version": "2026",
+      "superseded": false,
+      "count": 42
+    },
+    {
+      "version": "2022-05-30",
+      "superseded": false,
+      "count": 76
+    },
+    {
+      "version": "snapshot-2026-11-04",
+      "superseded": false,
+      "count": 19
+    }
+  ],
+  "actual_vector_dimension": 768
+}

@@ -11,7 +11,7 @@ _TAG = re.compile(r"\[([^\[\]\r\n]+?) / ([^\[\]\r\n]+?)\]")
 _MARKER = "\ufff0"
 
 
-def validate_grounding(answer: Answer, passages: list[Passage]) -> Answer:
+def validate_grounding(answer: Answer, passages: list[Passage], *, question: str | None = None) -> Answer:
     """Accept only request-local citation triples and cited prose sentences.
 
     False-groundedness output is canonicalized to a refusal, preventing uncited
@@ -45,6 +45,15 @@ def validate_grounding(answer: Answer, passages: list[Passage]) -> Answer:
     if re.match(r"\s*(?:(?:the )?supplied documents do not provide|"
                 r"(?:I (?:am )?)?(?:cannot determine|unable to answer))",answer.answer,re.I):
         raise ProviderError(ProviderFailureKind.INCONSISTENT_ANSWER)
+    if question and answer.answered_from_context:
+        for facility in ("hostel", "transport", "cafeteria"):
+            if facility in question.lower():
+                cited_passages = [
+                    p for p in passages
+                    if any((p.source == c.source and p.section == c.section) for c in answer.citations)
+                ]
+                if not any(facility in (p.text or "").lower() or facility in (p.section or "").lower() for p in cited_passages):
+                    raise ProviderError(ProviderFailureKind.INCONSISTENT_ANSWER)
     available = {(p.source,p.section,p.page) for p in passages}
     cited = [(c.source,c.section,c.page) for c in answer.citations]
     if not available or not cited or len(set(cited)) != len(cited) or any(c not in available for c in cited):

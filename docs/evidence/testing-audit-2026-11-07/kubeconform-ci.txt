@@ -1,0 +1,1 @@
+Summary: 38 resources found parsing stdin - Valid: 38, Invalid: 0, Errors: 0, Skipped: 0

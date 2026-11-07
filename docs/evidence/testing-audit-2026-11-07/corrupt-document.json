@@ -1,0 +1,22 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp:rw,size=64m",
+    "--memory",
+    "512m",
+    "rahbar-indexer:audit-94868ba",
+    "python",
+    "-c",
+    "from pathlib import Path;import os;Path('/tmp/bad-corpus').mkdir();Path('/tmp/bad-corpus/corrupt-audit.pdf').write_bytes(b'%PDF-corrupt-audit');os.environ['CORPUS_DIR']='/tmp/bad-corpus';from pipeline.run import main;raise SystemExit(main())"
+  ],
+  "exit": 1,
+  "stdout": "{\"ts\": \"2026-11-07T19:09:31Z\", \"logger\": \"rahbar.indexer\", \"msg\": \"indexer starting\", \"dummy\": false, \"embed_model\": \"nomic-embed-text\", \"collection\": \"rahbar\", \"chroma\": \"chroma:8000\", \"pod\": \"020eda013e1b\"}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/pdfplumber/pdf.py\", line 50, in __init__\n    self.doc = PDFDocument(PDFParser(stream), password=password or \"\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/pdfminer/pdfdocument.py\", line 744, in __init__\n    raise PDFSyntaxError(\"No /Root object! - Is this really a PDF?\")\npdfminer.pdfparser.PDFSyntaxError: No /Root object! - Is this really a PDF?\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/app/pipeline/extract.py\", line 140, in _pdf_pages\n    with pdfplumber.open(path) as pdf:\n         ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/pdfplumber/pdf.py\", line 107, in open\n    return cls(\n           ^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/pdfplumber/pdf.py\", line 52, in __init__\n    raise PdfminerException(e)\npdfplumber.utils.exceptions.PdfminerException: No /Root object! - Is this really a PDF?\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/app/pipeline/run.py\", line 105, in main\n    count = run_pipeline(settings)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/pipeline/run.py\", line 78, in run_pipeline\n    doc = clean(extract(str(path), doc_version, superseded))\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/pipeline/extract.py\", line 212, in extract\n    pages = _pdf_pages(source)\n            ^^^^^^^^^^^^^^^^^^\n  File \"/app/pipeline/extract.py\", line 183, in _pdf_pages\n    raise ExtractionError(\npipeline.extract.ExtractionError: corrupt-audit.pdf: PDF extraction failed (PdfminerException)\n",
+  "passed": true
+}

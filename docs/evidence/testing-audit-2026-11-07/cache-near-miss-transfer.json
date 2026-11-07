@@ -1,0 +1,198 @@
+{
+  "frozen_at_utc": "2026-11-07T19:32:45.262219+00:00",
+  "ground_truth_before_requests": {
+    "Campus Transfer Fee": "Rs5000",
+    "Temporary Campus Transfer Fee": "Rs2000"
+  },
+  "source": "Fee Structure Miscellaneous Fees table, original public HTML read before requests",
+  "scope": "Replace inconclusive first G4 pair: Additional Transcript abstained, so it never populated a cache candidate.",
+  "before": {
+    "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+    "generation": "4bb1ea338ab84ca8a685596333f390aa",
+    "embed_model": "nomic-embed-text",
+    "dimension": 768
+  },
+  "queries": [
+    {
+      "question": "What is the Campus Transfer Fee?",
+      "status": 200,
+      "cache": "HIT",
+      "body": {
+        "request_id": "c0b7cf342dec3f3238ad8b6a23d2c561",
+        "answer": "The Campus Transfer Fee is Rs. 5,000[fee-structure-page.html / Miscellaneous Fees].",
+        "citations": [
+          {
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
+        "retrieved": [
+          {
+            "chunk_id": "917f9627efe9f1a1b3b753b325714daaf8f932d589fcbff9b4c62f9fbcee02e9",
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null,
+            "score": 0.7297632700000001
+          },
+          {
+            "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+            "source": "fee-structure-page.html",
+            "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+            "page": null,
+            "score": 0.6806819399999999
+          },
+          {
+            "chunk_id": "9f933f7095f813470f9d7897d5b5683ae972e717f980153a868cc5e5755f4832",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "3.24",
+            "page": 16,
+            "score": 0.6739856
+          },
+          {
+            "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+            "source": "fee-structure-page.html",
+            "section": "Admission Fee",
+            "page": null,
+            "score": 0.6481683899999999
+          },
+          {
+            "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+            "source": "fee-structure-page.html",
+            "section": "Fee Refund Policy",
+            "page": null,
+            "score": 0.64800656
+          }
+        ],
+        "provider": "hosted",
+        "session_id": "c8798bc152fc4d80a3d6924210310d58"
+      }
+    },
+    {
+      "question": "What is the Campus Transfer Fee?",
+      "status": 200,
+      "cache": "HIT",
+      "body": {
+        "request_id": "834176c5cf3908413da01ae577f97c5f",
+        "answer": "The Campus Transfer Fee is Rs. 5,000[fee-structure-page.html / Miscellaneous Fees].",
+        "citations": [
+          {
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
+        "retrieved": [
+          {
+            "chunk_id": "917f9627efe9f1a1b3b753b325714daaf8f932d589fcbff9b4c62f9fbcee02e9",
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null,
+            "score": 0.7297632700000001
+          },
+          {
+            "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+            "source": "fee-structure-page.html",
+            "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+            "page": null,
+            "score": 0.6806819399999999
+          },
+          {
+            "chunk_id": "9f933f7095f813470f9d7897d5b5683ae972e717f980153a868cc5e5755f4832",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "3.24",
+            "page": 16,
+            "score": 0.6739856
+          },
+          {
+            "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+            "source": "fee-structure-page.html",
+            "section": "Admission Fee",
+            "page": null,
+            "score": 0.6481683899999999
+          },
+          {
+            "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+            "source": "fee-structure-page.html",
+            "section": "Fee Refund Policy",
+            "page": null,
+            "score": 0.64800656
+          }
+        ],
+        "provider": "hosted",
+        "session_id": "cc90f6cd724140dca5d14a34a224f147"
+      }
+    },
+    {
+      "question": "What is the Temporary Campus Transfer Fee?",
+      "status": 200,
+      "cache": "MISS",
+      "body": {
+        "request_id": "1f8bb59b9fa091e419169251b113172d",
+        "answer": "The Temporary Campus Transfer Fee is Rs.\u202f2,000 [fee-structure-page.html / Miscellaneous Fees].",
+        "citations": [
+          {
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
+        "retrieved": [
+          {
+            "chunk_id": "917f9627efe9f1a1b3b753b325714daaf8f932d589fcbff9b4c62f9fbcee02e9",
+            "source": "fee-structure-page.html",
+            "section": "Miscellaneous Fees",
+            "page": null,
+            "score": 0.7174397
+          },
+          {
+            "chunk_id": "6571bb85a84bb4a526bfeb031e7471842c496495b678654eb5972a55d79aa8d4",
+            "source": "fee-structure-page.html",
+            "section": "Tuition Fee (w.e.f. Fall 2026 semester)",
+            "page": null,
+            "score": 0.63634753
+          },
+          {
+            "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+            "source": "student-handbook-jun-2026.pdf",
+            "section": "XI.22",
+            "page": 18,
+            "score": 0.62218332
+          },
+          {
+            "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+            "source": "fee-structure-page.html",
+            "section": "Fee Refund Policy",
+            "page": null,
+            "score": 0.6220005200000001
+          },
+          {
+            "chunk_id": "9f933f7095f813470f9d7897d5b5683ae972e717f980153a868cc5e5755f4832",
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "3.24",
+            "page": 16,
+            "score": 0.6215176600000001
+          }
+        ],
+        "provider": "hosted",
+        "session_id": "127b015807cb492b95e8f9b940b56ec3"
+      }
+    }
+  ],
+  "after": {
+    "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+    "generation": "4bb1ea338ab84ca8a685596333f390aa",
+    "embed_model": "nomic-embed-text",
+    "dimension": 768
+  },
+  "cosine": 0.9090393456267521,
+  "same_generation": true,
+  "meaningful_cache_candidate": true,
+  "passed": true
+}
