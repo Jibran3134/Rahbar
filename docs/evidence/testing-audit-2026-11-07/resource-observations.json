@@ -1,0 +1,240 @@
+{
+  "scope": "Primary context read-only snapshots. Before means before deliberate isolated fault injection; some restarts occurred during ordinary audit workload, not necessarily before audit began. No root cause inferred.",
+  "before": [
+    {
+      "name": "api-6d999dcb95-dr89p",
+      "uid": "c14edfd4-9261-4c3a-9bad-6271035d9ddd",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 3,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://3cecc8a39d2367b3a835f46c296994c292172e08bd2a8aaa36c3653c0e5ad720",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T17:52:46Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T16:32:45Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "api-6d999dcb95-dxv5t",
+      "uid": "5951f61f-af7c-4f62-adcc-9eac91ee1e47",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 3,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://5ddd3579eb4557319d09dade4edb0fc5cfff725802052c270c057a06ec51ae7c",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T18:14:20Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T16:54:31Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "api-6d999dcb95-tbcgj",
+      "uid": "57787cab-163d-4738-8d03-007374565d52",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 2,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://1ed848af931a4698666dea4d1449f80742c9843f1201fcba2b7da0631679541a",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T18:15:35Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T16:55:26Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "chroma-0",
+      "uid": "c9d71c26-0ea5-4d75-8201-857cc6a82f36",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "chroma",
+          "ready": true,
+          "restartCount": 4,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://792529b13de065d3e7ac1b0fc79435dae753e909611212d0f36318fa49e58092",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T17:52:14Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T16:32:12Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "indexer-v28gl",
+      "uid": "dcb1c2cd-19ce-4062-bbae-eb57d9a29f83",
+      "phase": "Succeeded",
+      "containers": [
+        {
+          "name": "indexer",
+          "ready": false,
+          "restartCount": 0,
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "name": "redis-7f546bdffd-x2m64",
+      "uid": "23bed9f7-9aee-4d1d-bf06-ef4d4c1142f0",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "redis",
+          "ready": true,
+          "restartCount": 4,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://ef91e82d4cf4296d566b709317fc0c80d1964a5c7960bddc094b1f9b939c3233",
+              "exitCode": 255,
+              "finishedAt": "2026-11-07T08:42:37Z",
+              "reason": "Unknown",
+              "startedAt": "2026-11-06T18:15:39Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ui-6bddf5468f-4h49d",
+      "uid": "13abcff4-8594-40ee-9cfc-948c7fea1865",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "ui",
+          "ready": true,
+          "restartCount": 0,
+          "lastState": {}
+        }
+      ]
+    }
+  ],
+  "later": [
+    {
+      "name": "api-6d999dcb95-6ntgx",
+      "uid": "7665db27-dcb7-45d4-8b99-7f4cefb1cbdb",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 0,
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "name": "api-6d999dcb95-dr89p",
+      "uid": "c14edfd4-9261-4c3a-9bad-6271035d9ddd",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 4,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://dd952e888b91dd26b5f46fed071239d7b5efa4ef1f65a1bfb20921768cb239ce",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T19:07:12Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T17:52:47Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "api-6d999dcb95-gtrwc",
+      "uid": "e2673ad5-6f21-4621-91b7-5c31cf51096a",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "api",
+          "ready": true,
+          "restartCount": 0,
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "name": "chroma-0",
+      "uid": "c9d71c26-0ea5-4d75-8201-857cc6a82f36",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "chroma",
+          "ready": true,
+          "restartCount": 5,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://8dd995b64960664b5aa0f79ace2bb9ae3842f46e02ec04f213e488635d4838a6",
+              "exitCode": 137,
+              "finishedAt": "2026-11-07T18:55:31Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-11-07T17:52:15Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "redis-7f546bdffd-x2m64",
+      "uid": "23bed9f7-9aee-4d1d-bf06-ef4d4c1142f0",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "redis",
+          "ready": true,
+          "restartCount": 4,
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://ef91e82d4cf4296d566b709317fc0c80d1964a5c7960bddc094b1f9b939c3233",
+              "exitCode": 255,
+              "finishedAt": "2026-11-07T08:42:37Z",
+              "reason": "Unknown",
+              "startedAt": "2026-11-06T18:15:39Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ui-6bddf5468f-4h49d",
+      "uid": "13abcff4-8594-40ee-9cfc-948c7fea1865",
+      "phase": "Running",
+      "containers": [
+        {
+          "name": "ui",
+          "ready": true,
+          "restartCount": 0,
+          "lastState": {}
+        }
+      ]
+    }
+  ]
+}

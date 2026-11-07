@@ -1,0 +1,17 @@
+[
+  {
+    "overlay": "dev",
+    "exit_code": 0,
+    "output": "Summary: 31 resources found parsing stdin - Valid: 31, Invalid: 0, Errors: 0, Skipped: 0"
+  },
+  {
+    "overlay": "prod",
+    "exit_code": 0,
+    "output": "Summary: 31 resources found parsing stdin - Valid: 31, Invalid: 0, Errors: 0, Skipped: 0"
+  },
+  {
+    "overlay": "ci",
+    "exit_code": 0,
+    "output": "Summary: 38 resources found parsing stdin - Valid: 38, Invalid: 0, Errors: 0, Skipped: 0"
+  }
+]

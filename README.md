@@ -161,13 +161,15 @@ Ingress routes /api to API and / to UI. Probe/metrics endpoints are internal API
 
 Redis retains up to six bounded turns with a default 1800-second TTL. Cache candidates are bounded to 256 per namespace with 3600-second logical TTL/key expiry; logical expiry does not promise immediate physical erasure or backup deletion. IDs are bearer access to conversations, not authenticated identities.
 
-No real Secret is applied from Git. The selected host provider needs no API key. If documenting the optional compatibility Secret, supply a value from a process variable, never from a committed YAML:
+No real Secret is applied from Git. The shipped configuration uses a hosted provider (openai/gpt-oss-120b via groq); a Secret with the API key is required before applying the API deployment. Supply the key from a process variable, never from a committed YAML:
 
 ```powershell
 kubectl --context rahbar -n rahbar create secret generic rahbar-secret --from-literal="LLM_API_KEY=$env:LLM_API_KEY"
 ```
 
-k8s/secret-placeholder.yaml is excluded from Kustomize. Do not apply it over a real Secret. Selecting hosted mode remains unsupported even if a key is present.
+Create this Secret **before** applying the API Deployment (`kubectl apply -f .venv/platform/dev/foundation.yaml`) or the API pods will fail to start. k8s/secret-placeholder.yaml is excluded from Kustomize; do not apply it over a real Secret.
+
+For a local CPU/GPU generation path using Ollama instead, set `OLLAMA_HOST=0.0.0.0` in your Ollama environment so the server accepts in-cluster connections, confirm the host IP with `minikube ssh -p rahbar -- getent hosts host.minikube.internal`, and set `LLM_PROVIDER=ollama` and `OLLAMA_URL` accordingly in the ConfigMap.
 
 CPU generation is allowed 120 seconds per attempt, with at most one validation retry. Ingress, the Windows gateway and the evaluator use 360-second read budgets. A generation deadline still produces a safe, uncached fallback, now explained as `generation_timeout`. Title-only PDF matches are expanded with bounded facts from the same source page/version; scores and citation identities remain those of the matched headings.
 

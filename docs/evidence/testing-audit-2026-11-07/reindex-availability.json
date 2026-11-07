@@ -1,0 +1,1638 @@
+{
+  "scope": "Additional real reindex to measure Ingress availability throughout; earlier reindex proved invalidation but did not sample HTTP during rebuild.",
+  "http": [
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.4059999999954016,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20300000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.14100000000325963,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20300000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.0940000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.11000000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.3430000000007567,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.13999999999941792,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.0940000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.07800000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10900000000401633,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.1879999999946449,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10900000000401633,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20299999999406282,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.07800000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17199999999866122,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.11000000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.2649999999994179,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.11000000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23500000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.13999999999941792,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20299999999406282,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.34399999999732245,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.14099999999598367,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.14099999999598367,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1559999999954016,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.3120000000053551,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.5,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1569999999992433,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18699999999807915,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.31199999999807915,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.35899999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 1.0,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.31300000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.15600000000267755,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20300000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10900000000401633,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.39099999999598367,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.2969999999986612,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23500000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23399999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10899999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1569999999992433,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.3899999999994179,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23399999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.26600000000325963,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.2180000000007567,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.09399999999732245,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.25,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.25,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10899999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1569999999992433,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1879999999946449,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.39100000000325963,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.09399999999732245,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20300000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18699999999807915,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23399999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.4219999999986612,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17100000000209548,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.10899999999674037,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.0940000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23400000000401633,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.06199999999807915,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1559999999954016,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1559999999954016,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.0940000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1569999999992433,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.3280000000013388,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.4219999999986612,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.07800000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.31199999999807915,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17199999999866122,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.13999999999941792,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.8589999999967404,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.7660000000032596,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20300000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.4530000000013388,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20399999999790452,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.07800000000133878,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.25,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.5309999999954016,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.14099999999598367,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17199999999866122,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.1879999999946449,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.5619999999980791,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.5619999999980791,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.13999999999941792,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17199999999866122,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.625,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.5940000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.5619999999980791,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17100000000209548,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.26599999999598367,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.3899999999994179,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.6410000000032596,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.39100000000325963,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.125,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.23500000000058208,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.26600000000325963,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.40600000000267755,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.20299999999406282,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.375,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.39100000000325963,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.13999999999941792,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.3279999999940628,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 0.7340000000040163,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.17199999999866122,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.18800000000192085,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.5460000000020955,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.25,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.5160000000032596,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 15.0,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 1.1569999999992433,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 3.686999999998079,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.4210000000020955,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 4.2189999999973224,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 1.5460000000020955,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 6.765999999995984,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 3.5780000000013388,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 1.1869999999980791,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 0.4690000000045984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 1.4210000000020955,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 4.078000000001339,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 8.140999999995984,
+      "grounded": false
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 4.796999999998661,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 5.015999999995984,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 2.5469999999986612,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 9.719000000004598,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/info",
+      "status": 200,
+      "seconds": 3.639999999999418,
+      "active": {
+        "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+        "generation": "4bb1ea338ab84ca8a685596333f390aa",
+        "embed_model": "nomic-embed-text",
+        "dimension": 768
+      }
+    },
+    {
+      "route": "/api/ask",
+      "status": 200,
+      "seconds": 21.765999999995984,
+      "grounded": false
+    }
+  ],
+  "before": {
+    "active": {
+      "collection": "rahbar__g_4bb1ea338ab84ca8a685596333f390aa",
+      "generation": "4bb1ea338ab84ca8a685596333f390aa",
+      "embed_model": "nomic-embed-text",
+      "dimension": 768
+    },
+    "embed_model": "nomic-embed-text",
+    "llm_model": "openai/gpt-oss-120b",
+    "provider": "hosted",
+    "top_k": 5,
+    "temperature": 0.2,
+    "relevance_floor": 0.7,
+    "cache_threshold": 0.95,
+    "cache_ttl_seconds": 3600
+  },
+  "deployment_before": {
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/restartedAt": "2026-11-08T00:06:32+05:00"
+      },
+      "labels": {
+        "app.kubernetes.io/name": "api",
+        "app.kubernetes.io/part-of": "rahbar"
+      }
+    },
+    "spec": {
+      "automountServiceAccountToken": false,
+      "containers": [
+        {
+          "envFrom": [
+            {
+              "configMapRef": {
+                "name": "rahbar-config"
+              }
+            },
+            {
+              "secretRef": {
+                "name": "rahbar-secret",
+                "optional": true
+              }
+            }
+          ],
+          "image": "rahbar-api:audit-94868ba",
+          "imagePullPolicy": "IfNotPresent",
+          "lifecycle": {
+            "preStop": {
+              "exec": {
+                "command": [
+                  "python",
+                  "-c",
+                  "import time; time.sleep(10)"
+                ]
+              }
+            }
+          },
+          "livenessProbe": {
+            "failureThreshold": 3,
+            "httpGet": {
+              "path": "/healthz",
+              "port": "http",
+              "scheme": "HTTP"
+            },
+            "periodSeconds": 20,
+            "successThreshold": 1,
+            "timeoutSeconds": 2
+          },
+          "name": "api",
+          "ports": [
+            {
+              "containerPort": 8000,
+              "name": "http",
+              "protocol": "TCP"
+            }
+          ],
+          "readinessProbe": {
+            "failureThreshold": 3,
+            "httpGet": {
+              "path": "/readyz",
+              "port": "http",
+              "scheme": "HTTP"
+            },
+            "periodSeconds": 15,
+            "successThreshold": 1,
+            "timeoutSeconds": 8
+          },
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "512Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "256Mi"
+            }
+          },
+          "securityContext": {
+            "allowPrivilegeEscalation": false,
+            "capabilities": {
+              "drop": [
+                "ALL"
+              ]
+            },
+            "readOnlyRootFilesystem": true
+          },
+          "startupProbe": {
+            "failureThreshold": 30,
+            "httpGet": {
+              "path": "/healthz",
+              "port": "http",
+              "scheme": "HTTP"
+            },
+            "periodSeconds": 2,
+            "successThreshold": 1,
+            "timeoutSeconds": 2
+          },
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File",
+          "volumeMounts": [
+            {
+              "mountPath": "/tmp",
+              "name": "tmp"
+            }
+          ]
+        }
+      ],
+      "dnsPolicy": "ClusterFirst",
+      "restartPolicy": "Always",
+      "schedulerName": "default-scheduler",
+      "securityContext": {
+        "fsGroup": 10001,
+        "runAsGroup": 10001,
+        "runAsNonRoot": true,
+        "runAsUser": 10001,
+        "seccompProfile": {
+          "type": "RuntimeDefault"
+        }
+      },
+      "serviceAccount": "api",
+      "serviceAccountName": "api",
+      "terminationGracePeriodSeconds": 480,
+      "volumes": [
+        {
+          "emptyDir": {
+            "sizeLimit": "256Mi"
+          },
+          "name": "tmp"
+        }
+      ]
+    }
+  },
+  "job": "audit-availability-reindex-1794079790"
+}

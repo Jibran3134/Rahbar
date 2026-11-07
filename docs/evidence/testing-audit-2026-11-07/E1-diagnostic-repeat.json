@@ -1,0 +1,52 @@
+{
+  "at_utc": "2026-11-07T19:19:48.225142+00:00",
+  "reason": "Original companion E1 returned Ingress503; diagnostic repeat preserves original failure.",
+  "status": 200,
+  "body": {
+    "request_id": "audit-E1-diagnostic-repeat",
+    "answer": "The supplied documents do not provide enough information to answer this question.",
+    "citations": [],
+    "answered_from_context": false,
+    "confidence": "low",
+    "retrieved": [
+      {
+        "chunk_id": "3974b006ac83c8db069e387284ee209514005daf3267126ccfcbdf56d61bb920",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 19,
+        "score": 0.7118966
+      },
+      {
+        "chunk_id": "e93b656e6d3057bf0ac30ed071f6ea2989d4755886e375217091df01520113e3",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.8",
+        "page": 25,
+        "score": 0.69784582
+      },
+      {
+        "chunk_id": "51b7fd1b7f4ddd9d143ebc3258e7023d3ac283cc53cfbf81c11d2727c7161366",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.15",
+        "page": 21,
+        "score": 0.69463247
+      },
+      {
+        "chunk_id": "4cf173fad4847e734f2d520846c4bc3696b6c4a3e5fd10968b3c0a6bd8086fb9",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "3.99",
+        "page": 2,
+        "score": 0.69091272
+      },
+      {
+        "chunk_id": "4887b9302f2dac62c56ed967c74cb95fd096f9940c56f30a7f91c6ff84c67474",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4",
+        "page": 5,
+        "score": 0.6852733
+      }
+    ],
+    "provider": "hosted",
+    "session_id": "af72d43d12e447df93dea84c607efc2b"
+  },
+  "cache": "BYPASS"
+}

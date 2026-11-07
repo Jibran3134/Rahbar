@@ -1,0 +1,19 @@
+{
+  "scope": "Task-owned isolated cluster; direct controlled security probe from API pod, not API application behavior. Only a newly created empty audit-prefixed collection is deleted.",
+  "command": [
+    "kubectl",
+    "--context",
+    "rahbar-audit",
+    "-n",
+    "rahbar",
+    "exec",
+    "deployment/api",
+    "--",
+    "python",
+    "-c",
+    "import urllib.request,json;name='audit_api_write_probe_1794079363';assert name.startswith('audit_api_write_probe_');base='http://chroma:8000/api/v2/tenants/default_tenant/databases/default_database/collections';r=urllib.request.urlopen(urllib.request.Request(base,data=json.dumps({'name':name,'get_or_create':False,'metadata':{'audit_only':True}}).encode(),headers={'Content-Type':'application/json'},method='POST'));created=json.load(r);assert created['name']==name;print(json.dumps({'create_status':r.status,'name':name,'scope':'empty temporary collection; no normal corpus changes'}));d=urllib.request.urlopen(urllib.request.Request(base+'/'+name,method='DELETE'));print(json.dumps({'delete_status':d.status,'name':name}))"
+  ],
+  "exit": 0,
+  "stdout": "{\"create_status\": 200, \"name\": \"audit_api_write_probe_1794079363\", \"scope\": \"empty temporary collection; no normal corpus changes\"}\n{\"delete_status\": 200, \"name\": \"audit_api_write_probe_1794079363\"}\n",
+  "stderr": ""
+}

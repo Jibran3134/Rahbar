@@ -1,0 +1,1338 @@
+[
+  {
+    "id": "1.1",
+    "requirement": "No secret, key or password anywhere in Git history",
+    "status": "PASS",
+    "evidence": "77 history commits scanned; 2,311 keyword-hit lines reviewed; gitleaks v8.24.3 exit1 produced22 redacted candidates:16 public GPG fingerprints and6 image SHA tags, all reviewed false positives. No actual credential found. [gitleaks-review.json](evidence/testing-audit-2026-11-07/gitleaks-review.json); [history-keyword-review.json](evidence/testing-audit-2026-11-07/history-keyword-review.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.2",
+    "requirement": "No committed Secret manifest with a real base64 value",
+    "status": "PASS",
+    "evidence": "[k8s/secret-placeholder.yaml:1](../k8s/secret-placeholder.yaml#L1) contains only REPLACE_ME; excluded from Kustomize. [secret-manifest-review.json](evidence/testing-audit-2026-11-07/secret-manifest-review.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.3",
+    "requirement": "Indexing is not done at API startup",
+    "status": "PASS",
+    "evidence": "[api/app/main.py:31](../api/app/main.py#L31) initializes lazy readers/providers, never ingestion. AST scan found no Chroma mutators. Query embedding is required query work, not startup indexing. [api-static-guards.json](evidence/testing-audit-2026-11-07/api-static-guards.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.4",
+    "requirement": "Every returned citation matches a retrieved chunk",
+    "status": "PASS",
+    "evidence": "Fresh exact-source live run citation_validity=1.0; earlier primary runs also1.0. [fresh-sha-real-results.json](evidence/testing-audit-2026-11-07/fresh-sha-real-results.json); [api/app/services/grounding.py:48](../api/app/services/grounding.py#L48)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.5",
+    "requirement": "All must-abstain golden questions abstain",
+    "status": "FAIL",
+    "evidence": "Exact94868ba current-source hosted run fails required abstention: 0.5. [fresh-sha-real-results.json](evidence/testing-audit-2026-11-07/fresh-sha-real-results.json). Older primary also failed q14.",
+    "fix": "Reject applying a generic admission security deposit to hostel-specific costs; add applicability/entailment safeguards in [api/app/services/grounding.py:14](../api/app/services/grounding.py#L14) and [api/app/services/generation.py:14](../api/app/services/generation.py#L14), then rerun the unchanged frozen golden at the shipped configuration.",
+    "severity": "D-10"
+  },
+  {
+    "id": "1.6",
+    "requirement": "Chroma and Redis have a PVC and are not NodePort or LoadBalancer",
+    "status": "PASS",
+    "evidence": "[k8s/base/chroma-statefulset.yaml:83](../k8s/base/chroma-statefulset.yaml#L83); [k8s/base/redis.yaml:1](../k8s/base/redis.yaml#L1); four internal Services and bound PVCs in [primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.7",
+    "requirement": "Embedding model pinned, and indexer and API cannot disagree silently",
+    "status": "PASS",
+    "evidence": "[api/app/services/readiness.py:1](../api/app/services/readiness.py#L1); live mismatch/recovery in [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.8",
+    "requirement": "Every container has requests and limits; HPA never shows <unknown>",
+    "status": "PASS",
+    "evidence": "All workload/init containers have requests/limits; steady HPA has real CPU percentages. [primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt); [manifest-validation.json](evidence/testing-audit-2026-11-07/manifest-validation.json). OOM risk is separately recorded under11.2; startup transients are not evidence of steady-state unknown HPA.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.9",
+    "requirement": "Every publishing or deploying job has needs:; no :latest deploy",
+    "status": "PASS",
+    "evidence": "[.github/workflows/cd.yml:18](../.github/workflows/cd.yml#L18) and [.github/workflows/verify.yml:74](../.github/workflows/verify.yml#L74): publishing/deploy chain has needs; full SHA tags, no latest deployment. [cd-jobs.json](evidence/testing-audit-2026-11-07/cd-jobs.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.10",
+    "requirement": "Nothing in the default namespace",
+    "status": "PASS",
+    "evidence": "[default-namespace.txt](evidence/testing-audit-2026-11-07/default-namespace.txt) contains only standard Kubernetes Service, no Rahbar workloads; overlays assign rahbar.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.11",
+    "requirement": "README apply order works from a clean clone",
+    "status": "FAIL",
+    "evidence": "Fresh exact94868ba clone/images/Calico cluster followed the generated README apply order. APIs crashed: \u201cLLM_API_KEY must be set when LLM_PROVIDER=hosted\u201d. Only continued after a separately approved key transfer. [fresh-startup-failure.txt](evidence/testing-audit-2026-11-07/fresh-startup-failure.txt)",
+    "fix": "Document and perform hosted Secret provisioning before foundation/API rollout, or restore a documented working local default; remove the false hosted-unsupported/optional-key guidance. [README.md:150](../README.md#L150); [k8s/base/configmap.yaml:8](../k8s/base/configmap.yaml#L8)",
+    "severity": "D-5"
+  },
+  {
+    "id": "1.12",
+    "requirement": "No direct commits to main",
+    "status": "PASS",
+    "evidence": "[main-first-parent.txt](evidence/testing-audit-2026-11-07/main-first-parent.txt): only nonmerge first-parent entry is the initial scaffold; subsequent entries are merges. No confirmed direct-development-commit violation. Current protection requires PR/checks; review count exception under17.9.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.13",
+    "requirement": ".gitignore contains *-secret.yaml and any .env",
+    "status": "PASS",
+    "evidence": "[.gitignore:1](../.gitignore#L1) ignores .env/.env.* and *-secret.yaml/*secret*.yaml, with placeholder exception.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "1.14",
+    "requirement": "python scripts/check_submission.py exits clean",
+    "status": "PASS",
+    "evidence": "check_submission.py exit0:166 passed,4warnings,0failures. Warnings reviewed, not suppressed: placeholder, two heuristic false alarms, explicit sleeps in live/mock timing harnesses. [submission-check.txt](evidence/testing-audit-2026-11-07/submission-check.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.1",
+    "requirement": "Directories exist: api/, indexer/, ui/, corpus/, eval/, k8s/base/, k8s/overlays/dev/, k8s/overlays/prod/, docs/, docs/adr/, docs/evidence/, scripts/, .github/workflows/.",
+    "status": "PASS",
+    "evidence": "All13 required directories exist; verified with pathlib.is_dir. [source-audit.json](evidence/testing-audit-2026-11-07/source-audit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.2",
+    "requirement": "api/app/schemas.py defines Answer and Citation exactly per the brief: reasoning, answer, citations, answered_from_context, confidence as Literal[\"high\",\"medium\",\"low\"].",
+    "status": "PASS",
+    "evidence": "[api/app/schemas.py:65](../api/app/schemas.py#L65) and [api/app/schemas.py:57](../api/app/schemas.py#L57): exact model fields, strict confidence literals; AskResponse separately excludes reasoning.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.3",
+    "requirement": "Provider files exist: api/app/providers/llm/{base,ollama,hosted,stub}.py.",
+    "status": "PASS",
+    "evidence": "[api/app/providers/llm/base.py:1](../api/app/providers/llm/base.py#L1); ollama.py/hosted.py/stub.py all present and imported by factory.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.4",
+    "requirement": "Pipeline files exist: indexer/pipeline/{extract,clean,chunk,embed,store}.py.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/run.py:66](../indexer/pipeline/run.py#L66) invokes extract/clean/chunk/embed/store modules, all present.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.5",
+    "requirement": "Each of api, indexer, ui has a Dockerfile (and .dockerignore for api and indexer).",
+    "status": "PASS",
+    "evidence": "Independent api/indexer/ui Dockerfiles; API/indexer .dockerignore present. Allthree fresh builds exit0. [fresh-builds.json](evidence/testing-audit-2026-11-07/fresh-builds.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.6",
+    "requirement": "LICENSE, Makefile, README.md, .gitignore present.",
+    "status": "PASS",
+    "evidence": "LICENSE, Makefile, README.md and .gitignore exist. [source-audit.json](evidence/testing-audit-2026-11-07/source-audit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.7",
+    "requirement": "eval/results.json and eval/baseline.json are committed and contain real numbers.",
+    "status": "PASS",
+    "evidence": "[eval/results.json:1](../eval/results.json#L1) and [eval/baseline.json:1](../eval/baseline.json#L1) are tracked real17-question measurements, not placeholders. Their older local-model profile is not current hosted-profile proof; see15.7.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.8",
+    "requirement": "corpus/MANIFEST.md lists every URL with SHA-256, plus a fetch script. Source PDFs from third parties are not committed.",
+    "status": "PASS",
+    "evidence": "[corpus/MANIFEST.md:1](../corpus/MANIFEST.md#L1) lists7 URLs/SHA values; fetch.py present; third-party source bytes are ignored, not tracked. Assignment brief PDF is not an indexed corpus source.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "2.9",
+    "requirement": "README states the corpus is fetched, not committed, and says whether embedding goes through the Ollama host.",
+    "status": "PASS",
+    "evidence": "[README.md:206](../README.md#L206) explains fetched corpus; [README.md:68](../README.md#L68) identifies Windows-host embedding access. Hosted-generation prose is stale, see19.6.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.1",
+    "requirement": "At least 6 documents and 40 pages in total, all public or the team's own. Verify against MANIFEST.",
+    "status": "PASS",
+    "evidence": "Seven public sources,161 physical PDF pages, plus2 HTML pages; [corpus-structural-audit.json](evidence/testing-audit-2026-11-07/corpus-structural-audit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.2",
+    "requirement": "At least 2 versions of one policy (for example Academic Rules 2023 and the 2026 Handbook), with a clear statement of which is superseded.",
+    "status": "PASS",
+    "evidence": "2023-08 undergraduate rules superseded by2026-06 handbook; [docs/CORPUS.md:39](../docs/CORPUS.md#L39)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.3",
+    "requirement": "At least 1 scanned image-only PDF with no text layer, proven with pdffonts <file> showing an empty font list.",
+    "status": "PASS",
+    "evidence": "Image-only entrepreneurship PDF: pdffonts exit0 with header and no font rows; [pdffonts.txt](evidence/testing-audit-2026-11-07/pdffonts.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.4",
+    "requirement": "At least 1 document with an information-bearing table.",
+    "status": "PASS",
+    "evidence": "Fee/refund and grade-point tables in actual HTML; [docs/CORPUS.md:50](../docs/CORPUS.md#L50)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.5",
+    "requirement": "At least 1 document with long definitions a fixed-size chunker would split.",
+    "status": "PASS",
+    "evidence": "Long AI-policy definitions and numbered clauses; [docs/CORPUS.md:50](../docs/CORPUS.md#L50)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.6",
+    "requirement": "At least 1 deliberately absent topic, named explicitly, with evidence it is really absent.",
+    "status": "PASS",
+    "evidence": "Hostel allocation/deadline/hostel-specific deposit excluded; generic admission deposit explicitly insufficient; [docs/CORPUS.md:58](../docs/CORPUS.md#L58)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.7",
+    "requirement": "Exact-term content (course code, clause number, CGPA threshold, fee).",
+    "status": "PASS",
+    "evidence": "Clauses1.20/1.21, CGPA2.00, program fees and exact amounts retained; [docs/CORPUS.md:33](../docs/CORPUS.md#L33)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.8",
+    "requirement": "Not lecture slides, not LLM-generated, not paywalled or private.",
+    "status": "PASS",
+    "evidence": "All seven are official public policy/fee/grading sources, not private slides/model-generated text; [fresh-downloads.json](evidence/testing-audit-2026-11-07/fresh-downloads.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.9",
+    "requirement": "Every URL in MANIFEST still downloads (curl -sI) and the SHA-256 matches a fresh download.",
+    "status": "PASS",
+    "evidence": "All7 fresh HEAD/GET requests200; SHA-256 and byte count match frozen snapshots; [fresh-downloads.json](evidence/testing-audit-2026-11-07/fresh-downloads.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "3.10",
+    "requirement": "Fetch script: pauses between requests, URL-encodes file names, converts Google Drive /file/d/<ID>/view links, and touches no login-protected site.",
+    "status": "PASS",
+    "evidence": "[corpus/fetch.py:1](../corpus/fetch.py#L1) encodes filenames, normalizes Drive view URLs, paces requests; frozen URLs are public and freshly accessible.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.1",
+    "requirement": "Extract: detects pages with no text layer and OCRs them (or documents the loss honestly). Repeating headers and footers are stripped, but headings and section boundaries are kept.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/extract.py:1](../indexer/pipeline/extract.py#L1) detects textless pages, bounded OCR; clean.py strips repeated furniture with structure preserved. [unit-checks.json](evidence/testing-audit-2026-11-07/unit-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.2",
+    "requirement": "Clean: removes artefacts without destroying structure. PIPELINE.md lists the rules and one thing deliberately not stripped.",
+    "status": "PASS",
+    "evidence": "[docs/PIPELINE.md:80](../docs/PIPELINE.md#L80) and [indexer/pipeline/clean.py:1](../indexer/pipeline/clean.py#L1): artifact rules and deliberately preserved numbering/table values documented.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.3",
+    "requirement": "Chunk: structure-aware (sections, then paragraphs, then sentences) with overlap and a target size. Not a naive fixed-size splitter.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/chunk.py:1](../indexer/pipeline/chunk.py#L1): sections/paragraphs/sentences, bounded overlap,250/30; tested130 indexer cases.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.4",
+    "requirement": "Embed: one vector per chunk, model read from EMBED_MODEL, never hard-coded.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/embed.py:1](../indexer/pipeline/embed.py#L1) reads settings.embed_model; vector count/dimension validated.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.5",
+    "requirement": "Store: writes id, text, vector, metadata to ChromaDB. Chunk ids are stable and deterministic, so re-indexing does not duplicate chunks.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/store.py:24](../indexer/pipeline/store.py#L24) deterministic chunk IDs and separate verified generation publication; text/vectors/metadata written.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.6",
+    "requirement": "Metadata is complete on every chunk: source, section, page, doc_version, superseded (boolean). Query Chroma and confirm no chunk is missing a field and no superseded is null.",
+    "status": "PASS",
+    "evidence": "[live-chroma-audit.json](evidence/testing-audit-2026-11-07/live-chroma-audit.json):813/813 unique IDs have source,section,page,doc_version and actual boolean superseded;128-row bounded reads.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.7",
+    "requirement": "The superseded document's chunks carry superseded: true; current ones carry false.",
+    "status": "PASS",
+    "evidence": "[live-chroma-audit.json](evidence/testing-audit-2026-11-07/live-chroma-audit.json): all192 historical chunks superseded=true,621 remaining current chunks false.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.8",
+    "requirement": "Collection metadata contains the embedding model name and vector dimension (see section 8).",
+    "status": "PASS",
+    "evidence": "[live-chroma-audit.json](evidence/testing-audit-2026-11-07/live-chroma-audit.json): collection metadata nomic-embed-text,dimension768; sampled actual vector768.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.9",
+    "requirement": "Re-running the indexer is idempotent: chunk count is unchanged after a second run (collection rebuilt or upserted, not appended twice).",
+    "status": "PASS",
+    "evidence": "Fresh bootstrap813 chunks; independent CronJob reindex813 chunks, generation changed. [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.10",
+    "requirement": "On success the indexer expires the semantic cache (see section 6).",
+    "status": "PASS",
+    "evidence": "New immutable generation changes namespace immediately; previously HIT question becomes MISS, old keys retire byTTL. Logical invalidation does not require granting indexer Redis access. [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.11",
+    "requirement": "A bad document (corrupt PDF) does not crash the whole job silently: it logs the failure and either skips with a clear message or fails with a non-zero exit.",
+    "status": "PASS",
+    "evidence": "Actual fresh indexer Docker image, network disabled, corrupt-audit.pdf: contextual failure and exit1. [corrupt-document.json](evidence/testing-audit-2026-11-07/corrupt-document.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.12",
+    "requirement": "docs/PIPELINE.md contains: which documents needed OCR, one before-and-after example of a mangled table, what could not be recovered, chunk size and overlap, storage amplification (stored tokens divided by original tokens), model name, vector dimension, where the pin lives, chunk count, and the metadata schema.",
+    "status": "PASS",
+    "evidence": "[docs/PIPELINE.md:1](../docs/PIPELINE.md#L1) includes OCR source list/limits, before-after fee table, losses, size/overlap, amplification, model768 pin,813 chunks and metadata schema.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "4.13",
+    "requirement": "Chunk tuning table: at least three (size, overlap) configurations, each with measured recall@5 on the golden set, and a justification for the shipped one. A number with no measurement scores zero on that line.",
+    "status": "PASS",
+    "evidence": "[docs/adr/0002-chunking.md:1](../docs/adr/0002-chunking.md#L1): measured250/30,400/50,650/80 with recall1/.933333/.933333 and amplification1.034047/1.014862/1.001458; raw S19 measurements linked, not invented.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.1",
+    "requirement": "Step 1: validates question length 3 to 500 characters. Out-of-range returns 4xx, never 500.",
+    "status": "PASS",
+    "evidence": "[api/app/schemas.py:19](../api/app/schemas.py#L19):3\u2013500 boundaries, HTTP422 tests; companion F live responses retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.2",
+    "requirement": "Step 2: cache check, skipped for follow-up questions.",
+    "status": "PASS",
+    "evidence": "[api/app/services/cache.py:119](../api/app/services/cache.py#L119): follow-ups BYPASS; unit cache/session tests and live G5.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.3",
+    "requirement": "Step 3: embeds with the same model as the indexer.",
+    "status": "PASS",
+    "evidence": "[api/app/retrieval/chroma.py:110](../api/app/retrieval/chroma.py#L110) uses shared EMBED_MODEL and validates active identity/query dimension.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.4",
+    "requirement": "Step 4: top-k read from ConfigMap; metadata filter excludes superseded: true unless the user explicitly asks about an older version.",
+    "status": "PASS",
+    "evidence": "[api/app/retrieval/chroma.py:20](../api/app/retrieval/chroma.py#L20): configured top-k, superseded=false default, explicit historical filter;17 real golden responses.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.5",
+    "requirement": "Step 5: prompt order is instructions, then numbered evidence, then the question. Retrieved text is delimited.",
+    "status": "PASS",
+    "evidence": "[api/app/providers/llm/hosted.py:87](../api/app/providers/llm/hosted.py#L87) and ollama.py: system instructions precede numbered evidence/question serialized as data.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.6",
+    "requirement": "Step 6: generation uses structured output enforcement (Ollama format= or hosted JSON mode/response schema) at low temperature.",
+    "status": "PASS",
+    "evidence": "[api/app/providers/llm/hosted.py:98](../api/app/providers/llm/hosted.py#L98): JSON mode; Ollama format=Answer schema; temperature.2 from config.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.7",
+    "requirement": "Step 7: Pydantic validation, retry once, then a safe canned fallback. Confirm with a stub that returns invalid output twice that the HTTP status is 200 and the body is a valid Answer.",
+    "status": "PASS",
+    "evidence": "[api/app/services/generation.py:22](../api/app/services/generation.py#L22): two validation attempts maximum, valid public HTTP200 fallback. [provider-faults.json](evidence/testing-audit-2026-11-07/provider-faults.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.8",
+    "requirement": "Step 8: stores the turn, and a cache entry only when safe.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/ask.py:42](../api/app/routes/ask.py#L42); cache.py safety check only stores eligible verified contextual output.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.9",
+    "requirement": "Relevance floor: when nothing retrieved clears the floor, returns answered_from_context: false with a message that the corpus does not cover it, without calling the LLM (or with a guarded call).",
+    "status": "PASS",
+    "evidence": "[api/app/services/relevance.py:1](../api/app/services/relevance.py#L1): no above-floor evidence => canonical abstention without generation; unit tests plus live q13.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.10",
+    "requirement": "reasoning is stripped before display.",
+    "status": "PASS",
+    "evidence": "[api/app/schemas.py:87](../api/app/schemas.py#L87) has no reasoning; UI safe-render tests and live response review confirm absence.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.11",
+    "requirement": "Every citation is checked against the retrieved chunk ids for that request; unmatched citations are removed or trigger fallback.",
+    "status": "PASS",
+    "evidence": "[api/app/services/grounding.py:48](../api/app/services/grounding.py#L48): exact request-local source/section/page tuples, rendered inline labels verified;100% actual citation integrity.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.12",
+    "requirement": "The API code never writes to Chroma (grep for add(, upsert(, delete(, create_collection( in api/).",
+    "status": "PASS",
+    "evidence": "[api-static-guards.json](evidence/testing-audit-2026-11-07/api-static-guards.json): no add/upsert/delete/create_collection call in api/app; API reads only.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "5.13",
+    "requirement": "No eval(), exec(), or SQL built from model output or retrieved text.",
+    "status": "PASS",
+    "evidence": "[api-static-guards.json](evidence/testing-audit-2026-11-07/api-static-guards.json): no eval/exec in API; no output-to-shell/SQL execution path.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.1",
+    "requirement": "Redis or a second Chroma collection, with the choice defended in an ADR.",
+    "status": "PASS",
+    "evidence": "[docs/adr/0003-semantic-cache.md:1](../docs/adr/0003-semantic-cache.md#L1): Redis bounded sorted-set cache, TTL and generation-scoped namespaces defended.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.2",
+    "requirement": "Hit means cosine similarity at or above a threshold read from the ConfigMap, not hard-coded.",
+    "status": "PASS",
+    "evidence": "[api/app/services/cache.py:88](../api/app/services/cache.py#L88): inclusive cosine >= configured threshold plus signature safety guards.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.3",
+    "requirement": "Threshold chosen with data: the ADR reports two or three thresholds tried and the specific false hit that ruled one out.",
+    "status": "PASS",
+    "evidence": "[docs/adr/0002-chunking.md:19](../docs/adr/0002-chunking.md#L19): .90/.95/.98 actual results2/1/0 positive hits; .90 regular-vs-summer false hit; .95 selected. ADR0003 pending-S19 wording is stale but data exists in ADR0002.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.4",
+    "requirement": "Never cached: follow-up questions, abstentions, out-of-scope answers, anything that failed validation or used the fallback. Verify in code and with tests.",
+    "status": "PASS",
+    "evidence": "[api/app/services/cache.py:60](../api/app/services/cache.py#L60) and follow_up branch; unit tests exclude false/low confidence/fallback/bad citations, follow-ups. This cannot detect all semantically wrong but syntactically cited answers (q14).",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.5",
+    "requirement": "Invalidated on re-index: after the indexer Job, a previously cached question is a miss. Run the sequence in test script G8.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json): real HIT before CronJob; new generation and MISS afterward, APIs not redeployed.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.6",
+    "requirement": "Redis has persistence (PVC) and a Service that is ClusterIP only.",
+    "status": "PASS",
+    "evidence": "[k8s/base/redis.yaml:1](../k8s/base/redis.yaml#L1): AOF/everysec, PVC, internal ClusterIP service; [primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "6.7",
+    "requirement": "Cache hit ratio is exposed in /metrics.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/metrics.py:26](../api/app/routes/metrics.py#L26) and generated cache-hit ratio present in [live-metrics.txt](evidence/testing-audit-2026-11-07/live-metrics.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "7.1",
+    "requirement": "Provider is chosen by LLM_PROVIDER from the ConfigMap, behind the interface in base.py. Swapping providers touches one file.",
+    "status": "PASS",
+    "evidence": "[api/app/providers/llm/__init__.py:1](../api/app/providers/llm/__init__.py#L1): LLM_PROVIDER factory behind base.py interface; ConfigMap selection, no API-route rewrite.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "7.2",
+    "requirement": "At least one mode is fully working (ollama-host default: host.minikube.internal:11434, or hosted).",
+    "status": "PASS",
+    "evidence": "Hosted mode produces real cited answers in paced17 and companion probes; local mode passes actual indexed-poison test. Reliability caveats:429 burst and q14 inference failure. [paced-real-results.json](evidence/testing-audit-2026-11-07/paced-real-results.json); [indexed-poison.json](evidence/testing-audit-2026-11-07/indexed-poison.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "7.3",
+    "requirement": "If hosted: the key comes from a Kubernetes Secret via env, never from a committed manifest.",
+    "status": "PASS",
+    "evidence": "[k8s/base/api.yaml:61](../k8s/base/api.yaml#L61) inherits optional rahbar-secret via envFrom; no actual key in tracked manifests. Approved audit transfer copied one key in RAM only. [credential-transfer.json](evidence/testing-audit-2026-11-07/credential-transfer.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "7.4",
+    "requirement": "Temperature is in the ConfigMap, in the range 0 to 0.3, with a one-line justification beside it.",
+    "status": "FAIL",
+    "evidence": "[k8s/base/configmap.yaml:26](../k8s/base/configmap.yaml#L26) sets.2 but has no adjacent one-line justification.",
+    "fix": "Add a comment beside TEMPERATURE explaining that low temperature favors stable grounded structured answers; preserve.2.",
+    "severity": "Core/Doc"
+  },
+  {
+    "id": "7.5",
+    "requirement": "The system prompt says to use only supplied context and to abstain when the context lacks the answer.",
+    "status": "PASS",
+    "evidence": "[api/app/providers/llm/ollama.py:17](../api/app/providers/llm/ollama.py#L17) shared by hosted: supplied evidence only, abstain when unsupported.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "7.6",
+    "requirement": "Prompt-injection defence: retrieved text is delimited and treated as data. A pytest exists that indexes a poisoned chunk and asserts the system does not obey it.",
+    "status": "FAIL",
+    "evidence": "[api/tests/test_injection.py:22](../api/tests/test_injection.py#L22) tests only serialization boundary; live_indexed_attack is manual, not pytest-collected. Manual two-query actual indexed attack passed. [indexed-poison.json](evidence/testing-audit-2026-11-07/indexed-poison.json)",
+    "fix": "Add a discoverable integration pytest that writes an isolated poisoned collection, queries it, proves retrieval and asserts non-obedience with reliable cleanup; keep offline/mock test separate.",
+    "severity": "Core/tests"
+  },
+  {
+    "id": "7.7",
+    "requirement": "Tokens in and out per request are recorded.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/metrics.py:30](../api/app/routes/metrics.py#L30); hosted reports actual usage or labelled estimates, request query logs include input/output counts. [live-eval-logs.txt](evidence/testing-audit-2026-11-07/live-eval-logs.txt). Shared wrapper also records estimates; consumers must select kind label to avoid double counting actual+estimated usage.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.1",
+    "requirement": "EMBED_MODEL lives in the ConfigMap and is read by both the indexer and the API (check both envFrom/valueFrom blocks).",
+    "status": "PASS",
+    "evidence": "[k8s/base/configmap.yaml:9](../k8s/base/configmap.yaml#L9) is read via envFrom by API and indexer/CronJob.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.2",
+    "requirement": "The indexer writes model name and vector dimension into Chroma collection metadata.",
+    "status": "PASS",
+    "evidence": "[indexer/pipeline/store.py:60](../indexer/pipeline/store.py#L60); published model/dimension match live sample768.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.3",
+    "requirement": "At API startup, the API compares collection metadata with its own EMBED_MODEL and dimension.",
+    "status": "PASS",
+    "evidence": "[api/app/services/readiness.py:1](../api/app/services/readiness.py#L1) compares the active collection against configured model and actual embedded probe dimension before startup readiness; lazy lifespan deliberately keeps healthz independent.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.4",
+    "requirement": "On mismatch the API refuses to become ready and logs exactly what conflicts (both values).",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json): wrong API model => health200, ready503/model=false; JSON conflict log records expected/actual.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.5",
+    "requirement": "Live demo: change EMBED_MODEL in the ConfigMap, kubectl rollout restart deploy/api -n rahbar, and capture the pod at 0/1 READY with the conflict log line. Save to docs/evidence/.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json): actual ConfigMap mismatch and restarted new pod0/1; old valid replicas remain available because maxUnavailable0.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.6",
+    "requirement": "Revert the ConfigMap and confirm recovery to 1/1.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json): original pin restored in finally, rollout completed with ready pods.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "8.7",
+    "requirement": "A unit test covers the mismatch path.",
+    "status": "PASS",
+    "evidence": "[api/tests/test_readiness.py:1](../api/tests/test_readiness.py#L1) and test_index_state.py exercise missing/mismatched identities/dimensions offline.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.1",
+    "requirement": "Namespace rahbar exists; every manifest sets it (or a kustomization does).",
+    "status": "PASS",
+    "evidence": "[k8s/base/namespace.yaml:1](../k8s/base/namespace.yaml#L1); rendered dev/prod/ci namespace checks pass.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.2",
+    "requirement": "Deployment api: 3 replicas; startup, liveness and readiness probes; requests and limits; maxSurge: 1, maxUnavailable: 0; terminationGracePeriodSeconds; preStop sleep.",
+    "status": "PASS",
+    "evidence": "[k8s/base/api.yaml:1](../k8s/base/api.yaml#L1):3 replicas,3probes, resources,maxSurge1,maxUnavailable0,480s grace,preStop drain.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.3",
+    "requirement": "Deployment ui: 1 or more replicas, nginx serving the chat UI.",
+    "status": "PASS",
+    "evidence": "[k8s/base/ui.yaml:1](../k8s/base/ui.yaml#L1):nginx non-root deployment1 replica; actual Ingress UI200 and visible-version hashes.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.4",
+    "requirement": "StatefulSet chroma: 1 replica with volumeClaimTemplates. ARCHITECTURE.md explains why a StatefulSet, not a Deployment.",
+    "status": "PASS",
+    "evidence": "[k8s/base/chroma-statefulset.yaml:1](../k8s/base/chroma-statefulset.yaml#L1); [docs/ARCHITECTURE.md:26](../docs/ARCHITECTURE.md#L26) explains stable identity/attachment, not database HA.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.5",
+    "requirement": "Deployment redis with a PVC.",
+    "status": "PASS",
+    "evidence": "[k8s/base/redis.yaml:1](../k8s/base/redis.yaml#L1):Deployment+PVC, actual bound redis-data.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.6",
+    "requirement": "Job indexer: restartPolicy: OnFailure, backoffLimit set, requests and limits.",
+    "status": "PASS",
+    "evidence": "[k8s/base/indexer-job.yaml:1](../k8s/base/indexer-job.yaml#L1):OnFailure,backoff2,deadline1800, resource limits; fresh real Job Completed813.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.7",
+    "requirement": "CronJob reindex: weekly schedule; same image and args as the Job.",
+    "status": "PASS",
+    "evidence": "[k8s/base/reindex-cronjob.yaml:1](../k8s/base/reindex-cronjob.yaml#L1):weekly Sunday02:00UTC,Forbid; same rendered main/init images and args as bootstrap; actual manual reindex tested.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.8",
+    "requirement": "Four Services, all ClusterIP (api, ui, chroma, redis).",
+    "status": "PASS",
+    "evidence": "[k8s/base/services.yaml:1](../k8s/base/services.yaml#L1):exactly4 ClusterIP Services; Chroma headless is still ClusterIP type. [primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.9",
+    "requirement": "Ingress: / to ui, /api to api, one host. minikube addons enable ingress done.",
+    "status": "PASS",
+    "evidence": "[k8s/base/ingress.yaml:1](../k8s/base/ingress.yaml#L1):single rahbar.local, / UI,/api API; ingress addon enabled in fresh profile.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.10",
+    "requirement": "ConfigMap holds: chunk size, overlap, top_k, relevance floor, cache threshold, temperature, EMBED_MODEL, LLM_PROVIDER, CHROMA_HOST.",
+    "status": "PASS",
+    "evidence": "[k8s/base/configmap.yaml:1](../k8s/base/configmap.yaml#L1):all named settings present, hosted current mode/topk5/floor.70.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.11",
+    "requirement": "Secret: only a placeholder is committed; the README shows kubectl create secret generic rahbar-secret -n rahbar --from-literal=LLM_API_KEY=....",
+    "status": "PASS",
+    "evidence": "[k8s/secret-placeholder.yaml:1](../k8s/secret-placeholder.yaml#L1) and [README.md:167](../README.md#L167) show placeholder/env-based kubectl secret creation; misleading optional/unsupported prose fails19.6.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.12",
+    "requirement": "HPA on api: min 3, max 8, CPU target set.",
+    "status": "PASS",
+    "evidence": "[k8s/base/hpa.yaml:1](../k8s/base/hpa.yaml#L1):min3,max8,target70% CPU.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.13",
+    "requirement": "imagePullPolicy: IfNotPresent for locally loaded images.",
+    "status": "PASS",
+    "evidence": "All local image refs use IfNotPresent; fresh builds loaded into rahbar-audit and successfully started. [fresh-builds.json](evidence/testing-audit-2026-11-07/fresh-builds.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "9.14",
+    "requirement": "kustomize build k8s/overlays/dev and k8s/overlays/prod both succeed and kubeconform -strict is clean.",
+    "status": "PASS",
+    "evidence": "[manifest-validation.json](evidence/testing-audit-2026-11-07/manifest-validation.json):strict dev31/31,prod31/31,ci38/38 valid, zero invalid/error/skipped.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.1",
+    "requirement": "startupProbe: /healthz, failureThreshold: 30, periodSeconds: 2.",
+    "status": "PASS",
+    "evidence": "[k8s/base/api.yaml:64](../k8s/base/api.yaml#L64): /healthz,threshold30,period2.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.2",
+    "requirement": "livenessProbe: /healthz, periodSeconds: 20, failureThreshold: 3.",
+    "status": "PASS",
+    "evidence": "[k8s/base/api.yaml:71](../k8s/base/api.yaml#L71): /healthz,period20,threshold3.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.3",
+    "requirement": "readinessProbe: /readyz, periodSeconds: 10, failureThreshold: 3.",
+    "status": "FAIL",
+    "evidence": "[k8s/base/api.yaml:78](../k8s/base/api.yaml#L78) uses period15, checklist explicitly requires10.",
+    "fix": "Change readinessProbe.periodSeconds from15 to10, retain failureThreshold3 and validate manifests; reconcile timeout/request cost with measured readiness load.",
+    "severity": "Core"
+  },
+  {
+    "id": "10.4",
+    "requirement": "/healthz touches no dependency: read the handler. No Chroma, Redis or LLM call.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/health.py:12](../api/app/routes/health.py#L12):process-only handler, no dependency operation; offline tests and live outage200.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.5",
+    "requirement": "/readyz returns 200 only if Chroma is reachable, the collection is non-empty, and Redis is reachable. Otherwise 503 naming the failed dependency.",
+    "status": "PASS",
+    "evidence": "[api/app/services/readiness.py:1](../api/app/services/readiness.py#L1); normal live200, empty-index/outage/mismatch503 identify failed dependencies. [live-readiness.json](evidence/testing-audit-2026-11-07/live-readiness.json); [fresh-empty-readiness.json](evidence/testing-audit-2026-11-07/fresh-empty-readiness.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.6",
+    "requirement": "Live: kubectl scale sts/chroma --replicas=0 -n rahbar, then curl /readyz on an api pod returns 503 naming Chroma, and the pod is not restarted (restart count unchanged). Restore afterwards.",
+    "status": "PASS",
+    "evidence": "[runtime-followup.json](evidence/testing-audit-2026-11-07/runtime-followup.json): corrected stable-pod outage check, Chroma0 => health200,ready503/chroma=false, unready APIs, unchanged restart counts; finally restored. First harness race retained separately.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "10.7",
+    "requirement": "Live: with an empty collection (fresh cluster, before the Job), api pods are 0/1 and out of the Service endpoints.",
+    "status": "PASS",
+    "evidence": "[fresh-empty-readiness.json](evidence/testing-audit-2026-11-07/fresh-empty-readiness.json):new current-source API healthy process but ready503 with no active index, zero ready Service addresses before indexer publication. Old crash-loop pods also existed from missing Secret; distinguished explicitly.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "11.1",
+    "requirement": "Every container (api, ui, chroma, redis, indexer Job, CronJob) has requests and limits for CPU and memory.",
+    "status": "PASS",
+    "evidence": "[k8s/base/api.yaml:45](../k8s/base/api.yaml#L45); UI/Chroma/Redis/indexer and fetch init containers all bounded; check_platform and kubeconform pass.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "11.2",
+    "requirement": "kubectl top pods -n rahbar output is committed under docs/evidence/, and the numbers justify the requests and limits.",
+    "status": "PASS",
+    "evidence": "Finite exact-source reindex/query-load cgroup sample: maximum API214.38MiB against512MiB limit; Chroma692.55MiB against1536MiB; Redis18.41MiB/256MiB; UI9.52MiB/64MiB. All sampled current containers had zero restarts. [fresh-resource-peaks.json](evidence/testing-audit-2026-11-07/fresh-resource-peaks.json) and top/HPA outputs in [reindex-availability.json](evidence/testing-audit-2026-11-07/reindex-availability.json). Existing primary images had OOM137 history; this is a separate deployment warning, not proof the current source reproduced it. These finite measurements do not establish universal production sizing.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "11.3",
+    "requirement": "Indexer memory limit leaves margin above its measured peak. Documented. Exit 137 means the limit is too low.",
+    "status": "PASS",
+    "evidence": "Fresh indexer cgroup peak and1536Mi limit retained in [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json); Job completes without137. Historical327.902Mi peak/margin documented in ENGINEERING-NOTES, clearly labelled older finite workload.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "11.4",
+    "requirement": "minikube addons enable metrics-server done; kubectl get hpa -n rahbar shows a real percentage, not <unknown>.",
+    "status": "PASS",
+    "evidence": "[minikube-profiles.txt](evidence/testing-audit-2026-11-07/minikube-profiles.txt) and [primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt):metrics-server enabled, stable CPU percentage real, not unknown.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "11.5",
+    "requirement": "HPA screenshot or output in docs/evidence/.",
+    "status": "PASS",
+    "evidence": "[primary-objects.txt](evidence/testing-audit-2026-11-07/primary-objects.txt) saves HPA output alongside top evidence; prior platform P02/P04 HPA outputs also tracked.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "12.1",
+    "requirement": "kubectl set image ships a visible change; kubectl rollout status completes with no downtime.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) `visible_rollout_undo`: actual isolated-cluster output, rollout completed/restored; request loops and identity/hash observations retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "12.2",
+    "requirement": "kubectl rollout undo brings the previous version back.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) `visible_rollout_undo`: actual isolated-cluster output, rollout completed/restored; request loops and identity/hash observations retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "12.3",
+    "requirement": "Scale to 3 or more; kubectl get endpoints api -n rahbar lists that many IPs.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) `five_replicas`: actual isolated-cluster output, rollout completed/restored; request loops and identity/hash observations retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "12.4",
+    "requirement": "Deleting one api pod during a request loop causes no failed requests.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) `api_pod_replacement`: actual isolated-cluster output, rollout completed/restored; request loops and identity/hash observations retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "12.5",
+    "requirement": "Deleting chroma-0 and waiting for restart keeps the data (PVC), no re-index needed.",
+    "status": "PASS",
+    "evidence": "[runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) `chroma_pvc_replacement`: actual isolated-cluster output, rollout completed/restored; request loops and identity/hash observations retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.1",
+    "requirement": "Secrets: *-secret.yaml gitignored, placeholders committed.",
+    "status": "PASS",
+    "evidence": "[.gitignore:1](../.gitignore#L1) and placeholder-only review; no real committed Secret.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.2",
+    "requirement": "A dedicated ServiceAccount per workload; automountServiceAccountToken: false on pods that never call the API server.",
+    "status": "PASS",
+    "evidence": "[k8s/base/serviceaccounts.yaml:1](../k8s/base/serviceaccounts.yaml#L1):5 workload accounts; every application pod disables automount.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.3",
+    "requirement": "securityContext: runAsNonRoot: true, readOnlyRootFilesystem: true, capabilities: drop: [ALL], allowPrivilegeEscalation: false. Writable paths use emptyDir volumes.",
+    "status": "PASS",
+    "evidence": "All application/init containers enforce nonroot/read-only/capabilitiesALL/no escalation; bounded writable tmp/corpus mounts. [manifest-validation.json](evidence/testing-audit-2026-11-07/manifest-validation.json); [k8s/base/api.yaml:27](../k8s/base/api.yaml#L27)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.4",
+    "requirement": "Dockerfiles use a non-root USER and a pinned base image tag.",
+    "status": "PASS",
+    "evidence": "[api/Dockerfile:1](../api/Dockerfile#L1); indexer/ui Dockerfiles use pinned tags/digests and explicit non-root USER.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.5",
+    "requirement": "NetworkPolicy deny-all by default, then allow only: ui from Ingress; api from ui and Ingress; chroma from api and indexer only; redis from api only.",
+    "status": "PASS",
+    "evidence": "[k8s/base/networkpolicy.yaml:1](../k8s/base/networkpolicy.yaml#L1):default deny plus explicit ingress API/UI/data-store paths. API and indexer share allowed Chroma TCP port; no claim of method-level isolation.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.6",
+    "requirement": "DNS egress to kube-dns on port 53, UDP and TCP, in kube-system is allowed.",
+    "status": "PASS",
+    "evidence": "[k8s/base/networkpolicy.yaml:15](../k8s/base/networkpolicy.yaml#L15):kube-system/kube-dns TCP+UDP53.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.7",
+    "requirement": "api egress to the LLM host (ipBlock for the host IP) is allowed.",
+    "status": "PASS",
+    "evidence": "[k8s/base/networkpolicy.yaml:160](../k8s/base/networkpolicy.yaml#L160):host/32 TCP11434; public HTTPS443 additionally supports hosted provider.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.8",
+    "requirement": "Minikube was started with --cni=calico.",
+    "status": "PASS",
+    "evidence": "[minikube-profiles.txt](evidence/testing-audit-2026-11-07/minikube-profiles.txt):both real Rahbar and fresh audit profiles Calico; actual UI denial corroborates enforcement.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "13.9",
+    "requirement": "Live: ui pod cannot reach chroma; api pod can reach chroma and redis; api pod cannot reach the indexer's Chroma writes except through the allowed path.",
+    "status": "FAIL",
+    "evidence": "Live UI\u2192Chroma timeout and API\u2192Chroma/Redis success proved. However API can address the same unauthenticated Chroma HTTP service as indexer; NetworkPolicy cannot distinguish reads from write endpoints. [k8s/base/networkpolicy.yaml:1](../k8s/base/networkpolicy.yaml#L1); [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json) Controlled write probe from API pod created an empty uniquely named audit collection with HTTP200 and deleted only that collection with200: [chroma-write-isolation.json](evidence/testing-audit-2026-11-07/chroma-write-isolation.json). Normal application code did not perform this write.",
+    "fix": "For this checklist\u2019s stronger method-isolation clause, introduce an authenticated read-only Chroma proxy for API, route indexer through a separate write path, and restrict API egress to the read proxy. Current code-read-only requirement passes5.12; L7 enforcement is absent.",
+    "severity": "Core/checklist-specific"
+  },
+  {
+    "id": "13.10",
+    "requirement": "Model output and retrieved text are never passed to eval, shell, or SQL.",
+    "status": "PASS",
+    "evidence": "[api-static-guards.json](evidence/testing-audit-2026-11-07/api-static-guards.json); retrieved/model data only parsed/validated/rendered; no shell/SQL/eval sink.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "14.1",
+    "requirement": "Logs are JSON, written to stdout only. No log files.",
+    "status": "FAIL",
+    "evidence": "[api/app/logjson.py:40](../api/app/logjson.py#L40) configures application root only. Default Uvicorn startup/error stderr lines and nginx access/error format are plaintext; corrupt indexer failure prints traceback. [fresh-startup-failure.txt](evidence/testing-audit-2026-11-07/fresh-startup-failure.txt); [ui/nginx.conf:22](../ui/nginx.conf#L22)",
+    "fix": "Provide JSON stdout log configuration for Uvicorn and nginx, catch/log indexer exceptions in JSON before nonzero exit, then assert every emitted line parses as JSON; retain error visibility.",
+    "severity": "Core"
+  },
+  {
+    "id": "14.2",
+    "requirement": "Every log line carries request_id (from X-Request-ID or generated).",
+    "status": "FAIL",
+    "evidence": "Application HTTP logs have request_id, but Uvicorn/nginx/indexer lines do not. [api/app/logjson.py:30](../api/app/logjson.py#L30); [fresh-startup-failure.txt](evidence/testing-audit-2026-11-07/fresh-startup-failure.txt)",
+    "fix": "Propagate or generate IDs for nginx/Uvicorn request logs; use documented startup/job correlation IDs for nonrequest records and include request_id field consistently. Test raw container stdout and stderr.",
+    "severity": "Core"
+  },
+  {
+    "id": "14.3",
+    "requirement": "/metrics exposes Prometheus text with: request count, request latency, retrieval latency, generation latency, cache hit ratio, abstention count, fallback count, tokens in and out.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/metrics.py:1](../api/app/routes/metrics.py#L1) exports all requested Prometheus families; direct API /metrics200 in [live-metrics.txt](evidence/testing-audit-2026-11-07/live-metrics.txt). Ingress /metrics currently reaches UI HTML; companion I15 records this exposure gap.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "14.4",
+    "requirement": "One log line per request includes: top_k, retrieved chunk ids, their similarity scores, and whether the answer was an abstention.",
+    "status": "PASS",
+    "evidence": "[api/app/routes/ask.py:50](../api/app/routes/ask.py#L50) final query outcome includes top_k/chunk_ids/scores/abstained/cache and request_id, including cache hits. [live-eval-logs.txt](evidence/testing-audit-2026-11-07/live-eval-logs.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.1",
+    "requirement": "eval/golden.yaml has at least 15 questions, each listing its relevant chunk ids (or document and section). It was written before tuning.",
+    "status": "PASS",
+    "evidence": "[eval/golden.yaml:1](../eval/golden.yaml#L1):17 frozen questions, source/section/page relevance labels; freeze checksum/provenance in corpus docs and git history predates tuning. [corpus-structural-audit.json](evidence/testing-audit-2026-11-07/corpus-structural-audit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.2",
+    "requirement": "Mix meets minimums: 8 ordinary, 2 version-sensitive, 2 exact-term, 2 must-abstain, 1 prompt-injection.",
+    "status": "PASS",
+    "evidence": "8ordinary,4version,2exact,2must-abstain,1injection; validated frozen dataset. [corpus-structural-audit.json](evidence/testing-audit-2026-11-07/corpus-structural-audit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.3",
+    "requirement": "eval/run_eval.py runs against a live stack and writes eval/results.json.",
+    "status": "PASS",
+    "evidence": "Native unchanged run_eval.py evaluated17 frozen questions through the fresh exact94868ba Ingress, with45second start pacing, real hosted generation and cache bypass; out redirected to separate evidence rather than overwriting historical results/baseline. [fresh-sha-real-results.json](evidence/testing-audit-2026-11-07/fresh-sha-real-results.json); [fresh-sha-eval-exit.json](evidence/testing-audit-2026-11-07/fresh-sha-eval-exit.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.4",
+    "requirement": "Results report recall@3 and recall@5 overall and by question type.",
+    "status": "FAIL",
+    "evidence": "[eval/run_eval.py:88](../eval/run_eval.py#L88) emits only recall@5 per type, although overall includes3/5.",
+    "fix": "Add recall@3 to each by_type summary using the same labelled rows/denominators, retain null for no-relevance abstentions; regenerate measured report without changing golden labels.",
+    "severity": "Core/eval"
+  },
+  {
+    "id": "15.5",
+    "requirement": "Results report citation validity (%) and abstention correctness (%).",
+    "status": "PASS",
+    "evidence": "Exact-source measured citation validity=1.0, required abstention correctness=0.5, native gate exit=1. All denominators/rows retained. [fresh-sha-real-results.json](evidence/testing-audit-2026-11-07/fresh-sha-real-results.json). Older-primary failures are preserved separately.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.6",
+    "requirement": "Exact-term recall is visibly lower than definitional recall, and ENGINEERING-NOTES.md explains why (embeddings blur exact terms) and names hybrid retrieval.",
+    "status": "FAIL",
+    "evidence": "Committed exact recall@5=1 vs ordinary=.875; paced exact=ordinary=1. Exact recall is not lower as checklist predicts; notes honestly name hybrid retrieval. [docs/ENGINEERING-NOTES.md:31](../docs/ENGINEERING-NOTES.md#L31)",
+    "fix": "Preserve observed numbers and document this checklist mismatch; if a numeric lexical weakness demonstration is mandatory, create a separately labelled held-out exact-term challenge set before running it and report actual results. Never alter frozen labels or worsen retrieval to force the expected ranking.",
+    "severity": "Core/checklist-specific"
+  },
+  {
+    "id": "15.7",
+    "requirement": "eval/baseline.json holds the shipped numbers.",
+    "status": "FAIL",
+    "evidence": "[eval/baseline.json:1](../eval/baseline.json#L1) still describes llama3.2:3b/.74, while shipped ConfigMap is hosted/openai-gpt-oss120b/.70. Old measurement is genuine but not the current shipped profile.",
+    "fix": "Keep the old baseline as historical evidence; fix actual abstention/quality failures, run real current SHA/configuration against frozen golden, then deliberately approve/save the new baseline with provenance. Do not adopt the failing paced run as baseline.",
+    "severity": "Core/eval"
+  },
+  {
+    "id": "15.8",
+    "requirement": "Gate logic fails when: recall@5 drops more than 5 percentage points below baseline; any must-abstain is answered from context; citation validity is below 95%. Prove each with a synthetic degraded results.json.",
+    "status": "PASS",
+    "evidence": "Three separate native evaluator degraded replays each exit1 for the intended recall/abstention/citation gate; baseline hash unchanged. [synthetic-gate-proof.json](evidence/testing-audit-2026-11-07/synthetic-gate-proof.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "15.9",
+    "requirement": "eval/fixtures/ holds a tiny corpus used by CI.",
+    "status": "PASS",
+    "evidence": "[eval/fixtures/README.md:1](../eval/fixtures/README.md#L1);3 tiny committed Markdown sources plus separate CI golden/baseline; CD e2e-eval actual success.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.1",
+    "requirement": "Stage letter and how it was broken (A extraction, B chunking, C retrieval, D prompt, E source, F generation).",
+    "status": "PASS",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:1](../docs/FAILURE-ANALYSIS.md#L1) documents stage letters A/B/C/E and one-variable perturbations with retained S20-live.json machine observations. This audit reads existing experiments rather than relabelling new uncontrolled numbers.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.2",
+    "requirement": "The symptom observed.",
+    "status": "PASS",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:1](../docs/FAILURE-ANALYSIS.md#L1) documents specific observed symptoms with retained S20-live.json machine observations. This audit reads existing experiments rather than relabelling new uncontrolled numbers.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.3",
+    "requirement": "The diagnosis and the stage it points to.",
+    "status": "PASS",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:1](../docs/FAILURE-ANALYSIS.md#L1) documents stage-specific diagnoses with retained S20-live.json machine observations. This audit reads existing experiments rather than relabelling new uncontrolled numbers.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.4",
+    "requirement": "The remedy applied.",
+    "status": "PASS",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:1](../docs/FAILURE-ANALYSIS.md#L1) documents restored remedies with retained S20-live.json machine observations. This audit reads existing experiments rather than relabelling new uncontrolled numbers.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.5",
+    "requirement": "How you would have diagnosed it if you had not caused it, naming the metric or log field that would have shown it.",
+    "status": "PASS",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:1](../docs/FAILURE-ANALYSIS.md#L1) documents diagnostic log/metric names with retained S20-live.json machine observations. This audit reads existing experiments rather than relabelling new uncontrolled numbers.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "16.6",
+    "requirement": "Before-and-after numbers from the eval, not just prose.",
+    "status": "FAIL",
+    "evidence": "[docs/FAILURE-ANALYSIS.md:15](../docs/FAILURE-ANALYSIS.md#L15) correctly reports no eval for rejected OCR build. B/C/E have before-after numeric eval/retrieval results; four separate eval comparisons required by this strict row are not present.",
+    "fix": "Retain honest OCR failure/no-eval evidence; add a fourth independently controlled D or F experiment on isolated data with genuine before/after evaluator output, leaving production corpus and frozen labels intact.",
+    "severity": "Core/Doc"
+  },
+  {
+    "id": "17.1",
+    "requirement": "Jobs: lint (ruff, mypy), test (pytest, coverage at or above 60% on the app package, stub provider, no network), manifests (kustomize build k8s/overlays/prod \\| kubeconform -strict), build (api, ui, indexer; no push on PR), scan (Trivy, failing on HIGH or CRITICAL with a fix available), e2e-eval (kind or k3d, apply manifests, run the indexer Job on fixtures, wait for rollout, run run_eval.py, enforce the gate).",
+    "status": "PASS",
+    "evidence": "[.github/workflows/ci.yml:1](../.github/workflows/ci.yml#L1) triggers PR main/dev and push dev; verify.yml supplies Ruff/mypy,offline pytest60%,strict manifests,three image builds,Trivy fixedHIGH/CRITICAL gate,real kind fixture indexing/Ingress evaluator. Latest allgreen [cd-jobs.json](evidence/testing-audit-2026-11-07/cd-jobs.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.2",
+    "requirement": "Coverage threshold is enforced (--cov-fail-under=60), not just reported.",
+    "status": "PASS",
+    "evidence": "[.github/workflows/verify.yml:42](../.github/workflows/verify.yml#L42) enforces both app/indexer coverage; actual90.50%/90.34%.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.3",
+    "requirement": "test, then build-push with needs: test, then deploy with needs: build-push.",
+    "status": "PASS",
+    "evidence": "[.github/workflows/cd.yml:18](../.github/workflows/cd.yml#L18):test prerequisite,build-push needs test,deploy needs build-push.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.4",
+    "requirement": "Images are pushed to Docker Hub tagged ${{ github.sha }}. Deploy uses the SHA, never :latest.",
+    "status": "PASS",
+    "evidence": "[.github/workflows/cd.yml:45](../.github/workflows/cd.yml#L45):full github.sha tags; tested scanned artifacts reused; no latest.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.5",
+    "requirement": "Deploy job: ephemeral cluster, kubectl rollout status, smoke test through the Ingress.",
+    "status": "PASS",
+    "evidence": "[.github/workflows/cd.yml:70](../.github/workflows/cd.yml#L70) provisions ephemeral kind via ci_e2e.py, waits rollouts/smoke/eval; actual deploysuccess.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.6",
+    "requirement": "Credentials from GitHub Secrets (a Docker Hub access token, not a password).",
+    "status": "PASS",
+    "evidence": "[.github/workflows/cd.yml:36](../.github/workflows/cd.yml#L36) references GitHub repository secret, not literal password. User confirmed token provisioning; value never read during audit.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.7",
+    "requirement": "Every workflow has a least-privilege permissions: block.",
+    "status": "PASS",
+    "evidence": "[.github/workflows/ci.yml:11](../.github/workflows/ci.yml#L11); cd/verify contents:read; action pins and no persisted checkout credentials.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.8",
+    "requirement": "A cd.yml run exists that tested, published and deployed successfully (green).",
+    "status": "PASS",
+    "evidence": "[cd-jobs.json](evidence/testing-audit-2026-11-07/cd-jobs.json):run42393183003/94868ba all14 jobs success, including three build-push jobs and actual deploy.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "17.9",
+    "requirement": "main is protected: no direct pushes, PR required, CI required, one approval. Evidence in docs/evidence/.",
+    "status": "FAIL",
+    "evidence": "[github-audit.json](evidence/testing-audit-2026-11-07/github-audit.json):main requires PR/strict7 Actions checks, enforced for admins, but required approvals=0, explicitly requested by Jibran/AGENTS.",
+    "fix": "Checklist requires1 approval; changing it would contradict the user\u2019s explicit zero-approval instruction. Obtain instructor acceptance of the documented exception or a new explicit instruction before changing protection. No protection change made.",
+    "severity": "Core/policy exception"
+  },
+  {
+    "id": "17.10",
+    "requirement": "Gate demo: a PR that failed the eval gate (greyed-out merge button screenshot) and the fixed green PR, both in docs/evidence/.",
+    "status": "FAIL",
+    "evidence": "[docs/evidence/platform/P05/README.md:1](../docs/evidence/platform/P05/README.md#L1) retains actual red42046173348 and fixed green42088730566 PR1 evidence, but no authenticated greyed-out merge-button screenshot (document explicitly admits absence).",
+    "fix": "Supply a genuine authenticated screenshot while an appropriate controlled PR is blocked by eval, then retain fixed green evidence. Do not manufacture a historical screenshot or weaken protection; this audit creates no regression code changes.",
+    "severity": "Core/evidence"
+  },
+  {
+    "id": "17.11",
+    "requirement": "Docker Hub shows SHA-tagged images for api, ui and indexer.",
+    "status": "PASS",
+    "evidence": "[dockerhub-tags.json](evidence/testing-audit-2026-11-07/dockerhub-tags.json):API/UI/indexer exact94868ba SHA tags HTTP200 with registry digests.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "18.1",
+    "requirement": "pytest passes in api/tests/ and indexer/tests/ with no network and no model.",
+    "status": "PASS",
+    "evidence": "216 API+130 indexer+26 evaluator/scripts=372 tests pass; no live model/external dependency needed, mocked HTTP/loopback fixtures only. [unit-checks.json](evidence/testing-audit-2026-11-07/unit-checks.json); [api-tests.txt](evidence/testing-audit-2026-11-07/api-tests.txt); [indexer-tests.txt](evidence/testing-audit-2026-11-07/indexer-tests.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "18.2",
+    "requirement": "Tests cover: input validation boundaries (2, 3, 500, 501 chars), /healthz independence, /readyz failure modes, validation retry then fallback, citation matching, relevance-floor abstention, cache never stores abstentions or follow-ups, superseded filter, embedding-pin mismatch, poisoned-chunk injection.",
+    "status": "FAIL",
+    "evidence": "All named offline boundaries/cache/filter/pin/retry cases pass. Poison test only checks serialized prompt; actual indexed attack is not pytest-collected. [api/tests/test_injection.py:1](../api/tests/test_injection.py#L1); [indexed-poison.json](evidence/testing-audit-2026-11-07/indexed-poison.json)",
+    "fix": "Add the isolated indexed-poison integration pytest described in7.6 and run it explicitly in the intended integration job; keep default unit suite network/model-free.",
+    "severity": "Core/tests"
+  },
+  {
+    "id": "18.3",
+    "requirement": "Tests are deterministic. They do not assert on model wording.",
+    "status": "PASS",
+    "evidence": "Repeated offline suites pass with deterministic doubles; model-wording assertions are confined to explicit manual live diagnostics, not collected pytest. [unit-checks.json](evidence/testing-audit-2026-11-07/unit-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "19.1",
+    "requirement": "docs/adr/0001-indexer-as-job.md: the reasoning in the author's own words (three writers racing one volume, restart cost, readiness becoming a lie, no re-index without redeploy).",
+    "status": "PASS",
+    "evidence": "[docs/adr/0001-indexer-as-job.md:1](../docs/adr/0001-indexer-as-job.md#L1) explains racing3\u20134 writers, restart/OCR cost, incomplete readiness and reindex independent of API redeploy.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "19.2",
+    "requirement": "ADRs 0002 to 0004 exist, including cache store choice and 0004-llm-provider-and-data-governance.md.",
+    "status": "PASS",
+    "evidence": "ADRs0002 chunking,0003 Redis semantic cache,0004 LLM provider/data governance exist; measured calibration is in0002. Some status prose is stale, not absence of deliverables.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "19.3",
+    "requirement": "docs/ARCHITECTURE.md explains StatefulSet for Chroma.",
+    "status": "PASS",
+    "evidence": "[docs/ARCHITECTURE.md:26](../docs/ARCHITECTURE.md#L26) explains identity/PVC and limits of one-replica statefulness.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "19.4",
+    "requirement": "docs/ENGINEERING-NOTES.md answers all seven questions, each pointing to real files and line numbers (spot check that the lines exist and say what is claimed):",
+    "status": "FAIL",
+    "evidence": "[docs/ENGINEERING-NOTES.md:1](../docs/ENGINEERING-NOTES.md#L1) answers allseven topics, but its chroma.py:63 query/pin references now point inside parent-page metadata validation; cache.py:21 is a regex, not namespace. metrics.py:51 remains correct.",
+    "fix": "Update stale links to current ChromaRetriever.prepare/_prepare (101/110) and cache.namespace (28), recheck remaining anchors and reconcile obsolete resource/model/timeout descriptions.",
+    "severity": "Doc"
+  },
+  {
+    "id": "19.5",
+    "requirement": "docs/AI-USAGE.md names the tools, what they wrote or shaped, and what was changed afterwards and why. Specific, not generic.",
+    "status": "PASS",
+    "evidence": "[docs/AI-USAGE.md:1](../docs/AI-USAGE.md#L1) specifically names Codex, scoped generated work, interventions/rejections and changed tests/config/evidence; human-review caveat retained.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "19.6",
+    "requirement": "README: apply order, secret creation command, Ollama setup (OLLAMA_HOST=0.0.0.0), minikube image load, how to reindex, how to run eval.",
+    "status": "FAIL",
+    "evidence": "[README.md:150](../README.md#L150) and \u201cSelecting hosted mode remains unsupported\u201d contradict shipped hosted config; Ollama listener guidance omits the requested OLLAMA_HOST=0.0.0.0 setup path.",
+    "fix": "Replace stale local-only defaults with actual hosted-generation/local-embedding setup; put required Secret command before apply; document a Docker-reachable Ollama binding procedure and verification from a pod, plus existing image-load/reindex/eval commands.",
+    "severity": "Doc"
+  },
+  {
+    "id": "19.7",
+    "requirement": "The README make cluster and apply sequence works start to finish.",
+    "status": "FAIL",
+    "evidence": "Fresh clone reproduced startup failure without hosted key; manually supplied approved key was an additional intervention, not a clean README pass. [fresh-startup-failure.txt](evidence/testing-audit-2026-11-07/fresh-startup-failure.txt)",
+    "fix": "Apply the README fixes in1.11/19.6 and rerun documented setup start-to-finish in another empty cluster, including cited answer and abstention.",
+    "severity": "Doc; shares D-5 with1.11"
+  },
+  {
+    "id": "20.1",
+    "requirement": "Sections A to C: all answers match ground truth, all citations validate.",
+    "status": "FAIL",
+    "evidence": "Companion A\u2013C executed on the existing older deployed primary app; source-ground-truth review found omitted qualifications/incomplete tables, missing eligibility details, two provider400 fallbacks and exact-clause refusal. Five template rows lack required corpus sources and are explicitly N/A. [companion-review.json](evidence/testing-audit-2026-11-07/companion-review.json); [companion-answers.json](evidence/testing-audit-2026-11-07/companion-answers.json); [primary-source-comparison.json](evidence/testing-audit-2026-11-07/primary-source-comparison.json)",
+    "fix": "First deploy the verified current SHA to the primary environment and repeat these held-out questions. For failures that reproduce, preserve required table/eligibility/HoD qualifiers, add lexical clause retrieval rather than blindly lowering the safety floor, and diagnose provider400 with sanitized error codes. Relevant current paths: [api/app/retrieval/chroma.py:1](../api/app/retrieval/chroma.py#L1); [api/app/providers/llm/hosted.py:1](../api/app/providers/llm/hosted.py#L1); [api/app/services/grounding.py:1](../api/app/services/grounding.py#L1). No current-code change is justified solely by a failure on older source.",
+    "severity": "Core/behaviour"
+  },
+  {
+    "id": "20.2",
+    "requirement": "Section D: 5 of 5 must-abstain questions abstain.",
+    "status": "PASS",
+    "evidence": "Companion D1\u2013D5 all HTTP200, false/low/empty citations, cacheMISS. Current-source D1 repeats likewise decline without HIT. [companion-answers.json](evidence/testing-audit-2026-11-07/companion-answers.json); [runtime-followup.json](evidence/testing-audit-2026-11-07/runtime-followup.json). This set differs from frozen golden q14; do not conflate their outcomes.",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "20.3",
+    "requirement": "Sections E and F: no injection obeyed; no 5xx anywhere.",
+    "status": "FAIL",
+    "evidence": "Original primary E1 returned Ingress503 HTML; one diagnostic repeat200 safely refused. E2/E3 and all F boundaries passed. Actual current-source indexed poison resisted both attacks, but no pytest-collected indexed-poison integration test exists. [E1-diagnostic-repeat.json](evidence/testing-audit-2026-11-07/E1-diagnostic-repeat.json); [indexed-poison.json](evidence/testing-audit-2026-11-07/indexed-poison.json)",
+    "fix": "Redeploy current SHA and repeat primary injection/input probes; diagnose dependency-readiness and service availability under combined load if503 recurs. Add the discoverable indexed-poison test from7.6. [api/app/services/readiness.py:1](../api/app/services/readiness.py#L1); [api/tests/test_injection.py:1](../api/tests/test_injection.py#L1). Do not hide the original503 with its successful retry.",
+    "severity": "Core/availability/tests"
+  },
+  {
+    "id": "20.4",
+    "requirement": "Section G: cache hits, misses, non-caching and post-reindex expiry all correct.",
+    "status": "PASS",
+    "evidence": "G1MISS\u2192HIT with lower hit latency and counter increments; G2 cosine.884978<.95 correctlyMISS; G3 unrelated tuitionMISS; meaningful G4 warmed campus-transfer5000HIT then temporary-transfer2000MISS (cosine.909039), same generation; G5historicalBYPASS; G6two refusedMISS; G7two uncached HTTP200fallbacks; G8real reindexHIT\u2192MISS. Initial G4 transcript-refusal pair was inconclusive and replaced, not counted as proof. [runtime-followup.json](evidence/testing-audit-2026-11-07/runtime-followup.json); [cache-near-miss-transfer.json](evidence/testing-audit-2026-11-07/cache-near-miss-transfer.json); [provider-faults.json](evidence/testing-audit-2026-11-07/provider-faults.json); [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "20.5",
+    "requirement": "Section H: retry once, then fallback with HTTP 200.",
+    "status": "PASS",
+    "evidence": "H1invalid-once\u2192valid with2provider calls; H2invalid-twice\u2192HTTP200fallback,4calls for2uncached requests and exactly2fallback-counter increments; H3fabricated source blocked; H4upstream503 gives one-call safefallback; public JSON/UI exclude reasoning. All run through fresh audit Ingress with a non-secret scripted-provider key, then restored. [provider-faults.json](evidence/testing-audit-2026-11-07/provider-faults.json); [fallback-counter-proof.json](evidence/testing-audit-2026-11-07/fallback-counter-proof.json); [ui.txt](evidence/testing-audit-2026-11-07/ui.txt)",
+    "fix": null,
+    "severity": null
+  },
+  {
+    "id": "20.6",
+    "requirement": "Section I: delete-pod, scale, rollout and undo, embed-pin mismatch, reindex, NetworkPolicy checks all behave.",
+    "status": "FAIL",
+    "evidence": "Fresh infrastructure checks passed except documented first-run setup and metrics exposure. Bootstrap813/three readyAPI, scoped NetworkPolicy, pin mismatch/recovery, five endpoint IPs, visible rollout/undo, PVC retention, reindex/query availability and replacement outputs retained. Ingress /metrics returns200text/html UI, not Prometheus. [runtime-checks.json](evidence/testing-audit-2026-11-07/runtime-checks.json); [runtime-followup.json](evidence/testing-audit-2026-11-07/runtime-followup.json); [reindex-availability.json](evidence/testing-audit-2026-11-07/reindex-availability.json) Continuous reindex availability ALSO FAILED; inspect every native request outcome in the evidence.",
+    "fix": "Fix README required-Secret ordering (1.11) and add an exact /metrics Ingress route to API8000 (or document/test a supported API metrics route consistently). [k8s/base/ingress.yaml:1](../k8s/base/ingress.yaml#L1); [api/app/routes/metrics.py:50](../api/app/routes/metrics.py#L50). Keep direct API metrics behavior intact, then repeat I1/I15. Diagnose observed reindex-time failures without weakening the availability check.",
+    "severity": "Core/Doc; shares D-5 with1.11"
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "pods": [
+    {
+      "pod": "api-67bfc87bf9-4jfvk",
+      "ready": [
+        "False"
+      ],
+      "readyz": "",
+      "stderr": "error: unable to upgrade connection: container not found (\"api\")\n"
+    },
+    {
+      "pod": "api-67bfc87bf9-6svcw",
+      "ready": [
+        "False"
+      ],
+      "readyz": "",
+      "stderr": "error: unable to upgrade connection: container not found (\"api\")\n"
+    },
+    {
+      "pod": "api-67bfc87bf9-cb9sr",
+      "ready": [
+        "False"
+      ],
+      "readyz": "503 {\"status\":\"not_ready\",\"checks\":{\"chroma\":false,\"model\":false,\"dimension\":false,\"redis\":true}}\n",
+      "stderr": ""
+    },
+    {
+      "pod": "api-698955cbdf-z4glr",
+      "ready": [
+        "False"
+      ],
+      "readyz": "503 {\"status\":\"not_ready\",\"checks\":{\"chroma\":false,\"model\":false,\"dimension\":false,\"redis\":true}}\n",
+      "stderr": ""
+    }
+  ],
+  "endpoints": {
+    "apiVersion": "v1",
+    "kind": "Endpoints",
+    "metadata": {
+      "annotations": {
+        "endpoints.kubernetes.io/last-change-trigger-time": "2026-11-07T18:57:16Z"
+      },
+      "creationTimestamp": "2026-11-07T18:44:38Z",
+      "labels": {
+        "endpoints.kubernetes.io/managed-by": "endpoint-controller"
+      },
+      "name": "api",
+      "namespace": "rahbar",
+      "resourceVersion": "3032",
+      "uid": "10b40bf4-3ad2-4775-93a3-7127e53f548a"
+    },
+    "subsets": [
+      {
+        "notReadyAddresses": [
+          {
+            "ip": "10.244.56.199",
+            "nodeName": "rahbar-audit",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "api-67bfc87bf9-4jfvk",
+              "namespace": "rahbar",
+              "uid": "e5b1880e-5c75-4fd6-9438-b7f1d33c9edf"
+            }
+          },
+          {
+            "ip": "10.244.56.200",
+            "nodeName": "rahbar-audit",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "api-67bfc87bf9-cb9sr",
+              "namespace": "rahbar",
+              "uid": "834d73c2-381c-49a2-b65c-3a3b81dc6c4f"
+            }
+          },
+          {
+            "ip": "10.244.56.201",
+            "nodeName": "rahbar-audit",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "api-67bfc87bf9-6svcw",
+              "namespace": "rahbar",
+              "uid": "ad87473f-bf33-43da-a661-2c9ff89d1f7d"
+            }
+          },
+          {
+            "ip": "10.244.56.205",
+            "nodeName": "rahbar-audit",
+            "targetRef": {
+              "kind": "Pod",
+              "name": "api-698955cbdf-z4glr",
+              "namespace": "rahbar",
+              "uid": "72fc3b4b-36a8-4804-b7f4-80b825006feb"
+            }
+          }
+        ],
+        "ports": [
+          {
+            "name": "http",
+            "port": 8000,
+            "protocol": "TCP"
+          }
+        ]
+      }
+    ]
+  }
+}

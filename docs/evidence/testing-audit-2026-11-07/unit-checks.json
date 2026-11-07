@@ -1,0 +1,79 @@
+[
+  {
+    "check": "api",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\pytest-api",
+      "--cov=app",
+      "--cov-report=term",
+      "--cov-report=xml:C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\api-coverage.xml",
+      "--cov-fail-under=60"
+    ]
+  },
+  {
+    "check": "indexer",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\pytest-indexer",
+      "--cov=pipeline",
+      "--cov-report=term",
+      "--cov-report=xml:C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\indexer-coverage.xml",
+      "--cov-fail-under=60"
+    ]
+  },
+  {
+    "check": "eval-scripts",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "eval/tests",
+      "scripts/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\testing-audit\\pytest-scripts"
+    ]
+  },
+  {
+    "check": "ruff",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Jibran\\Desktop\\Rahbar\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "api",
+      "indexer",
+      "eval",
+      "corpus",
+      "scripts"
+    ]
+  },
+  {
+    "check": "ui",
+    "exit_code": 0,
+    "command": [
+      "node",
+      "scripts/ui.test.cjs"
+    ]
+  }
+]

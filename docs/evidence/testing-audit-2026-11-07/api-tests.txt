@@ -1,0 +1,50 @@
+........................................................................ [ 33%]
+........................................................................ [ 66%]
+........................................................................ [100%]
+============================== warnings summary ===============================
+..\.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Jibran\Desktop\Rahbar\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+app\__init__.py                      0      0   100%
+app\config.py                       97      3    97%
+app\logjson.py                      25      1    96%
+app\main.py                         57      2    96%
+app\providers\__init__.py            0      0   100%
+app\providers\llm\__init__.py       15      3    80%
+app\providers\llm\base.py           21      1    95%
+app\providers\llm\citations.py      18      0   100%
+app\providers\llm\hosted.py         70     13    81%
+app\providers\llm\ollama.py         53      4    92%
+app\providers\llm\stub.py           13      1    92%
+app\retrieval\__init__.py           11      4    64%
+app\retrieval\base.py                6      0   100%
+app\retrieval\chroma.py            122     13    89%
+app\retrieval\index_state.py        20      4    80%
+app\retrieval\stub.py                7      0   100%
+app\routes\__init__.py               0      0   100%
+app\routes\ask.py                   40      4    90%
+app\routes\health.py                20      5    75%
+app\routes\metrics.py               32      0   100%
+app\schemas.py                      53      0   100%
+app\services\__init__.py             0      0   100%
+app\services\answer.py              29      0   100%
+app\services\arithmetic.py          28      0   100%
+app\services\cache.py              119      7    94%
+app\services\generation.py          38      3    92%
+app\services\grounding.py           45      4    91%
+app\services\readiness.py           39     26    33%
+app\services\relevance.py           12      0   100%
+app\services\safety.py              21      0   100%
+app\services\sessions.py            42      2    95%
+----------------------------------------------------
+TOTAL                             1053    100    91%
+Coverage XML written to file C:\Users\Jibran\Desktop\Rahbar\.venv\testing-audit\api-coverage.xml
+Required test coverage of 60% reached. Total coverage: 90.50%
+216 passed, 1 warning in 11.77s

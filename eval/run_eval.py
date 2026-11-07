@@ -85,8 +85,14 @@ def summarise(rows: list[dict]) -> dict:
         expect=row.get("expect")
         diagnostic["expect_match"]=expect.lower() in " ".join(response.get("answer","").lower().split()) if expect else None
         diagnostics.append(diagnostic)
-    by_type={kind:{"recall@5":mean([r["recall@5"] for r in diagnostics if r.get("type")==kind]),
-                  "questions":sum(r.get("type")==kind for r in diagnostics)} for kind in sorted({r.get("type","ordinary") for r in rows})}
+    by_type = {
+        kind: {
+            "recall@3": mean([r["recall@3"] for r in diagnostics if r.get("type") == kind]),
+            "recall@5": mean([r["recall@5"] for r in diagnostics if r.get("type") == kind]),
+            "questions": sum(r.get("type") == kind for r in diagnostics),
+        }
+        for kind in sorted({r.get("type", "ordinary") for r in rows})
+    }
     return {"recall@3":mean([r["recall@3"] for r in diagnostics]),
             "recall@5":mean([r["recall@5"] for r in diagnostics]),
             "citation_validity":mean([r["citation_validity"] for r in diagnostics]),

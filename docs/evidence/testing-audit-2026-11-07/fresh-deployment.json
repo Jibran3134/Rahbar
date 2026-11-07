@@ -1,0 +1,8 @@
+{
+  "context": "rahbar-audit",
+  "host_model_ip": "192.168.65.254",
+  "source_revision": "94868ba05519f0598bc75536ef308a4db7282f36",
+  "missing_secret_failure_observed": true,
+  "pod": "api-67bfc87bf9-4jfvk",
+  "note": "README describes hosted as unsupported/optional, but shipped ConfigMap selects hosted. No source file was edited; no credential was copied."
+}

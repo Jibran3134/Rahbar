@@ -1,0 +1,77 @@
+NAME                         READY   STATUS    RESTARTS      AGE
+pod/api-6d999dcb95-6ntgx     1/1     Running   0             23m
+pod/api-6d999dcb95-dr89p     1/1     Running   4 (36s ago)   5h44m
+pod/api-6d999dcb95-gtrwc     1/1     Running   0             23m
+pod/chroma-0                 1/1     Running   5 (12m ago)   8h
+pod/redis-7f546bdffd-x2m64   1/1     Running   4 (10h ago)   2d6h
+pod/ui-6bddf5468f-4h49d      1/1     Running   0             8h
+
+NAME             TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+service/api      ClusterIP   10.96.50.136   <none>        8000/TCP   2d7h
+service/chroma   ClusterIP   None           <none>        8000/TCP   2d7h
+service/redis    ClusterIP   10.99.93.79    <none>        6379/TCP   2d7h
+service/ui       ClusterIP   10.98.81.56    <none>        8080/TCP   2d7h
+
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api     3/3     3            3           2d7h
+deployment.apps/redis   1/1     1            1           2d7h
+deployment.apps/ui      1/1     1            1           2d7h
+
+NAME                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/api-69f846575b     0         0         0       8h
+replicaset.apps/api-6d99747fd      0         0         0       5h51m
+replicaset.apps/api-6d999dcb95     3         3         3       5h44m
+replicaset.apps/api-75877658f5     0         0         0       5h55m
+replicaset.apps/redis-7f546bdffd   1         1         1       2d7h
+replicaset.apps/ui-58c965b65f      0         0         0       2d6h
+replicaset.apps/ui-599c66d744      0         0         0       25h
+replicaset.apps/ui-5c468b7bc4      0         0         0       2d7h
+replicaset.apps/ui-6b44897f9b      0         0         0       10h
+replicaset.apps/ui-6bddf5468f      1         1         1       8h
+replicaset.apps/ui-6fc8db86f6      0         0         0       2d6h
+replicaset.apps/ui-7944864c8d      0         0         0       9h
+replicaset.apps/ui-84d764b96c      0         0         0       10h
+
+NAME                      READY   AGE
+statefulset.apps/chroma   1/1     2d7h
+
+NAME                                      REFERENCE        TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: 13%/70%   3         8         3          2d7h
+
+NAME                    SCHEDULE    TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+cronjob.batch/reindex   0 2 * * 0   Etc/UTC    False     0        <none>          2d7h
+
+NAME                         DATA   AGE
+configmap/kube-root-ca.crt   1      2d7h
+configmap/rahbar-config      22     2d7h
+configmap/snapshot-config    3      2d7h
+
+NAME                   TYPE     DATA   AGE
+secret/rahbar-secret   Opaque   1      5h56m
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/corpus-data     Bound    pvc-70f902d7-a95f-4c9d-b7e5-b1a690a275a7   1Gi        RWO            standard       <unset>                 2d7h
+persistentvolumeclaim/data-chroma-0   Bound    pvc-59e82ec7-7f34-4881-a47f-ed7eb82bd08e   4Gi        RWO            standard       <unset>                 2d7h
+persistentvolumeclaim/redis-data      Bound    pvc-31408b5d-3303-4283-8938-bde30c19ad6f   1Gi        RWO            standard       <unset>                 2d7h
+
+NAME                               CLASS   HOSTS          ADDRESS        PORTS   AGE
+ingress.networking.k8s.io/rahbar   nginx   rahbar.local   192.168.49.2   80      2d7h
+
+NAME                                                   POD-SELECTOR                                                      AGE
+networkpolicy.networking.k8s.io/allow-api-egress       app.kubernetes.io/name=api,app.kubernetes.io/part-of=rahbar       2d7h
+networkpolicy.networking.k8s.io/allow-api-ingress      app.kubernetes.io/name=api,app.kubernetes.io/part-of=rahbar       2d7h
+networkpolicy.networking.k8s.io/allow-chroma-ingress   app.kubernetes.io/name=chroma,app.kubernetes.io/part-of=rahbar    2d7h
+networkpolicy.networking.k8s.io/allow-dns              <none>                                                            2d7h
+networkpolicy.networking.k8s.io/allow-indexer-egress   app.kubernetes.io/name=indexer,app.kubernetes.io/part-of=rahbar   2d7h
+networkpolicy.networking.k8s.io/allow-redis-ingress    app.kubernetes.io/name=redis,app.kubernetes.io/part-of=rahbar     2d7h
+networkpolicy.networking.k8s.io/allow-ui-api           app.kubernetes.io/name=ui,app.kubernetes.io/part-of=rahbar        2d7h
+networkpolicy.networking.k8s.io/allow-ui-ingress       app.kubernetes.io/name=ui,app.kubernetes.io/part-of=rahbar        2d7h
+networkpolicy.networking.k8s.io/default-deny           <none>                                                            2d7h
+
+NAME                     AGE
+serviceaccount/api       2d7h
+serviceaccount/chroma    2d7h
+serviceaccount/default   2d7h
+serviceaccount/indexer   2d7h
+serviceaccount/redis     2d7h
+serviceaccount/ui        2d7h
