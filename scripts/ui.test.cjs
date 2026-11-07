@@ -42,5 +42,7 @@ vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
   assert.equal(calls[3].session_id,undefined);
   assert.equal(elements['query-mode'].disabled,false);
   assert.match(JSON.stringify(elements.thread.children),/No verified answer/);
+  const timeoutCard=vm.runInContext('renderAnswer({answered_from_context:false,answer:"Could not verify"},"MISS","generation_timeout")',context);
+  assert.match(JSON.stringify(timeoutCard),/model reached its time limit/);
   console.log('PASS: independent repeats omit history, conversation reuses server session, reset works, output stays text');
 })().catch(error => { console.error(error); process.exitCode=1; });

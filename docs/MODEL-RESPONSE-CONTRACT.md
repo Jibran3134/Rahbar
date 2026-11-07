@@ -25,3 +25,8 @@ If the evidence is insufficient, the service returns a canonical refusal with `a
 The API adds request ID, retrieved references, provider and a server-issued session ID. A cache hit preserves answer/citations/confidence/retrieved references while assigning the current request/session metadata. `X-Cache` reports HIT/MISS/BYPASS; `X-Cache-Reason` explains matching, storage, exclusion or conversation bypass.
 
 The Windows launcher uses Ollama's [documented empty-request preload](https://docs.ollama.com/faq#how-can-i-preload-a-model-into-ollama-to-get-faster-response-times) before opening the app. This reduces cold-load delays without removing request timeouts or promising that every generation succeeds.
+
+
+The CPU profile now permits 120 seconds per generation attempt. At most two validation attempts remain allowed; a transport/timeout failure still falls back immediately. Ingress, the Windows gateway and the evaluator allow 360 seconds, and API pod termination grace is 360 seconds, covering the two attempts plus query embedding/drain allowances in the normal bounded case. Supported facts can therefore take longer to generate than the earlier 60-second budget. Timeout fallbacks are explicitly marked generation_timeout in X-Cache-Reason instead of being described as absent source information.
+
+PDF title-only search hits receive bounded same-generation/source/page/version context before generation. The score remains the original heading similarity, and citations identify that heading on its actual source page. This adds the nearby source clauses without inventing text or raising similarity scores.

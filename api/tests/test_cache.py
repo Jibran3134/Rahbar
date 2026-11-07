@@ -156,3 +156,28 @@ def test_refusal_miss_explains_why_it_was_not_stored(monkeypatch):
         assert not memory.rows
     finally:
         metrics.QUERY.reset(token)
+
+
+def test_model_timeout_miss_is_not_reported_as_missing_document_evidence():
+    from types import SimpleNamespace
+    from app.routes import metrics
+    from app.schemas import Passage
+    from app.providers.llm.base import ProviderError,ProviderFailureKind
+    from app.services.cache import SemanticCache,answer_cached
+    active=ActiveIndex(collection="g-a",generation="a",embed_model="nomic-embed-text",dimension=2)
+    p=Passage(chunk_id="a",text="The required CGPA is 2.00.",source="p.pdf",section="5.4",page=24,score=.9)
+    retriever=SimpleNamespace(name="chroma",prepare=lambda q:(active,None,[1,0]),
+        retrieve_prepared=lambda *a,**k:[p])
+    def fail(*args,**kwargs):
+        raise ProviderError(ProviderFailureKind.TIMEOUT)
+    trace={}
+    token=metrics.QUERY.set(trace)
+    memory=Memory()
+    try:
+        result,status=answer_cached("Academic warning?",retriever,SimpleNamespace(name="ollama",generate=fail),
+            Settings(),SemanticCache(memory,Settings()))
+        assert status=="MISS" and result.answered_from_context is False
+        assert trace['cache_reason']=='generation_timeout' and trace['fallback'] is True
+        assert not memory.rows
+    finally:
+        metrics.QUERY.reset(token)

@@ -15,7 +15,7 @@ from ..schemas import ActiveIndex, Answer, AskResponse, Passage
 from .grounding import validate_grounding
 from ..routes import metrics
 
-PROMPT_VERSION="grounded-v9-strict-model-contract"
+PROMPT_VERSION="grounded-v10-content-bearing-retrieval"
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:
@@ -121,5 +121,9 @@ def answer_cached(question: str,retriever: Any,provider: LLMProvider,settings: S
     frozen=SimpleNamespace(name=retriever.name,retrieve=lambda q,k:retriever.retrieve_prepared(q,k,prepared))
     result=answer_question(question,frozen,provider,settings)
     cache.put(key,question,vector,result)
-    metrics.field("cache_reason",cache_exclusion(result) or "miss_stored")
+    reason=cache_exclusion(result) or "miss_stored"
+    trace=metrics.QUERY.get() or {}
+    if reason=="not_grounded" and trace.get("fallback"):
+        reason="generation_timeout" if trace.get("generation_failure")=="timeout" else "generation_failure"
+    metrics.field("cache_reason",reason)
     return result,"MISS"

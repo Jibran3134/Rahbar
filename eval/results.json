@@ -40,7 +40,7 @@
       ],
       "expect": "passed",
       "response": {
-        "request_id": "31edf40a7dc73838c222465a3419d98c",
+        "request_id": "456417d9369e302b6ff4189537b15d10",
         "answer": "No; [academic-rules-handbook-jun-2026.pdf / 1.20]",
         "citations": [
           {
@@ -89,10 +89,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "f6c319c1436d409d942d84a0cd9c348f"
+        "session_id": "87c3f017fee941babfb12b8b0e0a2042"
       },
       "error": null,
-      "seconds": 95.15,
+      "seconds": 72.86,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -112,8 +112,8 @@
       ],
       "expect": "2.00",
       "response": {
-        "request_id": "884bc3d74e738f89ab15e934ad9fb01f",
-        "answer": "If the CGPA equals or exceeds 2.00 after the 1st or 2nd academic warning, the warning count is reset to zero.[academic-rules-handbook-jun-2026.pdf / 5.7]",
+        "request_id": "35d37380cc5210679d98f5ce9c8304d8",
+        "answer": "If the CGPA equals or exceeds 2.00 after the 1st or 2nd academic warning, the warning count is reset to zero. [academic-rules-handbook-jun-2026.pdf / 5.7]",
         "citations": [
           {
             "source": "academic-rules-handbook-jun-2026.pdf",
@@ -161,10 +161,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "0a700d2fe7154beb86aedad732615956"
+        "session_id": "95f36b2f899746adb4cfcebbc3e1f377"
       },
       "error": null,
-      "seconds": 42.63,
+      "seconds": 35.33,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -184,8 +184,8 @@
       ],
       "expect": "lab",
       "response": {
-        "request_id": "49e63cd7852e99bf74b2ebae6e3ded89",
-        "answer": "only Lab needs to be repeated. [academic-rules-handbook-jun-2026.pdf / 4.8]",
+        "request_id": "f3d6989abb9c5a3c20b5f1e78e741819",
+        "answer": "Lab;[academic-rules-handbook-jun-2026.pdf / 4.8]",
         "citations": [
           {
             "source": "academic-rules-handbook-jun-2026.pdf",
@@ -233,10 +233,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "a613767386cb4178b21c46446c3f276e"
+        "session_id": "473882a46a39433caed944075d5746fa"
       },
       "error": null,
-      "seconds": 27.47,
+      "seconds": 25.7,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -256,13 +256,13 @@
       ],
       "expect": "two weeks",
       "response": {
-        "request_id": "263ac8cc166c211d1716e4139cdd47c2",
-        "answer": "Students are allowed to Add/Drop a course during the first two weeks of the commencement of the semester; the approval of the Head of Department is essential. [student-handbook-jun-2026.pdf / XI.6]",
+        "request_id": "74bc5cf917fda8f0c12e83e2287efc54",
+        "answer": "Students can request adding or dropping a course during the first two weeks of the semester, and approval from the Head of Department is needed. [academic-rules-handbook-jun-2026.pdf / 4.19]",
         "citations": [
           {
-            "source": "student-handbook-jun-2026.pdf",
-            "section": "XI.6",
-            "page": 29
+            "source": "academic-rules-handbook-jun-2026.pdf",
+            "section": "4.19",
+            "page": 22
           }
         ],
         "answered_from_context": true,
@@ -305,10 +305,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "e676235a232441dfab013eb7b8694576"
+        "session_id": "4a6cb655cc4c4edfbeb5586c21d35032"
       },
       "error": null,
-      "seconds": 37.43,
+      "seconds": 34.02,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -328,7 +328,7 @@
       ],
       "expect": "20,000",
       "response": {
-        "request_id": "9c51da04de3f0fb43545611ae4ef8648",
+        "request_id": "6c85b1aa43d10893113240dd4a788098",
         "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
         "citations": [
           {
@@ -377,10 +377,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "d28091eee2624562a15b2cb006a0f6bf"
+        "session_id": "2129560abfce4950aa8d71f22a9b64d4"
       },
       "error": null,
-      "seconds": 14.15,
+      "seconds": 36.05,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -400,8 +400,8 @@
       ],
       "expect": "recent",
       "response": {
-        "request_id": "d48a84759e8591ee0c588944634e7463",
-        "answer": "The most recent grade points are used for repeat courses. [grading-page.html / Description of Grades]",
+        "request_id": "80c202500b2f0cc588e70bab77638d2f",
+        "answer": "The most recent grade;[grading-page.html / Description of Grades]",
         "citations": [
           {
             "source": "grading-page.html",
@@ -449,10 +449,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "671d7df8e4f5417c83d77979e1b075d6"
+        "session_id": "4e0d6e16ece34e6bbec7a0023a97ca1c"
       },
       "error": null,
-      "seconds": 38.48,
+      "seconds": 36.62,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -472,17 +472,17 @@
       ],
       "expect": "year",
       "response": {
-        "request_id": "040577a75a144d4cac50963560541711",
+        "request_id": "f010ef2cde9a4d6a51a6b9e7dbd46bbb",
         "answer": "The supplied documents do not provide enough information to answer this question.",
         "citations": [],
         "answered_from_context": false,
         "confidence": "low",
         "retrieved": [],
         "provider": "ollama",
-        "session_id": "e69692b3b76a4b3d8e8b7f016a3fd778"
+        "session_id": "00b9bd47463a4e2c9e6f549a07a0e5bd"
       },
       "error": null,
-      "seconds": 0.42,
+      "seconds": 0.38,
       "recall@3": 0.0,
       "recall@5": 0.0,
       "citation_validity": null,
@@ -502,11 +502,17 @@
       ],
       "expect": "privacy",
       "response": {
-        "request_id": "7c5afa12b46c623feeb2871d6a9393f3",
-        "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
-        "citations": [],
-        "answered_from_context": false,
-        "confidence": "low",
+        "request_id": "37c8ff8411ad1c9d26bae1cd00245cc6",
+        "answer": "Generative AI can autonomously create new content ranging from text to images; it offers tools such as ChatGPT, Bard, DALL-E, and Stable Diffusion, which have sparked significant interest and experimentation among students and instructors alike within academic settings.[student-handbook-jun-2026.pdf / XII.1]",
+        "citations": [
+          {
+            "source": "student-handbook-jun-2026.pdf",
+            "section": "XII.1",
+            "page": 48
+          }
+        ],
+        "answered_from_context": true,
+        "confidence": "high",
         "retrieved": [
           {
             "chunk_id": "4abdb9c97da7c64aaf84a735f011a01b24531ea7a9d7d482268a6802cb9c707c",
@@ -545,13 +551,13 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "de3ec3cdc08f45df8c39f024fec9c5e5"
+        "session_id": "72e5f2f6434241b2ae41accebe7bd8f9"
       },
       "error": null,
-      "seconds": 60.52,
+      "seconds": 130.59,
       "recall@3": 1.0,
       "recall@5": 1.0,
-      "citation_validity": null,
+      "citation_validity": 1.0,
       "abstention_correct": null,
       "expect_match": false
     },
@@ -568,7 +574,7 @@
       ],
       "expect": "makeup",
       "response": {
-        "request_id": "2d499f9865f301394decec89f9d22750",
+        "request_id": "9ba7cc4286e1a6911f3ae9a00e55718c",
         "answer": "The last day of the makeup week of every semester. [academic-rules-handbook-jun-2026.pdf / 4.25]",
         "citations": [
           {
@@ -617,10 +623,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "117eebc400c147e19a7f3c7e71ebc537"
+        "session_id": "3fcb36e20f64408f81f913b7451d5682"
       },
       "error": null,
-      "seconds": 29.64,
+      "seconds": 28.12,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -640,8 +646,8 @@
       ],
       "expect": "final year",
       "response": {
-        "request_id": "47b28f425a95522e2d3d660a8b7f2c5e",
-        "answer": "A final year student may register for an additional course beyond the normal five-course load. [academic-rules-handbook-jun-2026.pdf / 4.3]",
+        "request_id": "c5ca752a1a0fad5d37ebb2013600df50",
+        "answer": "A final year student;[academic-rules-handbook-jun-2026.pdf / 4.3]",
         "citations": [
           {
             "source": "academic-rules-handbook-jun-2026.pdf",
@@ -689,10 +695,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "2f27505de5414ace8e2012bf67264a9e"
+        "session_id": "0d10952d33a64ed08219dfc6d7234f8c"
       },
       "error": null,
-      "seconds": 40.02,
+      "seconds": 39.24,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -712,8 +718,8 @@
       ],
       "expect": "20%",
       "response": {
-        "request_id": "5a775d55f9a27ea4fd2632163811e321",
-        "answer": "100%; 20% [academic-rules-handbook-jun-2026.pdf / 1.21]",
+        "request_id": "a51f42d4cf52f6bebed38ff70562ef3a",
+        "answer": "100% attendance; up to 20% absence for genuine reasons. [academic-rules-handbook-jun-2026.pdf / 1.21]",
         "citations": [
           {
             "source": "academic-rules-handbook-jun-2026.pdf",
@@ -761,10 +767,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "837cd48227f64adab525d27742fc72c8"
+        "session_id": "097ce0a1987b476e9fd399940b68e92d"
       },
       "error": null,
-      "seconds": 41.31,
+      "seconds": 39.42,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -784,7 +790,7 @@
       ],
       "expect": "12,000",
       "response": {
-        "request_id": "9996cb0ded6d9fa5013106ebd341ea22",
+        "request_id": "ec4044674931cefb6a6ef6e3f17bfc9a",
         "answer": "The BBA/BS tuition fee per credit hour is Rs. 12,000.[fee-structure-page.html / Tuition Fee (w.e.f. Fall 2026 semester)]",
         "citations": [
           {
@@ -833,10 +839,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "9225914462fe4b44be5eff62d06563ad"
+        "session_id": "783e2d3c2a394359a0f0ee2e530bfd1c"
       },
       "error": null,
-      "seconds": 50.34,
+      "seconds": 50.96,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -850,17 +856,17 @@
       "relevant": [],
       "expect": null,
       "response": {
-        "request_id": "bd557afa3013ad602819129af83267f9",
+        "request_id": "1640ca38ede715417e0a79718caf9307",
         "answer": "The supplied documents do not provide enough information to answer this question.",
         "citations": [],
         "answered_from_context": false,
         "confidence": "low",
         "retrieved": [],
         "provider": "ollama",
-        "session_id": "ce04b3afbc3848f38c129dd084666814"
+        "session_id": "ce94b09ebd3441d080659ac822e2d020"
       },
       "error": null,
-      "seconds": 0.39,
+      "seconds": 0.47,
       "recall@3": null,
       "recall@5": null,
       "citation_validity": null,
@@ -874,17 +880,17 @@
       "relevant": [],
       "expect": null,
       "response": {
-        "request_id": "1c4fbc1f0446823022807e71aeddc479",
+        "request_id": "2f53cbba386c398113d512405c8226eb",
         "answer": "The supplied documents do not provide enough information to answer this question.",
         "citations": [],
         "answered_from_context": false,
         "confidence": "low",
         "retrieved": [],
         "provider": "ollama",
-        "session_id": "762fd8539e264f37a96e1a50753ee557"
+        "session_id": "5c81dca515c14cf3831cd7c94b1c0ee6"
       },
       "error": null,
-      "seconds": 0.39,
+      "seconds": 0.3,
       "recall@3": null,
       "recall@5": null,
       "citation_validity": null,
@@ -904,8 +910,8 @@
       ],
       "expect": "passed",
       "response": {
-        "request_id": "594b3f5895a2f11015d6719f044d51a3",
-        "answer": "No; academic-rules-handbook-jun-2026.pdf / 1.20 [academic-rules-handbook-jun-2026.pdf / 1.20]",
+        "request_id": "78026d2b29f6d08e7a280bd89677f5ce",
+        "answer": "No; students can only register for courses for which they have passed all the pre-requisite courses as specified in the approved curriculum.[academic-rules-handbook-jun-2026.pdf / 1.20]",
         "citations": [
           {
             "source": "academic-rules-handbook-jun-2026.pdf",
@@ -953,15 +959,15 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "3ff456e6240d44bd9964090b5fe16705"
+        "session_id": "582271b6e24d4210bfd73056e8278ce3"
       },
       "error": null,
-      "seconds": 30.35,
+      "seconds": 32.84,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
       "abstention_correct": null,
-      "expect_match": false
+      "expect_match": true
     },
     {
       "id": "q16",
@@ -976,8 +982,8 @@
       ],
       "expect": "classes",
       "response": {
-        "request_id": "4cb3a77b192c683a4476acdfc969257f",
-        "answer": "The last day of classes. [undergraduate-academic-rules-aug-2023.pdf / 4.25]",
+        "request_id": "500cf215481fee56bc30fdaf955e95be",
+        "answer": "The course-withdrawal deadline is the last day of classes.[undergraduate-academic-rules-aug-2023.pdf / 4.25]",
         "citations": [
           {
             "source": "undergraduate-academic-rules-aug-2023.pdf",
@@ -1025,10 +1031,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "17bb0df66b6a4afa8c3ba5a91e868575"
+        "session_id": "090fea255dcb4041a0071d2eb1f3da56"
       },
       "error": null,
-      "seconds": 26.03,
+      "seconds": 31.0,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -1048,7 +1054,7 @@
       ],
       "expect": "batch",
       "response": {
-        "request_id": "d36afb5934a264b67d70fbcc9b61b51d",
+        "request_id": "160bdd6131cd82d1dc44a2142233d182",
         "answer": "Students can register for more courses provided they are not getting ahead of their batch.[undergraduate-academic-rules-aug-2023.pdf / 4.3]",
         "citations": [
           {
@@ -1097,10 +1103,10 @@
           }
         ],
         "provider": "ollama",
-        "session_id": "4a8953586785482c8f7081893c4b0325"
+        "session_id": "9c8b4704722846069785e09371a45a8a"
       },
       "error": null,
-      "seconds": 35.2,
+      "seconds": 34.87,
       "recall@3": 1.0,
       "recall@5": 1.0,
       "citation_validity": 1.0,
@@ -1111,7 +1117,7 @@
   "execution_errors": 0,
   "denominators": {
     "recall": 15,
-    "citation_questions": 13,
+    "citation_questions": 14,
     "must_abstain": 2
   },
   "dataset_id": "8fc89dcc1ee4b5eada586ff7d96d3c3692eb3c5afb4e6d19b3b8a200615912e1",
@@ -1132,8 +1138,8 @@
     "cache_ttl_seconds": 3600
   },
   "source_revision": {
-    "git": "1f5e4469281513738d374f030bde6b2e19572090",
-    "application_digest": "8af021f62d184f7d1f1b6adaee1d91cdd07306154124765dd53f94e23efa1064"
+    "git": "a11d0f6e67fa0e51513a26cfdd4c244c6c05d619",
+    "application_digest": "3ba3a48360adda037964e458eb118788fd56a58c9ea4e22cb68d7db9122c9163"
   },
   "golden": "eval\\golden.yaml",
   "gate_failures": []

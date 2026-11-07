@@ -144,6 +144,8 @@ function renderAnswer(data, cacheHeader, cacheReason) {
     conversation_context: "Conversation context was used, so this answer was not cached.",
     requested_bypass: "Cache was explicitly bypassed for this request.",
     not_grounded: "No verified grounded answer was available, so it was not cached.",
+    generation_timeout: "The model reached its time limit. This response was not cached.",
+    generation_failure: "The model output could not be verified. This response was not cached.",
     low_confidence: "This low-confidence answer was not cached.",
     no_evidence: "There was no verified evidence to cache.",
     invalid_citations: "This answer did not qualify for safe caching.",

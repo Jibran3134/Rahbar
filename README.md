@@ -169,6 +169,8 @@ kubectl --context rahbar -n rahbar create secret generic rahbar-secret --from-li
 
 k8s/secret-placeholder.yaml is excluded from Kustomize. Do not apply it over a real Secret. Selecting hosted mode remains unsupported even if a key is present.
 
+CPU generation is allowed 120 seconds per attempt, with at most one validation retry. Ingress, the Windows gateway and the evaluator use 360-second read budgets. A generation deadline still produces a safe, uncached fallback, now explained as `generation_timeout`. Title-only PDF matches are expanded with bounded facts from the same source page/version; scores and citation identities remain those of the matched headings.
+
 The exact model JSON shape, completion checks and public response rules are documented in [MODEL-RESPONSE-CONTRACT.md](docs/MODEL-RESPONSE-CONTRACT.md). A valid structured response is still subject to evidence/citation checks; no fixed wording or perfect semantic accuracy is promised.
 
 ## Evaluation and CI/CD

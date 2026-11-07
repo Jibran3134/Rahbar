@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-07",
+  "reported_request_id": "b83bf449f69b6e5d4670b85e72eb446b",
+  "original_failure": "60-second generation timeout; highest-ranked seed contained only the section heading",
+  "implemented": [
+    "bounded same-page/version/collection PDF context",
+    "120-second model attempts; 360-second outer request/drain budgets",
+    "generation_timeout/generation_failure cache explanations"
+  ],
+  "api_image_tag": "warning-fix-v1",
+  "tests": {
+    "api": 180,
+    "evaluator_and_scripts": 23,
+    "api_mypy": "passed",
+    "ruff": "passed",
+    "node_ui": "passed",
+    "all_overlay_invariants": "passed"
+  },
+  "reported_question": {
+    "first_seconds": 71.672,
+    "first_status": "MISS; stored verified answer",
+    "repeat_seconds": 0.25,
+    "repeat_status": "HIT; identical answer/citations",
+    "page": 24,
+    "confidence": "high",
+    "browser": "passed; real UI screenshot and request bodies saved"
+  },
+  "real_gate": {
+    "recall@3": 0.9333333333333333,
+    "recall@5": 0.9333333333333333,
+    "citation_validity": 1.0,
+    "abstention_correctness": 1.0,
+    "execution_errors": 0,
+    "gate_failures": []
+  },
+  "diagnostic_expected_string_misses": [
+    "q01",
+    "q07",
+    "q08"
+  ],
+  "chroma_recovery": {
+    "interrupted_run": "preserved, not accepted as passing",
+    "temporary_limit_MiB": 3072,
+    "observed_cgroup_peak_MiB": 390.72,
+    "maximum_sampled_working_set_MiB": 348,
+    "final_request_MiB": 768,
+    "final_limit_MiB": 1536,
+    "final_state": "original allocation restored; bounded source lookup and Ingress answer passed",
+    "full_run_peak_source": "chroma-full-run-cgroup.json",
+    "restored_runtime_source": "chroma-final-cgroup.json"
+  },
+  "remaining_quality_limits": "q01 is a terse supported No answer; q07 remains a relevance-floor refusal; q08 omits requested risk details. Gate metrics are not universal semantic correctness.",
+  "frozen_golden_and_baselines": "unchanged"
+}

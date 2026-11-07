@@ -1,0 +1,45 @@
+[
+  {
+    "seconds": 50.218,
+    "transport": {
+      "model": "llama3.2:3b",
+      "done": true,
+      "done_reason": "stop",
+      "load_duration": 10157800,
+      "prompt_eval_count": 928,
+      "prompt_eval_duration": 151790000,
+      "eval_count": 365,
+      "eval_duration": 50033767000
+    }
+  },
+  {
+    "validated": false,
+    "output": {
+      "answer": "Academic warning refers to a situation where a student is placed on academic probation due to their performance;[academic-rules-handbook-jun-2026.pdf / Academic Warning/Probation] the exact conditions vary depending on the institution and the specific rules in place;[academic-rules-handbook-jun-2026.pdf / 4.4] registration of courses with Theory and associated Lab is restricted for students on academic warning;[academic-rules-handbook-jun-2026.pdf / 4.4] and students on academic warning must obtain written approval from their Head of Department to register for a new course;[academic-rules-handbook-jun-2026.pdf / 5.7] prospectus-academic-rules-and-regulations.pdf / 11] does not provide specific information on the conditions for academic warning;[prospectus-academic-rules-and-regulations.pdf / 11]",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "Academic Warning/Probation",
+          "page": 24
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.4",
+          "page": 20
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "5.7",
+          "page": 25
+        },
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "section": "11",
+          "page": 2
+        }
+      ],
+      "answered_from_context": false,
+      "confidence": "low"
+    }
+  }
+]

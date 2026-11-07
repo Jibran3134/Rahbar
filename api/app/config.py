@@ -102,7 +102,7 @@ class Settings:
     cache_ttl_seconds: int = 3600
     cache_max_entries: int = 256
     session_ttl_seconds: int = 1800
-    llm_timeout_seconds: float = 60.0
+    llm_timeout_seconds: float = 120.0
 
     log_level: str = "INFO"
 
@@ -156,6 +156,6 @@ def get_settings() -> Settings:
         cache_ttl_seconds=_int("CACHE_TTL_SECONDS", 3600),
         cache_max_entries=_int("CACHE_MAX_ENTRIES", 256),
         session_ttl_seconds=_int("SESSION_TTL_SECONDS", 1800),
-        llm_timeout_seconds=_float("LLM_TIMEOUT_SECONDS", 60.0),
+        llm_timeout_seconds=_float("LLM_TIMEOUT_SECONDS", 120.0),
         log_level=os.environ.get("LOG_LEVEL", "INFO").upper(),
     )

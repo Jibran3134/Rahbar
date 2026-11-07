@@ -27,7 +27,7 @@ flowchart TB
     HIT -->|"Yes: HIT"| RESULT
     HIT -->|"No: MISS"| RETRIEVE
     CACHE -->|"Follow-up / forced BYPASS"| RETRIEVE
-    RETRIEVE["Read Chroma top 5<br/>Current documents by default<br/>Explicit policy edition selects historical version"]
+    RETRIEVE["Read Chroma top 5; bounded parent-page context for heading hits<br/>Current documents by default<br/>Explicit policy edition selects historical version"]
     PUBLISH -. "Read published generation" .-> PREP
     RETRIEVE --> RELEVANCE{"Any usable evidence clears<br/>query relevance floor .74?"}
     RELEVANCE -->|No| REFUSE["Safe abstention<br/>Do not invent an answer"]

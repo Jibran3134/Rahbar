@@ -87,7 +87,7 @@
 <text x="822.5" y="1044.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Follow-up / explicit bypass skips lookup</text>
 <path d="M822.5,922 L822.5,958" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
 <rect x="610" y="1098.0" width="425" height="104" rx="14" fill="#fff" stroke="#8aaddb" stroke-width="1.5"/>
-<text x="822.5" y="1130.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Retrieve Chroma top 5</text>
+<text x="822.5" y="1130.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Chroma top 5 + bounded page context</text>
 <text x="822.5" y="1157.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Current versions by default</text>
 <text x="822.5" y="1184.0" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#20344f">Explicit edition → historical filter</text>
 <path d="M822.5,1062 L822.5,1098" fill="none" stroke="#61728a" stroke-width="2.3" marker-end="url(#arrow)"/>
