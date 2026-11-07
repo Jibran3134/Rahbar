@@ -1,0 +1,14 @@
+{
+  "url": "http://rahbar.local:18185",
+  "answer": "RAHBAR\n\nFAST-NUCES policy assistant. Answers from indexed documents with sources, and declines when information is missing.\n\nNew conversation\n\nQuestion mode: \nIndependent question\nConversation / follow-up\n Independent questions can reuse cached answers. Choose conversation mode to use previous questions.\n\nWhat is academic warning\nFrom the documents\nconfidence: high\nprovider: ollama\ncache: hit\nReused a verified answer for this index and question.\n\nAcademic warning is a condition where a student's CGPA drops below 2.00 at the end of a semester; the minimum CGPA required to avoid academic warning is 2.00 for all undergraduate programs.[academic-rules-handbook-jun-2026.pdf / Academic Warning/Probation]\n\nSOURCES\nacademic-rules-handbook-jun-2026.pdf / Academic Warning/Probation, p. 24\nRetrieved passages (5)\nrequest id 3c1cf1fade1c87ae00a6a480aea31382\nWhat is academic warning\nFrom the documents\nconfidence: high\nprovider: ollama\ncache: hit\nReused a verified answer for this index and question.\n\nAcademic warning is a condition where a student's CGPA drops below 2.00 at the end of a semester; the minimum CGPA required to avoid academic warning is 2.00 for all undergraduate programs.[academic-rules-handbook-jun-2026.pdf / Academic Warning/Probation]\n\nSOURCES\nacademic-rules-handbook-jun-2026.pdf / Academic Warning/Probation, p. 24\nRetrieved passages (5)\nrequest id 2168ff44d280983b0b515434ac1192ef\nAsk\nEnter to send, Shift+Enter for a new line. 3 to 500 characters.",
+  "screenshot": "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\academic-warning-fix\\browser-answer.png",
+  "source": "Actual deployed Rahbar UI; repeated independent asks, no conversation reset",
+  "requests": [
+    {
+      "question": "What is academic warning"
+    },
+    {
+      "question": "What is academic warning"
+    }
+  ]
+}

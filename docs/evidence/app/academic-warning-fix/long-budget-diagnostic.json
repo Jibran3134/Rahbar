@@ -1,0 +1,40 @@
+{
+  "exit_code": 137,
+  "records": [
+    {
+      "retrieved": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "Academic Warning/Probation",
+          "page": 24,
+          "score": 0.80471885
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "Registration of Students under Academic Warning",
+          "page": 19,
+          "score": 0.78814447
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "4.4",
+          "page": 20,
+          "score": 0.73792607
+        },
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "section": "11",
+          "page": 2,
+          "score": 0.72319692
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "5.7",
+          "page": 25,
+          "score": 0.710589
+        }
+      ]
+    }
+  ],
+  "error": "command terminated with exit code 137\n"
+}

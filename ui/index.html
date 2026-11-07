@@ -63,6 +63,13 @@
     <h1>RAHBAR</h1>
     <p>FAST-NUCES policy assistant. Answers from indexed documents with sources, and declines when information is missing.</p>
     <button id="new-chat" type="button">New conversation</button>
+    <p><label for="query-mode">Question mode:</label>
+      <select id="query-mode">
+        <option value="independent">Independent question</option>
+        <option value="conversation">Conversation / follow-up</option>
+      </select>
+      <small id="mode-help">Independent questions can reuse cached answers. Choose conversation mode to use previous questions.</small>
+    </p>
   </header>
   <section id="thread" aria-live="polite"></section>
 </main>
@@ -85,6 +92,13 @@ const form = document.getElementById("ask");
 const input = document.getElementById("question");
 const send = document.getElementById("send");
 const newChat = document.getElementById("new-chat");
+const queryMode = document.getElementById("query-mode");
+const modeHelp = document.getElementById("mode-help");
+queryMode.addEventListener("change", () => {
+  modeHelp.textContent = queryMode.value === "conversation"
+    ? "Uses the previous conversation. Follow-ups bypass cache to keep answers specific to your context."
+    : "Each question is independent and can reuse a cached answer. Conversation history is not sent.";
+});
 let sessionId = null;
 newChat.addEventListener("click", () => {
   if (send.disabled) return;
@@ -111,19 +125,33 @@ function cite(c) {
   return c.page != null ? `${c.source} / ${c.section}, p. ${c.page}` : `${c.source} / ${c.section}`;
 }
 
-function renderAnswer(data, cacheHeader) {
+function renderAnswer(data, cacheHeader, cacheReason) {
   const card = el("article", { class: "a" });
 
   const chips = el("div", { class: "chips" });
   chips.append(data.answered_from_context
     ? chip("From the documents", "ok")
-    : chip("Not covered by the documents", "warn"));
+    : chip("No verified answer", "warn"));
   if (data.confidence) chips.append(chip(`confidence: ${data.confidence}`));
   if (data.provider) chips.append(chip(`provider: ${data.provider}`));
   const cached = typeof data.cached === "boolean" ? data.cached
                : cacheHeader ? cacheHeader.toUpperCase() === "HIT" : null;
   if (cacheHeader?.toUpperCase() === "BYPASS") chips.append(chip("cache: bypass"));
   else if (cached !== null) chips.append(chip(cached ? "cache: hit" : "cache: miss"));
+  const cacheMessages = {
+    matched: "Reused a verified answer for this index and question.",
+    miss_stored: "No matching cached answer; this verified answer is now cached.",
+    conversation_context: "Conversation context was used, so this answer was not cached.",
+    requested_bypass: "Cache was explicitly bypassed for this request.",
+    not_grounded: "No verified grounded answer was available, so it was not cached.",
+    generation_timeout: "The model reached its time limit. This response was not cached.",
+    generation_failure: "The model output could not be verified. This response was not cached.",
+    low_confidence: "This low-confidence answer was not cached.",
+    no_evidence: "There was no verified evidence to cache.",
+    invalid_citations: "This answer did not qualify for safe caching.",
+    unavailable: "Cache is unavailable for this runtime."
+  };
+  if (cacheMessages[cacheReason]) chips.append(chip(cacheMessages[cacheReason]));
   card.append(chips);
 
   card.append(el("p", { class: "text" }, data.answer ?? ""));
@@ -176,11 +204,12 @@ async function ask(question) {
   pending.scrollIntoView({ behavior: "smooth", block: "end" });
   send.disabled = true;
   newChat.disabled = true;
+  queryMode.disabled = true;
   try {
     const res = await fetch(`${API_BASE}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, ...(sessionId ? { session_id: sessionId } : {}) }),
+      body: JSON.stringify({ question, ...(queryMode.value === "conversation" && sessionId ? { session_id: sessionId } : {}) }),
     });
     let body = null;
     try { body = await res.json(); } catch { /* non-JSON error page */ }
@@ -190,7 +219,7 @@ async function ask(question) {
     } else {
       sessionId = typeof body.session_id === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(body.session_id)
         ? body.session_id : null;
-      thread.append(renderAnswer(body, res.headers.get("X-Cache")));
+      thread.append(renderAnswer(body, res.headers.get("X-Cache"), res.headers.get("X-Cache-Reason")));
     }
   } catch (err) {
     pending.remove();
@@ -198,6 +227,7 @@ async function ask(question) {
   } finally {
     send.disabled = false;
     newChat.disabled = false;
+    queryMode.disabled = false;
     input.focus();
     thread.lastElementChild?.scrollIntoView({ behavior: "smooth", block: "end" });
   }

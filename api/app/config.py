@@ -92,7 +92,7 @@ class Settings:
     top_k: int = 5
     temperature: float = 0.2
     relevance_floor: float = 0.74   # S19 measured selected-corpus operating point
-    llm_model: str = "llama3.2:3b"
+    llm_model: str = "qwen3:4b-instruct-2507-q4_K_M"
     ollama_url: str = "http://host.minikube.internal:11434"
     hosted_base_url: str = ""        # e.g. an OpenAI-compatible endpoint
     llm_api_key: str = field(default="", repr=False)   # from the Secret; never log it
@@ -102,7 +102,7 @@ class Settings:
     cache_ttl_seconds: int = 3600
     cache_max_entries: int = 256
     session_ttl_seconds: int = 1800
-    llm_timeout_seconds: float = 60.0
+    llm_timeout_seconds: float = 180.0
 
     log_level: str = "INFO"
 
@@ -147,7 +147,7 @@ def get_settings() -> Settings:
         top_k=_int("TOP_K", 5),
         temperature=_float("TEMPERATURE", 0.2),
         relevance_floor=_float("RELEVANCE_FLOOR", 0.74),
-        llm_model=os.environ.get("LLM_MODEL", "llama3.2:3b"),
+        llm_model=os.environ.get("LLM_MODEL", "qwen3:4b-instruct-2507-q4_K_M"),
         ollama_url=os.environ.get("OLLAMA_URL", "http://host.minikube.internal:11434"),
         hosted_base_url=os.environ.get("HOSTED_BASE_URL", ""),
         llm_api_key=os.environ.get("LLM_API_KEY", ""),
@@ -156,6 +156,6 @@ def get_settings() -> Settings:
         cache_ttl_seconds=_int("CACHE_TTL_SECONDS", 3600),
         cache_max_entries=_int("CACHE_MAX_ENTRIES", 256),
         session_ttl_seconds=_int("SESSION_TTL_SECONDS", 1800),
-        llm_timeout_seconds=_float("LLM_TIMEOUT_SECONDS", 60.0),
+        llm_timeout_seconds=_float("LLM_TIMEOUT_SECONDS", 180.0),
         log_level=os.environ.get("LOG_LEVEL", "INFO").upper(),
     )

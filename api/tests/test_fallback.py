@@ -46,7 +46,7 @@ def test_successful_second_attempt_has_feedback_and_unchanged_question(caplog):
 
 
 @pytest.mark.parametrize("kind", [ProviderFailureKind.INVALID_JSON,ProviderFailureKind.INVALID_SCHEMA,
-                                 ProviderFailureKind.INVALID_CITATION])
+                                 ProviderFailureKind.INVALID_CITATION,ProviderFailureKind.INCONSISTENT_ANSWER])
 def test_exactly_two_validation_attempts_then_uncited_fallback(kind,caplog):
     provider = Provider([ProviderError(kind),ProviderError(kind),good()])
     result = ask(provider)
@@ -68,6 +68,17 @@ def test_bad_citation_retries_and_raw_wrong_type_falls_back():
     assert ask(provider).answered_from_context and len(provider.calls) == 2
     provider = Provider([{"answer":"untyped"},{"answer":"untyped"}])
     assert not ask(provider).answered_from_context and len(provider.calls) == 2
+
+
+def test_contradictory_flags_retry_the_actual_problem_without_leaking_output():
+    bad=good().model_copy(update={"answered_from_context":False})
+    provider=Provider([bad,good()])
+    assert ask(provider).answered_from_context
+    feedback=provider.calls[1][1]
+    assert "answered_from_context=true" in feedback
+    assert "false" in feedback and "citations=[]" in feedback
+    assert "NEVER EXPOSE THIS" not in feedback
+    assert len(feedback)<=200
 
 
 def test_malformed_provider_output_never_causes_unhandled_http_500(monkeypatch):

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "reported",
+    "question": "My gpa is 3.6. Am i on academic warning",
+    "source_review_expectation": "Conditional: if 3.6 is cumulative CGPA, above the 2.00 minimum, no threshold-triggered warning; semester GPA alone insufficient."
+  },
+  {
+    "id": "below",
+    "question": "My gpa is 1.6. Am i on academic warning",
+    "source_review_expectation": "Conditional: cumulative CGPA below 2.00 at semester end meets warning criterion; semester GPA alone insufficient."
+  },
+  {
+    "id": "boundary",
+    "question": "My CGPA is exactly 2.00. Am I on academic warning?",
+    "source_review_expectation": "2.00 is not below 2.00; does not meet the below-minimum warning criterion."
+  },
+  {
+    "id": "paraphrase",
+    "question": "With a cumulative GPA of 3.6, would I receive an academic warning?",
+    "source_review_expectation": "3.6 exceeds the 2.00 minimum; no threshold-triggered warning."
+  },
+  {
+    "id": "semester",
+    "question": "My semester GPA is 3.6. Does that mean my CGPA is safe from academic warning?",
+    "source_review_expectation": "Semester GPA alone does not establish cumulative CGPA; apply the below-2.00 cumulative rule conditionally."
+  },
+  {
+    "id": "definition",
+    "question": "What is academic warning?",
+    "source_review_expectation": "CGPA below 2.00 at the end of a semester triggers academic warning."
+  }
+]

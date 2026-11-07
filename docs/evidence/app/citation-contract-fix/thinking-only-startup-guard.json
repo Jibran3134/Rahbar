@@ -1,0 +1,6 @@
+{
+  "model": "qwen3:4b",
+  "rejected_before_preload": true,
+  "seconds": 0.453,
+  "message": "This model requires thinking. Use the configured Instruct model for bounded JSON generation."
+}

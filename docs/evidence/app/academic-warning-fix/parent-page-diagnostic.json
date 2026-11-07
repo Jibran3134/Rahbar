@@ -1,0 +1,30 @@
+[
+  {
+    "seconds": 66.36,
+    "transport": {
+      "model": "llama3.2:3b",
+      "done": true,
+      "done_reason": "stop",
+      "load_duration": 3628855800,
+      "prompt_eval_count": 1504,
+      "prompt_eval_duration": 47589195000,
+      "eval_count": 116,
+      "eval_duration": 15100204000
+    }
+  },
+  {
+    "validated": true,
+    "output": {
+      "answer": "The minimum CGPA required to avoid academic warning is 2.00 for all undergraduate programs.[academic-rules-handbook-jun-2026.pdf / Academic Warning/Probation]",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "Academic Warning/Probation",
+          "page": 24
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high"
+    }
+  }
+]

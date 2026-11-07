@@ -1,0 +1,24 @@
+[
+  {
+    "output": {
+      "answer": "answered_from_context=false",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low"
+    },
+    "citation_triples_match": false,
+    "inline_pairs_match": true,
+    "valid": false
+  },
+  {
+    "output": {
+      "answer": "No",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low"
+    },
+    "citation_triples_match": false,
+    "inline_pairs_match": true,
+    "valid": false
+  }
+]

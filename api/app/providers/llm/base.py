@@ -16,6 +16,7 @@ class ProviderFailureKind(str, Enum):
     INVALID_JSON = "invalid_json"
     INVALID_SCHEMA = "invalid_schema"
     INVALID_CITATION = "invalid_citation"
+    INCONSISTENT_ANSWER = "inconsistent_answer"
 
 
 class ProviderError(RuntimeError):

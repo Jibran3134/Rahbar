@@ -30,8 +30,10 @@ def ask(body: AskRequest, request: Request, response: Response) -> AskResponse:
             result,status=answer_cached(question,state.retriever,state.provider,state.settings,state.cache,
                                         follow_up=bool(turn and turn.follow_up))
         else:
+            trace["cache_reason"]="requested_bypass" if bypass else "unavailable"
             result,status=answer_question(question,state.retriever,state.provider,state.settings),"BYPASS"
         response.headers["X-Cache"]=status
+        response.headers["X-Cache-Reason"]=str(trace.get("cache_reason","unavailable"))
         trace["cache"]=status
         trace.update(top_k=state.settings.top_k,chunk_ids=[r.chunk_id for r in result.retrieved],
                      scores=[round(r.score,4) for r in result.retrieved],abstained=not result.answered_from_context)

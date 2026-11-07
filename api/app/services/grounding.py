@@ -31,14 +31,20 @@ def validate_grounding(answer: Answer, passages: list[Passage]) -> Answer:
     if not answer.answer.strip() or any(c in answer.answer for c in ("\ufff0","\ufff2")):
         invalid()
     if not answer.answered_from_context:
-        if (answer.citations or answer.confidence != "low" or "[" in answer.answer
+        if answer.citations:
+            raise ProviderError(ProviderFailureKind.INCONSISTENT_ANSWER)
+        if (answer.confidence != "low" or "[" in answer.answer
                 or not re.search(r"cannot determine|unable to answer|(?:do|does) not provide|"
                                  r"not enough information|insufficient (?:evidence|information)|"
                                  r"not (?:available|specified|provided)", answer.answer, re.I)):
             invalid()
         return abstention().model_copy(update={"reasoning":"Provider reported insufficient evidence."})
-    if re.search(r"(?:supplied documents do not provide|cannot determine|unable to answer)",answer.answer,re.I):
-        invalid()
+    # A supported conditional may explain that personal records are unavailable.
+    # Reject a leading global refusal, rather than rejecting that phrase anywhere
+    # in otherwise cited prose. This remains a format check, not entailment proof.
+    if re.match(r"\s*(?:(?:the )?supplied documents do not provide|"
+                r"(?:I (?:am )?)?(?:cannot determine|unable to answer))",answer.answer,re.I):
+        raise ProviderError(ProviderFailureKind.INCONSISTENT_ANSWER)
     available = {(p.source,p.section,p.page) for p in passages}
     cited = [(c.source,c.section,c.page) for c in answer.citations]
     if not available or not cited or len(set(cited)) != len(cited) or any(c not in available for c in cited):

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "reported",
+    "question": "My gpa is 3.6. Am i on academic warning",
+    "source_review_expectation": "Conditional: if 3.6 is cumulative CGPA, above the 2.00 minimum, no threshold-triggered warning; semester GPA alone insufficient.",
+    "model": "qwen2.5:3b",
+    "seconds": 101.391,
+    "output": {
+      "answer": "No, the user's CGPA of 3.6 does not meet the minimum requirement of 2.00 to avoid academic warning, as stated in section 5.4 of the prospectus-academic-rules-and-regulations.pdf. [prospectus-academic-rules-and-regulations.pdf / 11] Therefore, the user is not on academic warning. [prospectus-academic-rules-and-regulations.pdf / 11]",
+      "citations": [
+        {
+          "source": "prospectus-academic-rules-and-regulations.pdf",
+          "section": "11",
+          "page": 2
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "bounded_source_lookup": "passed",
+  "api_cached_answer": {
+    "request_id": "7a69a891cea3f9f5ecaa35df34004a82",
+    "answer": "Academic warning is a condition where a student's CGPA drops below 2.00 at the end of a semester; the minimum CGPA required to avoid academic warning is 2.00 for all undergraduate programs.[academic-rules-handbook-jun-2026.pdf / Academic Warning/Probation]",
+    "citations": [
+      {
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "Academic Warning/Probation",
+        "page": 24
+      }
+    ],
+    "answered_from_context": true,
+    "confidence": "high",
+    "retrieved": [
+      {
+        "chunk_id": "73372f317de4c4d31656815610c9f541536a110d7c3fad49ceabc00e60af6997",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "Academic Warning/Probation",
+        "page": 24,
+        "score": 0.80471885
+      },
+      {
+        "chunk_id": "be709972c2f9ff38ac3b634ac45024f0e1d06b5ad60b2c65bd658f3b7e740adc",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "Registration of Students under Academic Warning",
+        "page": 19,
+        "score": 0.78814447
+      },
+      {
+        "chunk_id": "91cf06fcd5601cc42b2372807312b9c57c6a6d6dbee95fbf60ebadea4d0a66e3",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 20,
+        "score": 0.73792607
+      },
+      {
+        "chunk_id": "54a1a13e76f99814201dcb1be0a4ff8e16791297cc2294375c66e2e436f55806",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.72319692
+      },
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.710589
+      }
+    ],
+    "provider": "ollama",
+    "session_id": "5dc2d4004a624a06a4a84ebbdb90abf8"
+  },
+  "cache": "HIT",
+  "chroma_limits": "original 768Mi request / 1536Mi limit restored",
+  "context_after": "k3d-civicpulse-ci"
+}
