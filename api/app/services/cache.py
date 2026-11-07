@@ -26,7 +26,7 @@ def namespace(active: ActiveIndex, settings: Settings) -> str:
 
 def signature(question: str) -> tuple[Any,...]:
     text=question.lower()
-    numbers=tuple(sorted(re.findall(r"\b\d+(?:[.,]\d+)*(?:%)?\b",text)))
+    numbers=tuple(sorted(re.findall(r"(?<!\w)[+-]?\d+(?:[.,]\d+)*(?:%)?(?!\w)",text)))
     scope=tuple(sorted(set(re.findall(r"hostel|admission|withdraw\w*|tuition|deposit|prerequisite|"
                                     r"lab|theory|not|never|without|cannot|optional|[a-z]{2,}-\d+",text))))
     # A semester result cannot stand in for a cumulative result, even when the

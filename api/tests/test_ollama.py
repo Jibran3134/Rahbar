@@ -31,6 +31,7 @@ def test_wire_schema_delimiters_model_temperature_and_order():
         assert provider.generate("When?", [passage()]).answered_from_context
     request = seen[0]
     assert request["model"] == "llama3.2:3b" and request["stream"] is False
+    assert request["think"] is False  # Hybrid models must leave room for the Answer JSON.
     base=Answer.model_json_schema()
     assert request["format"]["required"] == base["required"]
     assert request["format"]==base
@@ -55,6 +56,20 @@ def test_prompt_supplies_exact_copyable_inline_label():
     evidence = json.loads(seen[0]["messages"][1]["content"])["evidence"][0]
     assert evidence["inline_citation"] == "[s.pdf / 4.25]"
     assert "pattern" not in seen[0]["format"]["properties"]["answer"]
+
+
+def test_request_supplies_computed_decimal_relation_without_rewriting_evidence():
+    seen=[]
+    def respond(request):
+        seen.append(json.loads(request.content))
+        return httpx.Response(200,json={"message":{"content":json.dumps(payload())}})
+    p=passage().model_copy(update={"text":"4.25 The minimum value is 2.00."})
+    with httpx.Client(transport=httpx.MockTransport(respond)) as client:
+        OllamaProvider(Settings(),client=client).generate("My value is 3.6.",[p])
+    assert "3.6 > 2.00 is true" in seen[0]["messages"][0]["content"]
+    assert "not proof of matching units" in seen[0]["messages"][0]["content"]
+    body=json.loads(seen[0]["messages"][1]["content"])
+    assert body["question"]=="My value is 3.6." and body["evidence"][0]["text"]==p.text
 
 
 def test_prefix_citation_is_rendered_after_single_claim_without_inventing_sources():

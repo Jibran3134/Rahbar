@@ -108,6 +108,7 @@ def test_gpa_cache_distinguishes_cumulative_semester_and_unspecified_values():
         assert cache.get("gpa",question,[1,0],now=2) is None
     cache.put("semester","My SGPA is 3.6; academic warning?",[1,0],response(),now=1)
     assert cache.get("semester","My semester GPA is 3.6; academic warning?",[1,0],now=2)
+    assert cache.get("gpa","My CGPA is -3.6; academic warning?",[1,0],now=2) is None
 
 
 def test_http_repeat_hit_is_identical_and_session_followup_is_bypassed(monkeypatch):
