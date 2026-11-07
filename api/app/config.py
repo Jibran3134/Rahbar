@@ -91,7 +91,7 @@ class Settings:
     # Retrieval and generation
     top_k: int = 5
     temperature: float = 0.2
-    relevance_floor: float = 0.74   # S19 measured selected-corpus operating point
+    relevance_floor: float = 0.70   # Accommodates phrased questions with punctuation
     llm_model: str = "qwen3:4b-instruct-2507-q4_K_M"
     ollama_url: str = "http://host.minikube.internal:11434"
     hosted_base_url: str = ""        # e.g. an OpenAI-compatible endpoint
@@ -150,7 +150,7 @@ def get_settings() -> Settings:
         collection=os.environ.get("CHROMA_COLLECTION", "rahbar"),
         top_k=_int("TOP_K", 5),
         temperature=_float("TEMPERATURE", 0.2),
-        relevance_floor=_float("RELEVANCE_FLOOR", 0.74),
+        relevance_floor=_float("RELEVANCE_FLOOR", 0.70),
         llm_model=os.environ.get("LLM_MODEL", "qwen3:4b-instruct-2507-q4_K_M"),
         ollama_url=os.environ.get("OLLAMA_URL", "http://host.minikube.internal:11434"),
         hosted_base_url=os.environ.get("HOSTED_BASE_URL", ""),

@@ -92,7 +92,10 @@ def services():
         tags = ready('http://127.0.0.1:11434/api/tags', timeout=60).json()
     names = {model['name'] for model in tags['models']}
     config=yaml.safe_load((ROOT/'k8s/base/configmap.yaml').read_text(encoding='utf-8'))['data']
-    for model in [config['EMBED_MODEL'],config['LLM_MODEL']]:
+    pull_models = [config['EMBED_MODEL']]
+    if config.get('LLM_PROVIDER', 'ollama-host') == 'ollama-host':
+        pull_models.append(config['LLM_MODEL'])
+    for model in pull_models:
         if model not in names and model + ':latest' not in names:
             print(f'Downloading required model {model} (first run only)...', flush=True)
             command(['ollama', 'pull', model])
@@ -213,9 +216,10 @@ def launch(port=8090, no_browser=False, check_only=False, rebuild=False):
             serving = True
             url = f'http://127.0.0.1:{port}'
             info = ready(url + '/api/info').json()
-            if info.get('provider') != 'ollama-host' or not info.get('active'):
-                raise RuntimeError('Expected the real Ollama provider and a published corpus index.')
-            warm_generation(info['llm_model'])
+            if info.get('provider') not in {'ollama-host', 'hosted'} or not info.get('active'):
+                raise RuntimeError('Expected a configured provider and a published corpus index.')
+            if info.get('provider') == 'ollama-host':
+                warm_generation(info['llm_model'])
             home = ready(url)
             if 'RAHBAR' not in home.text:
                 raise RuntimeError('Ingress did not serve the Rahbar UI.')
