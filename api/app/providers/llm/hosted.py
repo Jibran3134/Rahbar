@@ -39,7 +39,10 @@ _FIELD_HINT = (
     "reasoning (string), answer (string), "
     "citations (array of {source, section, page}), "
     "answered_from_context (boolean), "
-    "confidence (one of: high, medium, low)."
+    "confidence (one of: high, medium, low). "
+    "When listing multiple conditions from different sections, write one concise prose "
+    "sentence per condition, each ending with its own [source / section] citation tag. "
+    "Include one citation object per distinct section used."
 )
 
 
@@ -93,7 +96,7 @@ class HostedProvider:
                     ),
                 },
             ],
-            "max_tokens": 768,
+            "max_tokens": 1024,
             "temperature": self.settings.temperature,
             "response_format": {"type": "json_object"},
         }

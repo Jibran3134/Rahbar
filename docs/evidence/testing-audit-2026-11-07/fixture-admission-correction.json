@@ -1,0 +1,19 @@
+{
+  "scope": "Temporary audit fixture only; namespace PodSecurity enforced correctly; no application manifest changed.",
+  "command": [
+    "kubectl",
+    "--context",
+    "rahbar-audit",
+    "-n",
+    "rahbar",
+    "patch",
+    "deployment",
+    "audit-provider",
+    "--type=merge",
+    "-p",
+    "{\"spec\": {\"template\": {\"spec\": {\"securityContext\": {\"seccompProfile\": {\"type\": \"RuntimeDefault\"}}}}}}"
+  ],
+  "exit": 0,
+  "stdout": "deployment.apps/audit-provider patched\n",
+  "stderr": ""
+}

@@ -28,7 +28,7 @@ def generate_verified(question: str, passages: list[Passage], provider: LLMProvi
             if provider.name!="ollama":
                 metrics.tokens((len(question)+sum(len(p.text) for p in passages)+3)//4,
                                (len(str(output))+3)//4,"estimated")
-            return validate_grounding(output,passages)
+            return validate_grounding(output,passages,question=safe_question)
         except ProviderError as exc:
             metrics.field("generation_failure",exc.kind.value)
             log.warning("generation validation/failure",extra={"failure_kind":exc.kind.value,

@@ -1,0 +1,123 @@
+{
+  "at_utc": "2026-11-07T19:39:19.088447+00:00",
+  "scope": "Current94868ba images during continuous Ingress requests and third real indexing Job, not older primary images. Finite sample, not universal capacity guarantee.",
+  "pods": [
+    {
+      "pod": "api-5cdc4f9949-47gmq",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "210845696",
+        "215445504",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "api-5cdc4f9949-5sm6f",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "94908416",
+        "99151872",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "api-5cdc4f9949-j7wdp",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "221052928",
+        "224792576",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "api-5cdc4f9949-nncpj",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "89919488",
+        "93945856",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "api-5cdc4f9949-vnrpm",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "102268928",
+        "106033152",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "api-5cdc4f9949-ztw55",
+      "app": "api",
+      "memory_current_peak_limit_bytes": [
+        "222949376",
+        "223203328",
+        "536870912"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "chroma-0",
+      "app": "chroma",
+      "memory_current_peak_limit_bytes": [
+        "722857984",
+        "726188032",
+        "1610612736"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "redis-7f546bdffd-fgprh",
+      "app": "redis",
+      "memory_current_peak_limit_bytes": [
+        "11624448",
+        "19300352",
+        "268435456"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    },
+    {
+      "pod": "ui-587c8b97dc-rpvnm",
+      "app": "ui",
+      "memory_current_peak_limit_bytes": [
+        "6668288",
+        "9981952",
+        "67108864"
+      ],
+      "exit": 0,
+      "restarts": [
+        0
+      ]
+    }
+  ]
+}

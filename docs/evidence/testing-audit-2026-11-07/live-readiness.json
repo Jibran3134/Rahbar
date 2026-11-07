@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "body": {
+    "status": "ready",
+    "checks": {
+      "chroma": true,
+      "model": true,
+      "dimension": true,
+      "redis": true
+    }
+  }
+}

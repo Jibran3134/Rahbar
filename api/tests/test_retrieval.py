@@ -128,6 +128,7 @@ def test_title_only_hit_is_replaced_by_real_clause_without_changing_score():
     ('Academic Warning/Probation','Academic Warning/Probation'),
     ('# 2. Academic warning','2. Academic warning'),
     ('5.4','5.4'),
+    ('4. Eligibility criteria for a technical start-up','4'),
 ])
 def test_heading_only_normalization(text,section):
     from app.retrieval.chroma import heading_only
