@@ -131,7 +131,9 @@ Invoke-RestMethod http://127.0.0.1:8085/api/ask -Method Post -Headers $headers -
 
 For the browser add `127.0.0.1 rahbar.local` to the Windows hosts file using an elevated editor, then open http://rahbar.local:8085. No system hosts file is changed by the scripts. Alternatively use minikube tunnel in its own terminal and follow its elevation prompt, with the same hostname on port 80. Docker-driver node IPs are not directly reachable from a Windows browser. Stop a port forward/tunnel with Ctrl+C.
 
-Use **New conversation** to reset browser-held session state. Server-issued IDs are held in memory for this page, shared turns reside in Redis, and follow-ups bypass semantic cache. The UI renders model/source strings as text.
+The UI defaults to **Independent question**: each submission omits conversation history, so an eligible repeated question can produce MISS then HIT without clearing the thread. Choose **Conversation / follow-up** to use the previous question/session; contextual turns deliberately return BYPASS. **New conversation** resets browser-held session state. Shared turns reside in Redis. The UI renders model/source strings as text.
+
+Cache status also includes a plain-language explanation (`X-Cache-Reason` in HTTP). `miss_stored` means the verified answer was stored and can be reused; `matched` means HIT. Refusals, generation fallbacks, low-confidence output and follow-ups are not cached. A first request that times out or fails validation can therefore MISS again until a safe answer is generated. Similarity must still clear .95 with matching scope/version/numeric guards and the same active generation/configuration; not every paraphrase should hit. The launcher preloads the generation model before opening the browser to reduce cold-start delays.
 
 ## Reindex without an API redeploy
 
@@ -155,7 +157,7 @@ Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache th
 | GET | /readyz | Compatible index, embedding dimension and Redis; 503 when unavailable |
 | GET | /metrics | Prometheus HTTP/stage/cache/refusal/fallback/token metrics |
 
-Ingress routes /api to API and / to UI. Probe/metrics endpoints are internal API endpoints; use a separate temporary API Service port forward for debugging them. Responses include X-Request-ID and X-Cache HIT/MISS/BYPASS. X-Bypass-Cache:true supports clean regression runs.
+Ingress routes /api to API and / to UI. Probe/metrics endpoints are internal API endpoints; use a separate temporary API Service port forward for debugging them. Responses include X-Request-ID, X-Cache HIT/MISS/BYPASS and X-Cache-Reason. X-Bypass-Cache:true supports clean regression runs.
 
 Redis retains up to six bounded turns with a default 1800-second TTL. Cache candidates are bounded to 256 per namespace with 3600-second logical TTL/key expiry; logical expiry does not promise immediate physical erasure or backup deletion. IDs are bearer access to conversations, not authenticated identities.
 
@@ -166,6 +168,8 @@ kubectl --context rahbar -n rahbar create secret generic rahbar-secret --from-li
 ```
 
 k8s/secret-placeholder.yaml is excluded from Kustomize. Do not apply it over a real Secret. Selecting hosted mode remains unsupported even if a key is present.
+
+The exact model JSON shape, completion checks and public response rules are documented in [MODEL-RESPONSE-CONTRACT.md](docs/MODEL-RESPONSE-CONTRACT.md). A valid structured response is still subject to evidence/citation checks; no fixed wording or perfect semantic accuracy is promised.
 
 ## Evaluation and CI/CD
 

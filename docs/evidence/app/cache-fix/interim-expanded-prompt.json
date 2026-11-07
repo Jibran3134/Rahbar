@@ -1,0 +1,112 @@
+[
+  {
+    "name": "standalone_first",
+    "cache": "MISS",
+    "reason": "not_grounded",
+    "seconds": 60.266,
+    "response": {
+      "request_id": "8a7b976fa05bed70dc3c6737c60f708b",
+      "answer": "I could not produce a verified answer from the supplied documents. Please check the original policy documents.",
+      "citations": [],
+      "answered_from_context": false,
+      "confidence": "low",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.84086251
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.73601907
+        },
+        {
+          "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+          "source": "fee-structure-page.html",
+          "section": "Admission Fee",
+          "page": null,
+          "score": 0.7002779800000001
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6914682999999999
+        },
+        {
+          "chunk_id": "1207dc53af4885f9a110e72b92b35105c3cfa471406e86dcae1f33d83720fa0a",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 22,
+          "score": 0.6816573699999999
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "a07c29fa02b34ab591fa8ebb24d9dd94"
+    }
+  },
+  {
+    "name": "standalone_repeat_without_reset",
+    "cache": "MISS",
+    "reason": "miss_stored",
+    "seconds": 83.172,
+    "response": {
+      "request_id": "01c534ce167297227fa030bfac04f193",
+      "answer": "A refundable security deposit of Rs 20,000 is payable at the time of admission. [fee-structure-page.html / Security Deposit]",
+      "citations": [
+        {
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "high",
+      "retrieved": [
+        {
+          "chunk_id": "d44eb214dc16a54e7cf22518c0ba3ef3e112381d8862831602a1912611c5f9af",
+          "source": "fee-structure-page.html",
+          "section": "Security Deposit",
+          "page": null,
+          "score": 0.84086251
+        },
+        {
+          "chunk_id": "ee190e88f06566c99fd334544ab6597c3831cc30d7f3a22887d0568df024df60",
+          "source": "fee-structure-page.html",
+          "section": "Fee Refund Policy",
+          "page": null,
+          "score": 0.73601907
+        },
+        {
+          "chunk_id": "e17cf4855ad3791132ce3f188f4cf728db2744486c3115a2b8ca53a88ddf2393",
+          "source": "fee-structure-page.html",
+          "section": "Admission Fee",
+          "page": null,
+          "score": 0.7002779800000001
+        },
+        {
+          "chunk_id": "ec51d7a0be5d25bc1718fbb0cf998c1dd165cef48a20ad810ffa37e93d41cb73",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 18,
+          "score": 0.6914682999999999
+        },
+        {
+          "chunk_id": "1207dc53af4885f9a110e72b92b35105c3cfa471406e86dcae1f33d83720fa0a",
+          "source": "student-handbook-jun-2026.pdf",
+          "section": "XI.22",
+          "page": 22,
+          "score": 0.6816573699999999
+        }
+      ],
+      "provider": "ollama",
+      "session_id": "c412d2a8146244c6be03fa4d7b147ba0"
+    }
+  }
+]

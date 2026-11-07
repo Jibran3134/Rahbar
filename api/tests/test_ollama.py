@@ -34,6 +34,8 @@ def test_wire_schema_delimiters_model_temperature_and_order():
     base=Answer.model_json_schema()
     assert request["format"]["required"] == base["required"]
     assert request["format"]==base
+    assert base["additionalProperties"] is False
+    assert base["$defs"]["Citation"]["additionalProperties"] is False
     assert request["options"]["temperature"] == .2
     messages = request["messages"]
     assert messages[0]["role"] == "system" and "untrusted" in messages[0]["content"].lower()
@@ -104,3 +106,19 @@ def test_errors_are_classified_and_sanitized(kind):
                 "status": ProviderFailureKind.TRANSPORT, "json": ProviderFailureKind.INVALID_JSON,
                 "outer": ProviderFailureKind.INVALID_JSON, "schema": ProviderFailureKind.INVALID_SCHEMA}
     assert error.value.kind == expected[kind]
+
+
+@pytest.mark.parametrize("change", [
+    {"done":False}, {"done_reason":"length"}, {"model":"wrong-model"},
+    {"message":{"role":"user","content":json.dumps(payload())}},
+    {"message":{"content":json.dumps({**payload(),"unexpected":"not in the schema"})}},
+    {"message":{"content":json.dumps({**payload(),"citations":[{
+        "source":"s.pdf","section":"4.25","page":23,"invented_url":"bad"}]})}},
+])
+def test_incomplete_wrong_model_role_and_extra_fields_are_rejected(change):
+    body={"model":"llama3.2:3b","done":True,"done_reason":"stop",
+          "message":{"role":"assistant","content":json.dumps(payload())},**change}
+    with httpx.Client(transport=httpx.MockTransport(lambda r:httpx.Response(200,json=body))) as client:
+        with pytest.raises(ProviderError) as error:
+            OllamaProvider(Settings(),client=client).generate("When?",[passage()])
+    assert error.value.kind==ProviderFailureKind.INVALID_SCHEMA

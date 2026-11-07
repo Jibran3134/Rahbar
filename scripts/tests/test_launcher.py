@@ -82,3 +82,25 @@ def test_failed_child_command_shows_diagnostics_and_stops(capsys):
         launcher.command([sys.executable, '-c', "import sys; print('child failed'); sys.exit(7)"])
     assert error.value.returncode == 7
     assert 'child failed' in capsys.readouterr().out
+
+
+@pytest.mark.parametrize('result', [
+    {'done':True,'model':'llama3.2:3b'},
+    {'done':False,'model':'llama3.2:3b'},
+    {'done':True,'model':'wrong-model'},
+])
+def test_preload_uses_empty_request_and_checks_completion(monkeypatch,result):
+    seen=[]
+    def post(url,**kwargs):
+        seen.append((url,kwargs))
+        return httpx.Response(200,json=result,request=httpx.Request('POST',url))
+    monkeypatch.setattr(launcher.httpx,'post',post)
+    if result['done'] and result['model']=='llama3.2:3b':
+        launcher.warm_generation('llama3.2:3b')
+    else:
+        with pytest.raises(RuntimeError,match='could not preload'):
+            launcher.warm_generation('llama3.2:3b')
+    body=seen[0][1]['json']
+    assert 'prompt' not in body and 'messages' not in body
+    assert body['model']=='llama3.2:3b' and body['stream'] is False
+    assert body['options']['num_ctx']==4096 and seen[0][1]['timeout']==180

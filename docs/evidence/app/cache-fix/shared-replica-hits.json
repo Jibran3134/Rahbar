@@ -1,0 +1,41 @@
+[
+  {
+    "pod": "api-bd967bdf5-crtv2",
+    "cache": "HIT",
+    "reason": "matched",
+    "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
+    "citations": [
+      {
+        "source": "fee-structure-page.html",
+        "section": "Security Deposit",
+        "page": null
+      }
+    ]
+  },
+  {
+    "pod": "api-bd967bdf5-nfq5c",
+    "cache": "HIT",
+    "reason": "matched",
+    "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
+    "citations": [
+      {
+        "source": "fee-structure-page.html",
+        "section": "Security Deposit",
+        "page": null
+      }
+    ]
+  },
+  {
+    "pod": "api-bd967bdf5-s8pp9",
+    "cache": "HIT",
+    "reason": "matched",
+    "answer": "The refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]",
+    "citations": [
+      {
+        "source": "fee-structure-page.html",
+        "section": "Security Deposit",
+        "page": null
+      }
+    ]
+  }
+]

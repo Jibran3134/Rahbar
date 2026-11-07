@@ -15,7 +15,7 @@ from ..schemas import ActiveIndex, Answer, AskResponse, Passage
 from .grounding import validate_grounding
 from ..routes import metrics
 
-PROMPT_VERSION="grounded-v7-quarantine-verified-render-query-floor-4096"
+PROMPT_VERSION="grounded-v9-strict-model-contract"
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:
@@ -40,17 +40,25 @@ def cosine(a: list[float], b: list[float]) -> float:
     return sum(x*y for x,y in zip(a,b,strict=True))/norm if norm else -1
 
 
-def safe(response: AskResponse) -> bool:
-    if not response.answered_from_context or response.confidence=="low" or not response.retrieved:
-        return False
+def cache_exclusion(response: AskResponse) -> str | None:
+    if not response.answered_from_context:
+        return "not_grounded"
+    if response.confidence=="low":
+        return "low_confidence"
+    if not response.retrieved:
+        return "no_evidence"
     try:
         answer=Answer(reasoning="cache integrity",**response.model_dump(include={
             "answer","citations","answered_from_context","confidence"}))
         refs=[Passage(text="Cached immutable-generation evidence reference",**r.model_dump()) for r in response.retrieved]
         validate_grounding(answer,refs)
-        return True
+        return None
     except (ValueError,RuntimeError):
-        return False
+        return "invalid_citations"
+
+
+def safe(response: AskResponse) -> bool:
+    return cache_exclusion(response) is None
 
 
 class SemanticCache:
@@ -92,6 +100,7 @@ def answer_cached(question: str,retriever: Any,provider: LLMProvider,settings: S
                   cache: SemanticCache,*,follow_up: bool=False) -> tuple[AskResponse,str]:
     from .answer import answer_question
     if follow_up:
+        metrics.field("cache_reason","conversation_context")
         return answer_question(question,retriever,provider,settings),"BYPASS"
     started=time.perf_counter()
     prepared=retriever.prepare(question)
@@ -102,6 +111,7 @@ def answer_cached(question: str,retriever: Any,provider: LLMProvider,settings: S
     metrics.CACHE_LOOKUPS.inc()
     cached=cache.get(key,question,vector)
     if cached:
+        metrics.field("cache_reason","matched")
         metrics.CACHE_HITS.inc()
         metrics.RETRIEVAL.observe(preparation)
         metrics.field("retrieval_ms",round(preparation*1000,2))
@@ -111,4 +121,5 @@ def answer_cached(question: str,retriever: Any,provider: LLMProvider,settings: S
     frozen=SimpleNamespace(name=retriever.name,retrieve=lambda q,k:retriever.retrieve_prepared(q,k,prepared))
     result=answer_question(question,frozen,provider,settings)
     cache.put(key,question,vector,result)
+    metrics.field("cache_reason",cache_exclusion(result) or "miss_stored")
     return result,"MISS"

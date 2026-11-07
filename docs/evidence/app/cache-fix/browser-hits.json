@@ -1,0 +1,14 @@
+{
+  "url": "http://rahbar.local:18185",
+  "answer": "RAHBAR\n\nFAST-NUCES policy assistant. Answers from indexed documents with sources, and declines when information is missing.\n\nNew conversation\n\nQuestion mode: \nIndependent question\nConversation / follow-up\n Independent questions can reuse cached answers. Choose conversation mode to use previous questions.\n\nWhat refundable university security deposit is payable at admission?\nFrom the documents\nconfidence: high\nprovider: ollama\ncache: hit\nReused a verified answer for this index and question.\n\nThe refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]\n\nSOURCES\nfee-structure-page.html / Security Deposit\nRetrieved passages (5)\nrequest id a955411e9673993042f9ff03f0654cc3\nWhat refundable university security deposit is payable at admission?\nFrom the documents\nconfidence: high\nprovider: ollama\ncache: hit\nReused a verified answer for this index and question.\n\nThe refundable university security deposit payable at admission is Rs 20,000.[fee-structure-page.html / Security Deposit]\n\nSOURCES\nfee-structure-page.html / Security Deposit\nRetrieved passages (5)\nrequest id 29535c1326589c57cb211b0cb27b9485\nAsk\nEnter to send, Shift+Enter for a new line. 3 to 500 characters.",
+  "screenshot": "C:\\Users\\Jibran\\Desktop\\Rahbar\\docs\\evidence\\app\\cache-fix\\browser-hits.png",
+  "source": "Actual deployed Rahbar UI; repeated independent asks, no conversation reset",
+  "requests": [
+    {
+      "question": "What refundable university security deposit is payable at admission?"
+    },
+    {
+      "question": "What refundable university security deposit is payable at admission?"
+    }
+  ]
+}

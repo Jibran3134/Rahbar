@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-07",
+  "image_tag": "cache-fix-v2",
+  "api_tests_passed": 168,
+  "api_mypy": "passed",
+  "evaluator_script_tests_passed": 22,
+  "ui_tests": "passed",
+  "ruff": "passed",
+  "live_cache": {
+    "first_status": "MISS",
+    "first_reason": "miss_stored",
+    "first_seconds": 14.469,
+    "repeat_status": "HIT",
+    "repeat_seconds": 0.328,
+    "identical_answer_and_citations": true,
+    "all_api_replicas_hit": 3,
+    "conversation": "BYPASS",
+    "absent_hostel_deposit": "MISS; refusal; not cached"
+  },
+  "browser": "two real independent UI asks without reset; two HITs; both omitted session_id",
+  "real_gate": {
+    "recall@3": 0.9333333333333333,
+    "recall@5": 0.9333333333333333,
+    "citation_validity": 1.0,
+    "abstention_correctness": 1.0,
+    "execution_errors": 0,
+    "gate_failures": []
+  },
+  "diagnostic_expect_misses": [
+    "q01",
+    "q07",
+    "q08",
+    "q15"
+  ],
+  "limitations": "q07 conservatively refuses at the unchanged relevance floor; q08 hit a CPU model timeout; q01/q15 have terse supported No answers that miss expected-string diagnostics. Citation validity does not certify complete semantics.",
+  "golden_and_baseline": "unchanged",
+  "ui_image_tag": "cache-fix-ui-v3"
+}

@@ -94,3 +94,65 @@ def test_threshold_boundary_course_codes_and_negation():
     assert cache.get("key","Is CS101 not required?",[1,0],now=2) is None
     assert cache.get("key","Is CS101 required?",[.95,math.sqrt(1-.95**2)],now=2)
     assert cache.get("key","Is CS101 required?",[.949,math.sqrt(1-.949**2)],now=2) is None
+
+
+def test_http_repeat_hit_is_identical_and_session_followup_is_bypassed(monkeypatch):
+    from types import SimpleNamespace
+    from fastapi.testclient import TestClient
+    from app.main import app
+    from app.schemas import Answer, Passage
+    from app.services.cache import SemanticCache
+    from app.services.sessions import SessionStore
+    from test_sessions import RedisDouble
+    monkeypatch.setenv("RETRIEVER","stub")
+    monkeypatch.setenv("LLM_PROVIDER","stub")
+    active=ActiveIndex(collection="g-a",generation="a",embed_model="nomic-embed-text",dimension=2)
+    p=Passage(chunk_id="a",text="Makeup week.",source="p.pdf",section="4.25",page=1,score=.9)
+    calls=[]
+    def generate(q,passages):
+        calls.append(q)
+        return Answer(reasoning="private",**response().model_dump(include={
+            "answer","citations","answered_from_context","confidence"}))
+    with TestClient(app) as client:
+        app.state.cache=SemanticCache(Memory(),app.state.settings)
+        app.state.sessions=SessionStore(RedisDouble(),ttl=30)
+        app.state.retriever=SimpleNamespace(name="chroma",prepare=lambda q:(active,None,[1,0]),
+            retrieve_prepared=lambda q,k,prepared:[p],retrieve=lambda q,k:[p])
+        app.state.provider=SimpleNamespace(name="ollama",generate=generate)
+        first=client.post("/api/ask",json={"question":"course withdrawal deadline"})
+        second=client.post("/api/ask",json={"question":"course withdrawal deadline"})
+        assert first.headers["X-Cache"]=="MISS" and first.headers["X-Cache-Reason"]=="miss_stored"
+        assert second.headers["X-Cache"]=="HIT" and second.headers["X-Cache-Reason"]=="matched"
+        for field in ["answer","citations","answered_from_context","confidence","retrieved","provider"]:
+            assert first.json()[field]==second.json()[field]
+        assert "reasoning" not in second.json()
+        assert first.json()["request_id"]!=second.json()["request_id"]
+        assert len(calls)==1  # A real cache hit must not call the provider again.
+        follow=client.post("/api/ask",json={"question":"And under the old rules?",
+                                           "session_id":first.json()["session_id"]})
+        assert follow.headers["X-Cache"]=="BYPASS"
+        assert follow.headers["X-Cache-Reason"]=="conversation_context"
+        forced=client.post("/api/ask",json={"question":"course withdrawal deadline"},headers={"X-Bypass-Cache":"true"})
+        assert forced.headers["X-Cache-Reason"]=="requested_bypass"
+        assert len(calls)==3
+
+
+def test_refusal_miss_explains_why_it_was_not_stored(monkeypatch):
+    from types import SimpleNamespace
+    from app.routes import metrics
+    from app.services.cache import SemanticCache, answer_cached
+    from app.services.relevance import abstention
+    active=ActiveIndex(collection="g-a",generation="a",embed_model="nomic-embed-text",dimension=2)
+    retriever=SimpleNamespace(name="chroma",prepare=lambda q:(active,None,[1,0]),
+        retrieve_prepared=lambda *a,**k:[])
+    trace={}
+    token=metrics.QUERY.set(trace)
+    memory=Memory()
+    try:
+        provider=SimpleNamespace(name="unused",generate=lambda *a,**k:None)
+        result,status=answer_cached("Hostel deadline",retriever,provider,Settings(),SemanticCache(memory,Settings()))
+        assert status=="MISS" and result.answer==abstention().answer
+        assert trace["cache_reason"]=="not_grounded"
+        assert not memory.rows
+    finally:
+        metrics.QUERY.reset(token)

@@ -63,11 +63,20 @@ class OllamaProvider:
                                        json=body, timeout=self.settings.llm_timeout_seconds)
             response.raise_for_status()
             outer = response.json()
+            if (not isinstance(outer,dict)
+                    or ("done" in outer and outer["done"] is not True)
+                    or outer.get("done_reason") == "length"
+                    or ("model" in outer and outer["model"] != self.settings.llm_model)
+                    or (isinstance(outer.get("message"),dict)
+                        and outer["message"].get("role","assistant") != "assistant")):
+                raise ProviderError(ProviderFailureKind.INVALID_SCHEMA)
             content = outer["message"]["content"]
             incoming,outgoing=outer.get("prompt_eval_count"),outer.get("eval_count")
-            actual=all(type(v) is int and v>=0 for v in (incoming,outgoing))
-            metrics.tokens(incoming if actual else (len(json.dumps(body["messages"]))+3)//4,
-                           outgoing if actual else (len(content)+3)//4,"actual" if actual else "estimated")
+            if type(incoming) is int and incoming>=0 and type(outgoing) is int and outgoing>=0:
+                metrics.tokens(incoming,outgoing,"actual")
+            else:
+                metrics.tokens((len(json.dumps(body["messages"]))+3)//4,
+                               (len(content)+3)//4,"estimated")
             parsed = json.loads(content)
             answer=Answer.model_validate(parsed, strict=True)
             for p in passages:

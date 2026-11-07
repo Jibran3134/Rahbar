@@ -166,6 +166,20 @@ def proxy_handler(backend_port):
     return Proxy
 
 
+def warm_generation(model):
+    print(f'Preloading generation model {model} before opening the app...', flush=True)
+    try:
+        response = httpx.post('http://127.0.0.1:11434/api/generate',
+            json={'model':model,'stream':False,'keep_alive':'5m','options':{'num_ctx':4096}},
+            timeout=180,trust_env=False)
+        response.raise_for_status()
+        result = response.json()
+        if result.get('done') is not True or result.get('model') != model:
+            raise ValueError('Unexpected preload response')
+    except (httpx.HTTPError, ValueError):
+        raise RuntimeError('Ollama could not preload the generation model. Check the local Ollama service.') from None
+
+
 def launch(port=8090, no_browser=False, check_only=False, rebuild=False):
     directory = ROOT / '.venv/launcher'
     directory.mkdir(parents=True, exist_ok=True)
@@ -191,6 +205,7 @@ def launch(port=8090, no_browser=False, check_only=False, rebuild=False):
             info = ready(url + '/api/info').json()
             if info.get('provider') != 'ollama-host' or not info.get('active'):
                 raise RuntimeError('Expected the real Ollama provider and a published corpus index.')
+            warm_generation(info['llm_model'])
             home = ready(url)
             if 'RAHBAR' not in home.text:
                 raise RuntimeError('Ingress did not serve the Rahbar UI.')

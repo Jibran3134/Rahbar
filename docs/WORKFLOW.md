@@ -10,6 +10,7 @@ Read left to right by lane: **A** prepares and publishes the corpus; **B** answe
 
 - `run.cmd` is the normal Windows startup command. It opens localhost:8090 through a loopback gateway to the real Kubernetes Ingress. The first run prepares the deployment; later runs reuse it.
 - Only the indexing Job/CronJob writes vector generations. It extracts, cleans, chunks, embeds and stores, then publishes a validated active identity. The API never indexes at startup.
+- The UI defaults to independent questions (no session ID sent), enabling safe repeat cache hits without clearing the visible thread. Conversation mode sends the server-issued session ID and contextual turns bypass cache.
 - The question path resolves shared Redis history and checks the active embedding identity. Query embedding is needed even for semantic cache lookup. A cache hit skips vector retrieval and generation; follow-ups and forced bypasses skip cache lookup.
 - A query fails the relevance gate when no usable retrieved passage clears .74. This is a query-level gate: it does not remove every lower-scoring passage once another passage clears the floor.
 - Generation is evidence-only with obvious instruction blocks quarantined. Schema/citation failures get one validation retry; transport/timeouts fall back immediately. Citation validation is not proof that every factual statement is semantically complete.
