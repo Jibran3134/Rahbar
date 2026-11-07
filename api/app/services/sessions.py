@@ -6,6 +6,11 @@ from dataclasses import dataclass
 from typing import Any
 
 MAX_TURNS = 6
+MAX_STORED_QUESTION_CHARS = 500
+MAX_STORED_ANSWER_CHARS = 1000
+_SESSION_ID = re.compile(r"[A-Za-z0-9_-]{1,128}")
+_FOLLOW_UP_PREFIX = re.compile(r"(?:and\b|what about\b|how about\b|under (?:the )?old\b|"
+                               r"does (?:it|that)\b|why\b|when\b)", re.I)
 
 
 @dataclass(frozen=True)
@@ -25,19 +30,19 @@ class SessionStore:
         return "rahbar:session:v1:" + session_id
 
     def prepare(self, question: str, session_id: str | None) -> Turn:
-        if session_id is not None and not re.fullmatch(r"[A-Za-z0-9_-]{1,128}",session_id):
+        if session_id is not None and not _SESSION_ID.fullmatch(session_id):
             raise ValueError("Invalid session_id")
         history = self.client.lrange(self.key(session_id),-MAX_TURNS,-1) if session_id else []
         if not history:
             return Turn(uuid.uuid4().hex,question,question,False)
-        previous = json.loads(history[-1])["question"][:500]
-        elliptical = bool(re.match(r"(?:and\b|what about\b|how about\b|under (?:the )?old\b|"
-                                   r"does (?:it|that)\b|why\b|when\b)",question.strip(),re.I))
+        previous = json.loads(history[-1])["question"][:MAX_STORED_QUESTION_CHARS]
+        elliptical = bool(_FOLLOW_UP_PREFIX.match(question.strip()))
         resolved = f"Previous question: {previous}\nFollow-up question: {question}" if elliptical else question
         return Turn(session_id or "",resolved,question,True)
 
     def save(self, turn: Turn, answer: str) -> None:
-        payload = json.dumps({"question":turn.original[:500],"answer":answer[:1000]})
+        payload = json.dumps({"question":turn.original[:MAX_STORED_QUESTION_CHARS],
+                              "answer":answer[:MAX_STORED_ANSWER_CHARS]})
         with self.client.pipeline(transaction=True) as pipe:
             pipe.rpush(self.key(turn.session_id),payload)
             pipe.ltrim(self.key(turn.session_id),-MAX_TURNS,-1)
