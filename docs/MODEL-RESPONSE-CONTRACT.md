@@ -1,6 +1,6 @@
 # Model and API response contract
 
-The real profile uses Ollama `llama3.2:3b` through `/api/chat`, with `stream=false`, temperature .2, context 4096 and output budget 512. `format` receives `Answer.model_json_schema()`; the system prompt explains the evidence, citation and refusal rules. The schema is not duplicated as a long JSON string in the prompt. This follows Ollama's [structured-output guidance](https://docs.ollama.com/capabilities/structured-outputs).
+The real profile uses Ollama `qwen3:4b-instruct-2507-q4_K_M` through `/api/chat`, with `stream=false`, temperature .2, context 4096 and output budget 512. `format` receives `Answer.model_json_schema()`; the system prompt explains the evidence, citation and refusal rules. The schema is not duplicated as a long JSON string in the prompt. This follows Ollama's [structured-output guidance](https://docs.ollama.com/capabilities/structured-outputs).
 
 The model must return this JSON shape, populated from the supplied evidence:
 
@@ -27,7 +27,7 @@ The API adds request ID, retrieved references, provider and a server-issued sess
 The Windows launcher uses Ollama's [documented empty-request preload](https://docs.ollama.com/faq#how-can-i-preload-a-model-into-ollama-to-get-faster-response-times) before opening the app. This reduces cold-load delays without removing request timeouts or promising that every generation succeeds.
 
 
-The CPU profile now permits 120 seconds per generation attempt. At most two validation attempts remain allowed; a transport/timeout failure still falls back immediately. Ingress, the Windows gateway and the evaluator allow 360 seconds, and API pod termination grace is 360 seconds, covering the two attempts plus query embedding/drain allowances in the normal bounded case. Supported facts can therefore take longer to generate than the earlier 60-second budget. Timeout fallbacks are explicitly marked generation_timeout in X-Cache-Reason instead of being described as absent source information.
+The CPU profile now permits 180 seconds per generation attempt. At most two validation attempts remain allowed; a transport/timeout failure still falls back immediately. Ingress, the Windows gateway and the evaluator allow 480 seconds, and API pod termination grace is 480 seconds, covering the two attempts plus query embedding/drain allowances in the normal bounded case. Supported facts can therefore take longer to generate than the earlier 60-second budget. Timeout fallbacks are explicitly marked generation_timeout in X-Cache-Reason instead of being described as absent source information.
 
 PDF title-only search hits receive bounded same-generation/source/page/version context before generation. The score remains the original heading similarity, and citations identify that heading on its actual source page. This adds the nearby source clauses without inventing text or raising similarity scores.
 

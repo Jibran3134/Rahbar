@@ -15,7 +15,7 @@ from ..schemas import ActiveIndex, Answer, AskResponse, Passage
 from .grounding import validate_grounding
 from ..routes import metrics
 
-PROMPT_VERSION="grounded-v11-conditional-numeric-answers"
+PROMPT_VERSION="grounded-v12-instruct-decimal-policy"
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:

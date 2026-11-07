@@ -7,7 +7,7 @@ data:
   RETRIEVER: chroma
   LLM_PROVIDER: ollama-host
   EMBED_MODEL: nomic-embed-text
-  LLM_MODEL: llama3.2:3b
+  LLM_MODEL: qwen3:4b-instruct-2507-q4_K_M
   OLLAMA_URL: http://host.minikube.internal:11434
   CHROMA_HOST: chroma
   CHROMA_PORT: '8000'
@@ -23,5 +23,5 @@ data:
   CACHE_MAX_ENTRIES: '256'
   SESSION_TTL_SECONDS: '1800'
   TEMPERATURE: '0.2'
-  LLM_TIMEOUT_SECONDS: '120'
+  LLM_TIMEOUT_SECONDS: '180'
   LOG_LEVEL: INFO

@@ -142,7 +142,7 @@ def proxy_handler(backend_port):
             headers = {k: v for k, v in self.headers.items()
                        if k.lower() not in HOP_HEADERS | {'host', 'content-length'}}
             headers['Host'] = 'rahbar.local'
-            connection = http.client.HTTPConnection('127.0.0.1', backend_port, timeout=360)
+            connection = http.client.HTTPConnection('127.0.0.1', backend_port, timeout=480)
             try:
                 connection.request(self.command, self.path, body=self.rfile.read(length), headers=headers)
                 response = connection.getresponse()

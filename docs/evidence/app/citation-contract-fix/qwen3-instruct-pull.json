@@ -1,0 +1,7 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "seconds": 681.203,
+  "result": {
+    "status": "success"
+  }
+}

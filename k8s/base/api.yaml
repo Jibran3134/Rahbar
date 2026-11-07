@@ -31,7 +31,7 @@ spec:
         fsGroup: 10001
         seccompProfile:
           type: RuntimeDefault
-      terminationGracePeriodSeconds: 360
+      terminationGracePeriodSeconds: 480
       containers:
       - name: api
         image: rahbar-api:dev

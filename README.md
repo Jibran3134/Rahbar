@@ -61,7 +61,7 @@ Start Ollama and provision the two selected models:
 
 ```powershell
 ollama pull nomic-embed-text
-ollama pull llama3.2:3b
+ollama pull qwen3:4b-instruct-2507-q4_K_M
 Invoke-RestMethod http://127.0.0.1:11434/api/tags
 ```
 
@@ -147,7 +147,7 @@ The CronJob runs Sunday 02:00 UTC with concurrencyPolicy Forbid. The application
 
 ## Configuration and API
 
-Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache threshold **.95**, temperature **.2**, llama3.2:3b, nomic-embed-text. Settings are in k8s/base/configmap.yaml and read at process start. Restart affected API pods after changing configuration. Unsupported hosted/in-cluster generation modes fail configuration; the CI embedding server is reached through OLLAMA_URL with generation explicitly stubbed.
+Real defaults: chunks **250/30**, top-k **5**, relevance floor **.74**, cache threshold **.95**, temperature **.2**, qwen3:4b-instruct-2507-q4_K_M, nomic-embed-text. Settings are in k8s/base/configmap.yaml and read at process start. Restart affected API pods after changing configuration. Unsupported hosted/in-cluster generation modes fail configuration; the CI embedding server is reached through OLLAMA_URL with generation explicitly stubbed.
 
 | Method | Path | Behavior |
 | --- | --- | --- |

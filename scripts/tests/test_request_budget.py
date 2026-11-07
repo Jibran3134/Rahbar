@@ -12,7 +12,7 @@ def test_default_generation_budget_fits_all_outer_request_layers():
     api=yaml.safe_load((ROOT/'k8s/base/api.yaml').read_text())
     ingress=yaml.safe_load((ROOT/'k8s/base/ingress.yaml').read_text())
     model=float(config['LLM_TIMEOUT_SECONDS'])
-    assert model==120
+    assert model==180
     # Two validation attempts + the bounded query embedding call + preStop drain.
     budget=2*model+60+10
     assert api['spec']['template']['spec']['terminationGracePeriodSeconds']>budget

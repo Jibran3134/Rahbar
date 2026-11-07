@@ -30,7 +30,7 @@ def test_wire_schema_delimiters_model_temperature_and_order():
         provider = OllamaProvider(Settings(), client=client)
         assert provider.generate("When?", [passage()]).answered_from_context
     request = seen[0]
-    assert request["model"] == "llama3.2:3b" and request["stream"] is False
+    assert request["model"] == "qwen3:4b-instruct-2507-q4_K_M" and request["stream"] is False
     assert request["think"] is False  # Hybrid models must leave room for the Answer JSON.
     base=Answer.model_json_schema()
     assert request["format"]["required"] == base["required"]
@@ -131,7 +131,7 @@ def test_errors_are_classified_and_sanitized(kind):
         "source":"s.pdf","section":"4.25","page":23,"invented_url":"bad"}]})}},
 ])
 def test_incomplete_wrong_model_role_and_extra_fields_are_rejected(change):
-    body={"model":"llama3.2:3b","done":True,"done_reason":"stop",
+    body={"model":"qwen3:4b-instruct-2507-q4_K_M","done":True,"done_reason":"stop",
           "message":{"role":"assistant","content":json.dumps(payload())},**change}
     with httpx.Client(transport=httpx.MockTransport(lambda r:httpx.Response(200,json=body))) as client:
         with pytest.raises(ProviderError) as error:

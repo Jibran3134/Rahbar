@@ -142,7 +142,7 @@ def main() -> int:
     headers = {"Host": args.host} if args.host else {}
     if args.bypass_cache:
         headers["X-Bypass-Cache"]="true"
-    with httpx.Client(timeout=360.0, headers=headers) as client:
+    with httpx.Client(timeout=480.0, headers=headers) as client:
         try:
             info=client.get(args.api.rstrip("/")+"/api/info").json()
         except Exception:
