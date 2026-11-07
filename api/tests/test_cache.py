@@ -96,6 +96,20 @@ def test_threshold_boundary_course_codes_and_negation():
     assert cache.get("key","Is CS101 required?",[.949,math.sqrt(1-.949**2)],now=2) is None
 
 
+def test_gpa_cache_distinguishes_cumulative_semester_and_unspecified_values():
+    from app.services.cache import SemanticCache
+    cache=SemanticCache(Memory(),Settings())
+    cache.put("gpa","My CGPA is 3.6; academic warning?",[1,0],response(),now=1)
+    assert cache.get("gpa","My cumulative GPA is 3.6; academic warning?",[1,0],now=2)
+    for question in ["My semester GPA is 3.6; academic warning?",
+                     "My SGPA is 3.6; academic warning?",
+                     "My GPA is 3.6; academic warning?",
+                     "My CGPA is 1.6; academic warning?"]:
+        assert cache.get("gpa",question,[1,0],now=2) is None
+    cache.put("semester","My SGPA is 3.6; academic warning?",[1,0],response(),now=1)
+    assert cache.get("semester","My semester GPA is 3.6; academic warning?",[1,0],now=2)
+
+
 def test_http_repeat_hit_is_identical_and_session_followup_is_bypassed(monkeypatch):
     from types import SimpleNamespace
     from fastapi.testclient import TestClient

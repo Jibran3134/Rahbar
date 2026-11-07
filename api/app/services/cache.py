@@ -15,7 +15,7 @@ from ..schemas import ActiveIndex, Answer, AskResponse, Passage
 from .grounding import validate_grounding
 from ..routes import metrics
 
-PROMPT_VERSION="grounded-v10-content-bearing-retrieval"
+PROMPT_VERSION="grounded-v11-conditional-numeric-answers"
 
 
 def namespace(active: ActiveIndex, settings: Settings) -> str:
@@ -29,6 +29,17 @@ def signature(question: str) -> tuple[Any,...]:
     numbers=tuple(sorted(re.findall(r"\b\d+(?:[.,]\d+)*(?:%)?\b",text)))
     scope=tuple(sorted(set(re.findall(r"hostel|admission|withdraw\w*|tuition|deposit|prerequisite|"
                                     r"lab|theory|not|never|without|cannot|optional|[a-z]{2,}-\d+",text))))
+    # A semester result cannot stand in for a cumulative result, even when the
+    # embeddings and numbers match. Normalize abbreviations without equating an
+    # unspecified GPA with either interpretation.
+    gpa_scope=[]
+    if re.search(r"\bcgpa\b|\bcumulative\b",text):
+        gpa_scope.append("gpa:cumulative")
+    if re.search(r"\bsgpa\b|\bsemester\b",text):
+        gpa_scope.append("gpa:semester")
+    if not gpa_scope and re.search(r"\bgpa\b",text):
+        gpa_scope.append("gpa:unspecified")
+    scope=tuple(sorted((*scope,*gpa_scope)))
     courses=tuple(sorted(re.findall(r"\b[a-z]{2,}[- ]?\d{2,}\b",text)))
     return numbers,scope,courses,json.dumps(version_filter(question),sort_keys=True)
 

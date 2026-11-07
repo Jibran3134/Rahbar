@@ -1,0 +1,284 @@
+[
+  {
+    "id": "reported",
+    "question": "My gpa is 3.6. Am i on academic warning",
+    "source_review_expectation": "Conditional: if 3.6 is cumulative CGPA, above the 2.00 minimum, no threshold-triggered warning; semester GPA alone insufficient.",
+    "passages": [
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.741077
+      },
+      {
+        "chunk_id": "9005b90a7f8d8cf6ffe7dc74984e023cedce17963015fbec9ee13c86233dfc6c",
+        "text": "5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.4",
+        "page": 24,
+        "score": 0.7361731499999999
+      },
+      {
+        "chunk_id": "54a1a13e76f99814201dcb1be0a4ff8e16791297cc2294375c66e2e436f55806",
+        "text": "11. Academic Warning/Probation five courses.\nDepartment (HOD) before the last\na) At the end of every semester d) Students with warning count = 2\nday of classes.\n(including summer semester), MUST not register for a new\nd) Request to withdraw from a\nwarning is issued if the CGPA of a course.\ncourse requires approval of the\nstudent is less than the minimum e) Parents/guardians are called to\nHOD.\nrequired for graduation. the campus for a consultative\ne) For courses having an associated\nMinimum CGPA required to avoid meeting with the HOD.\nlab, withdrawal is always from\nacademic warning: f) Must obtain written approval\nboth theory and lab portions of\nBS/BBA programs 2.00 from their Head of Department\nthe course.",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.7313936999999999
+      },
+      {
+        "chunk_id": "0b77b5f9c825b19c4042c7a2e7e8c740d850046e33f66c5523901780b2e77099",
+        "text": "5.6 If CGPA remains below 2.00 for 3 consecutive semesters,\nwarning count becomes three and the admission of student at\nthe University is automatically closed.\n18",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.6",
+        "page": 24,
+        "score": 0.73122978
+      },
+      {
+        "chunk_id": "3974b006ac83c8db069e387284ee209514005daf3267126ccfcbdf56d61bb920",
+        "text": "4.4 A student under academic warning or probation:\na) Must register for all such courses, in which the grade\nwas F, provided these courses are being offered.\nb) Should register for all such courses, in which the grade\nwas D, D+ or C-, provided these courses are being\noffered.\nc) Should not register for more than five courses.\nd) Parents/guardian will be called to the campus for a\nmeeting with the HoD for sharing the unsatisfactory",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 19,
+        "score": 0.7286763199999999
+      }
+    ]
+  },
+  {
+    "id": "below",
+    "question": "My gpa is 1.6. Am i on academic warning",
+    "source_review_expectation": "Conditional: cumulative CGPA below 2.00 at semester end meets warning criterion; semester GPA alone insufficient.",
+    "passages": [
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.75399566
+      },
+      {
+        "chunk_id": "9005b90a7f8d8cf6ffe7dc74984e023cedce17963015fbec9ee13c86233dfc6c",
+        "text": "5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.4",
+        "page": 24,
+        "score": 0.7375522999999999
+      },
+      {
+        "chunk_id": "54a1a13e76f99814201dcb1be0a4ff8e16791297cc2294375c66e2e436f55806",
+        "text": "11. Academic Warning/Probation five courses.\nDepartment (HOD) before the last\na) At the end of every semester d) Students with warning count = 2\nday of classes.\n(including summer semester), MUST not register for a new\nd) Request to withdraw from a\nwarning is issued if the CGPA of a course.\ncourse requires approval of the\nstudent is less than the minimum e) Parents/guardians are called to\nHOD.\nrequired for graduation. the campus for a consultative\ne) For courses having an associated\nMinimum CGPA required to avoid meeting with the HOD.\nlab, withdrawal is always from\nacademic warning: f) Must obtain written approval\nboth theory and lab portions of\nBS/BBA programs 2.00 from their Head of Department\nthe course.",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.73247558
+      },
+      {
+        "chunk_id": "3974b006ac83c8db069e387284ee209514005daf3267126ccfcbdf56d61bb920",
+        "text": "4.4 A student under academic warning or probation:\na) Must register for all such courses, in which the grade\nwas F, provided these courses are being offered.\nb) Should register for all such courses, in which the grade\nwas D, D+ or C-, provided these courses are being\noffered.\nc) Should not register for more than five courses.\nd) Parents/guardian will be called to the campus for a\nmeeting with the HoD for sharing the unsatisfactory",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 19,
+        "score": 0.72973144
+      },
+      {
+        "chunk_id": "91cf06fcd5601cc42b2372807312b9c57c6a6d6dbee95fbf60ebadea4d0a66e3",
+        "text": "academic performance of the student.\ne) Students on 2nd academic warning must NOT register\nfor a new course, unless recommended by the HoD\nand approved by Controller of Examinations.\nRegistration of courses with Theory and associated Lab:",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 20,
+        "score": 0.7247834200000001
+      }
+    ]
+  },
+  {
+    "id": "boundary",
+    "question": "My CGPA is exactly 2.00. Am I on academic warning?",
+    "source_review_expectation": "2.00 is not below 2.00; does not meet the below-minimum warning criterion.",
+    "passages": [
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.84603506
+      },
+      {
+        "chunk_id": "9005b90a7f8d8cf6ffe7dc74984e023cedce17963015fbec9ee13c86233dfc6c",
+        "text": "5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.4",
+        "page": 24,
+        "score": 0.80931687
+      },
+      {
+        "chunk_id": "5913d7a65376043f3b5a240baa24b1e6a3d5d877e8fb86ff797033e4c4d720e2",
+        "text": "5.5 If at the end of a semester (including summer semester) CGPA\ndrops below 2.00, warning is issued, and warning count is\nincremented by one.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.5",
+        "page": 24,
+        "score": 0.79450572
+      },
+      {
+        "chunk_id": "0b77b5f9c825b19c4042c7a2e7e8c740d850046e33f66c5523901780b2e77099",
+        "text": "5.6 If CGPA remains below 2.00 for 3 consecutive semesters,\nwarning count becomes three and the admission of student at\nthe University is automatically closed.\n18",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.6",
+        "page": 24,
+        "score": 0.79291093
+      },
+      {
+        "chunk_id": "4ccc18601389cf167ca7759b1c88ccdd2c4525196af5498039f9c83f145a288e",
+        "text": "## Warning/Probation\n\n1. At the end of every semester (including the first semester and summer semesters), warning is issued provided the CGPA of a student is less than the minimum required for the degree program.\n\n2. A student with a warning cannot register in a subsequent semester without approval of the relevant Head of Department or any other senior faculty nominated by him.\n\n3. After each semester (including the summer or the first semester), if the CGPA of a student is less than the required minimum, the Warning Count increases by one.\n\n4. If Warning Count becomes three, the admission of student at the University is closed.\n\n5. If the CGPA equals or exceeds the required minimum, the Warning Count becomes zero.\n\n| Programs | Minimum CGPA required to avoid Warning |\n\n| BBA/BS | 2.0 |\n\n| MBA/MS | 2.5 |",
+        "source": "grading-page.html",
+        "section": "Warning/Probation",
+        "page": null,
+        "score": 0.77182138
+      }
+    ]
+  },
+  {
+    "id": "paraphrase",
+    "question": "With a cumulative GPA of 3.6, would I receive an academic warning?",
+    "source_review_expectation": "3.6 exceeds the 2.00 minimum; no threshold-triggered warning.",
+    "passages": [
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.7714752
+      },
+      {
+        "chunk_id": "0b77b5f9c825b19c4042c7a2e7e8c740d850046e33f66c5523901780b2e77099",
+        "text": "5.6 If CGPA remains below 2.00 for 3 consecutive semesters,\nwarning count becomes three and the admission of student at\nthe University is automatically closed.\n18",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.6",
+        "page": 24,
+        "score": 0.76396918
+      },
+      {
+        "chunk_id": "9005b90a7f8d8cf6ffe7dc74984e023cedce17963015fbec9ee13c86233dfc6c",
+        "text": "5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.4",
+        "page": 24,
+        "score": 0.76344979
+      },
+      {
+        "chunk_id": "54a1a13e76f99814201dcb1be0a4ff8e16791297cc2294375c66e2e436f55806",
+        "text": "11. Academic Warning/Probation five courses.\nDepartment (HOD) before the last\na) At the end of every semester d) Students with warning count = 2\nday of classes.\n(including summer semester), MUST not register for a new\nd) Request to withdraw from a\nwarning is issued if the CGPA of a course.\ncourse requires approval of the\nstudent is less than the minimum e) Parents/guardians are called to\nHOD.\nrequired for graduation. the campus for a consultative\ne) For courses having an associated\nMinimum CGPA required to avoid meeting with the HOD.\nlab, withdrawal is always from\nacademic warning: f) Must obtain written approval\nboth theory and lab portions of\nBS/BBA programs 2.00 from their Head of Department\nthe course.",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.75147098
+      },
+      {
+        "chunk_id": "4ccc18601389cf167ca7759b1c88ccdd2c4525196af5498039f9c83f145a288e",
+        "text": "## Warning/Probation\n\n1. At the end of every semester (including the first semester and summer semesters), warning is issued provided the CGPA of a student is less than the minimum required for the degree program.\n\n2. A student with a warning cannot register in a subsequent semester without approval of the relevant Head of Department or any other senior faculty nominated by him.\n\n3. After each semester (including the summer or the first semester), if the CGPA of a student is less than the required minimum, the Warning Count increases by one.\n\n4. If Warning Count becomes three, the admission of student at the University is closed.\n\n5. If the CGPA equals or exceeds the required minimum, the Warning Count becomes zero.\n\n| Programs | Minimum CGPA required to avoid Warning |\n\n| BBA/BS | 2.0 |\n\n| MBA/MS | 2.5 |",
+        "source": "grading-page.html",
+        "section": "Warning/Probation",
+        "page": null,
+        "score": 0.74756002
+      }
+    ]
+  },
+  {
+    "id": "semester",
+    "question": "My semester GPA is 3.6. Does that mean my CGPA is safe from academic warning?",
+    "source_review_expectation": "Semester GPA alone does not establish cumulative CGPA; apply the below-2.00 cumulative rule conditionally.",
+    "passages": [
+      {
+        "chunk_id": "0b77b5f9c825b19c4042c7a2e7e8c740d850046e33f66c5523901780b2e77099",
+        "text": "5.6 If CGPA remains below 2.00 for 3 consecutive semesters,\nwarning count becomes three and the admission of student at\nthe University is automatically closed.\n18",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.6",
+        "page": 24,
+        "score": 0.82105541
+      },
+      {
+        "chunk_id": "5913d7a65376043f3b5a240baa24b1e6a3d5d877e8fb86ff797033e4c4d720e2",
+        "text": "5.5 If at the end of a semester (including summer semester) CGPA\ndrops below 2.00, warning is issued, and warning count is\nincremented by one.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.5",
+        "page": 24,
+        "score": 0.8072753
+      },
+      {
+        "chunk_id": "4ccc18601389cf167ca7759b1c88ccdd2c4525196af5498039f9c83f145a288e",
+        "text": "## Warning/Probation\n\n1. At the end of every semester (including the first semester and summer semesters), warning is issued provided the CGPA of a student is less than the minimum required for the degree program.\n\n2. A student with a warning cannot register in a subsequent semester without approval of the relevant Head of Department or any other senior faculty nominated by him.\n\n3. After each semester (including the summer or the first semester), if the CGPA of a student is less than the required minimum, the Warning Count increases by one.\n\n4. If Warning Count becomes three, the admission of student at the University is closed.\n\n5. If the CGPA equals or exceeds the required minimum, the Warning Count becomes zero.\n\n| Programs | Minimum CGPA required to avoid Warning |\n\n| BBA/BS | 2.0 |\n\n| MBA/MS | 2.5 |",
+        "source": "grading-page.html",
+        "section": "Warning/Probation",
+        "page": null,
+        "score": 0.80234933
+      },
+      {
+        "chunk_id": "9005b90a7f8d8cf6ffe7dc74984e023cedce17963015fbec9ee13c86233dfc6c",
+        "text": "5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.4",
+        "page": 24,
+        "score": 0.79794276
+      },
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.78042042
+      }
+    ]
+  },
+  {
+    "id": "definition",
+    "question": "What is academic warning?",
+    "source_review_expectation": "CGPA below 2.00 at the end of a semester triggers academic warning.",
+    "passages": [
+      {
+        "chunk_id": "73372f317de4c4d31656815610c9f541536a110d7c3fad49ceabc00e60af6997",
+        "text": "Academic Warning/Probation\nSection 5: 5. Academic Assessment\nSection 5.1: 5.1 The performance of students is assessed during the semester\nthrough midterm exams, assignments, quizzes, case studies or\nany other method considered appropriate by the course\ninstructor and the University and communicated to the\nstudents at the start of a course.\nSection 5.2: 5.2 The semester work will normally contribute 50% towards the\nfinal grade, while the final examination will contribute the\nremaining 50% of the total marks. A letter grade will be\nawarded to each student based on his/her overall academic\nperformance in a course.\nSection 5.3: 5.3 Any deviation from Rule 5.2 above if necessitated by the\nnature of course will be made with the approval of Dean of the\nFaculty.\nSection 5.4: 5.4 Minimum CGPA required to avoid academic warning is 2.00\nfor all undergraduate programs.\nSection 5.5: 5.5 If at the end of a semester (including summer semester) CGPA\ndrops below 2.00, warning is issued, and warning count is\nincremented by one.\nSection 5.6: 5.6 If CGPA remains below 2.00 for 3 consecutive semesters,\nwarning count becomes three and the admission of student at\nthe University is automatically closed.\n18",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "Academic Warning/Probation",
+        "page": 24,
+        "score": 0.80658382
+      },
+      {
+        "chunk_id": "be709972c2f9ff38ac3b634ac45024f0e1d06b5ad60b2c65bd658f3b7e740adc",
+        "text": "Registration of Students under Academic Warning\nSection 4: 4. Registration\nSection 4.1: 4.1 The recommended course registration procedure is as follows:\na) Clear all previous fees and dues before registration.\nb) Register online.\nc) Pay semester fees by the due date.\nSection 4.2: 4.2 In a regular (Fall and Spring) semester, students without\nacademic warning are expected to take courses prescribed in\nthe prospectus.\nSection 4.3: 4.3 The normal course load is 5 courses. A final year student may\nregister in one additional course (inclusive of Final Year\nProject-FYP).\nSection 4.4: 4.4 A student under academic warning or probation:\na) Must register for all such courses, in which the grade\nwas F, provided these courses are being offered.\nb) Should register for all such courses, in which the grade\nwas D, D+ or C-, provided these courses are being\noffered.\nc) Should not register for more than five courses.\nd) Parents/guardian will be called to the campus for a\nmeeting with the HoD for sharing the unsatisfactory",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "Registration of Students under Academic Warning",
+        "page": 19,
+        "score": 0.78850949
+      },
+      {
+        "chunk_id": "91cf06fcd5601cc42b2372807312b9c57c6a6d6dbee95fbf60ebadea4d0a66e3",
+        "text": "academic performance of the student.\ne) Students on 2nd academic warning must NOT register\nfor a new course, unless recommended by the HoD\nand approved by Controller of Examinations.\nRegistration of courses with Theory and associated Lab:",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "4.4",
+        "page": 20,
+        "score": 0.7431078
+      },
+      {
+        "chunk_id": "54a1a13e76f99814201dcb1be0a4ff8e16791297cc2294375c66e2e436f55806",
+        "text": "11. Academic Warning/Probation five courses.\nDepartment (HOD) before the last\na) At the end of every semester d) Students with warning count = 2\nday of classes.\n(including summer semester), MUST not register for a new\nd) Request to withdraw from a\nwarning is issued if the CGPA of a course.\ncourse requires approval of the\nstudent is less than the minimum e) Parents/guardians are called to\nHOD.\nrequired for graduation. the campus for a consultative\ne) For courses having an associated\nMinimum CGPA required to avoid meeting with the HOD.\nlab, withdrawal is always from\nacademic warning: f) Must obtain written approval\nboth theory and lab portions of\nBS/BBA programs 2.00 from their Head of Department\nthe course.",
+        "source": "prospectus-academic-rules-and-regulations.pdf",
+        "section": "11",
+        "page": 2,
+        "score": 0.7281994199999999
+      },
+      {
+        "chunk_id": "c5df56f83c26efc564157ce74facb6fb04885328748fe61187dbb3e9ec6935a7",
+        "text": "5.7 If the CGPA equals or exceeds 2.00 after the 1st or 2nd\nacademic warning, the warning count is reset to zero.",
+        "source": "academic-rules-handbook-jun-2026.pdf",
+        "section": "5.7",
+        "page": 25,
+        "score": 0.71888924
+      }
+    ]
+  }
+]

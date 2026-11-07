@@ -1,0 +1,41 @@
+[
+  {
+    "output": {
+      "answer": "The supplied documents do not provide information on whether a CGPA of 3.6 puts a student on academic warning. [academic-rules-handbook-jun-2026.pdf / 5.7]",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "5.7",
+          "page": 25
+        }
+      ],
+      "answered_from_context": true,
+      "confidence": "low"
+    },
+    "citation_triples_match": true,
+    "inline_pairs_match": true,
+    "valid": false
+  },
+  {
+    "output": {
+      "answer": "The CGPA of 3.6 does not meet the minimum requirement of 2.00 to avoid academic warning; [academic-rules-handbook-jun-2026.pdf / 5.4]; [academic-rules-handbook-jun-2026.pdf / 5.7]",
+      "citations": [
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "5.4",
+          "page": 24
+        },
+        {
+          "source": "academic-rules-handbook-jun-2026.pdf",
+          "section": "5.7",
+          "page": 25
+        }
+      ],
+      "answered_from_context": false,
+      "confidence": "low"
+    },
+    "citation_triples_match": true,
+    "inline_pairs_match": true,
+    "valid": false
+  }
+]

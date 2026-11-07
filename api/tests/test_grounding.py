@@ -100,3 +100,25 @@ def test_numeric_fact_with_valid_citation_is_a_claim():
     answer=valid()
     answer.answer="100% [policy.pdf / 4.25]"
     assert validate_grounding(answer,passages()).answered_from_context
+
+
+def test_supported_conditional_can_explain_missing_personal_records():
+    from app.services.grounding import validate_grounding
+    answer=valid()
+    answer.answer=("If this is your cumulative value, it exceeds the documented minimum "
+                   "[policy.pdf / 4.25]. Semester results alone cannot determine your cumulative "
+                   "standing [policy.pdf / 4.25].")
+    assert validate_grounding(answer,passages()).answered_from_context
+
+
+@pytest.mark.parametrize("text,grounded", [
+    ("The supplied documents do not provide that information [policy.pdf / 4.25].", True),
+    ("I cannot determine the answer [policy.pdf / 4.25].", True),
+    ("The documented deadline is makeup week [policy.pdf / 4.25].", False),
+])
+def test_contradictory_groundedness_has_specific_safe_failure(text,grounded):
+    from app.services.grounding import validate_grounding
+    answer=valid().model_copy(update={"answer":text,"answered_from_context":grounded})
+    with pytest.raises(ProviderError) as error:
+        validate_grounding(answer,passages())
+    assert error.value.kind.value=="inconsistent_answer"
