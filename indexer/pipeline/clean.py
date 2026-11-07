@@ -10,17 +10,19 @@ from pathlib import Path
 
 from .models import Document
 
+_CHARACTER_REPLACEMENTS: dict[str, str | int | None] = {
+    "\u00ad": "", "\u200b": "", "\ufeff": "", "\u00a0": " ",
+    "\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi", "\ufb04": "ffl",
+}
+_TEXT_TRANSLATION = str.maketrans(_CHARACTER_REPLACEMENTS)
+
 
 def _normalize(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     # A discretionary soft hyphen is explicit wrap information. Hard hyphens
     # are ambiguous (FAST-NUCES, non-credit) and are never guessed away.
     text = re.sub(r"(?<=[^\W\d_])\u00ad\n[ \t]*(?=[^\W\d_])", "", text)
-    replacements: dict[str, str | int | None] = {
-        "\u00ad": "", "\u200b": "", "\ufeff": "", "\u00a0": " ",
-        "\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi", "\ufb04": "ffl",
-    }
-    text = text.translate(str.maketrans(replacements))
+    text = text.translate(_TEXT_TRANSLATION)
     text = re.sub(r"[\x00-\x08\x0b-\x1f\x7f]", "", text)
     text = "\n".join(re.sub(r"[^\S\n]+", " ", line).strip() for line in text.split("\n"))
     return re.sub(r"\n{3,}", "\n\n", text).strip()
